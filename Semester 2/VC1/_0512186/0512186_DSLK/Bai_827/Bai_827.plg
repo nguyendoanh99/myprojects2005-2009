@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Bai_827 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\pm3-ws14\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Bai_827.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"C:\SV\0512186\Bai_827\Bai_827.cpp"
+]
+Creating command line "cl.exe @"C:\DOCUME~1\pm3-ws14\LOCALS~1\Temp\RSP5E.tmp"" 
+Creating temporary file "C:\DOCUME~1\pm3-ws14\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Bai_827.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"C:\SV\0512186\Bai_827\StdAfx.cpp"
+]
+Creating command line "cl.exe @"C:\DOCUME~1\pm3-ws14\LOCALS~1\Temp\RSP5F.tmp"" 
+Creating temporary file "C:\DOCUME~1\pm3-ws14\LOCALS~1\Temp\RSP60.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Bai_827.pdb" /debug /machine:I386 /out:"Debug/Bai_827.exe" /pdbtype:sept 
+.\Debug\StdAfx.obj
+.\Debug\Bai_827.obj
+]
+Creating command line "link.exe @"C:\DOCUME~1\pm3-ws14\LOCALS~1\Temp\RSP60.tmp""
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+c:\sv\0512186\bai_827\stdafx.cpp(145) : warning C4700: local variable 'filename' used without having been initialized
+Compiling...
+Skipping... (no relevant changes detected)
+Bai_827.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+Bai_827.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

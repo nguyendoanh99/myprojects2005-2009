@@ -1,0 +1,71 @@
+
+An unexpected exception has been detected in native code outside the VM.
+Unexpected Signal : EXCEPTION_ACCESS_VIOLATION occurred at PC=0x6D063639
+Function=Java_sun_print_Win32PrintJob_printRawData+0x1BBC
+Library=F:\j2sdk1.4.0\jre\bin\awt.dll
+
+Current Java thread:
+	at sun.awt.windows.Win32SurfaceData.initOps(Native Method)
+	at sun.awt.windows.Win32SurfaceData.<init>(Win32SurfaceData.java:335)
+	at sun.awt.windows.Win32SurfaceData.createData(Win32SurfaceData.java:218)
+	at sun.awt.windows.WComponentPeer.replaceSurfaceData(WComponentPeer.java:321)
+	- locked <02FD5B40> (a sun.awt.windows.WFramePeer)
+	at sun.awt.windows.WComponentPeer.displayChanged(WComponentPeer.java:350)
+	at sun.awt.windows.WCanvasPeer.displayChanged(WCanvasPeer.java:42)
+	at sun.awt.windows.WPanelPeer.displayChanged(WPanelPeer.java:118)
+	at sun.awt.windows.WWindowPeer.displayChanged(WWindowPeer.java:175)
+	at sun.awt.SunDisplayChanger.notifyListeners(SunDisplayChanger.java:102)
+	at sun.awt.Win32GraphicsDevice.displayChanged(Win32GraphicsDevice.java:333)
+	at sun.awt.Win32GraphicsEnvironment.displayChanged(Win32GraphicsEnvironment.java:90)
+	at sun.awt.windows.WToolkit$4.run(WToolkit.java:717)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:178)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:443)
+	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:190)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:144)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:130)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:98)
+
+Dynamic libraries:
+0x00400000 - 0x00406000 	F:\j2sdk1.4.0\jre\bin\java.exe
+0x77F50000 - 0x77FF7000 	D:\WINDOWS\System32\ntdll.dll
+0x77E60000 - 0x77F46000 	D:\WINDOWS\system32\kernel32.dll
+0x77DD0000 - 0x77E5D000 	D:\WINDOWS\system32\ADVAPI32.dll
+0x78000000 - 0x78086000 	D:\WINDOWS\system32\RPCRT4.dll
+0x77C10000 - 0x77C63000 	D:\WINDOWS\system32\MSVCRT.dll
+0x6D330000 - 0x6D442000 	F:\j2sdk1.4.0\jre\bin\client\jvm.dll
+0x77D40000 - 0x77DCC000 	D:\WINDOWS\system32\USER32.dll
+0x77C70000 - 0x77CB0000 	D:\WINDOWS\system32\GDI32.dll
+0x76B40000 - 0x76B6C000 	D:\WINDOWS\System32\WINMM.dll
+0x76390000 - 0x763AC000 	D:\WINDOWS\System32\IMM32.DLL
+0x629C0000 - 0x629C8000 	D:\WINDOWS\System32\LPK.DLL
+0x72FA0000 - 0x72FFA000 	D:\WINDOWS\System32\USP10.dll
+0x5CD70000 - 0x5CD77000 	D:\WINDOWS\System32\serwvdrv.dll
+0x5B0A0000 - 0x5B0A7000 	D:\WINDOWS\System32\umdmxfrm.dll
+0x6D1D0000 - 0x6D1D7000 	F:\j2sdk1.4.0\jre\bin\hpi.dll
+0x6D300000 - 0x6D30D000 	F:\j2sdk1.4.0\jre\bin\verify.dll
+0x6D210000 - 0x6D228000 	F:\j2sdk1.4.0\jre\bin\java.dll
+0x6D320000 - 0x6D32D000 	F:\j2sdk1.4.0\jre\bin\zip.dll
+0x6D000000 - 0x6D0F6000 	F:\j2sdk1.4.0\jre\bin\awt.dll
+0x73000000 - 0x73023000 	D:\WINDOWS\System32\WINSPOOL.DRV
+0x771B0000 - 0x772D1000 	D:\WINDOWS\system32\ole32.dll
+0x5AD70000 - 0x5ADA4000 	D:\WINDOWS\System32\uxtheme.dll
+0x6D180000 - 0x6D1D0000 	F:\j2sdk1.4.0\jre\bin\fontmanager.dll
+0x0AF80000 - 0x0AFAB000 	D:\WINDOWS\System32\msctfime.ime
+0x69500000 - 0x699BF000 	D:\WINDOWS\System32\nvoglnt.dll
+0x51000000 - 0x5104D000 	D:\WINDOWS\System32\ddraw.dll
+0x73BC0000 - 0x73BC6000 	D:\WINDOWS\System32\DCIMAN32.dll
+0x746F0000 - 0x74716000 	D:\WINDOWS\System32\Msimtf.dll
+0x74720000 - 0x74764000 	D:\WINDOWS\System32\MSCTF.dll
+0x76C90000 - 0x76CB2000 	D:\WINDOWS\system32\imagehlp.dll
+0x6D510000 - 0x6D58D000 	D:\WINDOWS\system32\DBGHELP.dll
+0x77C00000 - 0x77C07000 	D:\WINDOWS\system32\VERSION.dll
+0x76BF0000 - 0x76BFB000 	D:\WINDOWS\System32\PSAPI.DLL
+
+Local Time = Fri Aug 06 10:32:38 2004
+Elapsed Time = 1110
+#
+# The exception above was detected in native code outside the VM
+#
+# Java VM: Java HotSpot(TM) Client VM (1.4.0-b92 mixed mode)
+#

@@ -1,0 +1,99 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 839 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSP17C.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/839.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Baitap\VC\Debug\839\839.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSP17C.tmp" 
+Creating temporary file "C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSP17D.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/839.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Baitap\VC\Debug\839\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSP17D.tmp" 
+Creating temporary file "C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSP17E.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/839.pdb" /debug /machine:I386 /out:"Debug/839.exe" /pdbtype:sept 
+.\Debug\839.obj
+.\Debug\StdAfx.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSP17E.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+e:\baitap\vc\debug\839\stdafx.h(29) : error C2079: 'ngaytiepnhan' uses undefined struct 'ngay'
+e:\baitap\vc\debug\839\stdafx.cpp(5) : error C2059: syntax error : 'PCH creation point'
+d:\program files\microsoft visual studio\vc98\include\stdlib.h(37) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+e:\baitap\vc\debug\839\stdafx.cpp(6) : error C2059: syntax error : 'PCH creation point'
+d:\program files\microsoft visual studio\vc98\include\stdio.h(36) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+e:\baitap\vc\debug\839\stdafx.cpp(7) : error C2059: syntax error : 'PCH creation point'
+d:\program files\microsoft visual studio\vc98\include\string.h(28) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+e:\baitap\vc\debug\839\stdafx.cpp(8) : error C2059: syntax error : 'PCH creation point'
+e:\baitap\vc\debug\839\stdafx.cpp(13) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+e:\baitap\vc\debug\839\stdafx.cpp(24) : error C2535: 'struct ngay::node *__thiscall ngay::getnode(struct ngay::daily)' : member function already defined or declared
+        e:\baitap\vc\debug\839\stdafx.h(48) : see declaration of 'getnode'
+e:\baitap\vc\debug\839\stdafx.cpp(34) : error C2535: 'void __thiscall ngay::init(struct ngay::list &)' : member function already defined or declared
+        e:\baitap\vc\debug\839\stdafx.h(47) : see declaration of 'init'
+e:\baitap\vc\debug\839\stdafx.cpp(39) : error C2556: 'int __thiscall ngay::input(char *,struct ngay::list)' : overloaded function differs only by return type from 'void __thiscall ngay::input(char *,struct ngay::list)'
+        e:\baitap\vc\debug\839\stdafx.h(50) : see declaration of 'input'
+e:\baitap\vc\debug\839\stdafx.cpp(39) : error C2371: 'input' : redefinition; different basic types
+        e:\baitap\vc\debug\839\stdafx.h(50) : see declaration of 'input'
+e:\baitap\vc\debug\839\stdafx.cpp(40) : error C2143: syntax error : missing ';' before '*'
+e:\baitap\vc\debug\839\stdafx.cpp(40) : error C2501: 'FILE' : missing storage-class or type specifiers
+e:\baitap\vc\debug\839\stdafx.cpp(40) : error C2065: 'fopen' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(40) : error C2065: 'filename' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(40) : error C2258: illegal pure syntax, must be '= 0'
+e:\baitap\vc\debug\839\stdafx.cpp(40) : error C2501: 'fp' : missing storage-class or type specifiers
+e:\baitap\vc\debug\839\stdafx.cpp(41) : error C2059: syntax error : 'if'
+e:\baitap\vc\debug\839\stdafx.cpp(42) : error C2238: unexpected token(s) preceding ';'
+e:\baitap\vc\debug\839\stdafx.cpp(45) : error C2059: syntax error : 'while'
+e:\baitap\vc\debug\839\stdafx.cpp(46) : error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+e:\baitap\vc\debug\839\stdafx.cpp(51) : error C2061: syntax error : identifier 'fp'
+e:\baitap\vc\debug\839\stdafx.cpp(52) : error C2059: syntax error : 'return'
+e:\baitap\vc\debug\839\stdafx.cpp(52) : error C2238: unexpected token(s) preceding ';'
+e:\baitap\vc\debug\839\stdafx.cpp(55) : error C2628: 'ngay' followed by 'void' is illegal (did you forget a ';'?)
+e:\baitap\vc\debug\839\stdafx.cpp(55) : error C2065: 'LIST' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(55) : error C2065: 'l' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(56) : error C2448: '<Unknown>' : function-style initializer appears to be a function definition
+e:\baitap\vc\debug\839\stdafx.cpp(64) : error C2061: syntax error : identifier 'LIST'
+e:\baitap\vc\debug\839\stdafx.cpp(66) : error C2065: 'FILE' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(66) : error C2065: 'fp' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(66) : error C2106: '=' : left operand must be l-value
+e:\baitap\vc\debug\839\stdafx.cpp(69) : error C2065: 'NODE' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(69) : error C2065: 'p' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(69) : error C2228: left of '.pHead' must have class/struct/union type
+e:\baitap\vc\debug\839\stdafx.cpp(69) : error C2227: left of '->pNext' must point to class/struct/union
+e:\baitap\vc\debug\839\stdafx.cpp(71) : error C2065: 'fwrite' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(71) : error C2227: left of '->info' must point to class/struct/union
+e:\baitap\vc\debug\839\stdafx.cpp(71) : error C2065: 'DAILY' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(77) : error C2065: 'x' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(78) : error C2448: '<Unknown>' : function-style initializer appears to be a function definition
+e:\baitap\vc\debug\839\stdafx.cpp(88) : error C2065: 'NGAY' : undeclared identifier
+e:\baitap\vc\debug\839\stdafx.cpp(88) : error C2146: syntax error : missing ')' before identifier 'x'
+e:\baitap\vc\debug\839\stdafx.cpp(88) : error C2182: 'xuat' : illegal use of type 'void'
+e:\baitap\vc\debug\839\stdafx.cpp(88) : error C2059: syntax error : ')'
+e:\baitap\vc\debug\839\stdafx.cpp(89) : error C2143: syntax error : missing ';' before '{'
+e:\baitap\vc\debug\839\stdafx.cpp(89) : error C2447: missing function header (old-style formal list?)
+e:\baitap\vc\debug\839\stdafx.cpp(93) : error C2146: syntax error : missing ')' before identifier 'l'
+e:\baitap\vc\debug\839\stdafx.cpp(93) : error C2059: syntax error : ')'
+e:\baitap\vc\debug\839\stdafx.cpp(94) : error C2143: syntax error : missing ';' before '{'
+e:\baitap\vc\debug\839\stdafx.cpp(94) : error C2447: missing function header (old-style formal list?)
+e:\baitap\vc\debug\839\stdafx.cpp(107) : error C2146: syntax error : missing ';' before identifier 'timtiepnhan'
+e:\baitap\vc\debug\839\stdafx.cpp(107) : error C2501: 'DAILY' : missing storage-class or type specifiers
+e:\baitap\vc\debug\839\stdafx.cpp(107) : fatal error C1004: unexpected end of file found
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+839.exe - 56 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+6
+001
+Nguyen Dang Khoa
+10000000
+002
+Nguyen Trung Kien
+5000000
+003
+Nguyen Thi Nhu Anh
+7000000
+004
+Huynh Duy Khuong
+9500000
+005
+Nguyen Hue Nghi
+8000000
+006
+Truong Dinh Kim
+9000000

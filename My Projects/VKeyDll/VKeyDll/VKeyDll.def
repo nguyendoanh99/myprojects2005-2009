@@ -1,0 +1,5 @@
+LIBRARY	"VKeyDll"
+EXPORTS
+	doSetGlobalHook
+	doRemoveGlobalHook
+

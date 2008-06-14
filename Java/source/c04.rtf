@@ -1,0 +1,895 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff17\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f14\fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}
+{\f17\fnil\fcharset0\fprq2{\*\panose 00000000000000000000}VNI-Centur;}{\f18\fnil\fcharset0\fprq2{\*\panose 00000000000000000000}VNI-Couri;}{\f19\fnil\fcharset0\fprq2{\*\panose 00000000000000000000}VNI-Times;}
+{\f20\fnil\fcharset0\fprq2{\*\panose 00000000000000000000}VNI Centur;}{\f21\fnil\fcharset0\fprq2{\*\panose 00000000000000000000}VNI Times;}{\f22\froman\fcharset238\fprq2 Times New Roman CE;}{\f23\froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f25\froman\fcharset161\fprq2 Times New Roman Greek;}{\f26\froman\fcharset162\fprq2 Times New Roman Tur;}{\f27\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f28\fswiss\fcharset238\fprq2 Arial CE;}{\f29\fswiss\fcharset204\fprq2 Arial Cyr;}
+{\f31\fswiss\fcharset161\fprq2 Arial Greek;}{\f32\fswiss\fcharset162\fprq2 Arial Tur;}{\f33\fswiss\fcharset186\fprq2 Arial Baltic;}{\f34\fmodern\fcharset238\fprq1 Courier New CE;}{\f35\fmodern\fcharset204\fprq1 Courier New Cyr;}
+{\f37\fmodern\fcharset161\fprq1 Courier New Greek;}{\f38\fmodern\fcharset162\fprq1 Courier New Tur;}{\f39\fmodern\fcharset186\fprq1 Courier New Baltic;}{\f136\fnil\fcharset238\fprq2 VNI-Times CE;}{\f140\fnil\fcharset162\fprq2 VNI-Times Tur;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;
+\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \snext0 Normal,Book_normal;}{
+\s1\sb120\keepn\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\ls177\adjustright \b\caps\f17\fs20\ul\kerning28\cgrid \sbasedon0 \snext0 heading 1;}{\s2\qj\li284\sb120\keepn\nowidctlpar\widctlpar
+\tx284\tx567\tx851\tx1134\tx1418\abslock1\ls178\ilvl1\adjustright \b\f17\fs22\cgrid \sbasedon0 \snext15 heading 2;}{\s3\qj\li567\sb120\keepn\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\abslock1\ls179\ilvl2\adjustright \b\f17\fs20\cgrid 
+\sbasedon0 \snext16 heading 3;}{\s4\qj\li851\sb120\keepn\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\ls180\ilvl3\adjustright \b\f17\fs20\cgrid \sbasedon0 \snext17 heading 4;}{\s5\qj\li1134\nowidctlpar\widctlpar
+\tx284\tx567\tx851\abslock1\ls181\ilvl4\adjustright \b\f17\fs20\cgrid \sbasedon0 \snext18 heading 5;}{\s6\qj\li1418\sb240\sa60\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\ls182\ilvl5\adjustright \i\fs22\cgrid \sbasedon0 \snext0 heading 6;}{
+\s7\qj\fi567\sb240\sa60\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f1\fs20\cgrid \sbasedon0 \snext0 heading 7;}{\s8\qj\fi567\sb240\sa60\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \i\f1\fs20\cgrid \sbasedon0 \snext0 
+heading 8;}{\s9\qj\fi567\sb240\sa60\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \b\i\f1\fs18\cgrid \sbasedon0 \snext0 heading 9;}{\*\cs10 \additive Default Paragraph Font;}{\s15\qj\fi567\sb120\nowidctlpar\widctlpar
+\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \sbasedon0 \snext15 Body Text Indent 2;}{\s16\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \sbasedon0 \snext16 Body Text Indent 3;}{
+\s17\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \sbasedon0 \snext17 Body Text Indent 4;}{\s18\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \sbasedon0 \snext18 
+Body Text Indent 5;}{\s19\qj\fi567\sb120\nowidctlpar\widctlpar\tqc\tx3402\tqr\tx6804\abslock1\adjustright \b\f17\fs18\up6\cgrid \sbasedon0 \snext19 header,Header_1;}{\s20\qj\fi-284\li284\sb120\nowidctlpar\widctlpar
+\tx284\jclisttab\tx360\tx567\tx851\abslock1{\*\pn \pnlvlbody\ilvl0\ls176\pnrnot0\pndec }\ls176\adjustright \i\f17\fs20\cgrid \sbasedon0 \snext20 footnote text;}{\s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright 
+\b\f18\fs18\cgrid \sbasedon0 \snext21 Example;}{\s22\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\adjustright \f17\fs20\cgrid \sbasedon0 \snext22 Body Text;}{\s23\qj\fi567\li567\ri567\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright 
+\i\f17\fs20\cgrid \sbasedon0 \snext23 Block Text,Contents;}{\s24\qc\sb120\sa60\nowidctlpar\widctlpar\abslock1\adjustright \b\caps\f17\cgrid \sbasedon0 \snext0 caption;}{\s25\fi567\li567\ri567\nowidctlpar\widctlpar\tx284\tx567\tx851\adjustright 
+\b\i\f17\fs22\ul\cgrid \sbasedon23 \snext23 TOMTAT;}{\s26\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\outlinelevel0\adjustright \shading1250\cbpat8 \b\f17\fs18\cgrid \sbasedon0 \snext21 Sample_title;}{
+\s27\qc\sb60\nowidctlpar\widctlpar\abslock1\adjustright \b\i\f17\fs22\ul\kerning28\cgrid \sbasedon0 \snext24 Title;}{\s28\qj\fi567\sb120\nowidctlpar\widctlpar\tqc\tx4320\tqr\tx8640\abslock1\adjustright \f17\fs20\cgrid \sbasedon0 \snext28 footer;}{
+\s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid \sbasedon30 \snext21 explanation;}{\s30\qc\fi567\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs16\cgrid \sbasedon0 \snext30 Body Text 2;}{
+\s31\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \sbasedon22 \snext31 Body Text First Indent;}{\s32\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \cbpat9 \f19\fs20\cgrid 
+\sbasedon0 \snext32 Document Map;}{\s33\qj\nowidctlpar\widctlpar\adjustright \f2\cgrid \sbasedon0 \snext33 CodeStyle;}{\s34\qc\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid \sbasedon0 \snext34 Body Text 3;}{\*\cs35 
+\additive \ul\cf2 \sbasedon10 Hyperlink;}{\*\cs36 \additive \ul\cf12 \sbasedon10 FollowedHyperlink;}{\s37\qj\nowidctlpar\widctlpar\adjustright \f2\fs20\cf10\cgrid \sbasedon33 \snext37 CommentEnglish;}{\*\cs38 \additive 
+\f19\fs20\expnd0\expndtw0\up0\nosupersub\kerning20\animtext0\charscalex100 \sbasedon10 Typewriter;}{\s39\fi567\sb100\sa100\keepn\nowidctlpar\widctlpar\outlinelevel4\adjustright \b \sbasedon0 \snext0 H4;}{
+\s40\fi567\li360\ri360\sb100\sa100\nowidctlpar\widctlpar\adjustright \sbasedon0 \snext40 Blockquote;}{\*\cs41 \additive \f2\fs20 CODE;}{\s42\fi567\nowidctlpar\widctlpar\tx0\tx959\tx1918\tx2877\tx3836\tx4795\tx5754\tx6713\tx7672\tx8631\tx9590\adjustright 
+\f2\fs20 \sbasedon0 \snext42 Preformatted;}{\s43\nowidctlpar\widctlpar\adjustright \sbasedon0 \snext44 Definition Term;}{\s44\li360\nowidctlpar\widctlpar\adjustright \sbasedon0 \snext43 Definition List;}{
+\s45\sb100\sa100\keepn\nowidctlpar\widctlpar\outlinelevel2\adjustright \b\fs36 \sbasedon0 \snext0 H2;}{\*\cs46 \additive \b \sbasedon10 Strong;}{\*\cs47 \additive \i \sbasedon10 Emphasis;}{\*\cs48 \additive \b\f18\fs20 Sample;}{
+\s49\qj\fi-288\li144\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \b\f17\fs20\cgrid \sbasedon0 \snext22 Bold;}{\*\cs50 \additive \f17\super \sbasedon10 footnote reference;}{
+\s51\qj\sb120\nowidctlpar\widctlpar\abslock1\ls183\adjustright \f17\fs20\cgrid \sbasedon0 \snext0 \sautoupd toc 1;}{\s52\qj\nowidctlpar\widctlpar\abslock1\ls184\adjustright \f17\fs20\cgrid \sbasedon51 \snext51 indent01;}{
+\s53\qj\fi567\li144\ri432\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid \sbasedon0 \snext22 italic;}{\s54\qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \b\f20\cgrid \sbasedon0 \snext0 
+toa heading;}{\s55\qj\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\ls185\adjustright \b\f17\fs20\cgrid \sbasedon54 \snext51 mucluc;}}{\*\listtable{\list\listtemplateid-1\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat0
+\levelspace0\levelindent0{\leveltext\'01*;}{\levelnumbers;}}{\listname ;}\listid-2}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}
+\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid10764922}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 
+\fi-360\li360\jclisttab\tx360 }{\listname ;}\listid49116778}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360
+\jclisttab\tx360 }{\listname ;}\listid88745174}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }
+{\listname ;}\listid89011390}{\list\listtemplateid67698691\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3928 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid93717703}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid104884019}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid113526975}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid124007416}
+{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid127626062}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid130482818}
+{\list\listtemplateid188413428{\listlevel\levelnfc1\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'09Ch\'f6\'f4ng \'00.;}{\levelnumbers\'08;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs20\nosupersub\striked0\fbias0 \s51}
+{\listlevel\levelnfc22\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs18\nosupersub\striked0\fbias0 \li284 }{\listlevel\levelnfc4\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'02);}{\levelnumbers\'02;}\fi-432\li720\jclisttab\tx720 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'03);}{\levelnumbers\'02;}
+\fi-144\li864\jclisttab\tx864 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'04);}{\levelnumbers\'01;}\fi-432\li1008\jclisttab\tx1008 }{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'02\'05);}{\levelnumbers\'01;}\fi-432\li1152\jclisttab\tx1152 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'06);}{\levelnumbers\'01;}\fi-288\li1296
+\jclisttab\tx1296 }{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'07.;}{\levelnumbers\'01;}\fi-432\li1440\jclisttab\tx1440 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'02\'08.;}{\levelnumbers\'01;}\fi-144\li1584\jclisttab\tx1584 }{\listname ;}\listid148836978}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid149249557}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid149642418}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid172186755}{\list\listtemplateid827484434{\listlevel\levelnfc1\leveljc0\levelfollow1\levelstartat1\levellegal\levelspace0\levelindent0{\leveltext
+\'09Ch\'f6\'f4ng \'00.;}{\levelnumbers\'08;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs20\nosupersub\striked0\fbias0 \s55}{\listlevel\levelnfc22\leveljc0\levelfollow0\levelstartat1\levellegal\levelspace0\levelindent0{\leveltext
+\'0bSection \'00.\'01;}{\levelnumbers\'09\'0b;}\jclisttab\tx1800 }{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'02);}{\levelnumbers\'02;}\fi-432\li720\jclisttab\tx720 }{\listlevel\levelnfc2\leveljc2
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03(\'03);}{\levelnumbers\'02;}\fi-144\li864\jclisttab\tx864 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'04);}{\levelnumbers\'01;}
+\fi-432\li1008\jclisttab\tx1008 }{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'05);}{\levelnumbers\'01;}\fi-432\li1152\jclisttab\tx1152 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'02\'06);}{\levelnumbers\'01;}\fi-288\li1296\jclisttab\tx1296 }{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'07.;}{\levelnumbers\'01;}\fi-432\li1440
+\jclisttab\tx1440 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'08.;}{\levelnumbers\'01;}\fi-144\li1584\jclisttab\tx1584 }{\listname ;}\listid174535465}{\list\listtemplateid67698689\listsimple
+{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid179854336}{\list\listtemplateid1306194950{\listlevel\levelnfc1
+\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'09Ch\'f6\'f4ng \'00.;}{\levelnumbers\'08;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs20\nosupersub\striked0\fbias0 \s52}{\listlevel\levelnfc22\leveljc0\levelfollow1
+\levelstartat1\levelspace0\levelindent0{\leveltext\'05\'00.\'01 :;}{\levelnumbers\'01\'03;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs18\nosupersub\striked0\fbias0 \li284 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0
+\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs18\ulnone\cf1\nosupersub\striked0\fbias0 \li567 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'03(\'03);}{\levelnumbers\'02;}\fi-144\li864\jclisttab\tx864 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'04);}{\levelnumbers\'01;}\fi-432\li1008\jclisttab\tx1008 }{\listlevel
+\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'05);}{\levelnumbers\'01;}\fi-432\li1152\jclisttab\tx1152 }{\listlevel\levelnfc2\leveljc2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'02\'06);}{\levelnumbers\'01;}\fi-288\li1296\jclisttab\tx1296 }{\listlevel\levelnfc4\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'07.;}{\levelnumbers\'01;}\fi-432\li1440\jclisttab\tx1440 }{\listlevel\levelnfc2\leveljc2
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'08.;}{\levelnumbers\'01;}\fi-144\li1584\jclisttab\tx1584 }{\listname ;}\listid181942079}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid202334222}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid217278543}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid222956735}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid224489984}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid232546113}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid236328728}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid260602284}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid274025091}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid277611428}{\list\listtemplateid-1565783844\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3844 ?;}{\levelnumbers;}\f14\fbias0 \fi-567\li567\jclisttab\tx567 }{\listname ;}\listid286358604}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid299193383}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid305940898}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid308871660}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid329646540}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid353776811}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid359279452}{\list\listtemplateid67698691\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3928 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid365526366}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid368409563}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid375203950}{\list\listtemplateid-1755271416\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'02\'00.;}{\levelnumbers\'01;}\fbias0 \fi-360\li927\jclisttab\tx927 }{\listname ;}\listid414323284}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid419646230}{\list\listtemplateid1560296332\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat13\levelspace0\levelindent0{\leveltext
+\'01\'00;}{\levelnumbers\'01;}\f2\fbias0 \fi-1440\li2160\jclisttab\tx2160 }{\listname ;}\listid419646623}{\list\listtemplateid-26322684{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers
+\'01;}\b\i0\strike0\shad0\embo0\impr0\caps\v0\f19\fs20\ul\cf0\nosupersub\striked0\fbias0 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}\fi-432\li792\jclisttab\tx792 }
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers\'01\'03\'05;}\fi-504\li1224\jclisttab\tx1224 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}\fi-648\li1728\jclisttab\tx1728 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers
+\'01\'03\'05\'07\'09;}\fi-792\li2232\jclisttab\tx2232 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fi-936\li2736
+\jclisttab\tx2736 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fi-1080\li3240\jclisttab\tx3240 }{\listlevel\levelnfc0
+\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fi-1224\li3744\jclisttab\tx3744 }{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fi-1440\li4320\jclisttab\tx4320 }{\listname ;}\listid425813642}{\list\listtemplateid67698689
+\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid443382947}{\list\listtemplateid-1683870966\listsimple
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00);}{\levelnumbers\'01;}\b0\i\strike0\shad0\embo0\impr0\caps0\v0\f19\fs18\cf0\super\striked0\fbias0 \s20\fi-284\li284\jclisttab\tx360 }{\listname 
+;}\listid476803531}{\list\listtemplateid779383024{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\b\i0\outl0\shad0\embo0\impr0\caps\v0\f19\fs20\ul\cf0\nosupersub\fbias0 }
+{\listlevel\levelnfc255\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'041.1.;}{\levelnumbers;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\ulnone\cf0\nosupersub\striked0\fbias0 \li284 }{\listlevel\levelnfc255\leveljc0
+\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'061.1.1.;}{\levelnumbers;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 \li567 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0
+\levelindent0{\leveltext\'081.1.1.\'03.;}{\levelnumbers\'07;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\nosupersub\striked0\fbias0 \li851 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext
+\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\nosupersub\striked0\fbias0 \li1134 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fi-1152\li1152\jclisttab\tx1152 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fi-1296\li1296\jclisttab\tx1296 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fi-1440\li1440\jclisttab\tx1440 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fi-1584\li1584\jclisttab\tx1584 }{\listname ;}\listid490756724}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid510069366}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid518080956}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid518859085}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid532429019}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid537164184}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid539510269}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid576747383}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid584386010}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid667638970}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid690911803}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid716204899}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid719596355}{\list\listtemplateid130061390{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers
+\'01;}\b\i0\strike0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}
+\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f21\fs22\cf0\nosupersub\striked0\fbias0 \li284 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers\'01\'03\'05;}
+\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 \s18\li851 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}
+\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs20\cf0\nosupersub\striked0\fbias0 \li851 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers\'01\'03\'05\'07\'09;}
+\fi-792\li2232\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fi-936\li2736\jclisttab\tx3600 }{\listlevel
+\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fi-1080\li3240\jclisttab\tx3960 }{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fi-1224\li3744\jclisttab\tx4680 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fi-1440\li4320\jclisttab\tx5400 }{\listname ;}\listid775953017}{\list\listtemplateid174385410{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat129\levelspace0\levelindent0{\leveltext\'01\'00;}{\levelnumbers\'01;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat74\levelspace0\levelindent0{\leveltext
+\'03\'00.\'01;}{\levelnumbers\'01\'03;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat250\levelspace0\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-2880\li2880
+\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat103\levelspace0\levelindent0{\leveltext\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listname ;}\listid776607401}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid784810162}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid786385562}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid786701110}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid799490902}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid803884430}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid808090059}{\list\listtemplateid-1565783844\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3844 ?;}{\levelnumbers;}\f14\fbias0 \fi-567\li567\jclisttab\tx567 }{\listname ;}\listid811480296}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid813831694}{\list\listtemplateid67698691\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3928 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid834423078}{\list\listtemplateid-1392240208{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers
+\'01;}\fbias0 \fi-360\li360\jclisttab\tx360 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat2\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}\fbias0 \fi-360\li644\jclisttab\tx644 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-720\li1288\jclisttab\tx1288 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-720\li1572\jclisttab\tx1572 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers
+\'01\'03\'05\'07\'09;}\fbias0 \fi-1080\li2216\jclisttab\tx2216 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 
+\fi-1080\li2500\jclisttab\tx2500 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-1440\li3144\jclisttab\tx3144 }
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-1440\li3428\jclisttab\tx3428 }{\listlevel\levelnfc0
+\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-1800\li4072\jclisttab\tx4072 }{\listname ;}\listid867327904}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid888957785}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid891649718}
+{\list\listtemplateid296269508\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01/;}{\levelnumbers;}\b\i\f19\fs20\fbias0 \li284\jclisttab\tx644 }{\listname ;}\listid897134270}
+{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid909001199}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid912815484}
+{\list\listtemplateid1313236330{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\b\i0\strike0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 \s1}{\listlevel
+\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f21\fs22\cf0\nosupersub\striked0\fbias0 \s2\li284 }{\listlevel\levelnfc0\leveljc0
+\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers\'01\'03\'05;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 \s3\li567 }{\listlevel\levelnfc0\leveljc0\levelfollow1
+\levelstartat1\levelspace0\levelindent0{\leveltext\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs20\cf0\nosupersub\striked0\fbias0 \s4\li851 }{\listlevel\levelnfc0\leveljc0\levelfollow1
+\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers\'01\'03\'05\'07\'09;}\b\i0\f19\fs20\fbias0 \s5\li1134 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext
+\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs20\nosupersub\striked0\fbias0 \s6\li1418 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fi-1080\li3240\jclisttab\tx3960 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fi-1224\li3744\jclisttab\tx4680 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fi-1440\li4320\jclisttab\tx5400 }{\listname ;}\listid916671021}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid922563587}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid943071936}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid970015335}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid988904608}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid993022247}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1009673218}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1011838209}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1025056989}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1029796214}{\list\listtemplateid-949299512\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat5\levelspace0\levelindent0{\leveltext
+\'01-;}{\levelnumbers;}\f0\fbias0 \fi-360\li840\jclisttab\tx840 }{\listname ;}\listid1044721442}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1063210956}{\list\listtemplateid1298427240{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat127\levelspace0\levelindent0{\leveltext\'01\'00;}{\levelnumbers
+\'01;}\fbias0 \fi-855\li855\jclisttab\tx855 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\fbias0 \fi-855\li855\jclisttab\tx855 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-855\li855\jclisttab\tx855 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-1080\li1080\jclisttab\tx1080 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers
+\'01\'03\'05\'07\'09;}\fbias0 \fi-1080\li1080\jclisttab\tx1080 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 \fi-1440\li1440
+\jclisttab\tx1440 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-1800\li1800\jclisttab\tx1800 }{\listlevel
+\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-1800\li1800\jclisttab\tx1800 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-2160\li2160\jclisttab\tx2160 }{\listname ;}\listid1074397437}
+{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1081829492}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1082222627}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1096093217}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1102185381}
+{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1105660223}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1124933248}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1132862745}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1137406763}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1172793209}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1188716744}
+{\list\listtemplateid1112473426\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat127\levelspace0\levelindent0{\leveltext\'01-;}{\levelnumbers;}\f0\fbias0 \fi-360\li927\jclisttab\tx927 }{\listname ;}\listid1188909638}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1206061888}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1220214945}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1222524814}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1223250636}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1240556826}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1246453892}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1279607682}
+{\list\listtemplateid-1894493346{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat129\levelspace0\levelindent0{\leveltext\'01\'00;}{\levelnumbers\'01;}\fbias0 \fi-2880\li2880\jclisttab\tx2880 }{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat74\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\fbias0 \fi-2880\li3120\jclisttab\tx3120 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat250\levelspace0\levelindent0{\leveltext
+\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-2880\li3360\jclisttab\tx3360 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat103\levelspace0\levelindent0{\leveltext\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 
+\fi-2880\li3600\jclisttab\tx3600 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\fbias0 \fi-2880\li3840\jclisttab\tx3840 }{\listlevel
+\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 \fi-2880\li4080\jclisttab\tx4080 }{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-2880\li4320\jclisttab\tx4320 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-2880\li4560\jclisttab\tx4560 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-2880\li4800\jclisttab\tx4800 }{\listname ;}\listid1295284080}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1311331185}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1326855771}{\list\listtemplateid1942496650{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat127
+\levelspace0\levelindent0{\leveltext\'01\'00;}{\levelnumbers\'01;}\fbias0 \fi-1560\li1560\jclisttab\tx1560 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\fbias0 
+\fi-1560\li1655\jclisttab\tx1655 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat0\levelspace0\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-1560\li1750\jclisttab\tx1750 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-1560\li1845\jclisttab\tx1845 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\fbias0 \fi-1560\li1940\jclisttab\tx1940 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers
+\'01\'03\'05\'07\'09\'0b;}\fbias0 \fi-1560\li2035\jclisttab\tx2035 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 
+\fi-1560\li2130\jclisttab\tx2130 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-1560\li2225
+\jclisttab\tx2225 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-1560\li2320\jclisttab\tx2320 
+}{\listname ;}\listid1326973599}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1327440912}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1335106702}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1350447243}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1369723510}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1373261818}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1384909090}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1414090037}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1414349925}{\list\listtemplateid-349640116\listsimple{\listlevel\levelnfc3\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fbias0 \fi-360\li1124\jclisttab\tx1124 }{\listname 
+;}\listid1431392424}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1439986975}{\list\listtemplateid-1565783844\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3844 ?;}{\levelnumbers;}\f14\fbias0 \fi-567\li567\jclisttab\tx567 }{\listname 
+;}\listid1445463890}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname 
+;}\listid1450201040}{\list\listtemplateid-2111020548{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}
+\b\i0\strike0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}
+\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f21\fs22\cf0\nosupersub\striked0\fbias0 \li284 }{\listlevel\levelnfc0\leveljc0\levelfollow1\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers\'01\'03\'05;}
+\b\i0\strike0\outl0\shad0\embo0\impr0\caps0\v0\f19\fs22\cf0\nosupersub\striked0\fbias0 \li851 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}
+\fi-648\li1728\jclisttab\tx2160 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers\'01\'03\'05\'07\'09;}\fi-792\li2232\jclisttab\tx2880 }{\listlevel\levelnfc0
+\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fi-936\li2736\jclisttab\tx3600 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fi-1080\li3240\jclisttab\tx3960 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fi-1224\li3744\jclisttab\tx4680 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fi-1440\li4320\jclisttab\tx5400 }{\listname ;}\listid1460763849}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1485928812}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1492208682}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1535381200}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1572154131}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1597061020}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1598713920}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1605649793}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1609121169}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1614047810}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1637296800}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1644920223}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1648558429}{\list\listtemplateid-600155408\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3874 ?;}{\levelnumbers;}\f3\cf0\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1664507606}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1666939122}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1673138061}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1674332797}{\list\listtemplateid-1620138050{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers
+\'01;}\fbias0 \fi-360\li360\jclisttab\tx360 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}\fbias0 \fi-360\li644\jclisttab\tx644 }{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers\'01\'03\'05;}\fbias0 \fi-720\li1288\jclisttab\tx1288 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-720\li1572\jclisttab\tx1572 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers
+\'01\'03\'05\'07\'09;}\fbias0 \fi-1080\li2216\jclisttab\tx2216 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 
+\fi-1080\li2500\jclisttab\tx2500 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-1440\li3144\jclisttab\tx3144 }
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-1440\li3428\jclisttab\tx3428 }{\listlevel\levelnfc0
+\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-1800\li4072\jclisttab\tx4072 }{\listname ;}\listid1686979448}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1692950485}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1697922306}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1707832710}
+{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1742681658}
+{\list\listtemplateid67698703\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1746800370}
+{\list\listtemplateid-1620138050{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fbias0 \fi-360\li360\jclisttab\tx360 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'04\'00.\'01.;}{\levelnumbers\'01\'03;}\fbias0 \fi-360\li644\jclisttab\tx644 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'06\'00.\'01.\'02.;}{\levelnumbers
+\'01\'03\'05;}\fbias0 \fi-720\li1288\jclisttab\tx1288 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'08\'00.\'01.\'02.\'03.;}{\levelnumbers\'01\'03\'05\'07;}\fbias0 \fi-720\li1572\jclisttab\tx1572 }
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0a\'00.\'01.\'02.\'03.\'04.;}{\levelnumbers\'01\'03\'05\'07\'09;}\fbias0 \fi-1080\li2216\jclisttab\tx2216 }{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'0c\'00.\'01.\'02.\'03.\'04.\'05.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\fbias0 \fi-1080\li2500\jclisttab\tx2500 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'0e\'00.\'01.\'02.\'03.\'04.\'05.\'06.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\fbias0 \fi-1440\li3144\jclisttab\tx3144 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'10\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\fbias0 \fi-1440\li3428\jclisttab\tx3428 }{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'12\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08.;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\fbias0 \fi-1800\li4072\jclisttab\tx4072 }{\listname ;}\listid1747259521}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1750686069}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1754468900}{\list\listtemplateid67698691\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3928 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1766073451}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1780681429}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1785493078}{\list\listtemplateid1160515496\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'02\'00.;}{\levelnumbers\'01;}\fbias0 \fi-360\li927\jclisttab\tx927 }{\listname ;}\listid1787770880}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1792629109}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1820460627}{\list\listtemplateid151654886{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat2\levelspace0\levelindent0{\leveltext\'01-;}{\levelnumbers;}
+\fbias0 \fi-360\li927\jclisttab\tx927 }{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li1647\jclisttab\tx1647 }{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li2367\jclisttab\tx2367 }{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}
+\f3\fbias0 \fi-360\li3087\jclisttab\tx3087 }{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li3807\jclisttab\tx3807 }{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li4527\jclisttab\tx4527 }{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}
+\f3\fbias0 \fi-360\li5247\jclisttab\tx5247 }{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01o;}{\levelnumbers;}\f2\fbias0 \fi-360\li5967\jclisttab\tx5967 }{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li6687\jclisttab\tx6687 }{\listname ;}\listid1829976820}{\list\listtemplateid-2077344354\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\b\i0\strike0\shad0\embo0\impr0\caps\v0\f19\fs20\cf0\nosupersub\striked0\fbias0 \jclisttab\tx360 }{\listname ;}\listid1836064330}{\list\listtemplateid67698689\listsimple
+{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1841964225}{\list\listtemplateid67698689\listsimple{\listlevel
+\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1867524973}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23
+\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1884094957}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1915578933}{\list\listtemplateid67698693\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0
+\levelstartat1\levelspace0\levelindent0{\leveltext\'01\u-3929 ?;}{\levelnumbers;}\f14\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1927957967}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1933659776}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1964070216}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid1973822195}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid2011250628}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid2038503046}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid2067603279}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid2078479572}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid2099982874}{\list\listtemplateid-1565783844\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3844 ?;}{\levelnumbers;}\f14\fbias0 \fi-567\li567\jclisttab\tx567 }{\listname ;}\listid2107532002}{\list\listtemplateid67698689\listsimple{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 \fi-360\li360\jclisttab\tx360 }{\listname ;}\listid2144542596}}{\*\listoverridetable{\listoverride\listid476803531\listoverridecount0\ls1}{\listoverride\listid1460763849\listoverridecount0\ls2}
+{\listoverride\listid1460763849\listoverridecount0\ls3}{\listoverride\listid1460763849\listoverridecount0\ls4}{\listoverride\listid775953017\listoverridecount0\ls5}{\listoverride\listid916671021\listoverridecount0\ls6}{\listoverride\listid476803531
+\listoverridecount0\ls7}{\listoverride\listid1787770880\listoverridecount0\ls8}{\listoverride\listid897134270\listoverridecount0\ls9}{\listoverride\listid1431392424\listoverridecount0\ls10}{\listoverride\listid1327440912\listoverridecount0\ls11}
+{\listoverride\listid1841964225\listoverridecount0\ls12}{\listoverride\listid1102185381\listoverridecount0\ls13}{\listoverride\listid149249557\listoverridecount0\ls14}{\listoverride\listid104884019\listoverridecount0\ls15}{\listoverride\listid1697922306
+\listoverridecount0\ls16}{\listoverride\listid1240556826\listoverridecount0\ls17}{\listoverride\listid1692950485\listoverridecount0\ls18}{\listoverride\listid576747383\listoverridecount0\ls19}{\listoverride\listid1485928812\listoverridecount0\ls20}
+{\listoverride\listid1742681658\listoverridecount0\ls21}{\listoverride\listid299193383\listoverridecount0\ls22}{\listoverride\listid776607401\listoverridecount0\ls23}{\listoverride\listid1295284080\listoverridecount0\ls24}{\listoverride\listid1609121169
+\listoverridecount0\ls25}{\listoverride\listid518859085\listoverridecount0\ls26}{\listoverride\listid719596355\listoverridecount0\ls27}{\listoverride\listid1223250636\listoverridecount0\ls28}{\listoverride\listid786701110\listoverridecount0\ls29}
+{\listoverride\listid222956735\listoverridecount0\ls30}{\listoverride\listid943071936\listoverridecount0\ls31}{\listoverride\listid1597061020\listoverridecount0\ls32}{\listoverride\listid88745174\listoverridecount0\ls33}{\listoverride\listid1754468900
+\listoverridecount0\ls34}{\listoverride\listid518080956\listoverridecount0\ls35}{\listoverride\listid10764922\listoverridecount0\ls36}{\listoverride\listid1933659776\listoverridecount0\ls37}{\listoverride\listid1188716744\listoverridecount0\ls38}
+{\listoverride\listid353776811\listoverridecount0\ls39}{\listoverride\listid1311331185\listoverridecount0\ls40}{\listoverride\listid1369723510\listoverridecount0\ls41}{\listoverride\listid1206061888\listoverridecount0\ls42}{\listoverride\listid1450201040
+\listoverridecount0\ls43}{\listoverride\listid274025091\listoverridecount0\ls44}{\listoverride\listid1074397437\listoverridecount0\ls45}{\listoverride\listid1124933248\listoverridecount0\ls46}{\listoverride\listid1535381200\listoverridecount0\ls47}
+{\listoverride\listid1707832710\listoverridecount0\ls48}{\listoverride\listid1780681429\listoverridecount0\ls49}{\listoverride\listid1172793209\listoverridecount0\ls50}{\listoverride\listid1492208682\listoverridecount0\ls51}{\listoverride\listid813831694
+\listoverridecount0\ls52}{\listoverride\listid1279607682\listoverridecount0\ls53}{\listoverride\listid443382947\listoverridecount0\ls54}{\listoverride\listid993022247\listoverridecount0\ls55}{\listoverride\listid236328728\listoverridecount0\ls56}
+{\listoverride\listid1326973599\listoverridecount0\ls57}{\listoverride\listid1188909638\listoverridecount0\ls58}{\listoverride\listid2038503046\listoverridecount0\ls59}{\listoverride\listid1063210956\listoverridecount0\ls60}{\listoverride\listid149642418
+\listoverridecount0\ls61}{\listoverride\listid1373261818\listoverridecount0\ls62}{\listoverride\listid1648558429\listoverridecount0\ls63}{\listoverride\listid2067603279\listoverridecount0\ls64}{\listoverride\listid1132862745\listoverridecount0\ls65}
+{\listoverride\listid1915578933\listoverridecount0\ls66}{\listoverride\listid1082222627\listoverridecount0\ls67}{\listoverride\listid1414349925\listoverridecount0\ls68}{\listoverride\listid359279452\listoverridecount0\ls69}{\listoverride\listid1096093217
+\listoverridecount0\ls70}{\listoverride\listid922563587\listoverridecount0\ls71}{\listoverride\listid49116778\listoverridecount0\ls72}{\listoverride\listid1246453892\listoverridecount0\ls73}{\listoverride\listid1674332797\listoverridecount0\ls74}
+{\listoverride\listid93717703\listoverridecount0\ls75}{\listoverride\listid834423078\listoverridecount0\ls76}{\listoverride\listid1766073451\listoverridecount0\ls77}{\listoverride\listid1572154131\listoverridecount0\ls78}{\listoverride\listid667638970
+\listoverridecount0\ls79}{\listoverride\listid537164184\listoverridecount0\ls80}{\listoverride\listid375203950\listoverridecount0\ls81}{\listoverride\listid365526366\listoverridecount0\ls82}{\listoverride\listid1350447243\listoverridecount0\ls83}
+{\listoverride\listid113526975\listoverridecount0\ls84}{\listoverride\listid329646540\listoverridecount0\ls85}{\listoverride\listid803884430\listoverridecount0\ls86}{\listoverride\listid2078479572\listoverridecount0\ls87}{\listoverride\listid1011838209
+\listoverridecount0\ls88}{\listoverride\listid308871660\listoverridecount0\ls89}{\listoverride\listid1598713920\listoverridecount0\ls90}{\listoverride\listid127626062\listoverridecount0\ls91}{\listoverride\listid1750686069\listoverridecount0\ls92}
+{\listoverride\listid716204899\listoverridecount0\ls93}{\listoverride\listid305940898\listoverridecount0\ls94}{\listoverride\listid1105660223\listoverridecount0\ls95}{\listoverride\listid1666939122\listoverridecount0\ls96}{\listoverride\listid970015335
+\listoverridecount0\ls97}{\listoverride\listid490756724\listoverridecount0\ls98}{\listoverride\listid1836064330\listoverridecount0\ls99}{\listoverride\listid425813642\listoverridecount0\ls100}{\listoverride\listid2011250628\listoverridecount0\ls101}
+{\listoverride\listid124007416\listoverridecount0\ls102}{\listoverride\listid1605649793\listoverridecount0\ls103}{\listoverride\listid808090059\listoverridecount0\ls104}{\listoverride\listid1137406763\listoverridecount0\ls105}
+{\listoverride\listid2099982874\listoverridecount0\ls106}{\listoverride\listid799490902\listoverridecount0\ls107}{\listoverride\listid224489984\listoverridecount0\ls108}{\listoverride\listid786385562\listoverridecount0\ls109}
+{\listoverride\listid1220214945\listoverridecount0\ls110}{\listoverride\listid690911803\listoverridecount0\ls111}{\listoverride\listid130482818\listoverridecount0\ls112}{\listoverride\listid1867524973\listoverridecount0\ls113}
+{\listoverride\listid784810162\listoverridecount0\ls114}{\listoverride\listid988904608\listoverridecount0\ls115}{\listoverride\listid1785493078\listoverridecount0\ls116}{\listoverride\listid419646230\listoverridecount0\ls117}
+{\listoverride\listid1326855771\listoverridecount0\ls118}{\listoverride\listid2144542596\listoverridecount0\ls119}{\listoverride\listid1414090037\listoverridecount0\ls120}{\listoverride\listid891649718\listoverridecount0\ls121}
+{\listoverride\listid1335106702\listoverridecount0\ls122}{\listoverride\listid1029796214\listoverridecount0\ls123}{\listoverride\listid179854336\listoverridecount0\ls124}{\listoverride\listid867327904\listoverridecount0\ls125}
+{\listoverride\listid1747259521\listoverridecount0\ls126}{\listoverride\listid1686979448\listoverridecount0\ls127}{\listoverride\listid1044721442\listoverridecount0\ls128}{\listoverride\listid1025056989\listoverridecount0\ls129}
+{\listoverride\listid419646623\listoverridecount0\ls130}{\listoverride\listid888957785\listoverridecount0\ls131}{\listoverride\listid172186755\listoverridecount0\ls132}{\listoverride\listid1222524814\listoverridecount0\ls133}
+{\listoverride\listid1820460627\listoverridecount0\ls134}{\listoverride\listid1614047810\listoverridecount0\ls135}{\listoverride\listid912815484\listoverridecount0\ls136}{\listoverride\listid1884094957\listoverridecount0\ls137}
+{\listoverride\listid89011390\listoverridecount0\ls138}{\listoverride\listid532429019\listoverridecount0\ls139}{\listoverride\listid1637296800\listoverridecount0\ls140}{\listoverride\listid1964070216\listoverridecount0\ls141}
+{\listoverride\listid1673138061\listoverridecount0\ls142}{\listoverride\listid1384909090\listoverridecount0\ls143}{\listoverride\listid368409563\listoverridecount0\ls144}{\listoverride\listid1644920223\listoverridecount0\ls145}
+{\listoverride\listid539510269\listoverridecount0\ls146}{\listoverride\listid1009673218\listoverridecount0\ls147}{\listoverride\listid1973822195\listoverridecount0\ls148}{\listoverride\listid1792629109\listoverridecount0\ls149}
+{\listoverride\listid584386010\listoverridecount0\ls150}{\listoverride\listid1664507606\listoverridecount0\ls151}{\listoverride\listid2107532002\listoverridecount0\ls152}{\listoverride\listid916671021\listoverridecount0\ls153}
+{\listoverride\listid916671021\listoverridecount0\ls154}{\listoverride\listid916671021\listoverridecount0\ls155}{\listoverride\listid916671021\listoverridecount0\ls156}{\listoverride\listid916671021\listoverridecount0\ls157}{\listoverride\listid916671021
+\listoverridecount0\ls158}{\listoverride\listid916671021\listoverridecount0\ls159}{\listoverride\listid916671021\listoverridecount0\ls160}{\listoverride\listid916671021\listoverridecount0\ls161}{\listoverride\listid916671021\listoverridecount0\ls162}
+{\listoverride\listid916671021\listoverridecount0\ls163}{\listoverride\listid916671021\listoverridecount0\ls164}{\listoverride\listid916671021\listoverridecount0\ls165}{\listoverride\listid916671021\listoverridecount0\ls166}{\listoverride\listid916671021
+\listoverridecount0\ls167}{\listoverride\listid-2\listoverridecount1{\lfolevel\listoverrideformat{\listlevel\levelnfc23\leveljc0\levelfollow0\levelstartat0\levelold\levelspace0\levelindent360{\leveltext\'01\u-3913 ?;}{\levelnumbers;}\f3\fbias0 
+\fi-360\li1440 }}\ls168}{\listoverride\listid916671021\listoverridecount0\ls169}{\listoverride\listid811480296\listoverridecount0\ls170}{\listoverride\listid916671021\listoverridecount0\ls171}{\listoverride\listid916671021\listoverridecount0\ls172}
+{\listoverride\listid1445463890\listoverridecount0\ls173}{\listoverride\listid916671021\listoverridecount0\ls174}{\listoverride\listid286358604\listoverridecount0\ls175}{\listoverride\listid476803531\listoverridecount0\ls176}{\listoverride\listid916671021
+\listoverridecount0\ls177}{\listoverride\listid916671021\listoverridecount0\ls178}{\listoverride\listid916671021\listoverridecount0\ls179}{\listoverride\listid916671021\listoverridecount0\ls180}{\listoverride\listid916671021\listoverridecount0\ls181}
+{\listoverride\listid916671021\listoverridecount0\ls182}{\listoverride\listid148836978\listoverridecount0\ls183}{\listoverride\listid181942079\listoverridecount0\ls184}{\listoverride\listid174535465\listoverridecount0\ls185}{\listoverride\listid1829976820
+\listoverridecount0\ls186}{\listoverride\listid202334222\listoverridecount0\ls187}{\listoverride\listid909001199\listoverridecount0\ls188}{\listoverride\listid510069366\listoverridecount0\ls189}{\listoverride\listid1081829492\listoverridecount0\ls190}
+{\listoverride\listid1927957967\listoverridecount0\ls191}{\listoverride\listid1439986975\listoverridecount0\ls192}{\listoverride\listid217278543\listoverridecount0\ls193}{\listoverride\listid1746800370\listoverridecount0\ls194}
+{\listoverride\listid232546113\listoverridecount0\ls195}{\listoverride\listid260602284\listoverridecount0\ls196}{\listoverride\listid277611428\listoverridecount0\ls197}{\listoverride\listid414323284\listoverridecount0\ls198}}{\info{\title Ch\'f6\'f4ng 10}
+{\author phd}{\operator JonMMx 2000}{\creatim\yr2003\mo8\dy24\hr9}{\revtim\yr2003\mo8\dy24\hr9\min8}{\printim\yr1999\mo7\dy16\hr9\min23}{\version3}{\edmins0}{\nofpages12}{\nofwords1982}{\nofchars11303}{\*\company FCV}{\nofcharsws0}{\vern71}}
+\paperw11907\paperh16840\margl851\margr4082\margt964\margb4536 \deftab284\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\formshade\viewkind1\viewscale150\pgbrdrhead\pgbrdrfoot \fet0\sectd 
+\psz9\linex0\headery680\footery0\endnhere\pgbrdropt32\sectdefaultcl {\header \pard\plain \s19\qj\fi567\sb120\nowidctlpar\widctlpar\tqc\tx3402\tqr\tx6804\abslock1\adjustright \b\f17\fs18\up6\cgrid {\lang1024 
+{\shp{\*\shpinst\shpleft130\shptop404\shpright7042\shpbottom404\shpfhdr1\shpbxcolumn\shpbypara\shpwr1\shpwrk0\shpfblwtxt0\shpz0\shplid2049{\sp{\sn shapeType}{\sv 20}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}
+{\sp{\sn shapePath}{\sv 4}}{\sp{\sn fFillOK}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}{\sp{\sn lineWidth}{\sv 12700}}{\sp{\sn fArrowheadsOK}{\sv 1}}{\sp{\sn fLine}{\sv 1}}}{\shprslt{\*\do\dobxcolumn\dobypara\dodhgt8192\dpline\dpptx0\dppty0\dpptx6912\dppty0
+\dpx130\dpy404\dpxsize6912\dpysize0\dplinew20\dplinecor0\dplinecog0\dplinecob0}}}{\shp{\*\shpinst\shpleft0\shptop0\shpright8674\shpbottom13266\shpfhdr1\shpbxpage\shpbypage\shpwr3\shpwrk0\shpfblwtxt0\shpz1\shplockanchor\shplid2050
+{\sp{\sn shapeType}{\sv 1}}{\sp{\sn fFlipH}{\sv 0}}{\sp{\sn fFlipV}{\sv 0}}{\sp{\sn fAutoTextMargin}{\sv 0}}{\sp{\sn fRotateText}{\sv 0}}{\sp{\sn fFitShapeToText}{\sv 0}}{\sp{\sn fFitTextToShape}{\sv 0}}{\sp{\sn fillColor}{\sv 0}}{\sp{\sn fFilled}{\sv 0}}
+{\sp{\sn fHitTestFill}{\sv 1}}{\sp{\sn fillShape}{\sv 1}}{\sp{\sn fillUseRect}{\sv 0}}{\sp{\sn fLine}{\sv 1}}{\sp{\sn fHitTestLine}{\sv 1}}{\sp{\sn lineFillShape}{\sv 1}}
+{\sp{\sn fShadow}{\sv 0}}{\sp{\sn fshadowObscured}{\sv 0}}{\sp{\sn fCalloutMinusX}{\sv 0}}{\sp{\sn fCalloutMinusY}{\sv 0}}{\sp{\sn fCalloutDropAuto}{\sv 0}}{\sp{\sn fCalloutLengthSpecified}{\sv 0}}}{\shprslt{\*\do\dobxpage\dobypage\dodhgt8193\dprect
+\dpx0\dpy0\dpxsize8674\dpysize13266\dpfillfgcr255\dpfillfgcg255\dpfillfgcb255\dpfillbgcr0\dpfillbgcg0\dpfillbgcb0\dpfillpat0\dplinew15\dplinecor0\dplinecog0\dplinecob0}}}}{\tab 
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {
+\lang1036 
+\par import java.applet.Applet;
+\par import java.awt.Graphics;
+\par 
+\par }{public class HelloWorld extends Applet \{
+\par     public void paint(Graphics g) \{
+\par         g.drawString("Hello world!", 50, 25);
+\par     \}
+\par \}
+\par }{\lang1036 
+\par ---------------
+\par 
+\par import java.applet.Applet;
+\par import java.awt.Graphics;
+\par 
+\par }{public class Simple extends Applet \{
+\par 
+\par     public void init() \{
+\par            System.out.println("initializing... ");
+\par     \}
+\par 
+\par     public void start() \{
+\par            System.out.println("starting... ");
+\par     \}
+\par 
+\par     public void stop() \{
+\par           System.out.println("stopping... ");
+\par     \}
+\par 
+\par     public void destroy() \{
+\par           System.out.println("preparing for unloading...");
+\par     \}
+\par 
+\par     public void paint(Graphics g) \{
+\par }{\b0          g.drawString(\ldblquote Simple Applet\rdblquote , 5, 15);
+\par     \}
+\par \}
+\par 
+\par }{----------------
+\par import java.awt.event.MouseListener;
+\par import java.awt.event.MouseEvent;
+\par }{\lang1036 import java.applet.Applet;
+\par import java.awt.Graphics;
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\lang1036 
+\par /*
+\par      Ca\'f8i \'f1a\'ebt the\'e2m giao die\'e4n MouseListener \'f1e\'e5 l\'f4\'f9p Applet co\'f9 kha\'fb na\'eang
+\par     \'f1o\'f9n nha\'e4n ca\'f9c s\'f6\'ef kie\'e4n chuo\'e4t
+\par }{*/
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {public class SimpleMouse extends Applet 
+\par  \tab \tab \tab                                 implements MouseListener \{
+\par 
+\par     StringBuffer buffer;
+\par 
+\par     public void init() \{
+\par }{\b0\i\f17\fs20             //\'d1a\'ebt bo\'e4 nghe MouseListener cho applet}{
+\par \tab \tab \tab addMouseListener(this);  
+\par              
+\par               System.out.println("initializing... ");
+\par     \}
+\par 
+\par     public void start() \{
+\par               System.out.println("starting... ");
+\par     \}
+\par 
+\par     public void stop() \{
+\par              System.out.println("stopping... ");
+\par     \}
+\par 
+\par     public void destroy() \{
+\par            System.out.println("preparing for unloading...");
+\par     \}
+\par 
+\par 
+\par     public void paint(Graphics g) \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\tab //Ve\'f5 h\'ecnh ch\'f6\'f5 nha\'e4t chung quanh vu\'f8ng hie\'e4n applet
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          g.drawRect(0, 0, 
+\par \tab \tab    getSize().width - 1,
+\par \tab \tab    getSize().height - 1);
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {
+\par \tab //Vie\'e1t do\'f8ng ch\'f6\'f5 ra applet
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {         g.drawString(\ldblquote Mouse testing\rdblquote , 5, 15);
+\par     \}
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {   /*Ca\'f9c ph\'f6\'f4ng th\'f6\'f9c x\'f6\'fb ly\'f9 chuo\'e4t tre\'e2n applet  */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {    public void mouseEntered(MouseEvent event) \{
+\par           System.out.println("Mouse Enter ");
+\par     \}
+\par 
+\par     public void mouseExited(MouseEvent event) \{
+\par          System.out.println("Mouse Exit ");
+\par     \}
+\par     public void mousePressed(MouseEvent event) \{
+\par          System.out.println("Mouse Press");
+\par     \}
+\par     public void mouseReleased(MouseEvent event) \{
+\par               System.out.println("Mouse Release");
+\par     \}
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {   // Ca\'f8i \'f1a\'ebt x\'f6\'fb ly\'f9 s\'f6\'ef kie\'e4n nha\'e1p chuo\'e4t
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {    public void mouseClicked(MouseEvent event) \{
+\par         System.out.println("click!... ");
+\par     \}
+\par \}
+\par 
+\par 
+\par }{\lang1036 ----------------------------------
+\par import java.applet.*;
+\par import java.awt.*;
+\par import java.awt.event.*;
+\par import java.lang.Math;
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\lang1036 /* ca\'e0n ca\'f8i \'f1a\'ebt the\'e2m giao tie\'e1p ActionListener 
+\par     \'f1e\'e5 nha\'e4n bie\'e1t ca\'f9c thao ta\'f9c nha\'e4p d\'f6\'f5 lie\'e4u va\'f8o ca\'f9c o\'e2 va\'ean ba\'fbn */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {public class SumAp extends Applet 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab implements ActionListener 
+\par \{
+\par     TextField textField1;
+\par     TextField textField2;
+\par 
+\par     public void init()
+\par     \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* Ta\'efo 2 o\'e2 va\'ean ba\'fbn co\'f9 k\'edch th\'f6\'f4\'f9c la\'f8 5 ky\'f9 t\'f6\'ef */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        textField1 = new TextField(5);
+\par         textField2 = new TextField(5);
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* \'d1ie\'e0n va\'f8o vu\'f8ng hie\'e5n th\'f2 cu\'fba Applet */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        add(textField1);
+\par         add(textField2);
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* Ga\'f9n gia\'f9 tr\'f2 ma\'ebc \'f1\'f2nh 0 cho ca\'fb 2 o\'e2 */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        textField1.setText("0");
+\par         textField2.setText("0");
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* Ca\'f8i \'f1a\'ebt 2 ba\'e3y s\'f6\'ef kie\'e4n  */}{\b\f18\fs18 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab \tab \tab textField1.addActionListener(this);
+\par \tab \tab \tab textField2.addActionListener(this);
+\par \tab  \}
+\par 
+\par     public void paint(Graphics g)
+\par \tab \{
+\par         int value1;
+\par         int value2;
+\par         int sum;
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* Ve\'f5 2 do\'f8ng ch\'f6\'f5 gi\'f4\'f9i thie\'e4u a\'f9ch du\'f8ng va\'f8 ke\'e1t qua\'fb */}{\b\f18\fs18 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        g.drawString("Type a number in each box.", 40, 50);
+\par         g.drawString("The sum of the values is:", 40, 75);
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* Du\'f8ng ph\'f6\'f4ng th\'f6\'f9c getText \'f1e\'e5 nha\'e4n ca\'f9c gia\'f9 tr\'f2 the\'e2m va\'f8o va\'f8 du\'f8ng ph\'f6\'f4ng th\'f6\'f9c parseInt 
+\'f1e\'e5 chuye\'e5n kie\'e5u  */}{\b\f18\fs18 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        String s = textField1.getText();
+\par         value1 = Integer.parseInt(s);
+\par         s = textField2.getText();
+\par         value2 = Integer.parseInt(s);
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* T\'ednh toa\'f9n */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        sum = value1 + value2;
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {/* Chuye\'e5n kie\'e5u ke\'e1t qua\'fb tha\'f8nh chuo\'e3i ky\'f9 t\'f6\'ef \'f1e\'e5 co\'f9 the\'e5 in ra */
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        s = String.valueOf(sum);
+\par         g.drawString(s, 80, 100);
+\par     \}
+\par 
+\par     public void actionPerformed(ActionEvent event)
+\par     \{
+\par         repaint();
+\par     \}
+\par \}
+\par }\pard\plain \qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid {
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\lang1036 -----------------------------------------
+\par import java.applet.Applet;
+\par import java.awt.*;
+\par 
+\par }{public class EventChart  extends Applet\{
+\par 
+\par      int initCount = 0;
+\par      int startCount = 0;
+\par      int stopCount = 0; 
+\par      int destroyCount = 0;
+\par 
+\par      
+\par      public void paint (Graphics g)\{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {        \tab //Xo\'f9a tra\'e9ng vu\'f8ng ve\'f5 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {         g.setColor(Color.white);
+\par          g.fillRect(0,0,getSize().width,getSize().height);
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {
+\par \tab //Ve\'f5 la\'efi ca\'f9c pha\'e0n c\'f4 ba\'fbn cu\'fba \'f1o\'e0 th\'f2
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          g.setColor (Color.red);
+\par           g.drawLine (120,20,120,220);
+\par           g.drawLine (120,220,300,220);
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {
+\par \tab //Ve\'f5 la\'efi ca\'f9c nha\'f5n
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          g.setColor (Color.gray);
+\par           g.drawString ( "Init Count", 5,50);
+\par           g.drawString ( "Start Count", 5,100);
+\par           g.drawString ( "Stop Count", 5,150);
+\par           g.drawString ( "Destroy Count", 5,200);
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {
+\par \tab //Ve\'f5 la\'efi l\'f6\'f4\'f9i \'f1o\'e0 th\'f2 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          g.setColor(Color.lightGray);
+\par           for (int x=(120+25);x<300;x+=25)\{
+\par                g.drawLine(x,20,x,199);
+\par           \}
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {       \tab //Ve\'f5 la\'efi ca\'f9c thanh bie\'e5u die\'e3n \'f1o\'e0 th\'f2 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          g.setColor (Color.black);
+\par           g.fillRect (120,30,initCount * 25,40);
+\par           g.fillRect (120,80,startCount * 25,40);
+\par           g.fillRect (120,130,stopCount * 25, 40);
+\par           g.fillRect (120,180,destroyCount * 25, 40);
+\par      \}
+\par 
+\par 
+\par      public void update(Graphics g)\{
+\par              paint(g);
+\par      \}
+\par 
+\par      public void init()\{
+\par           initCount++;
+\par           System.out.println("init");
+\par           repaint();
+\par      \}
+\par 
+\par      public void start()\{
+\par           startCount++;
+\par           System.out.println("start");
+\par           repaint();
+\par      \}
+\par 
+\par      public void stop()\{
+\par           stopCount++;
+\par           System.out.println("stop");
+\par           repaint();
+\par      \}
+\par 
+\par      public void destroy()\{
+\par           destroyCount++;
+\par           System.out.println("destroy");
+\par           repaint();
+\par      \}
+\par \}
+\par 
+\par --------------------------------
+\par }{\lang1036 
+\par import java.applet.Applet;
+\par import java.awt.*;
+\par import java.net.URL;
+\par 
+\par }{public class LoadBanner extends Applet\{
+\par    Image img;
+\par 
+\par    public void init()\{
+\par       img= getImage(getDocumentBase(),"images/bean.gif");
+\par    \}
+\par 
+\par    public void paint(Graphics g)\{
+\par      g.drawImage(img,0,0,this);
+\par    \}
+\par \}
+\par 
+\par --------------------------------
+\par import java.applet.Applet;
+\par import java.awt.Graphics;
+\par 
+\par public class CustomAp extends Applet \{
+\par 
+\par    String sText="Hello World";
+\par    int x=50;
+\par    int y=50;
+\par  
+\par     public void init()\{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {         //\'d1o\'efc ca\'f9c gia\'f9 tr\'f2 tham so\'e1 truye\'e0n cho applet   
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\b0          String param1=getParameter("TEXT");
+\par          String param2=getParameter("XDRAW");
+\par          String param3=getParameter("YDRAW");
+\par }{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {         //La\'e1y ve\'e0 no\'e4i dung chuo\'e3i
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          if (param1!=null) sText=param1;
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {
+\par           //La\'e1y ve\'e0 to\'efa \'f1o\'e4 ve\'f5 chuo\'e3i 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {          if (param2!=null) \{
+\par              x=Integer.parseInt(param2);
+\par           \}
+\par 
+\par           if (param3!=null) \{
+\par              y=Integer.parseInt(param3);
+\par           \}
+\par  
+\par     \}
+\par 
+\par     public void paint(Graphics g) \{
+\par          g.drawString(sText, x, y);
+\par     \}
+\par \}
+\par }{\lang1036 
+\par 
+\par 
+\par ------------------------------
+\par import java.awt.*;
+\par import java.awt.event.*;
+\par import java.applet.Applet;
+\par 
+\par }{public class AnimatorAp extends Applet 
+\par                                      \tab \tab \tab     implements Runnable \{
+\par     int frameNumber = -1;
+\par     int delay;
+\par 
+\par     Thread animatorThread;
+\par 
+\par     boolean frozen = false;
+\par 
+\par     public void init() \{
+\par         String str;
+\par 
+\par         int delayTime = 10;
+\par 
+\par         str = getParameter("DELAYTIME ");
+\par         try \{
+\par             if (str != null) \{
+\par \tab \tab \tab \tab  delayTime}{\lang1036  = Integer.parseInt(str);
+\par             }{\}
+\par         \} catch (Exception e) \{\}
+\par         delay = (delayTime > 0) ? (1000 / delayTime) : 100;
+\par 
+\par  \tab    addMouseListener(new MouseAdapter() \{
+\par 
+\par     \tab    public void mousePressed(MouseEvent e) \{
+\par              if (frozen) \{
+\par                  frozen = false;
+\par                  start();
+\par              \} else \{
+\par                  frozen = true;
+\par                  stop();
+\par              \}
+\par          \}
+\par        \});
+\par     \}
+\par 
+\par     public void start() \{
+\par         if (frozen) \{ 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\tab \tab //Kho\'e2ng la\'f8m g\'ec v\'ec ng\'f6\'f4\'f8i du\'f8ng ye\'e2u ca\'e0u ta\'efm d\'f6\'f8ng.
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        \} else \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {           //Ba\'e9t \'f1a\'e0u hoa\'eft h\'ecnh
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {            if (animatorThread == null) \{
+\par                 animatorThread = new Thread(this);
+\par             \}
+\par             animatorThread.start();
+\par         \}
+\par     \}
+\par 
+\par     public void stop() \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {      //D\'f6\'f8ng ch\'f6\'f4ng tr\'ecnh
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        animatorThread = null;
+\par     \}
+\par 
+\par     public void run() \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {
+\par // \'d1a\'ebt ca\'f9c tuye\'e1n hie\'e5n th\'f2 hoa\'eft h\'ecnh co\'f9 \'f1o\'e4 \'f6u tie\'e2n tha\'e1p nha\'e1t, 
+\par //da\'f8nh th\'f4\'f8i gian ta\'f8i nguye\'e2n co\'f8n la\'efi cu\'fba he\'e4 tho\'e1ng cho vie\'e4c 
+\par //x\'f6\'fb ly\'f9 cu\'fba tuye\'e1n kha\'f9c 
+\par }\pard\plain \s21\ri-142\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {      Thread.currentThread().setPriority(
+\par                                                            Thread.MIN_PRIORITY);
+\par }\pard \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright {
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {// L\'f6u gi\'f6\'f5 th\'f4\'f8i gian ba\'e9t \'f1a\'e0u        
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        long startTime = System.currentTimeMillis();
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {//L\'f6u la\'efi tuye\'e1n \'f1ang du\'f8ng
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        Thread currentThread = Thread.currentThread();
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {// \'d1a\'e2y la\'f8 \'f1oa\'efn ve\'f5 hoa\'eft h\'ecnh
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab \tab while (currentThread == animatorThread) \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\tab \tab \tab \tab //cho\'efn khung h\'ecnh m\'f4\'f9i
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab \tab \tab \tab \tab frameNumber++;
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\tab \tab \tab \tab // hie\'e4n khung h\'ecnh \'f1o\'f9 le\'e2n
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {                  repaint();
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {\tab \tab \tab \tab // Ke\'f9o da\'f8i th\'f4\'f8i gian
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab \tab \tab \tab   try \{
+\par                           startTime += delay;
+\par                           Thread.sleep(Math.max(0, 
+\par }\pard \s21\li851\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright {                            startTime-\tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab 
+System.currentTimeMillis()));
+\par }\pard \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright {            \} catch (InterruptedException e) \{
+\par                 break;
+\par             \}
+\par         \}
+\par     \}
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {// \'d1a\'e2y la\'f8 ve\'f5 khung h\'ecnh hie\'e4n ha\'f8nh
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab \tab public void paint(Graphics g) \{
+\par                 g.drawString("Frame " + frameNumber, 0, 30);
+\par     \}
+\par \}
+\par }\pard\plain \qj\fi567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid {
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\lang1036 ----------------------------------
+\par import java.applet.*;
+\par import java.awt.*;
+\par }{import java.awt.event.ActionListener;
+\par import java.awt.event.ActionEvent;
+\par 
+\par public class SoundExample extends Applet 
+\par \tab \tab \tab                           implements ActionListener \{
+\par     SoundList soundList;
+\par     String onceFile = "Mozard.au";
+\par     String loopFile = "trinhcongson.au";
+\par 
+\par     AudioClip onceClip;
+\par     AudioClip loopClip;
+\par 
+\par     Button playOnce;
+\par     Button startLoop;
+\par     Button stopLoop;
+\par     Button reload;
+\par 
+\par     boolean looping = false;
+\par 
+\par     public void init() \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {       // Kh\'f4\'fbi ta\'efo ca\'f9c nu\'f9t ba\'e1m
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        playOnce = new Button("Mozard");
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {       // Ca\'f8i \'f1a\'ebt bo\'e4 x\'f6\'fb ly\'f9 s\'f6\'ef kie\'e4n nha\'e1n chuo\'e4t cho nu\'f9t 
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab     playOnce.addActionListener(this);
+\par         add(playOnce);
+\par 
+\par         startLoop = new Button("Start sound loop");
+\par         stopLoop = new Button("Stop sound loop");
+\par         stopLoop.setEnabled(false);
+\par         startLoop.addActionListener(this);
+\par         add(startLoop);
+\par \tab \tab stopLoop.addActionListener(this);
+\par         add(stopLoop);
+\par 
+\par         reload = new Button("Reload sounds");
+\par \tab \tab reload.addActionListener(this);
+\par         add(reload);
+\par 
+\par         startLoadingSounds();
+\par     \}
+\par 
+\par     void startLoadingSounds() \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {        // Ba\'e9t \'f1a\'e0u vie\'e4c na\'efp ca\'f9c d\'f6\'f5 lie\'e4u mo\'e4t ca\'f9ch kho\'e2ng \'f1o\'e0ng bo\'e4
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        soundList = new SoundList(this, getCodeBase());
+\par         soundList.startLoading(loopFile);
+\par         soundList.startLoading(onceFile);
+\par    \}
+\par 
+\par     public void stop() \{
+\par         onceClip.stop();        }{\b0\i\f17\fs20 //ng\'f6\'f8ng clip 01-la\'e0n.}{\b0 
+\par }{        if (looping) \{
+\par             loopClip.stop();   }{\i\f17\fs20  // }{\b0\i\f17\fs20 Ng\'f6\'f8ng vo\'f8ng la\'ebp}{
+\par         \}
+\par     \}    
+\par 
+\par     public void start() \{
+\par         if (looping) \{
+\par             loopClip.loop();    }{\b0\i\f17\fs20 //Ba\'e9t \'f1a\'e0u la\'efi vo\'f8ng la\'ebp
+\par         \}
+\par }{    \}    
+\par 
+\par     public void actionPerformed(ActionEvent event) \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {        // Ba\'e1m nu\'f9t Play
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid { \tab     Object source = event.getSource();
+\par         
+\par          if (source == playOnce) \{
+\par             if (onceClip == null) \{
+\par }\pard \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1418\tx1701\tx1985\abslock1\adjustright {                }{\b0\i\f17\fs20 // Th\'f6\'fb na\'efp ta\'e4p tin a\'e2m thanh (AudioClip)}{.
+\par }\pard \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright {                onceClip = soundList.getClip(onceFile);
+\par             \}
+\par 
+\par             if (onceClip != null) \{  }{\b0\i\f17\fs20 //Ne\'e1u ta\'e4p tin a\'e2m thanh \'f1a\'f5 na\'efp}{\b0\i 
+\par }{                onceClip.play();        }{\b0\i\f17\fs20 //Pha\'f9t mo\'e4t la\'e0n}{\b0\i\f17\fs20\cf10 .
+\par }{                showStatus("Playing sound " + onceFile + ".");
+\par             \} else \{
+\par }\pard \s21\fi-2977\li3544\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright {\tab showStatus("Sound " + onceFile + " not loaded yet.");
+\par }\pard \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright {            \}
+\par \tab     return;
+\par         \}
+\par 
+\par         }{\b0\i\f17\fs20 //Ba\'e1m nu\'f9t Start Loop}{\i\f17\fs20 
+\par }{        if (source == startLoop) \{
+\par             if (loopClip == null) \{
+\par }{\b0\i\f17\fs20                 //Na\'efp ta\'e4p tin a\'e2m thanh (AudioClip)}{\b0\i\f17\fs20\cf10 .}{
+\par                 loopClip = soundList.getClip(loopFile);
+\par             \}
+\par 
+\par             if (loopClip != null) \{  }{\b0\i 
+\par }{                looping = true;
+\par                 loopClip.loop();     
+\par }{\b0\i\f17\fs20 \tab \tab //Cho nu\'f9t Stop co\'f9 the\'e5 hoa\'eft \'f1o\'e4ng.}{
+\par                 stopLoop.setEnabled(true);   
+\par \tab \tab }{\b0\i\f17\fs20 //Ca\'e1m nu\'f9t Start hoa\'eft do\'e4ng.
+\par }{                startLoop.setEnabled(false); }{\i\f17\fs20\cf10 
+\par }{                showStatus("Playing sound " + loopFile + " 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab continuously.");
+\par             \} else \{
+\par                 showStatus("Sound " + loopFile + " not loaded
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab  yet.");
+\par             \}
+\par             return;
+\par         \}
+\par 
+\par         }{\b0\i\f17\fs20 //Ba\'e1m nu\'f9t Stop.}{\i\f17\fs20 
+\par }{        if (source == stopLoop) \{
+\par             if (looping) \{
+\par                 looping = false;
+\par \tab \tab \tab }{\b0\i\f17\fs20 //D\'f6\'f8ng vo\'f8ng la\'ebp la\'efi}{\b0\i .}{
+\par                 loopClip.stop();    
+\par \tab \tab \tab }{\b0\i\f17\fs20 // Cho nu\'f9t Start co\'f9 the\'e5 hoa\'eft \'f1o\'e4ng}{\b0\i .}{
+\par                 startLoop.setEnabled(true); 
+\par \tab \tab \tab }{\b0\i\f17\fs20 //Ca\'e1m nu\'f9t Stop hoa\'eft do\'e4ng.
+\par }{                stopLoop.setEnabled(false); }{\i\f17\fs20\cf10 
+\par }{            \}
+\par             showStatus("Stopped playing sound " + loopFile + 
+\par \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab \tab ".");
+\par             return;
+\par         \}
+\par 
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {     // na\'efp la\'efi ca\'f9c button
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {        if (source == reload) \{
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {    //  D\'f6\'f8ng vo\'f8ng la\'ebp sound.
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {            if (looping) \{          
+\par                 looping = false;
+\par                 loopClip.stop();
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {    // Cho nu\'f9t start hoa\'eft \'f1o\'e4ng la\'efi
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {                startLoop.setEnabled(true);                
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {    // Cho nu\'f9t stop ng\'f6\'f8ng hoa\'eft \'f1o\'e4ng
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {\tab \tab \tab   stopLoop.setEnabled(false); }{\i\f17\fs20\cf10 
+\par }{            \}
+\par }\pard\plain \s29\qj\sb60\nowidctlpar\widctlpar\tx567\tx851\abslock1\adjustright \i\f17\fs20\cgrid {    // Ga\'f9n la\'efi ca\'f9c gia\'f9 tr\'f2
+\par }\pard\plain \s21\nowidctlpar\widctlpar\tx284\tx567\tx851\tx1134\tx1418\tx1701\tx1985\abslock1\adjustright \b\f18\fs18\cgrid {            loopClip = null;        
+\par             onceClip = null;        
+\par             startLoadingSounds();
+\par             showStatus("Reloading all sounds.");
+\par             return;
+\par         \}
+\par     \}
+\par \}
+\par }\pard\plain \qj\li567\sb120\nowidctlpar\widctlpar\tx284\tx567\tx851\abslock1\adjustright \f17\fs20\cgrid {
+\par }}

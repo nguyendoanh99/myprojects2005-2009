@@ -1,0 +1,137 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SapXep - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSPA3.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Baitap\VC\SapXep\Stack_DSLK.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSPA3.tmp" 
+Creating temporary file "C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSPA4.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/SapXep.pdb" /debug /machine:I386 /out:"Debug/SapXep.exe" /pdbtype:sept 
+.\Debug\SapXep.obj
+.\Debug\Stack.obj
+.\Debug\StdAfx.obj
+.\Debug\Stack_DSLK.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\Khoa\LOCALS~1\Temp\RSPA4.tmp"
+<h3>Output Window</h3>
+Compiling...
+Stack_DSLK.cpp
+e:\baitap\vc\sapxep\stack_dslk.cpp(6) : error C2143: syntax error : missing ';' before '*'
+e:\baitap\vc\sapxep\stack_dslk.cpp(6) : error C2501: 'NODE' : missing storage-class or type specifiers
+e:\baitap\vc\sapxep\stack_dslk.cpp(7) : error C2501: 'getnode' : missing storage-class or type specifiers
+e:\baitap\vc\sapxep\stack_dslk.cpp(8) : error C2065: 'p' : undeclared identifier
+e:\baitap\vc\sapxep\stack_dslk.cpp(8) : error C2061: syntax error : identifier 'NODE'
+e:\baitap\vc\sapxep\stack_dslk.cpp(11) : error C2227: left of '->info' must point to class/struct/union
+e:\baitap\vc\sapxep\stack_dslk.cpp(12) : error C2227: left of '->pNext' must point to class/struct/union
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : error C2143: syntax error : missing ';' before '}'
+e:\baitap\vc\sapxep\stack_dslk.cpp(14) : fatal error C1003: error count exceeds 100; stopping compilation
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+SapXep.exe - 102 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

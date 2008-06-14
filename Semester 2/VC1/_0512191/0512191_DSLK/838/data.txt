@@ -1,0 +1,37 @@
+6
+001
+Loai_1
+Nguyen Dang Khoa
+0512175
+15 2 2002
+15000000
+002
+Loai_A
+Nguyen Thi Nhu Anh
+0512068
+9 10 1999
+2000000
+003
+Loai_2
+Nguyen Hue Nghi
+0512232
+5 5 20004
+5000000
+004
+Loai_B
+Huynh Duy Khuong
+0512186
+30 12 2006
+30000000
+005
+Loai_3
+Truong Dinh Kim
+0512189
+20 11 2001
+500000000
+006
+Loai_C
+Nguyen Trung Kien
+0512191
+9 9 1998
+7000000

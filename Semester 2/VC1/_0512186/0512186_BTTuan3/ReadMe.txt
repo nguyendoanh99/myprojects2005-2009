@@ -1,0 +1,4 @@
+- Ho ten:	HUYNH DUY KHUONG
+- Mssv:		0512186
+- Phong thuc hanh:1
+- Ca thuc hanh:1

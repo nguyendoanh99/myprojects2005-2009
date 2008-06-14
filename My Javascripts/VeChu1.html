@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script language="JavaScript">
+var images="coffee.gif";
+var amount=13;    
+var SizeMax = 13;
+var rangeX = 600;
+var rangeY = 600;
+var Xcur = randommaker(rangeX);
+var Ycur = randommaker(rangeY);
+var t;
+var t1;
+var flag = false;
+function randommaker(range)
+{		
+	return Math.floor(range*Math.random())
+}
+
+
+ var Ai = [-2, -2, -2, -2, -2, -1, 0, 1, 2, 2, 2, 2, 2];
+ var Aj = [-2, -1, 0, 1, 2, -1, 0, 1, -2, -1, 0, 1, 2];
+
+var marginbottom;
+var marginright;
+
+var sparklewidth=20;
+var sparkleheight=20;
+var x_random=new Array();
+var y_random=new Array();
+var max_explsteps=80;
+var i_explsteps=0;
+var speed=20;
+
+function init()
+{
+	marginbottom=document.body.clientHeight;
+	marginright=document.body.clientWidth;
+	i_explsteps = 0;
+
+	for (i=0;i<=amount;i++) {
+		x_random[i]=Math.ceil(20*Math.random())-10;
+        y_random[i]=Math.ceil(20*Math.random())-10;
+		while(x_random[i]>-2 && x_random[i]<2) {
+        	x_random[i]=Math.ceil(20*Math.random())-10;
+        	y_random[i]=Math.ceil(20*Math.random())-10;
+		}
+	}
+	
+	explode();
+}
+
+function explode() 
+{
+	if (i_explsteps<=max_explsteps) 
+	{
+		for (i=0;i<amount;i++) 
+		{
+			with (ieDiv.all.pictures.all[i].style)
+			{
+				if (parseInt(left) >=marginright-sparklewidth-30+document.body.scrollLeft || parseInt(top)>=marginbottom-sparkleheight-20+document.body.scrollTop)
+				{
+					top = -100;
+					left = -100;
+				}
+				else
+				{
+					left = parseInt(left)+x_random[i];
+					top = parseInt(top)+y_random[i];
+				}			
+			}			
+		}
+		i_explsteps++;
+		var timer=setTimeout("explode()",speed);		
+	}
+	else // Hoi tu chu tai mot diem
+	{ 
+		clearTimeout(timer);
+		Xcur = randommaker(rangeX);
+		Ycur = randommaker(rangeY);
+		for (i = 0; i < amount; ++i)
+		{
+			setTimeout("LineBres(" + i +", " + (Xcur + Ai[i] * SizeMax) +", " + (Ycur + Aj[i] * SizeMax) +")", 20);	
+		}		
+	}
+	
+}
+
+function LineBres(index, x2, y2)
+{
+	var x1 = parseInt(ieDiv.all.pictures.all[index].style.left);
+	var y1 = parseInt(ieDiv.all.pictures.all[index].style.top);
+	var Dx = x2 - x1;
+	var Dy = y2 - y1;
+	var dx = (Dx < 0) ? -1 : 1;	
+	Dx = Math.abs(Dx);
+	var dy = (Dy < 0) ? -1 : 1;	
+	Dy = Math.abs(Dy);
+	
+	if (Dx > Dy)
+	{
+		var p = 2 * Dy - Dx;
+		var Const1 = 2 * Dy;
+		var Const2 = 2 * (Dy-Dx);
+		setTimeout("Line1(" + index + ", " + x1 + ", " + y1 + ", " + x2 + ", " +  y2 + ", " + dx + ", " + dy + ", " + p + ", " + Const1 + ", " + Const2 + ")", 20);
+	}
+	else
+	{
+		var p = 2 * Dx - Dy;
+		var Const1 = 2 * Dx;
+		var Const2 = 2 * (Dx-Dy);
+		setTimeout("Line2(" + index + ", " + x1 + ", " + y1 + ", " + x2 + ", " +  y2 + ", " + dx + ", " + dy + ", " + p + ", " + Const1 + ", " + Const2 + ")", 20);
+	}
+
+}
+var heso = 3;
+function Line1(index, x, y, x2, y2, dx, dy, p, Const1, Const2)
+{
+	if (x != x2) 
+	{
+
+		if (p < 0) {
+			p += Const1 * heso;
+		} 
+		else {
+			p += Const2 * heso;
+			y += dy * heso;
+			if ((dy == -1 && y < y2) || (dy == 1 && y > y2))		
+				y = y2;
+		}
+		x += dx * heso;
+		if ((dx == -1 && x < x2) || (dx == 1 && x > x2))
+		{
+			x = x2;
+			y = y2;
+		}
+		with (ieDiv.all.pictures.all[index].style)
+		{
+			left = x;
+			top = y;
+		}
+	
+		setTimeout("Line1(" + index + ", " + x + ", " + y + ", " + x2 + ", " + y2 + ", " + dx + ", " + dy + ", " + p + ", " + Const1 + ", " + Const2 + ")", 20);
+	}
+}
+
+function Line2(index, x, y, x2, y2, dx, dy, p, Const1, Const2)
+{
+	if (y != y2) 
+	{
+		if (p < 0) {
+			p += Const1 * heso;
+		} 
+		else {
+			p += Const2 * heso;
+			x += dx * heso;
+			if ((dx == -1 && x < x2) || (dx == 1 && x > x2))		
+				x = x2;
+		}
+		y += dy * heso;
+
+		if ((dy == -1 && y < y2) || (dy == 1 && y > y2))		
+		{
+			x = x2;
+			y = y2;
+		}
+		with (ieDiv.all.pictures.all[index].style)
+		{
+			left = x;
+			top = y;
+		}
+	
+		setTimeout("Line2(" + index + ", " + x + ", " + y + ", " + x2 + ", " + y2 + ", " + dx + ", " + dy + ", " + p + ", " + Const1 + ", " + Const2 + ")", 20);
+	}
+}
+
+function VeChu(Xpos, Ypos) 
+{
+	 for (i=0;i<ieDiv.all.pictures.all.length;i++)
+	 {
+		 ieDiv.all.pictures.all[i].style.top = (Ypos + Aj[i] * SizeMax);
+		 ieDiv.all.pictures.all[i].style.left = (Xpos + Ai[i] * SizeMax);
+	 }
+ }
+
+function KhoiTao()
+{
+	if (document.all)
+	{
+	document.write('<div id="ieDiv" style="position:absolute;top:0px;left:0px">')
+	document.write('<div id="pictures" style="position:relative">');
+	for (n=0; n < amount; n++)
+	document.write('<img src=" '+images+'" style="position:absolute;top:0px;left:0px" width="' + SizeMax + '" height="' + SizeMax + '" onmouseover="init()"">')
+	document.write('</div>')
+	document.write('</div>')
+
+	 }
+
+	 VeChu(Xcur, Ycur);
+}
+
+KhoiTao();
+
+function alert1()
+{
+	var Xpos = 300;
+	var Ypos = 300;
+
+	for (i = 0; i < amount; ++i)
+	{
+		ieDiv.all.pictures.all[i].style.top = randommaker(rangeX);
+		 ieDiv.all.pictures.all[i].style.left = randommaker(rangeY);
+		setTimeout("LineBres(" + i +", " + (Xpos + Ai[i] * SizeMax) +", " + (Ypos + Aj[i] * SizeMax) +")", 20);	
+	}
+}
+
+</script>
+</HEAD>
+
+<BODY>
+<input type="button" value="Start count!" onClick="alert1()">
+
+</BODY>
+</HTML>
+

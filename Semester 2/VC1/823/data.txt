@@ -1,0 +1,81 @@
+6
+Truong Dinh Kim 2
+23 8 1940
+100000
+1
+Nguyen Trung Kien 2
+24 9 1947
+999999
+1
+Nguyen Hue Nghi 2
+14 3 1943
+150000
+0
+Huynh Duy Khuong 2
+18 12 1938
+500000
+1
+Nguyen Dang Khoa 
+13 2 1987
+30000000
+1
+Nguyen Thi Nhu Anh
+5 1 1987
+15000000
+0
+Truong Dinh Kim
+23 8 1987
+10000000
+1
+Nguyen Trung Kien
+24 9 1987
+10000000
+1
+Nguyen Hue Nghi
+14 3 1987
+15000000
+0
+Huynh Duy Khuong
+18 12 1987
+10000000
+1
+Nguyen Kieu Phuong
+17 10 1987
+10000000
+0
+Nguyen Dang Khoa 1
+13 2 1957
+100000
+1
+Nguyen Thi Nhu Anh 1
+5 1 1937
+900000
+0
+Truong Dinh Kim 1
+23 8 1950
+100000
+1
+Nguyen Trung Kien 1
+24 9 1927
+999999
+1
+Nguyen Hue Nghi 1
+14 3 1947
+700800
+0
+Huynh Duy Khuong 1
+18 12 1917
+500000
+1
+Nguyen Kieu Phuong 1
+17 10 1937
+300000
+0
+Nguyen Dang Khoa 2
+13 2 1957
+300000
+1
+Nguyen Thi Nhu Anh 2
+5 1 1947
+150000
+0

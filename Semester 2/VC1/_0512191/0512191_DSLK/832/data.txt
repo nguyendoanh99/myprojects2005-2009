@@ -1,0 +1,31 @@
+6
+00A
+15 5 2004
+15 30 30
+Noi_di_AA
+Noi_den_BB
+00B
+14 6 2006
+17 40 0
+Noi_di_AA
+Noi_den_CC
+00C
+15 5 2004
+10 5 0
+Noi_di_CC
+Noi_den_BB
+00D
+17 10 2005
+11 20 0
+Noi_di_AA
+Noi_den_DD
+00E
+15 5 2004
+16 50 00
+Noi_di_DD
+Noi_den_BB
+00F
+13 2 2005
+20 00 00
+Noi_di_CC 
+Noi_den_DD

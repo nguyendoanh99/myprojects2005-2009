@@ -1,0 +1,19 @@
+6
+001
+Nguyen Van A
+3 7 1993
+002
+Tran Thi B
+15 6 1999
+003
+Tran Van C
+5 1 1996
+004
+Nguyen Van Teo
+15 6 1999
+005
+Nguyen Van D
+19 9 1994
+006
+Le Van E
+15 6 1999

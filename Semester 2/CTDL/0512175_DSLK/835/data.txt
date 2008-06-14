@@ -1,0 +1,31 @@
+6
+001
+Nguyen Dang Khoa
+0
+10
+10
+002
+Truong Dinh Kim
+0
+10
+0
+003
+Nguyen Thi Nhu Anh
+9
+9
+8
+004
+Nguyen Hue Nghi
+9
+8
+9
+005
+Huynh Duy Khuong
+10
+9
+10
+006
+Nguyen Trung Kien
+5
+6
+2

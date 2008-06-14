@@ -1,0 +1,914 @@
+
+/*
+// Lay 2 so ra khoi Stack va tinh ket qua voi toan tu c
+int ThucHien(STACK &toantu,STACK &so)
+{
+	BIGINT *temp=new BIGINT;
+	I_NODE x=top(toantu);
+	char *c=(char *) x.pInfo;
+	if (*c=='(')
+		return 0;
+	x=pop(toantu);
+	x=pop(so);
+	BIGINT *b=(BIGINT *) x.pInfo;
+	if (*c=='!')
+	{
+		*temp=giaithua(convert(*b));
+	}
+	else
+	{
+		x=pop(so);
+		BIGINT *a=(BIGINT *) x.pInfo;
+		switch (*c)
+		{
+		case '+':
+			*temp=*a + *b;
+			break;
+		case '-':
+			*temp=*a - *b;
+			break;
+		case '*':
+			*temp=*a * *b;
+			break;
+		case '/':
+			*temp=*a / *b;
+			break;
+		case '%':
+			*temp=*a % *b;
+			break;
+		case '^':
+			*temp=pow(*a,convert(*b));
+			break;
+		}	
+		deleteBIGINT(*a);
+	}
+	x.loai=_BIGINT;
+	x.pInfo=temp;
+	NODESTACK *p=getnode(x);
+	push(so,p);		
+	deleteBIGINT(*b);
+	return 1;
+}
+*/
+/*
+// Tinh gia tri cua bieu thuc s
+BIGINT tinhbieuthuc(char *s)
+{
+	BIGINT *temp=new BIGINT;
+	STACK toantu,so;
+	I_NODE x;
+	init(so);
+	init(toantu);
+	init(*temp);
+	char *c;
+	while (*s!=0 &&*s!=10)
+	{
+		if (isdigit(*s))
+		{
+			// Dua cac chu so lan luot vao BIGINT *temp
+			NODE *p=getnode(*s-'0');
+			addtail(*temp,p);
+		}
+		else
+		{			
+			NODESTACK *p;
+			// Them BIGINT vao STACK
+			if (!isEmpty(*temp))
+			{
+				temp->dau=1;
+				xoa0(*temp);
+				x.loai=_BIGINT;
+				x.pInfo=temp;
+				p=getnode(x);
+				push(so,p);
+				temp=new BIGINT;
+				init(*temp);
+			}
+
+			if (*s==' ')
+			{
+				s++;
+				continue;
+			}
+			
+			if (*s==')')
+			{
+				// Thuc hien cac phep tinh cho toi khi gap toan tu '('
+				// thi dung lai
+				while (ThucHien(toantu,so));
+				x=pop(toantu);				
+			}			
+			else	// *s=(+-* /%^!
+			{
+				if (*s!='(')
+				{
+					int u1=uutien(*s); // Do uu tien cua *s
+					int u2; // Lay do uu tien cua phan tu o dinh STACK
+					while (!isEmpty(toantu))
+					{	
+						x=top (toantu);
+						c=(char *) x.pInfo;
+						u2=uutien(*c);
+						if (u2>=u1)
+							ThucHien(toantu,so);
+						else
+							break;
+					}
+				}
+				// Them toan tu vao STACK
+				c=new char;
+				*c=*s;
+				x.loai=_CHAR;
+				x.pInfo=c;
+				p=getnode(x);
+				push(toantu,p);
+			}						
+		}
+		s++;
+	}
+	// So nam o cuoi chuoi
+	if (!isEmpty(*temp))
+	{
+		temp->dau=1;
+		xoa0(*temp);
+		x.loai=_BIGINT;
+		x.pInfo=temp;
+		NODESTACK *p=getnode(x);
+		push(so,p);
+	}
+	// Thuc hien cac phep tinh con lai trong STACK
+	while (!isEmpty(toantu))
+		ThucHien(toantu,so);
+	// Lay ket qua cua phep tinh
+	x=pop(so);
+	temp=(BIGINT *) x.pInfo;
+	return *temp;
+}
+/*
+// Tinh gia tri cua bieu thuc s
+BIGINT tinhbieuthuc(char *s)
+{
+	BIGINT *temp=new BIGINT;
+	STACK toantu,so;
+	init(so);
+	init(toantu);
+	init(*temp);
+	char *c;
+	while (*s!=0 &&*s!=10)
+	{
+		if (isdigit(*s))
+		{
+			NODE *p=getnode(*s-'0');
+			addtail(*temp,p);
+		}
+		else
+		{			
+			NODESTACK *p;
+			// Them so vao STACK
+			if (!isEmpty(*temp))
+			{
+				temp->dau=1;
+				xoa0(*temp);
+				p=getnode(temp);
+				push(so,p);
+				temp=new BIGINT;
+				init(*temp);
+			}
+			if (*s==' ')
+			{
+				s++;
+				continue;
+			}
+			int u1=uutien(*s); // Do uu tien cua *s
+			int u2; // Lay do uu tien cua phan tu o dinh STACK
+			// Cac case co do uu tien giam dan
+			switch (*s)
+			{			
+			case '!':				
+				while (!isEmpty(toantu))
+				{					
+					c=(char *) top(toantu);
+					u2=uutien(*c);
+					if (*c=='!')
+						ThucHien(toantu,so);
+					else
+						break;
+				}
+				break;
+			case '^':
+				while (!isEmpty(toantu))
+				{
+					c=(char *) top(toantu);
+					u2=uutien(*c);
+					if (*c=='^' || *c=='!')
+						ThucHien(toantu,so);
+					else
+						break;
+				}
+				break;
+			case '/':
+			case '%':
+			case '*':				
+				while (!isEmpty(toantu))
+				{
+					c=(char *) top(toantu);
+					u2=uutien(*c);
+					if (*c=='*' || *c=='/' || *c=='%' || 
+						*c=='^' || *c=='!')
+						ThucHien(toantu,so);
+					else
+						break;
+				}
+				break;
+			case '+':
+			case '-':
+				// Thuc hien cac phep tinh cho toi khi STACK rong
+				while (!isEmpty(toantu))
+					if (!ThucHien(toantu,so))
+						break;
+				break;
+			case ')':
+				// Thuc hien cac phep tinh cho toi khi gap toan tu '('
+				// thi dung lai
+				while (ThucHien(toantu,so));
+				pop(toantu);
+				break;
+			case ' ':
+				s++;
+				continue;
+			}
+			// Neu *s !=')' thi them toan tu vao STACK
+			if (*s!=')')
+			{
+				c=new char;
+				*c=*s;
+				p=getnode(c);
+				push(toantu,p);
+			}
+		}
+		s++;
+	}
+	// So nam o cuoi chuoi
+	if (!isEmpty(*temp))
+	{
+		temp->dau=1;
+		NODESTACK *p=getnode(temp);
+		push(so,p);
+	}
+	// Thuc hien cac phep tinh con lai trong STACK
+	while (!isEmpty(toantu))
+		ThucHien(toantu,so);
+	// Lay ket qua cua phep tinh
+	temp=(BIGINT *) pop(so);
+	return *temp;
+}
+
+/*
+BIGINT _tinhbieuthuc(char *s)
+{
+	BIGINT *temp=new BIGINT;
+	BIGINT so[2];
+	char dau='+';	
+	so[0]=createBIGINT(0);
+	init(*temp);
+	char *c;
+	while (*s!=0 &&*s!=10)
+	{
+		if (isdigit(*s))
+		{
+			NODE *p=getnode(*s-'0');
+			addtail(*temp,p);
+		}
+		else
+		{			
+			if (!isEmpty(*temp))
+			{
+				temp->dau=1;
+				so[1]=*temp;				
+				temp=new BIGINT;
+				init(*temp);
+			}			
+			if (*s==' ')
+			{
+				s++;
+				continue;
+			}
+			switch (dau)
+			{			
+			case '+':
+				*temp=so[0]+so[1];				
+				break;
+			case '-':
+				*temp=so[0]-so[1];
+				break;			
+			}
+			deleteBIGINT(so[0]);
+			so[0]=*temp;
+			temp=new BIGINT;
+			init(*temp);
+			deleteBIGINT(so[1]);
+			dau=*s;
+		}
+		s++;
+	}	
+	if (!isEmpty(*temp))
+	{
+		temp->dau=1;
+		so[1]=*temp;				
+		temp=new BIGINT;
+		init(*temp);
+	}
+	switch (dau)
+	{			
+	case '+':
+		*temp=so[0]+so[1];				
+		break;
+	case '-':
+		*temp=so[0]-so[1];
+		break;			
+	}
+	deleteBIGINT(so[0]);	
+	deleteBIGINT(so[1]);
+	return *temp;
+}
+*/
+/*
+// tich cua 1 so BIGINT voi 1 so nguyen duong 
+BIGINT tich(BIGINT a,char b)
+{
+	BIGINT c;
+	init(c);	
+	// Neu b=0 thi tra ve 0
+	if (b==0)
+	{
+		c=createBIGINT("0");
+		return c;
+	}
+	NODE *p=a.pTail;
+	NODE *temp;
+	int nho=0;
+	int kq;
+	while (p)
+	{
+		kq=nho+p->digit*b;
+		temp=getnode(kq%10);
+		addhead(c,temp);
+		nho=kq/10;
+		p=p->pPrev;
+	}
+	if (nho)
+	{
+		temp=getnode(nho);
+		addhead(c,temp);
+	}	
+	c.dau=a.dau;
+	return c;
+}
+*/
+/*
+// Dua vao phep cong
+// tich 2 so BIGINT
+BIGINT tich(BIGINT a,BIGINT b)
+{
+	BIGINT c,temp;
+	init(c);
+	c=createBIGINT("0"); // c = 0
+	if (kiemtra0(a) || kiemtra0(b))
+		return c;
+	NODE *p=a.pTail;
+	NODE *q=b.pTail;
+	NODE *t;
+	int buoc=0;
+	while (q)
+	{
+		if (q->digit!=0)
+		{
+			temp=tich(a,q->digit);
+			for (int i=0;i<buoc;i++)
+			{
+				t=getnode(0);
+				addtail(temp,t);
+			}
+			c=tong(c,temp);
+			deleteBIGINT(temp);
+		}
+		q=q->pPrev;
+		buoc++;
+	}
+	// Neu b<0 thi c = -c
+	if (b.dau==-1)
+		c.dau = -c.dau;
+	return c;
+}
+*/
+/*
+// Tao them 1 mang phu de luu gia tri cua a*n voi n=1..9
+// Tich 2 so a, b
+BIGINT tich(BIGINT a,BIGINT b)
+{	
+	BIGINT c=createBIGINT("0");
+	if (kiemtra0(a) || kiemtra0(b))
+		return c;
+	BIGINT gt[10];
+	NODE *temp=c.pTail;
+	for (int i=0;i<10;i++)
+		init(gt[i]);
+	// Cat bo cac so 0 o cuoi b va them vao c
+	for (NODE *q=b.pTail;q->digit==0;q=q->pPrev)
+	{
+		NODE *p=getnode(0);
+		addtail(c,p);
+	}
+	// Cat bo cac so 0 o cuoi a va them vao c
+	NODE *temp1=a.pTail; // giu dia chi node cuoi cua a
+	for (;a.pTail->digit==0;a.pTail=a.pTail->pPrev)
+	{
+		NODE *p=getnode(0);
+		addtail(c,p);
+	}
+	NODE *t=c.pTail;
+	c.pTail=temp;
+	temp=t;
+	while (q)
+	{
+		if (q->digit)
+		{
+			if (isEmpty(gt[q->digit]))
+				gt[q->digit]=tich(a,q->digit);
+			_tong(c,gt[q->digit]);
+		}		
+		if (!c.pTail->pPrev)
+		{
+			NODE *p=getnode(0);
+			addhead(c,p);
+		}
+		c.pTail=c.pTail->pPrev;			
+		q=q->pPrev;
+	}
+	for (i=0;i<10;i++)
+		deleteBIGINT(gt[i]);
+	c.pTail=temp;
+	a.pHead=temp1;
+	xoa0(c);
+	c.dau = a.dau*b.dau;
+	return c;
+}
+*/
+/*
+// Tong 2 so BIGINT, ket qua tra ve cho bien a
+BIGINT _tong(BIGINT &a,BIGINT b)
+{	
+	// neu 2 so trai dau
+	if (a.dau*b.dau == -1)
+	{
+		b.dau =-b.dau;
+		_hieu(a,b);
+		b.dau =-b.dau;
+	}
+	// neu 2 so cung dau
+	else
+	{	
+		// Dau cua ket qua phep tinh la dau cua a
+		NODE *p=a.pTail;
+		NODE *q=b.pTail;		
+		char nho=0;
+		// p, q chay tu phai qua trai
+		while (p && q)
+		{
+			p->digit+=q->digit+nho;			
+			nho=p->digit/10;			
+			p->digit%=10;
+			p=p->pPrev;
+			q=q->pPrev;
+		}		
+		// giu cac chu so con lai cua a
+		while (p && nho)
+		{
+			p->digit+=nho;			
+			nho=p->digit/10;
+			p->digit%=10;
+			p=p->pPrev;			
+		}
+		// them cac chu so con lai cua b vao c
+		NODE *temp;
+		char kq;		
+		while (q)
+		{
+			kq=q->digit+nho;
+			temp=getnode(kq%10);
+			nho=kq/10;
+			addhead(a,temp);
+			q=q->pPrev;
+		}
+		// Tao them 1 node neu nho!=0
+		if (nho)
+		{
+			temp=getnode(nho);
+			addhead(a,temp);
+		}		
+	}
+	return a;
+}
+// Tong 2 so BIGINT
+BIGINT tong(BIGINT a,BIGINT b)
+{
+	BIGINT c=createBIGINT(a);
+	return _tong(c,b);
+}
+// Hieu 2 so BIGINT, ket qua tra ve cho a
+BIGINT _hieu(BIGINT &a,BIGINT b)
+{	
+	// neu a, b trai dau
+	if (a.dau*b.dau==-1)
+	{
+		b.dau=-b.dau;
+		_tong(a,b);
+		b.dau=-b.dau;
+	}
+	// neu a, b cung dau
+	else
+	{
+		BIGINT a1,b1;		
+		// Dau phu thuoc vao so co tri tuyet doi lon hon
+		// Neu abs(a)>abs(b) : dau cua phep tinh la dau cua a
+		// Neu abs(a)<abs(b) : dau cua phep tinh la dau cua -b		
+		if (ssanh(a,b)==-1)	// Neu abs(a)<abs(b) thi hoan vi 2 so
+		{			
+			a1=b;
+			b1=a;
+			// Dao dau cua so lon hon
+			a.dau=-b.dau;
+		}
+		else
+		{
+			a1=a;
+			b1=b;
+		}
+		
+		NODE *p=a1.pTail;
+		NODE *q=b1.pTail;
+		NODE *p1=a.pTail;
+		NODE *temp;
+		char nho=0;
+		char kq;
+		while (q)
+		{
+			if (p->digit+nho<q->digit)
+			{
+				p1->digit=10+nho+p->digit-q->digit;
+				nho=-1;
+			}
+			else
+			{
+				p1->digit=nho+p->digit-q->digit;
+				nho=0;
+			}			
+			p=p->pPrev;
+			q=q->pPrev;
+			p1=p1->pPrev;
+		}
+		while (p)
+		{
+			if (p->digit+nho<0)
+			{
+				kq=10+p->digit+nho;
+				nho=-1;
+			}
+			else
+			{
+				kq=p->digit+nho;
+				nho=0;
+			}
+			if (p1)
+			{
+				p1->digit=kq;
+				p1=p1->pPrev;
+			}
+			else
+			{
+				temp=getnode(kq);
+				addhead(a,temp);
+			}
+			p=p->pPrev;
+		}		
+		xoa0(a);	// Xoa cac so 0 vo nghia cua phep tinh
+	}
+	return a;
+}
+// Hieu 2 so BIGINT
+BIGINT hieu(BIGINT a,BIGINT b)
+{
+	BIGINT c=createBIGINT(a);	
+	return _hieu(c,b);;
+}
+*/
+/*
+// Tinh a^x
+BIGINT pow1(BIGINT a,int x)
+{
+	if (x==0)
+		return createBIGINT(1);
+	BIGINT temp1;
+	BIGINT temp=createBIGINT(a);
+	while (1)
+	{
+		int dem=0;
+		for (int n=0;x!=1;x/=2,n++)
+			dem+=x%2;	
+		if (n==0)
+			return temp;	
+		for (;n;n--)
+		{
+			temp1=temp*temp;
+			deleteBIGINT(temp);
+			temp=temp1;
+		}
+		x=dem;
+	}
+	return temp;
+}
+*/
+/*
+// Phan tich n! thanh thua so nguyen to, rai mu cua cac thua so nho
+// cho thua so lon, KDL.heso dung kieu int
+// Tinh n!
+BIGINT giaithua3(int n)
+{
+	if (n==0)
+		return createBIGINT(1);
+	if (n==1)
+		return createBIGINT(1);
+	struct kdl 
+	{
+		int heso;
+		int mu;
+	};
+	typedef struct kdl KDL;
+	STACK l;
+	init(l);
+	
+	// Phan tich n! thanh tich cac thua so nguyen to
+	int j;
+	for (int i=2;i<=n;i++)
+	{
+		j=i;
+		for (NODESTACK *p=l.pHead;p;p=p->pNext)
+		{	
+			KDL *t=(KDL*) p->info;
+			while (j%t->heso==0)
+			{
+				t->mu++;
+				j/=t->heso;
+			}
+		}
+		if (j!=1)
+		{
+			KDL *temp=new KDL;
+			temp->heso=j;
+			temp->mu=1;
+			NODESTACK *p=getnode(temp);
+			addtail(l,p);
+		}
+	}
+/*
+	for (NODESTACK *p1=l.pHead;p1;p1=p1->pNext)
+	{
+		KDL *t=(KDL*) p1->info;
+		printf("%d^%d * ",t->heso,t->mu);
+	}
+
+	//Dem so luong chu so 0 o cuoi n!
+	int length=0;
+	for (NODESTACK *p=l.pHead;p;p=p->pNext)
+	{
+		KDL *temp=(KDL*) p->info;		
+		if (temp->heso>=5)
+		{
+			length=temp->mu;			
+			KDL *q=(KDL*) l.pHead->info;
+			q->mu-=temp->mu;
+			delafter(l,l.pHead->pNext);
+			break;
+		}
+	}
+
+	KDL *temp1,*temp2;
+	NODESTACK *pPrev=NULL;
+	p=l.pHead;
+	while (p)	
+	{
+		temp1=(KDL*) p->info;
+//		if (temp1->heso>2)
+//			break;
+//		if (temp1->mu<=1)
+//			break;
+		if (temp1->heso>=10000)
+		{
+			pPrev=p;
+			p=p->pNext;
+			continue;
+		}
+		NODESTACK *q=p->pNext;
+		while (q)
+		{
+			temp2=(KDL*) q->info;
+			if (temp2->mu/temp1->mu>3)			
+				break;			
+			while (temp1->mu>=temp2->mu)
+			{
+				if (temp2->heso>=10000)
+					break;
+				temp2->heso*=temp1->heso;
+				temp1->mu-=temp2->mu;
+			}
+			if (temp1->mu==0)
+			{
+				delafter(l,pPrev);
+				p=pPrev;
+				break;
+			}
+			q=q->pNext;
+		}
+		pPrev=p;
+		if (p)
+			p=p->pNext;
+		else
+			p=l.pHead;
+	}
+/*		printf("\n\n");
+		for (NODESTACK *p1=l.pHead;p1;p1=p1->pNext)
+		{
+			KDL *t=(KDL*) p1->info;
+			printf("%d^%d * ",t->heso,t->mu);
+		}
+	// Tinh n!
+	BIGINT c=createBIGINT(1);
+	while (!isEmpty(l))
+	{		
+		KDL *t=(KDL *) pop(l);
+		BIGINT temp=createBIGINT(t->heso);
+		BIGINT temp2=pow(temp,t->mu);
+		deleteBIGINT(temp);
+		BIGINT temp3=c;
+		c=c*temp2;		
+		deleteBIGINT(temp2);
+		deleteBIGINT(temp3);
+		delete t;
+	}
+	NODE *q;
+	for (;length;length--)
+	{
+		q=getnode(0);
+		addtail(c,q);
+	}
+	return c;
+}
+*/
+/*
+// Phan tich n! thanh thua so nguyen to, rai mu cua cac thua so nho
+// cho thua so lon, KDL.heso dung kieu BIGINT
+// Tinh n!
+BIGINT giaithua2(int n)
+{
+	if (n==0)
+		return createBIGINT(1);
+	if (n==1)
+		return createBIGINT(1);
+	struct kdl 
+	{
+		BIGINT heso;
+		int mu;
+	};
+	typedef struct kdl KDL;
+	STACK l;
+	init(l);
+	// Phan tich n! thanh tich cac thua so nguyen to
+	int j;
+	for (int i=2;i<=n;i++)
+	{
+		j=i;
+		for (NODESTACK *p=l.pHead;p;p=p->pNext)
+		{	
+			KDL *t=(KDL*) p->info;
+			int temp=convert(t->heso);
+			while (j%temp==0)
+			{
+				t->mu++;
+				j/=temp;
+			}
+		}
+		if (j!=1)
+		{
+			KDL *temp=new KDL;
+			temp->heso=createBIGINT(j);
+			temp->mu=1;
+			NODESTACK *p=getnode(temp);
+			addtail(l,p);
+		}
+	}	
+
+	// Dem so luong chu so 0 o cuoi n!
+	int length=0;
+	for (NODESTACK *p=l.pHead;p;p=p->pNext)
+	{
+		KDL *temp=(KDL*) p->info;
+		int t=convert(temp->heso);		
+		if (t>=5)
+		{
+			length=temp->mu;			
+			KDL *q=(KDL*) l.pHead->info;
+			q->mu-=temp->mu;
+			l.pHead->pNext->pNext=p->pNext;
+			if (p==l.pTail)
+				l.pTail=l.pHead->pNext;
+			delete p;
+			break;
+		}
+	}
+/*
+	for (NODESTACK *p1=l.pHead;p1;p1=p1->pNext)
+	{
+		KDL *t=(KDL*) p1->info;
+		printf("%d^%d * ",convert(t->heso),t->mu);
+	}
+
+	// Tinh n!
+	KDL *t1;
+	while (l.pHead->pNext)
+	{		
+		t1=(KDL *) pop(l);
+		NODESTACK *p=l.pHead;		
+		while (p)
+		{
+			KDL *t2=(KDL*) p->info;
+			if (t1->mu>=t2->mu)
+			{
+				BIGINT temp1=t2->heso;
+				BIGINT temp2=pow(t1->heso,t1->mu/t2->mu);
+				t2->heso=temp2*t2->heso;
+				t1->mu%=t2->mu;
+				deleteBIGINT(temp1);
+				deleteBIGINT(temp2);
+				if (t1->mu==0)
+					break;
+			}
+			p=p->pNext;
+		}
+		if (t1->mu) // Truong hop n=6
+		{	
+			NODESTACK *p=getnode(t1);
+			addtail(l,p);
+			continue;
+		}
+		delete t1;
+//		printf("\n");
+//		for (NODESTACK *p1=l.pHead;p1;p1=p1->pNext)
+//	{
+//		KDL *t=(KDL*) p1->info;
+//		printf("%d^%d * ",convert(t->heso),t->mu);
+//	}
+//getch();
+	}
+	t1=(KDL *) pop(l);
+	BIGINT c=pow(t1->heso,t1->mu);
+	deleteBIGINT(t1->heso);
+	NODE *q;
+	for (;length;length--)
+	{
+		q=getnode(0);
+		addtail(c,q);
+	}	
+	delete t1;
+	return c;
+}
+*/
+/*
+// Dua vao phep nhan
+// Tinh n!
+BIGINT giaithua(int n)
+{
+	BIGINT temp=createBIGINT("1");
+	BIGINT temp1;
+	BIGINT t;
+	if (n==0)
+		return temp;
+	char s[10];
+	for (int i=2;i<=n;i++)
+	{
+		sprintf(s,"%d",i);
+		t=createBIGINT(s);
+		temp1=temp;
+		temp=t*temp;
+		deleteBIGINT(temp1);
+		deleteBIGINT(t);		
+	}
+	return temp;
+}
+*/
+
+
+/*
+Chua giai quyet duoc tat ca cac truong hop loi nhu;
+	3^2(*3)
+	4^2<=!!3
+*/

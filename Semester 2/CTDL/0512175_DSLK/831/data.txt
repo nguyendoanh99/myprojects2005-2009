@@ -1,0 +1,19 @@
+6
+Mat hang 1
+1000
+10000
+Mat hang 2
+2000
+20000
+Mat hang 3
+5000
+300
+Mat hang 4
+3000
+200
+Mat hang 5
+15000
+9000
+Mat hang 6
+8000
+200

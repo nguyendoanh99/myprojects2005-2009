@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script language="JavaScript">
+var images="coffee.gif";
+var amount=13;    
+var size = 1;
+var SizeMax = 13;
+var rangeX = 400;
+var rangeY = 400;
+var Xcur = randommaker(rangeX);
+var Ycur = randommaker(rangeY);
+var t;
+var t1;
+var flag = false;
+function randommaker(range) {		
+	return Math.floor(range*Math.random())
+}
+
+
+ var Ai = [-2, -2, -2, -2, -2, -1, 0, 1, 2, 2, 2, 2, 2];
+ var Aj = [-2, -1, 0, 1, 2, -1, 0, 1, -2, -1, 0, 1, 2];
+// Ve chu voi hieu ung
+// index = 1: chu dan xuat hien
+// index = -1: chu dan bien mat
+ function VeChu(Xpos, Ypos, index) 
+ {
+	size += index;
+	if (size > SizeMax || size < 0)
+	{			
+		clearTimeout(t);	
+		
+		if (size > SizeMax)
+		{
+			size = SizeMax;
+			flag = false;
+		}
+		else
+		{
+			size = 0;
+			flag = true;
+		}
+		return;
+	}
+
+	var temp = (SizeMax - size) / 2;
+	 for (i=0;i<ieDiv.all.pictures.all.length;i++)
+	 {
+		ieDiv.all.pictures.all[i].height = size;
+		ieDiv.all.pictures.all[i].width = size;
+		 ieDiv.all.pictures.all[i].style.top = (Ypos + Aj[i] * SizeMax) + temp;
+		 ieDiv.all.pictures.all[i].style.left = (Xpos + Ai[i] * SizeMax) + temp;
+	 }
+	 
+	 t = setTimeout("VeChu(" + Xpos +"," + Ypos + "," + index + ")", 20);
+	 return;
+ }
+
+function mouseOver()
+{		
+	clearTimeout(t);
+	flag = false;
+	VeChu(Xcur, Ycur, -1); // Cho chu bien mat
+	t1 = setTimeout("KiemTra()", 20 * SizeMax);	
+	return;
+}
+
+function KiemTra()
+{
+	if (flag == true)
+	{
+		clearTimeout(t1);
+		flag = false;
+		Xcur = randommaker(rangeX);
+		Ycur = randommaker(rangeY);
+		VeChu(Xcur, Ycur, 1);
+		return;
+	}
+	else
+		t1 = setTimeout("KiemTra()", 20);
+
+	return;
+}
+function KhoiTao()
+{
+	if (document.all)
+	{
+	document.write('<div id="ieDiv" style="position:absolute;top:0px;left:0px">')
+	document.write('<div id="pictures" style="position:relative">');
+	for (n=0; n < amount; n++)
+	document.write('<img src=" '+images+'" style="position:absolute;top:0px;left:0px" width="0" height="0" onmouseover="mouseOver()"">')
+	document.write('</div>')
+	document.write('</div>')
+
+	 }
+
+	 VeChu(Xcur, Ycur, 1);
+}
+
+KhoiTao();
+function alert1()
+{
+	alert(size + " " + flag);
+}
+
+</script>
+</HEAD>
+
+<BODY>
+<input type="button" value="Start count!" onClick="alert1()">
+</BODY>
+</HTML>
+

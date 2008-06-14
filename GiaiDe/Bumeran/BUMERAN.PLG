@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: BUMERAN - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSPAA.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/BUMERAN.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Baitap\GiaiDe\Bumeran\BUMERAN.CPP"
+]
+Creating command line "cl.exe @C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSPAA.tmp" 
+Creating temporary file "C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSPAB.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/BUMERAN.pdb" /debug /machine:I386 /out:"Debug/BUMERAN.exe" /pdbtype:sept 
+.\Debug\BUMERAN.OBJ
+]
+Creating command line "link.exe @C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSPAB.tmp"
+<h3>Output Window</h3>
+Compiling...
+BUMERAN.CPP
+E:\Baitap\GiaiDe\Bumeran\BUMERAN.CPP(42) : warning C4129: 'B' : unrecognized character escape sequence
+E:\Baitap\GiaiDe\Bumeran\BUMERAN.CPP(44) : warning C4129: 'B' : unrecognized character escape sequence
+E:\Baitap\GiaiDe\Bumeran\BUMERAN.CPP(314) : warning C4018: '<' : signed/unsigned mismatch
+E:\Baitap\GiaiDe\Bumeran\BUMERAN.CPP(319) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+
+
+
+<h3>Results</h3>
+BUMERAN.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

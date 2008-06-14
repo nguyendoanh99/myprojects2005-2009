@@ -1,0 +1,41 @@
+// stdafx.h : include file for standard system include files,
+//  or project specific include files that are used frequently, but
+//      are changed infrequently
+//
+
+#if !defined(AFX_STDAFX_H__2EAF952D_8050_42CB_B05E_28D8A1635A78__INCLUDED_)
+#define AFX_STDAFX_H__2EAF952D_8050_42CB_B05E_28D8A1635A78__INCLUDED_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+
+// TODO: reference additional headers your program requires here
+struct node
+{
+	char info;
+	struct node *pNext;
+};
+typedef struct node NODE;
+struct list
+{
+	NODE *pHead;
+	NODE *pTail;
+};
+typedef struct list LIST;
+
+void addhead(LIST &,NODE *);
+void init(LIST&);
+void push(LIST &,NODE*);
+char pop(LIST &);
+NODE *getnode(char);
+int isEmpty(LIST);
+void addtail(LIST &,NODE *);
+void enQueue(LIST&,NODE*);
+char deQueue(LIST&);
+
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Visual C++ will insert additional declarations immediately before the previous line.
+
+#endif // !defined(AFX_STDAFX_H__2EAF952D_8050_42CB_B05E_28D8A1635A78__INCLUDED_)

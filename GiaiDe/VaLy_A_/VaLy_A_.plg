@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: VaLy_A_ - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSP65.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/VaLy_A_.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\_MANG DI\GIAIDE\VaLy_A_\VaLy_C3.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSP65.tmp" 
+Creating temporary file "C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSP66.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/VaLy_A_.pdb" /debug /machine:I386 /out:"Debug/VaLy_A_.exe" /pdbtype:sept 
+".\Debug\VaLy.obj"
+".\Debug\VaLy_C2.obj"
+".\Debug\VaLy_C3.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\_EVERY~1\LOCALS~1\Temp\RSP66.tmp"
+<h3>Output Window</h3>
+Compiling...
+VaLy_C3.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+VaLy_A_.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,25 @@
+3
+Lop_A
+1
+Nguyen Trung Kien
+1
+2
+Lop_B
+3
+Nguyen Dang Khoa
+10
+10
+Nguyen Thi Nhu Anh
+9
+7
+Huynh Duy Khuong
+8
+9
+Lop_C
+2
+Nguyen Hue Nghi
+8
+8
+Truong Dinh Kim
+9
+9

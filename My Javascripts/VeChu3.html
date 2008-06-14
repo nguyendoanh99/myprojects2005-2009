@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<STYLE type=text/css>.big {
+	FONT-WEIGHT: bold; FONT-SIZE: 38pt; COLOR: blue; FONT-FAMILY: monotype corsiva
+}
+</STYLE>
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script src = "HamVeChu.js" language="JavaScript"> </script>
+<script src = "fly.js" language="JavaScript"> </script>
+<script language="JavaScript">
+<!--you can use this on your web page as long as the above stays in the script-->
+//Wave Text! by GeluKrait (GeluKrait@yahoo.com)
+//Submitted to Echip
+//For this script and more, contact AsSaSsIn@mail2phoenix.com
+
+
+
+	var TimerID;
+	var updown = true;
+	var str = 1;
+
+	function start()
+	{
+          if (document.all)
+	  TimerID = window.setInterval( "wave()", 100 );
+	}
+
+	function wave()
+	{
+	  if ( str > 20 || str < 1 )
+		updown = !updown;
+
+	  if ( updown )
+		str++;
+	   else
+		str--;
+
+	wft.filters( "wave" ).phase = str * 20;
+	wft.filters( "wave" ).strength = str;
+	}
+</script>
+
+
+<script language="JavaScript">
+function BatDau()
+{
+	Begin();
+	start();
+	fly();
+}
+	window.onload=BatDau;
+</script>
+</HEAD>
+
+<BODY BGCOLOR="#000000">
+
+
+<DIV class=big id=wft  
+style="FILTER: wave(add=0, freq=4, light=0, phase=0, strength=5); WIDTH: 1000px; HEIGHT: 115px; text-align:center"><SPAN 
+style="FONT-WEIGHT: 400"><FONT face="Whimsy TT" color=#cc0000 size=7> nhu 
+com binh dan</FONT></SPAN></DIV></BODY></HTML>
+
+</BODY>
+</HTML>
+

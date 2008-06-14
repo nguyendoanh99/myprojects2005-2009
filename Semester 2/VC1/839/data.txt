@@ -1,0 +1,37 @@
+6
+001
+Ten_A
+888833
+13 2 1999
+DIA_CHI_TG
+meo@yahoo.com
+002
+Ten_1
+087373
+23 5 2000
+DIA_CHI_5
+neogeo@yahoo.com
+003
+Ten_2
+125345
+27 9 2005
+DIA_CHI_231
+htv@yahoo.com
+004
+Ten_B
+884794
+10 10 1999
+DIA_CHI_ERTGFH
+kv132@yahoo.com
+005
+Ten_C
+212456
+12 12 2000
+DIA_CHI_TWEEWR
+uns@yahoo.com
+006
+Ten_3A
+890676
+27 9 2005
+DIA_CHI_TGQ23
+meo_super@yahoo.com

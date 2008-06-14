@@ -1,0 +1,4 @@
+- Ho ten:	NGUYEN DANG KHOA
+- Mssv:		0512175
+- Phong thuc hanh: 1
+- Ca thuc hanh: 1

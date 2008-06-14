@@ -1,0 +1,5 @@
+bin\Debug\thu.exe
+bin\Debug\thu.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\thu.exe
+obj\Debug\thu.pdb
