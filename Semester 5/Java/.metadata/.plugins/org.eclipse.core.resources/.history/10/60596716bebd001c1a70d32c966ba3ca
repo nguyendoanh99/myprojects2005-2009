@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TRUONG>
+  <DanhSachKhoi>
+    <KHOI>
+      <MaKhoi>01</MaKhoi>
+      <TenKhoi>Khối 10</TenKhoi>
+      <DanhSachLop>
+        <LOP>
+          <MaLop>01</MaLop>
+          <TenLop>10 A</TenLop>
+          <GiaoVien>
+            <MaGiaoVien></MaGiaoVien>
+            <TenGiaoVien></TenGiaoVien>
+            <TenTat></TenTat>
+            <DiaChi></DiaChi>
+            <DienThoai></DienThoai>
+          </GiaoVien>
+          <PhongHoc></PhongHoc>
+          <GioHoc></GioHoc>
+          <DanhSachHocSinh>
+            <HOCSINH>
+              <MaHocSinh></MaHocSinh>
+              <TenHocSinh></TenHocSinh>
+              <NamSinh></NamSinh>
+              <DiaChi></DiaChi>
+              <DienThoai></DienThoai>
+              <KQHT>
+                <Toan></Toan>
+                <Ly></Ly>
+                <Hoa></Hoa>
+                <DTB></DTB>
+              </KQHT>
+            </HOCSINH>
+          </DanhSachHocSinh>
+        </LOP>
+      </DanhSachLop>
+    </KHOI>
+  </DanhSachKhoi>
+</TRUONG>

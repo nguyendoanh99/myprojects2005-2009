@@ -1,0 +1,6 @@
+#Sun Dec 30 00:56:55 ICT 2007
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression="" OR "Java perspective"

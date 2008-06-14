@@ -1,0 +1,16 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+public class KETQUAHOCTAPDAO extends AbstractDAO {
+
+	public KETQUAHOCTAPDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public KETQUAHOCTAPDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+
+}

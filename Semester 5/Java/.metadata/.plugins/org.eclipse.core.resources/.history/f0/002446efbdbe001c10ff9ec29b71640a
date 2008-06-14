@@ -1,0 +1,76 @@
+
+
+import java.awt.event.KeyEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Event;
+import java.awt.BorderLayout;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.KeyStroke;
+import java.awt.Point;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JMenuItem;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JFrame;
+import javax.swing.JDialog;/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class ChuyenLop {
+
+	private JFrame jFrame;
+	private JPanel jContentPane;
+	private JMenuBar jJMenuBar;
+	private JMenu fileMenu;
+	private JMenu editMenu;
+	private JMenu helpMenu;
+	private JMenuItem exitMenuItem;
+	private JMenuItem aboutMenuItem;
+	private JMenuItem cutMenuItem;
+	private JMenuItem copyMenuItem;
+	private JMenuItem pasteMenuItem;
+	private JMenuItem saveMenuItem;
+	private JDialog aboutDialog;
+	private JPanel aboutContentPane;
+	private JLabel aboutVersionLabel;
+
+	/**
+	 * 
+	 */
+	public ChuyenLop() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * This method initializes jFrame
+	 * 
+	 * @return javax.swing.JFrame
+	 */	
+	private JFrame getJFrame() {
+		if (jFrame == null) { 
+			jFrame = new JFrame();
+			jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			jFrame.setJMenuBar(getJJMenuBar());
+			jFrame.setSize(300,200);
+			jFrame.setContentPane(getJContentPane());
+			jFrame.setTitle("Application");
+		}
+		return jFrame;
+	}
+
+}

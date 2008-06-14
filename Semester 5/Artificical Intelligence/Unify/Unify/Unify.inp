@@ -1,0 +1,25 @@
+24
+P(A,x,f(g(y))) P(y,f(z),f(z))
+x x
+F(x,y) F(y,x)
+P(x) P(A)
+P(F(x),y,G(x)) P(F(x),x,G(x))
+P(F(x),y,G(y)) P(F(x),z,G(x))
+P(x,B,B) P(A,y,z)
+P(G(F(v)),G(u)) P(x,x)
+P(x,F(x)) P(x,x)
+P(A,x,foo(z)) P(A,B,y)
+Father(A,x) G(B)
+x Father(Any)
+P(A,f(x,B),C) P(z)
+Son(x,Bryan) Aunt
+x F(x)
+x B
+P(x,g(f(A)),f(x)) P(f(y),z,y)
+P(F(x),y,G(x)) P(F(x),x,G(x))
+F(x,g(A)) F(g(u),x)
+A(x,f(D,x)) A(E,f(D,y))
+A(B,C) A(x,y)
+A(x,y) A(f(C,y),z)
+P(x,f(y)) P(z,g(w))
+F(x) P(y)

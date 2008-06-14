@@ -1,0 +1,31 @@
+import javax.swing.JDesktopPane;
+
+public class LoginForm extends JDesktopPane {
+
+	private static final long serialVersionUID = 1L;
+
+	public LoginForm() {
+		// TODO Auto-generated constructor stub
+		super();
+		initialize();
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * This method initializes this
+	 * 
+	 * @return void
+	 */
+	private void initialize() {
+		this.setSize(300, 200);
+
+	}
+
+}

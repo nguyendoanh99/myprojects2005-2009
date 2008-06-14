@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package DAO;
+
+import java.util.*;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import DTO.*;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class TRUONGDAO extends AbstractDAO{
+	/**
+	 * 
+	 */
+	public TRUONGDAO() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+	public TRUONGDTO getTruong()
+	{
+		TRUONGDTO kq = new TRUONGDTO();
+		Element goc = doc.getDocumentElement();
+		Node DSKhoi = goc.getElementsByTagName("DanhSachKhoi").item(0);
+		KHOIDAO khoidao = new KHOIDAO(DSKhoi);
+		kq.setDanhSachKhoiHoc(khoidao.getDanhSachKhoiHoc());
+		
+		return kq;
+	}
+	
+}

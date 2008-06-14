@@ -1,0 +1,85 @@
+import java.util.Locale;
+import java.util.TimeZone;
+
+import org.w3c.dom.Node;
+
+import DAO.GIAOVIENDAO;
+import DAO.KETQUAHOCTAPDAO;
+import DAO.KHOIDAO;
+import DAO.LOPHOCDAO;
+import DAO.TRUONGDAO;
+import DTO.GIAOVIENDTO;
+import DTO.HOCSINHDTO;
+import DTO.KETQUAHOCTAPDTO;
+import DTO.KHOIDTO;
+import DTO.LOPHOCDTO;
+import DTO.TRUONGDTO;
+import LIB.DOMUtil;
+public class testQuanLyTruongHoc {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//TRUONGDAO truongdao = new TRUONGDAO();
+		//TRUONGDTO truongdto = truongdao.getTruong();
+		/*
+		KETQUAHOCTAPDTO kqhtdto = new KETQUAHOCTAPDTO();
+		KETQUAHOCTAPDAO dao = new KETQUAHOCTAPDAO();
+		dao.createNode(kqhtdto);
+		*/
+		
+		TRUONGDAO truongdao = new TRUONGDAO();
+		
+		TRUONGDTO truongdto = truongdao.getTruong();
+		LOPHOCDTO lopdto = new LOPHOCDTO();
+//		lopdto.setMaLop("L02");
+		
+		KHOIDAO khoidao = new KHOIDAO();
+		LOPHOCDAO lopdao = new LOPHOCDAO();
+		khoidao.XoaLop(truongdto.getDanhSachKhoiHoc().get(0), lopdto)
+//		HOCSINHDTO hocsinhdto = new HOCSINHDTO();
+//		LOPHOCDTO lophocdto = truongdto.getDanhSachKhoiHoc().get(0).getDanhSachLopHoc().get(0);
+//		lopdao.ThemHocSinh(lophocdto, hocsinhdto);
+//		khoidao.ThemLop(truongdto.getDanhSachKhoiHoc().get(0), lopdto);
+/*		KHOIDTO khoidto = new KHOIDTO();
+		khoidto.setMaKhoi("K10");
+		khoidto.setTenKhoi("Khối 10");
+		truongdao.ThemKhoi(khoidto);
+		
+		khoidto.setMaKhoi("K11");
+		khoidto.setTenKhoi("Khối 11");
+		truongdao.ThemKhoi(khoidto);
+		
+		khoidto.setMaKhoi("K12");
+		khoidto.setTenKhoi("Khối 12");
+		truongdao.ThemKhoi(khoidto);
+		/*
+		GIAOVIENDTO giaoviendto = new GIAOVIENDTO();
+		GIAOVIENDAO dao = new GIAOVIENDAO();
+		giaoviendto.setMaGiaoVien("GV01");
+		giaoviendto.setHoTen("Nguyễn Đăng Khoa");
+		giaoviendto.setDiaChi("6 đường 2/4 Nha Trang");
+		giaoviendto.setDienThoai("0984290981");
+		giaoviendto.setTenTat("Quỉ");
+		Node node = dao.createNode(giaoviendto);
+		System.out.println(node);
+		
+		/*
+		Locale[] lo = Locale.getAvailableLocales();
+		// Vietnam vi VN
+		for (int i = 0; i < lo.length; ++i)
+		{
+			System.out.println(lo[i].getDisplayCountry() + " " + lo[i].getLanguage() + " " + lo[i].getCountry());
+		}
+		*/
+		//Asia/Saigon
+		/*
+		String[] arr = TimeZone.getAvailableIDs();
+		for (int j = 0; j < arr.length; ++j)
+			System.out.println(arr[j]);
+			*/
+	}
+
+}

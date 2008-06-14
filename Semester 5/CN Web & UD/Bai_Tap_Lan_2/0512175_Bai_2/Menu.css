@@ -1,0 +1,77 @@
+@charset "utf-8";
+#menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+}
+#menu li {
+	height: 2em;
+	padding: 0;
+	position: relative;
+	width: 150px;
+	z-index: 1000;
+	float: left;
+	margin: 0px 1px 0px 0px;
+}
+#menu li dl {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+}
+
+#menu dt {
+	display: block;
+	color: #FF0000;
+	border-bottom: 1px solid #444;
+	font-size: 1.2em;
+	padding: 2px;
+}
+#menu .line {
+	border-bottom: 1px solid #666666;
+}
+
+#menu .border_bottom {
+	border-bottom: 1px solid #444;
+}
+
+#menu dl {
+	background: #6699FF;
+	cursor: pointer;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+	text-align: center;
+}
+
+#menu li dd {
+	display: none;
+}
+#menu dd {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	border: 0;
+}
+#menu    li:hover    dd, #menu   li   a:hover   dd {
+	display: block;
+}
+
+#menu li a, #menu li a:visited {
+	text-decoration:none;
+}
+#menu li:hover, #menu li a:hover {
+	border: 0;
+
+}
+.Root dd a, .gallery dd a:visited {
+	padding: 0 0 0 30px;
+	color:#FFFFFF;
+	text-decoration:none;
+	display:block;
+}
+.Root dd a:hover {
+	background: #00ff00;
+	color:#FFFFFF;
+}

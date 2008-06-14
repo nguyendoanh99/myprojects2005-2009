@@ -1,0 +1,267 @@
+/**
+ * 
+ */
+package DAO;
+
+import java.util.*;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import DTO.*;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class TRUONGDAO extends AbstractDAO{
+	private Document doc;
+	/**
+	 * 
+	 */
+	public TRUONGDAO() {
+		// TODO Auto-generated constructor stub
+		doc = KetNoiXML("TruongHoc.xml");
+	}
+
+	public TRUONGDTO getTruong()
+	{
+		TRUONGDTO kq = new TRUONGDTO();
+		Element goc = doc.getDocumentElement();
+		Node DSKhoi = goc.getElementsByTagName("DanhSachKhoi").item(0);
+		
+		kq.setDanhSachKhoiHoc(getDanhSachKhoiHoc(DSKhoi));
+		
+		return kq;
+	}
+	public List<KHOIDTO> getDanhSachKhoiHoc(Node node)
+	{
+		List<KHOIDTO> kq = new ArrayList<KHOIDTO>();
+		node = node.getFirstChild();
+		
+		while (node != null)
+		{
+			if (node.getNodeType() == Node.ELEMENT_NODE)
+			{
+				kq.add(getKhoi(node));
+			}
+			node = node.getNextSibling();
+		}
+		return kq;
+	}
+	public List<LOPHOCDTO> getDanhSachLopHoc(Node node)
+	{
+		List<LOPHOCDTO> kq = new ArrayList<LOPHOCDTO>();
+		node = node.getFirstChild();
+		
+		while (node != null)
+		{
+			if (node.getNodeType() == Node.ELEMENT_NODE)
+			{
+				kq.add(getLopHoc(node));
+			}
+			node = node.getNextSibling();
+		}
+		return kq;
+	}
+	public List<HOCSINHDTO> getDanhSachHocSinh(Node node)
+	{
+		List<HOCSINHDTO> kq = new ArrayList<HOCSINHDTO>();
+		node = node.getFirstChild();
+		
+		while (node != null)
+		{
+			if (node.getNodeType() == Node.ELEMENT_NODE)
+			{
+				kq.add(getHocSinh(node));
+			}
+			node = node.getNextSibling();
+		}
+		return kq;
+	}
+	public KHOIDTO getKhoi(Node node)
+	{
+		KHOIDTO kq = new KHOIDTO();
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaKhoi") == 0)
+					kq.setMaKhoi(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("TenKhoi") == 0)
+						kq.setTenKhoi(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("DanhSachLop") == 0)
+						{
+							List<LOPHOCDTO> arrLopHoc = new ArrayList<LOPHOCDTO>();
+							kq.setDanhSachLopHoc(arrLopHoc);
+						}				
+			}
+			item = item.getNextSibling();
+		}	
+		
+		return kq;
+	}
+	public LOPHOCDTO getLopHoc(Node node)
+	{
+		LOPHOCDTO kq = new LOPHOCDTO();
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaLop") == 0)
+					kq.setMaLop(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("TenLop") == 0)
+						kq.setTenLop(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("GiaoVien") == 0)
+						{
+							GIAOVIENDTO giaovien = getGiaoVien(item);							
+							kq.setGiaoVien(giaovien);
+						}				
+						else
+							if (name.compareToIgnoreCase("PhongHoc") == 0)
+								kq.setPhongHoc(item.getFirstChild().getNodeValue());
+							else
+								if (name.compareToIgnoreCase("GioHoc") == 0)
+								{
+									String value = item.getFirstChild().getNodeValue();
+									Date d = new Date(value);
+									kq.setGioHoc(d);
+								}
+								else
+									if (name.compareToIgnoreCase("DanhSachHocSinh") == 0)
+									{
+										List<HOCSINHDTO> hocsinh = null;
+										kq.setDanhSachHocSinh(hocsinh);
+									}	
+			}
+			item = item.getNextSibling();
+		}	
+		
+		return kq;
+	}
+	public GIAOVIENDTO getGiaoVien(Node node)
+	{
+		GIAOVIENDTO kq = new GIAOVIENDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaGiaoVien") == 0)
+					kq.setMaGiaoVien(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("TenGiaoVien") == 0)
+						kq.setHoTen(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("TenTat") == 0)
+							kq.setTenTat(item.getFirstChild().getNodeValue());
+						else
+							if (name.compareToIgnoreCase("DiaChi") == 0)
+								kq.setDiaChi(item.getFirstChild().getNodeValue());
+							else
+								if (name.compareToIgnoreCase("DienThoai") == 0)
+									kq.setDienThoai(item.getFirstChild().getNodeValue());
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;
+	}
+	public HOCSINHDTO getHocSinh(Node node)
+	{
+		HOCSINHDTO kq = new HOCSINHDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaHocSinh") == 0)
+					kq.setMaHocSinh(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("TenHocSinh") == 0)
+						kq.setHoTen(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("NamSinh") == 0)
+						{
+							Date d = new Date();
+							kq.setNamSinh(d);
+						}
+						else
+							if (name.compareToIgnoreCase("DiaChi") == 0)
+								kq.setDiaChi(item.getFirstChild().getNodeValue());
+							else
+								if (name.compareToIgnoreCase("DienThoai") == 0)
+									kq.setDienThoai(item.getFirstChild().getNodeValue());
+								else
+									if (name.compareToIgnoreCase("KQHT") == 0)
+									{
+										
+									}
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;
+	}
+	public KETQUAHOCTAPDTO getKQHT(Node node)
+	{
+		KETQUAHOCTAPDTO kq = new KETQUAHOCTAPDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				float value = Float.parseFloat(item.getFirstChild().getNodeValue());
+				if (name.compareToIgnoreCase("Toan") == 0)
+					kq.setToan(value);
+				else
+					if (name.compareToIgnoreCase("Ly") == 0)
+						kq.setLy(value);
+					else
+						if (name.compareToIgnoreCase("Hoa") == 0)
+							kq.setHoa(value);
+						else
+							if (name.compareToIgnoreCase("DTB") == 0)
+								kq.setDTB(value);
+							else
+								if (name.compareToIgnoreCase("DienThoai") == 0)
+									kq.setDienThoai(item.getFirstChild().getNodeValue());
+								else
+									if (name.compareToIgnoreCase("KQHT") == 0)
+									{
+										
+									}
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;	
+	}
+}

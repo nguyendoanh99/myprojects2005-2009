@@ -1,0 +1,8 @@
+#Wed Jan 09 10:51:00 ICT 2008
+PALETTE_WIDTH=125
+GENERATE_EXPRESSION_COMMENT=true
+PALETTE_STATE=2
+eclipse.preferences.version=1
+VISUAL_CLASS_WIZARD_SELECTED_ELEMENT_KEY=org.eclipse.ve.jfc.swing.cat-Application-java.lang.Object
+GENERATE_TRY_CATCH_BLOCK=true
+SWING_LOOKANDFEEL=com.sun.java.swing.plaf.windows.WindowsLookAndFeel

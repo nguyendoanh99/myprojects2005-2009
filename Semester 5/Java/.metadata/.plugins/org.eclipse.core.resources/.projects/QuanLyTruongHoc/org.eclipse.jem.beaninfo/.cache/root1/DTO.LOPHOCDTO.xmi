@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:ChangeDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:change="http://www.eclipse.org/emf/2003/Change" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.jem.internal.beaninfo.beaninfo="http:///org/eclipse/jem/internal/beaninfo/beaninfo.ecore" xmlns:org.eclipse.jem.java="java.xmi">
+  <objectChanges xsi:type="change:EObjectToChangesMapEntry" key="org.eclipse.jem.java:JavaClass java:/DTO#LOPHOCDTO">
+    <value xsi:type="change:FeatureChange" featureName="eAnnotations">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.0"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="eStructuralFeatures">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.1 #//@objectsToAttach.2 #//@objectsToAttach.3 #//@objectsToAttach.4 #//@objectsToAttach.5 #//@objectsToAttach.6"/>
+    </value>
+  </objectChanges>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanDecorator" implicitDecoratorFlag="IMPLICIT_DECORATOR"/>
+  <objectsToAttach xsi:type="ecore:EReference" name="gioHoc" eType="org.eclipse.jem.java:JavaClass java:/java.util#Date" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.getGioHoc(" writeMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.setGioHoc(java.util.Date"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="danhSachHocSinh" eType="org.eclipse.jem.java:JavaClass java:/java.util#List" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.getDanhSachHocSinh(" writeMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.setDanhSachHocSinh(java.util.List"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="phongHoc" eType="org.eclipse.jem.java:JavaClass java:/java.lang#String" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.getPhongHoc(" writeMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.setPhongHoc(java.lang.String"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="maLop" eType="org.eclipse.jem.java:JavaClass java:/java.lang#String" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.getMaLop(" writeMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.setMaLop(java.lang.String"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="giaoVien" eType="org.eclipse.jem.java:JavaClass java:/DTO#GIAOVIENDTO" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.getGiaoVien(" writeMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.setGiaoVien(DTO.GIAOVIENDTO"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="tenLop" eType="org.eclipse.jem.java:JavaClass java:/java.lang#String" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.getTenLop(" writeMethod="org.eclipse.jem.java:Method java:/DTO#LOPHOCDTO.setTenLop(java.lang.String"/>
+  </objectsToAttach>
+</change:ChangeDescription>

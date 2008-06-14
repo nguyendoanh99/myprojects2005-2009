@@ -1,0 +1,22 @@
+import java.util.*;
+public class KETQUAHOCTAPDTO {
+	private List<Float> m_Diem;	
+	private float m_fDTB;
+	public KETQUAHOCTAPDTO() {
+		// TODO Auto-generated constructor stub
+		m_Diem = new ArrayList<Float>();
+		m_Diem.add(0f); // Toan
+		m_Diem.add(0f); // Ly
+		m_Diem.add(0f); // Hoa
+		m_fDTB = 0;
+	}
+	public float getDiemLy()
+	{
+		return m_Diem.get(1);
+	}
+	public float setDiemLy(float value)
+	{
+		m_Diem.set(1, value);
+	}
+
+}

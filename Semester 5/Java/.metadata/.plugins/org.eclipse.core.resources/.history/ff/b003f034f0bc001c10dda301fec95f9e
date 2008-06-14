@@ -1,0 +1,53 @@
+import java.util.*;
+public class KETQUAHOCTAPDTO {
+	private List<Float> m_Diem;	
+	private float m_fDTB;
+	public KETQUAHOCTAPDTO() {
+		// TODO Auto-generated constructor stub
+		m_Diem = new ArrayList<Float>();
+		m_Diem.add(0f); // Toan
+		m_Diem.add(0f); // Ly
+		m_Diem.add(0f); // Hoa
+		m_fDTB = 0;
+	}
+	// Toan
+	public float getToan()
+	{
+		return m_Diem.get(0);
+	}
+	public boolean setToan(float value)
+	{
+		if (0 > value || value > 10)
+			return false;
+		
+		m_Diem.set(0, value);
+		return true;
+	}
+	// Ly
+	public float getLy()
+	{
+		return m_Diem.get(1);
+	}
+	public boolean setLy(float value)
+	{
+		if (0 > value || value > 10)
+			return false;
+		
+		m_Diem.set(1, value);
+		return true;
+	}
+	// Hoa
+	public float getHoa()
+	{
+		return m_Diem.get(2);
+	}
+	public boolean setHoa(float value)
+	{
+		if (0 > value || value > 10)
+			return false;
+		
+		m_Diem.set(2, value);
+		return true;
+	}
+
+}

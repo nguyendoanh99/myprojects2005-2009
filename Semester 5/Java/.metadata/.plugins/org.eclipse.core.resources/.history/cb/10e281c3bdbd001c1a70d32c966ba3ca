@@ -1,0 +1,56 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+import DTO.GIAOVIENDTO;
+
+public class GIAOVIENDAO extends AbstractDAO {
+
+	public GIAOVIENDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public GIAOVIENDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+	public GIAOVIENDTO getGiaoVien()
+	{
+		Node node = getNode();
+		GIAOVIENDTO kq = new GIAOVIENDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaGiaoVien") == 0)
+					kq.setMaGiaoVien(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("TenGiaoVien") == 0)
+						kq.setHoTen(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("TenTat") == 0)
+							kq.setTenTat(item.getFirstChild().getNodeValue());
+						else
+							if (name.compareToIgnoreCase("DiaChi") == 0)
+								kq.setDiaChi(item.getFirstChild().getNodeValue());
+							else
+								if (name.compareToIgnoreCase("DienThoai") == 0)
+									kq.setDienThoai(item.getFirstChild().getNodeValue());
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;
+	}
+	public Node createNode(GIAOVIENDTO giaoviendto)
+	{
+		Node _node;
+		setNode(_node);
+		return _node;
+	}
+}

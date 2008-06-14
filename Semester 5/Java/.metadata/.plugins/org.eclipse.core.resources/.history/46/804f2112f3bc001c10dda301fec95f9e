@@ -1,0 +1,29 @@
+import java.util.Date;
+
+/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class GIAOVIENDTO {
+	private String m_strMaGiaoVien;
+	private String m_strHoTen;
+	private String m_strTenTat;
+	private String m_strDiaChi;
+	private String m_strDienThoai;
+		
+	/**
+	 * 
+	 */
+	public GIAOVIENDTO() {
+		// TODO Auto-generated constructor stub
+		m_strMaGiaoVien = "";
+		m_strHoTen = "";
+		m_strDiaChi = "";
+		m_strDienThoai = "";
+	}
+
+}

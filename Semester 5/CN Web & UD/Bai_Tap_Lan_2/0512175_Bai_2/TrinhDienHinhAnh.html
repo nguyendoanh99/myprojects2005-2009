@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="Menu.css" rel="stylesheet" type="text/css" />
+<link href="popupmenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="_XML.js"></script>
+<script type="text/javascript" src="_Window.js"> </script>
+<script type="text/javascript" src="_ListWindow.js"> </script>
+<script type="text/javascript" src="Functions.js"></script>
+<script type="text/javascript" src="Events.js"> </script>
+
+<script type="text/javascript">
+    // Xac dinh co phai trinh duyet IE khong
+    var IE = document.all ? 1 : 0; //http://javascript.internet.com/page-details/drag-n-drop.html
+    var listWindow = new _ListWindow();
+    var CurrentID = 0;
+    
+    document.onmouseup = MouseUp;
+    document.onmousedown =  MouseDown;
+    document.oncontextmenu = ShowMenu;
+
+</script>
+</head>
+
+<body>
+<!-- Menu -->
+
+<ul id="menu">
+    <li>
+        <!--[if lte IE 6]><a href="#"><table><tr><td><![endif]-->
+    	<dl class="Root">
+        	<dt> File </dt>
+            <dd id="mnuNew" onclick="New_Click()"> <a href="#">New </a></dd>
+            <dd id="mnuOpen" onclick="MenuItem_Click(this.id)"> <a href="#"> Open </a></dd>
+            <dd id="mnuSave" onclick="MenuItem_Click(this.id)"> <a href="#"> Save </a></dd>
+            <dd id="mnuSaveAs" onclick="MenuItem_Click(this.id)" class="line"> <a href="#"> Save as... </a></dd>
+            <dd id="mnuPageSetup" onclick="MenuItem_Click(this.id)"> <a href="#"> Page Setup... </a></dd>
+            <dd id="mnuPrint" onclick="MenuItem_Click(this.id)" class="line"> <a href="#"> Print... </a></dd>
+            <dd id="mnuExit" onclick="MenuItem_Click(this.id)" class="border_bottom"> <a href="#"> Exit </a></dd>
+        </dl>        
+   	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+    <li>
+    	<!--[if lte IE 6]><a href="#"><table><tr><td><![endif]-->
+    	<dl class="Root">
+        	<dt> <span class="style1"></span>Edit</dt>
+            <dd id="mnuUndo" onclick="MenuItem_Click(this.id)" class="line"> <a href="#"> Undo </a></dd>
+            <dd id="mnuCut" onclick="MenuItem_Click(this.id)"> <a href="#"> Cut </a></dd>
+            <dd id="mnuCopy" onclick="MenuItem_Click(this.id)"> <a href="#"> Copy </a></dd>
+            <dd id="mnuPaste" onclick="MenuItem_Click(this.id)"> <a href="#"> Paste </a></dd>
+            <dd id="mnuDelete" onclick="MenuItem_Click(this.id)" class="line"> <a href="#"> Delete </a></dd>
+            <dd id="mnuFind" onclick="MenuItem_Click(this.id)"> <a href="#"> Find... </a></dd>
+            <dd id="mnuFindNext" onclick="MenuItem_Click(this.id)"> <a href="#"> Find Next </a></dd>
+            <dd id="mnuReplace" onclick="MenuItem_Click(this.id)"> <a href="#"> Replace... </a></dd>
+            <dd id="mnuGoto" onclick="MenuItem_Click(this.id)" class="line"> <a href="#"> Go To... </a></dd>
+            <dd id="mnuSelectAll" onclick="MenuItem_Click(this.id)"> <a href="#"> Select All </a></dd>
+            <dd id="mnuTimeDate" onclick="MenuItem_Click(this.id)" class="border_bottom"> <a href="#"> Time/Date </a></dd>
+        </dl>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+    <li>
+    	<!--[if lte IE 6]><a href="#"><table><tr><td><![endif]-->
+    	<dl class="Root">
+        	<dt> Format </dt>
+            <dd id="mnuWordWrap" onclick="MenuItem_Click(this.id)"> <a href="#"> Word Wrap </a></dd>
+            <dd id="mnuFont" onclick="MenuItem_Click(this.id)" class="border_bottom"> <a href="#"> Font... </a></dd>
+        </dl>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+    <li>
+    	<!--[if lte IE 6]><a href="#"><table><tr><td><![endif]-->
+    	<dl class="Root">
+        	<dt> View </dt>
+            <dd id="mnuStatusBar" onclick="MenuItem_Click(this.id)" class="border_bottom"> <a href="#"> Status Bar </a></dd>
+        </dl>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+    <li>
+    	<!--[if lte IE 6]><a href="#"><table><tr><td><![endif]-->
+    	<dl class="Root">
+        	<dt> Help </dt>
+            <dd id="mnuHelpTopics" onclick="MenuItem_Click(this.id)" class="line"> <a href="#"> Help Topics </a></dd>
+            <dd id="mnuAbout" onclick="MenuItem_Click(this.id)" class="border_bottom"> <a href="#"> About </a></dd>
+        </dl>
+        <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+</ul>
+
+<!-- Popup menu -->
+<div id="popupmenu">
+<ul>
+    <li>
+        <!--[if lte IE 6]><a href="#"><table><tr><td><![endif]-->
+    	<dl class="Root">
+            <dd id="popupNew" onclick="pMenuItem_Click(this.id)"> <a name="pmenu" href="#">New </a></dd>
+            <dd id="popupOpen" onclick="pMenuItem_Click(this.id)"> <a name="pmenu" href="#"> Open </a></dd>
+            <dd id="popupSave" onclick="pMenuItem_Click(this.id)"> <a name="pmenu" href="#"> Save </a></dd>
+            <dd id="popupSaveAs" onclick="pMenuItem_Click(this.id)" class="line"> <a name="pmenu" href="#"> Save as... </a></dd>
+            <dd id="popupPageSetup" onclick="pMenuItem_Click(this.id)"> <a name="pmenu" href="#"> Page Setup... </a></dd>
+            <dd id="popupPrint" onclick="pMenuItem_Click(this.id)" class="line"> <a name="pmenu" href="#"> Print... </a></dd>
+            <dd id="popupExit" onclick="pMenuItem_Click(this.id)" class="border_bottom"> <a name="pmenu" href="#"> Exit </a></dd>
+        </dl>        
+   	<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+    </li>
+</ul>
+</div>
+</body>
+</html>

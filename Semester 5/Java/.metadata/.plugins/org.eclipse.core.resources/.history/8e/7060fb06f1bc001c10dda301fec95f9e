@@ -1,0 +1,24 @@
+import java.util.Date;
+
+
+public class HOCSINHDTO {
+	//private
+	private	String m_strMaHocSinh;
+	private String m_strHoTen;
+	private Date m_dateNamSinh;
+	private String m_strDiaChi;
+	private String m_strDienThoai;
+	private KETQUAHOCTAPDTO m_KQHT;
+ 
+	public HOCSINHDTO() {
+		// TODO Auto-generated constructor stub
+		m_strMaHocSinh = "";
+		m_strHoTen = "";
+		m_dateNamSinh = new Date();
+		m_strDiaChi = "";
+		m_strDienThoai = "";
+		m_KQHT = new KETQUAHOCTAPDTO();
+		
+	}
+
+}

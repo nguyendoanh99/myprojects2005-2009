@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DULIEU>
+  <MaGiaoVien Chuoi="GV" ChieuDai="5">0</MaGiaoVien>
+  <MaKhoi Chuoi="K" ChieuDai="3">12</MaKhoi>
+  <MaLichLopHoc Chuoi="LLH" ChieuDai="8">0</MaLichLopHoc>
+  <MaLopHoc Chuoi="LH" ChieuDai="4">0</MaLopHoc>
+  <MaMonHoc Chuoi="MH" ChieuDai="4">0</MaMonHoc>
+  <MaPhanCong Chuoi="PC" ChieuDai="6">0</MaPhanCong>
+  <MaPhuTrach Chuoi="PT" ChieuDai="5">0</MaPhuTrach>
+  <MaRangBuocGiaoVien Chuoi="RBGV" ChieuDai="9">8120</MaRangBuocGiaoVien>
+  <MaRangBuocLopHoc Chuoi="RBLH" ChieuDai="9">1960</MaRangBuocLopHoc>
+</DULIEU>

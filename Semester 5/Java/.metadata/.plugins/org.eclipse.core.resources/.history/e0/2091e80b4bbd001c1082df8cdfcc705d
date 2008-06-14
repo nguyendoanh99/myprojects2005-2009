@@ -1,0 +1,16 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+public class HOCSINHDAO extends AbstractDAO {
+
+	public HOCSINHDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public HOCSINHDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+
+}

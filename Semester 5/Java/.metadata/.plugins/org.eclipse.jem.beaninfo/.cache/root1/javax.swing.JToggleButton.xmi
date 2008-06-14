@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:ChangeDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:change="http://www.eclipse.org/emf/2003/Change" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.jem.internal.beaninfo.beaninfo="http:///org/eclipse/jem/internal/beaninfo/beaninfo.ecore" xmlns:org.eclipse.jem.java="java.xmi">
+  <objectChanges xsi:type="change:EObjectToChangesMapEntry" key="org.eclipse.jem.java:JavaClass java:/javax.swing#JToggleButton">
+    <value xsi:type="change:FeatureChange" featureName="eAnnotations">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.0"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="eStructuralFeatures">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.1 #//@objectsToAttach.2 #//@objectsToAttach.3 #//@objectsToAttach.4 #//@objectsToAttach.5"/>
+    </value>
+    <value xsi:type="change:FeatureChange" featureName="events">
+      <listChanges xsi:type="change:ListChange" referenceValues="#//@objectsToAttach.6 #//@objectsToAttach.7 #//@objectsToAttach.8"/>
+    </value>
+  </objectChanges>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanDecorator" shortDescription="Represents a two-state button" implicitlySetBits="6773413839565225998" implicitDecoratorFlag="IMPLICIT_DECORATOR" mergeSuperMethods="false">
+    <attributes xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:FeatureAttributeMapEntry" key="ICON_COLOR_32x32" value="&quot;icons/jtbutn32.gif&quot;"/>
+    <attributes xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:FeatureAttributeMapEntry" key="ICON_COLOR_16x16" value="&quot;icons/jtbutn16.gif&quot;"/>
+    <notInheritedPropertyNames>horizontalAlignment</notInheritedPropertyNames>
+    <notInheritedPropertyNames>horizontalTextPosition</notInheritedPropertyNames>
+    <notInheritedPropertyNames>selectedObjects</notInheritedPropertyNames>
+    <notInheritedPropertyNames>verticalAlignment</notInheritedPropertyNames>
+    <notInheritedPropertyNames>verticalTextPosition</notInheritedPropertyNames>
+    <notInheritedEventNames>change</notInheritedEventNames>
+    <notInheritedEventNames>item</notInheritedEventNames>
+    <notInheritedEventNames>action</notInheritedEventNames>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="horizontalAlignment" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" shortDescription="Horizontal alignment of icon and text in button" implicitlySetBits="6773413839565226044" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.getHorizontalAlignment(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.setHorizontalAlignment(int">
+      <attributes xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:FeatureAttributeMapEntry" key="enumerationValues" value="[15]{&quot;LEFT&quot;,2,&quot;javax.swing.SwingConstants.LEFT&quot;,&quot;CENTER&quot;,0,&quot;javax.swing.SwingConstants.CENTER&quot;,&quot;RIGHT&quot;,4,&quot;javax.swing.SwingConstants.RIGHT&quot;,&quot;LEADING&quot;,10,&quot;javax.swing.SwingConstants.LEADING&quot;,&quot;TRAILING&quot;,11,&quot;javax.swing.SwingConstants.TRAILING&quot;}"/>
+    </eAnnotations>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="horizontalTextPosition" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" shortDescription="Horizontal position of text relative to the icon" implicitlySetBits="6773413839565226044" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.getHorizontalTextPosition(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.setHorizontalTextPosition(int">
+      <attributes xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:FeatureAttributeMapEntry" key="enumerationValues" value="[15]{&quot;LEFT&quot;,2,&quot;javax.swing.SwingConstants.LEFT&quot;,&quot;CENTER&quot;,0,&quot;javax.swing.SwingConstants.CENTER&quot;,&quot;RIGHT&quot;,4,&quot;javax.swing.SwingConstants.RIGHT&quot;,&quot;LEADING&quot;,10,&quot;javax.swing.SwingConstants.LEADING&quot;,&quot;TRAILING&quot;,11,&quot;javax.swing.SwingConstants.TRAILING&quot;}"/>
+    </eAnnotations>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="selectedObjects" eType="org.eclipse.jem.java:ArrayType java:/java.lang#Object[]" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" shortDescription="Array with selected item" expert="true" implicitlySetBits="6629298651489370228" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" designTime="false" readMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.getSelectedObjects("/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="verticalAlignment" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" shortDescription="Vertical alignment of icon and text in button" implicitlySetBits="6773413839565226044" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" bound="true" readMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.getVerticalAlignment(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.setVerticalAlignment(int">
+      <attributes xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:FeatureAttributeMapEntry" key="enumerationValues" value="[9]{&quot;TOP&quot;,1,&quot;javax.swing.SwingConstants.TOP&quot;,&quot;CENTER&quot;,0,&quot;javax.swing.SwingConstants.CENTER&quot;,&quot;BOTTOM&quot;,3,&quot;javax.swing.SwingConstants.BOTTOM&quot;}"/>
+    </eAnnotations>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="verticalTextPosition" eType="org.eclipse.jem.java:JavaDataType java:/#int" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" shortDescription="Vertical position of text relative to the icon" implicitlySetBits="6773413839565226044" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.getVerticalTextPosition(" writeMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.setVerticalTextPosition(int">
+      <attributes xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:FeatureAttributeMapEntry" key="enumerationValues" value="[9]{&quot;TOP&quot;,1,&quot;javax.swing.SwingConstants.TOP&quot;,&quot;CENTER&quot;,0,&quot;javax.swing.SwingConstants.CENTER&quot;,&quot;BOTTOM&quot;,3,&quot;javax.swing.SwingConstants.BOTTOM&quot;}"/>
+    </eAnnotations>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanEvent" name="change">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:EventSetDecorator" displayName="Change" shortDescription="All change events" implicitlySetBits="-2594073385365405571" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" inDefaultEventSet="true" addListenerMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.addChangeListener(javax.swing.event.ChangeListener" listenerType="org.eclipse.jem.java:JavaClass java:/javax.swing.event#ChangeListener" removeListenerMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.removeChangeListener(javax.swing.event.ChangeListener">
+      <serListMthd xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:MethodProxy" name="stateChanged" method="org.eclipse.jem.java:Method java:/javax.swing.event#ChangeListener.stateChanged(javax.swing.event.ChangeEvent">
+        <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:MethodDecorator" shortDescription="Event fired when state has changed" preferred="true" implicitlySetBits="6629298651489370113">
+          <serParmDesc xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:ParameterDecorator" implicitlySetBits="2017612633061982209" name="stateChangeEvent"/>
+        </eAnnotations>
+      </serListMthd>
+    </eAnnotations>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanEvent" name="item">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:EventSetDecorator" displayName="Item" shortDescription="All Item events" implicitlySetBits="-2594073385365405571" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" inDefaultEventSet="true" addListenerMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.addItemListener(java.awt.event.ItemListener" listenerType="org.eclipse.jem.java:JavaClass java:/java.awt.event#ItemListener" removeListenerMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.removeItemListener(java.awt.event.ItemListener">
+      <serListMthd xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:MethodProxy" name="itemStateChanged" method="org.eclipse.jem.java:Method java:/java.awt.event#ItemListener.itemStateChanged(java.awt.event.ItemEvent">
+        <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:MethodDecorator" shortDescription="Event fired when the item state has changed" preferred="true" implicitlySetBits="6629298651489370113">
+          <serParmDesc xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:ParameterDecorator" implicitlySetBits="2017612633061982209" name="itemEvent"/>
+        </eAnnotations>
+      </serListMthd>
+    </eAnnotations>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanEvent" name="action">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:EventSetDecorator" displayName="Action" shortDescription="All action events" preferred="true" implicitlySetBits="-2594073385365405571" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" inDefaultEventSet="true" addListenerMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.addActionListener(java.awt.event.ActionListener" listenerType="org.eclipse.jem.java:JavaClass java:/java.awt.event#ActionListener" removeListenerMethod="org.eclipse.jem.java:Method java:/javax.swing#AbstractButton.removeActionListener(java.awt.event.ActionListener">
+      <serListMthd xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:MethodProxy" name="actionPerformed" method="org.eclipse.jem.java:Method java:/java.awt.event#ActionListener.actionPerformed(java.awt.event.ActionEvent">
+        <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:MethodDecorator" shortDescription="Event fired on clicking the button" preferred="true" implicitlySetBits="6629298651489370113">
+          <serParmDesc xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:ParameterDecorator" implicitlySetBits="2017612633061982209" name="actionEvent"/>
+        </eAnnotations>
+      </serListMthd>
+    </eAnnotations>
+  </objectsToAttach>
+</change:ChangeDescription>

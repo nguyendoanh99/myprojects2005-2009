@@ -1,0 +1,103 @@
+/**
+ * 
+ */
+package DAO;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import LIB.DOMUtil;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class DuLieuDAO {
+	public static String TenFile = "TruongHoc.xml";
+	public static Document TaiLieu = AbstractDAO.KetNoiXML(TenFile);
+	/**
+	 * 
+	 */
+    private void GhiDuLieu(String TenNode, int GiaTri)
+    {
+    	// Lay thong tin cua node co ten la TenNode
+    	Node node = TaiLieu.getElementsByTagName(TenNode).item(0);
+    	Node node1 = node.cloneNode(false);
+    	node1.getFirstChild().setNodeValue(String.valueOf(GiaTri));
+    	TaiLieu.getDocumentElement().replaceChild(node1, node);
+    	DOMUtil.writeXmlToFile(TenFile, TaiLieu);
+    }
+
+    private void LayThongTinNode(String TenNode, String Chuoi, Integer ChieuDai, Integer Giatri)
+    {
+    	Element node = (Element) TaiLieu.getElementsByTagName(TenNode).item(0);
+    	Chuoi = node.getAttribute("Chuoi");
+    	ChieuDai = Integer.parseInt(node.getAttribute("ChieuDai"));
+    	Giatri = Integer.parseInt(node.getFirstChild().getNodeValue());    	
+    }
+
+    //Lay so lon nhat co n chu so
+    private int SoLonNhat(int n)
+    {
+    	int kq = 1;
+    	for (int i = 1; i <= n; ++i)
+    		kq *= 10;
+    	return kq - 1;
+    }
+    // Sinh ma moi, ma do la ma strMa trong bang strBang
+    private String TaoMa(String strMa, String strBang)
+    {
+    	String kq = "";
+    	String Chuoi = "";
+    	int ChieuDai;
+    	int GiaTri;
+    	LayThongTinNode(strMa, Chuoi, ChieuDai, GiaTri);
+    	int ChieuDaiChuoiSo = ChieuDai - Chuoi.length();
+    	int Max = SoLonNhat(ChieuDaiChuoiSo);
+    	String format;
+    	int GiaTriCu = GiaTri - 1; // Luu lai gia tri vua moi doc
+    	
+    	if (GiaTriCu < 0)
+    		GiaTriCu = Max;
+    	while (GiaTriCu != GiaTri)
+    	{
+    		format = Chuoi +
+    	}
+    }
+
+        While GiaTriCu <> GiaTri
+            format = Chuoi & "{0," & ChieuDaiChuoiSo.ToString() & ":D}"
+            KetQua = String.Format(format, GiaTri)
+            KetQua = KetQua.Replace(" ", "0")
+
+            Dim strSQL As String
+            strSQL = "select count(*) from " & strBang & " where " _
+                        & strMa & "='" & KetQua & "'"
+            Dim cmd As New OleDbCommand(strSQL, cn)
+
+            Dim gt As Integer = cmd.ExecuteScalar()
+            If gt = 0 Then ' Ma nay chua co trong csdl
+                Exit While
+            End If
+
+            GiaTri += 1
+            If GiaTri > Max Then
+                GiaTri = 0
+            End If
+        End While
+
+        If (GiaTri = GiaTriCu) Then
+            KetQua = ""
+        Else
+            GhiDuLieu(strMa, GiaTri)
+            Console.WriteLine(GiaTri)
+        End If
+
+        Return KetQua
+    End Function
+	public DuLieuDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

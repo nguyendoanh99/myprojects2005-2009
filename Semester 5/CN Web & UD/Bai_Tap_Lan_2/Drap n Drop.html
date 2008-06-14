@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+var obj;
+var cursorX;
+var cursorY;
+// Xac dinh co phai trinh duyet IE khong
+var IE = document.all ? 1 : 0; //http://javascript.internet.com/page-details/drag-n-drop.html
+// Ham xu ly khi co su kien di chuyen chuot
+function MouseMove(e)
+{
+	if (obj)
+	{
+	    //http://javascript.internet.com/page-details/drag-n-drop.html
+	    var x, y;
+	    if (IE)
+	    {
+            x = event.clientX;
+            y = event.clientY;
+        }
+        else
+        {
+            x = e.pageX;
+            y = e.pageY;
+		}
+		var Dx = x - cursorX;
+		var Dy = y - cursorY;
+		var _left =obj.style.left.replace("px", "");
+		var _top = obj.style.top.replace("px", "");
+       
+	    document.getElementById("cursor").childNodes[0].nodeValue = "cursorX, cursorY " + cursorX + " " + cursorY;	    
+	    document.getElementById("DxDy").childNodes[0].nodeValue = "DxDy " + Dx + " " + Dy;
+	    document.getElementById("xy").childNodes[0].nodeValue = "xy " + x + " " + y;
+	    document.getElementById("before").childNodes[0].nodeValue = "before " + obj.style.left + " " + obj.style.top + " ___ " + _left + " " + _top;
+	    
+        // Toa do moi cua doi tuong	    
+	    obj.style.left = parseInt(_left) + Dx + 'px';
+		obj.style.top = parseInt(_top) + Dy + 'px';
+	
+		document.getElementById("after").childNodes[0].nodeValue = "after " + obj.style.left + " " + obj.style.top;
+		// Gan lai cursorX, cursorY la vi tri hien tai cua chuot
+		cursorX = x;
+	    cursorY = y;
+	}
+}
+// Ham xu ly khi co su kien nhap chuot
+function MouseDown(e)
+{     
+    //http://javascript.internet.com/page-details/drag-n-drop.html
+    if (IE) // code cho IE
+    {
+        obj = event.srcElement; 
+        // Chi cho phep di chuyen nhung object co name = "window"
+        if (obj.getAttribute("name") != "window")
+            return;
+            
+	    cursorX = event.clientX;
+    	cursorY = event.clientY;        
+    }
+    else
+    {
+        obj = e.target; 
+        // Chi cho phep di chuyen nhung object co name = "window"
+        if (obj.getAttribute("name") != "window")
+            return;
+            
+        cursorX = e.pageX;
+        cursorY = e.pageY;
+    }
+    
+    document.onmousemove = MouseMove;
+}
+// Ham xu ly khi co su kien di nha phim chuot
+function MouseUp()
+{
+    //http://javascript.internet.com/page-details/drag-n-drop.html
+	obj = null;
+	document.onmousemove = null;
+}
+
+document.onmouseup = MouseUp;
+document.onmousedown = MouseDown;
+
+</script>
+</head>
+
+<body>
+    <div id="cursor">asfd</div>
+    <div id="xy">asdf</div>    
+    <div id="DxDy">asfd</div>
+    <div id="before">asfd</div>
+    <div id="after">sdf</div>
+    <div name="test" id="Div1" style="left:300px; top:100px; widtd:10px; height:20px; position:absolute; background:#FF0000"> 
+	lksajdfl;ksdajfl;ksdjl
+<!--    	<div name="title" id="title1" style="width:100px; height:20px; position:relative; background:#FF0000" >
+        	
+        </div>
+        <div name="client" id="client1" style="width: 100px; height:100px; position:relative; background:#99FF00">
+        </div>-->
+    </div>
+    
+	<div name="window" id="window1" style="left:100px; top:50px; widtd:10px; height:20px; position:absolute; background:#FF0000"> 
+	lksajdfl;ksdajfl;ksdjl
+<!--    	<div name="title" id="title1" style="width:100px; height:20px; position:relative; background:#FF0000" >
+        	
+        </div>
+        <div name="client" id="client1" style="width: 100px; height:100px; position:relative; background:#99FF00">
+        </div>-->
+    </div>
+    
+  
+</body>
+</html>

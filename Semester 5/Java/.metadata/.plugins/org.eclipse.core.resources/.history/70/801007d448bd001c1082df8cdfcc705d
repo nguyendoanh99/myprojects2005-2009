@@ -1,0 +1,9 @@
+package DAO;
+
+public class KHOIDAO {
+
+	public KHOIDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

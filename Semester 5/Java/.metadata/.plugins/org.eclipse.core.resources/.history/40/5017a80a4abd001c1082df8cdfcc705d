@@ -1,0 +1,16 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+public class KHOIDAO extends AbstractDAO{
+	
+	public KHOIDAO() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+	public KHOIDAO(Node node)
+	{
+		super(node);
+	}
+	
+}

@@ -1,0 +1,28 @@
+
+
+import javax.swing.JDialog;/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class ChuyenLop {
+
+	/**
+	 * 
+	 */
+	public ChuyenLop() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

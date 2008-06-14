@@ -1,0 +1,125 @@
+import java.sql.*;
+import java.util.*;
+
+public class _ConvertTypes {
+	private List mJDBCTypes;
+	private List<String> mJavaTypes;
+	private List<String> mEntityFunc;
+	private List<String> mPreparedStatementFunc; 
+	public _ConvertTypes()
+	{	
+		PreparedStatement pst;
+		mJDBCTypes = new ArrayList();
+		mJavaTypes = new ArrayList<String>();
+		mEntityFunc = new ArrayList<String>();
+		mPreparedStatementFunc = new ArrayList<String>();
+		
+		mJDBCTypes.add(Types.BIGINT);
+		mJavaTypes.add("long");
+		mEntityFunc.add("getLong(arg0)");
+		mPreparedStatementFunc.add("setLong(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.BINARY);
+		mJavaTypes.add("byte[]");
+		mEntityFunc.add("getBytes(arg0)");
+		mPreparedStatementFunc.add("setBytes(arg0, arg1)");
+
+		mJDBCTypes.add(Types.BIT);
+		mJavaTypes.add("boolean");
+		mEntityFunc.add("getBoolean(arg0)");
+		mPreparedStatementFunc.add("setBoolean(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.CHAR);
+		mJavaTypes.add("String");
+		mEntityFunc.add("getString(arg0)");
+		mPreparedStatementFunc.add("setString(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.DECIMAL);
+		mJavaTypes.add("java.math.BigDecimal");
+		mEntityFunc.add("getBigDecimal(arg0)");
+		mPreparedStatementFunc.add("setBigDecimal(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.DOUBLE);
+		mJavaTypes.add("double");
+		mEntityFunc.add("getDouble(arg0)");
+		mPreparedStatementFunc.add("setDouble(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.INTEGER);
+		mJavaTypes.add("int");
+		mEntityFunc.add("getInt(arg0)");
+		mPreparedStatementFunc.add("setInt(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.LONGVARBINARY);
+		mJavaTypes.add("byte[]");
+		mEntityFunc.add("getBytes(arg0)");
+		mPreparedStatementFunc.add("setBytes(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.LONGVARCHAR);
+		mJavaTypes.add("String");
+		mEntityFunc.add("getString(arg0)");
+		mPreparedStatementFunc.add("setString(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.NUMERIC);
+		mJavaTypes.add("java.math.BigDecimal");
+		mEntityFunc.add("getBigDecimal(arg0)");
+		mPreparedStatementFunc.add("setBigDecimal(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.REAL);
+		mJavaTypes.add("float");
+		mEntityFunc.add("getFloat(arg0)");
+		mPreparedStatementFunc.add("setFloat(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.SMALLINT);
+		mJavaTypes.add("short");
+		mEntityFunc.add("getShort(arg0)");
+		mPreparedStatementFunc.add("setShort(arg0, arg1)");
+
+		mJDBCTypes.add(Types.TIMESTAMP);
+		mJavaTypes.add("java.sql.Timestamp");
+		mEntityFunc.add("getTimestamp(arg0)");
+		mPreparedStatementFunc.add("setTimestamp(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.VARBINARY);
+		mJavaTypes.add("byte[]");
+		mEntityFunc.add("getBytes(arg0)");
+		mPreparedStatementFunc.add("setBytes(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.VARCHAR);
+		mJavaTypes.add("String");
+		mEntityFunc.add("getString(arg0)");
+		mPreparedStatementFunc.add("setString(arg0, arg1)");
+		
+		mJDBCTypes.add(Types.TINYINT);
+		mJavaTypes.add("short");
+		mEntityFunc.add("getShort(arg0)");
+		v
+	}
+	public String JDBC2JavaType(int data_type)
+	{
+		String result = new String();
+		int index = mJDBCTypes.indexOf(data_type);
+		result = mJavaTypes.get(index);
+		return result;
+	}
+	public int Java2JDBCType(String data_type)
+	{
+		int result;
+		int index = mJavaTypes.indexOf(data_type);
+		result = Integer.parseInt(mJDBCTypes.get(index).toString());
+		return result;
+	}
+	public String JavaType2EntityFunc(String data_type)
+	{
+		String result;
+		int index = mJavaTypes.indexOf(data_type);
+		result = mEntityFunc.get(index);
+		return result;
+	}
+	public String JDBCType2EntityFunc(String data_type)
+	{
+		String result;
+		int index = mJDBCTypes.indexOf(data_type);
+		result = mEntityFunc.get(index);
+		return result;
+	}
+}

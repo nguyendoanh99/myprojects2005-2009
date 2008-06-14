@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+</head>
+
+<body>
+<script type = "text/javascript">
+    var Thong_bao = new String();
+    var URL="http://localhost:50194/XuatThongBao/Default.aspx";
+    var Tai_lieu = new ActiveXObject("Microsoft.XMLDOM");
+    Tai_lieu.async = false;
+    Tai_lieu.load(URL);
+    var Goc = Tai_lieu.documentElement;
+    Thong_bao = Goc.getAttribute("Thong_bao");
+    alert(Thong_bao);
+</script>
+</body>
+</html>

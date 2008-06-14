@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+import java.util.*;
+/**
+ * @author DangKhoa
+ *
+ */
+public class TRUONGDTO {
+	private List<KHOIDTO> m_arrKhoi;
+	/**
+	 * 
+	 */
+	public TRUONGDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

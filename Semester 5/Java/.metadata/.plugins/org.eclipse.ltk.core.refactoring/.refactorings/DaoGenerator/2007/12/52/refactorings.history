@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<session version="1.0">
+<refactoring comment="Rename type 'Login' to '_Login'&#13;&#10;- Original element: 'Login'&#13;&#10;- Renamed element: '_Login'&#13;&#10;- Update references to refactored element&#13;&#10;- Update textual occurrences in comments and strings" description="Rename type 'Login'" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Login.java[Login" matchStrategy="1" name="_Login" qualified="false" references="true" similarDeclarations="false" stamp="1198860450370" textual="false" version="1.0"/>
+<refactoring comment="Rename type 'FormLogin' to 'LoginForm'&#13;&#10;- Original element: 'FormLogin'&#13;&#10;- Renamed element: 'LoginForm'&#13;&#10;- Update references to refactored element&#13;&#10;- Update textual occurrences in comments and strings" description="Rename type 'FormLogin'" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{FormLogin.java[FormLogin" matchStrategy="1" name="LoginForm" qualified="false" references="true" similarDeclarations="false" stamp="1198943023713" textual="false" version="1.0"/>
+</session>

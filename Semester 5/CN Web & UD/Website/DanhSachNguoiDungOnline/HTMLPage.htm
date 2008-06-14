@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+</head>
+<script type="text/javascript">
+
+function Button1_onclick() {
+    var LoiChao = new String();
+    var URL = "http://localhost:49191/DanhSachNguoiDungOnline/MH_Chinh.aspx";
+    var TaiLieu = new ActiveXObject("Microsoft.XMLDOM");
+    TaiLieu.async = false;
+    TaiLieu.load(URL);
+    
+    var Goc = TaiLieu.documentElement;
+    LoiChao = Goc.getAttribute("GiaTri");
+    alert(LoiChao);
+    setTimeout("Button1_onclick()", 5000);
+}
+Button1_onclick()
+
+</script>
+<body>
+    &nbsp;
+
+</body>
+</html>

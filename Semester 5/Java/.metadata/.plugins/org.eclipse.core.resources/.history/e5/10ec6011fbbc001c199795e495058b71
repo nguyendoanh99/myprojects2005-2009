@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package DAO;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class AbstractDAO {
+
+	/**
+	 * 
+	 */
+	public AbstractDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	public Document KetNoiXML(String TenFile)
+	{
+		Document doc = null;
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		// To get a validating parser
+	    factory.setValidating(false);
+	    // To get one that understands namespaces
+	    factory.setNamespaceAware(true);
+	    
+		return doc;
+	}
+}

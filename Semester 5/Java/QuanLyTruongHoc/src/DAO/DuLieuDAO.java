@@ -1,0 +1,130 @@
+/**
+ * 
+ */
+package DAO;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import DTO.GIAOVIENDTO;
+import DTO.HOCSINHDTO;
+import DTO.LOPHOCDTO;
+import LIB.DOMUtil;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class DuLieuDAO {
+	public static String TenFile = "DuLieu.xml";
+	public static Document TaiLieu = AbstractDAO.KetNoiXML(TenFile);
+	/**
+	 * 
+	 */
+    private void GhiDuLieu(String TenNode, int GiaTri)
+    {
+    	// Lay thong tin cua node co ten la TenNode
+    	Node node = TaiLieu.getElementsByTagName(TenNode).item(0);
+    	Node node1 = node.cloneNode(true);
+    	node1.getFirstChild().setNodeValue(String.valueOf(GiaTri));
+    	TaiLieu.getDocumentElement().replaceChild(node1, node);
+    	DOMUtil.writeXmlToFile(TenFile, TaiLieu);
+    }
+
+    //Lay so lon nhat co n chu so
+    private int SoLonNhat(int n)
+    {
+    	int kq = 1;
+    	for (int i = 1; i <= n; ++i)
+    		kq *= 10;
+    	return kq - 1;
+    }
+    
+    // Sinh ma moi, ma do la ma strMa trong bang strBang   
+    private String TaoMa(String strMa, String strBang)
+    {
+    	String kq = "";
+    	String Chuoi = "";
+    	int ChieuDai;
+    	int GiaTri = -1;
+    	// Lay thong tin node
+    	Element _node = (Element) TaiLieu.getElementsByTagName(strMa).item(0);
+    	Chuoi = _node.getAttribute("Chuoi");
+    	ChieuDai = Integer.parseInt(_node.getAttribute("ChieuDai"));
+    	GiaTri = Integer.parseInt(_node.getFirstChild().getNodeValue());
+    	
+    	int ChieuDaiChuoiSo = ChieuDai - Chuoi.length();
+    	int Max = SoLonNhat(ChieuDaiChuoiSo);
+    	String format;
+    	int GiaTriCu = GiaTri - 1; // Luu lai gia tri vua moi doc
+    	
+    	if (GiaTriCu < 0)
+    		GiaTriCu = Max;
+    	while (GiaTriCu != GiaTri)
+    	{
+    		format = Chuoi + "%" + String.valueOf(ChieuDaiChuoiSo)+"d";
+    		kq = String.format(format, GiaTri);
+    		kq = kq.replace(" ", "0");
+    		int gt = 1;
+    		if (strBang.compareToIgnoreCase("LOP") == 0)
+    		{
+    			LOPHOCDAO lophocdao = new LOPHOCDAO();
+    			LOPHOCDTO lophocdto = new LOPHOCDTO();
+    			lophocdto.setMaLop(kq);    			
+    			Node node = lophocdao.TimLopHoc(lophocdto);
+    			if (node == null)
+    				gt = 0;
+    		}
+    		else
+    			if (strBang.compareToIgnoreCase("GIAOVIEN") == 0)
+    			{
+    				GIAOVIENDAO giaoviendao = new GIAOVIENDAO();
+        			GIAOVIENDTO giaoviendto = new GIAOVIENDTO();
+        			giaoviendto.setMaGiaoVien(kq);    			
+        			Node node = giaoviendao.TimGiaoVien(giaoviendto);
+        			if (node == null)
+        				gt = 0;
+    			}
+    			else
+    				if (strBang.compareToIgnoreCase("HOCSINH") == 0)
+        			{
+    					HOCSINHDAO hocsinhdao = new HOCSINHDAO();
+    					HOCSINHDTO hocsinhdto = new HOCSINHDTO();
+            			hocsinhdto.setMaHocSinh(kq);    			
+            			Node node = hocsinhdao.TimHocSinh(hocsinhdto);
+            			if (node == null)
+            				gt = 0;
+        			}
+    		if (gt == 0) // Ma nay chua co trong csdl
+    			break;
+    	
+    		GiaTri += 1;
+    		if (GiaTri > Max)
+    			GiaTri = 0;
+    	}
+    	if (GiaTri == GiaTriCu)
+    		kq = "";
+    	else
+    	{
+    		GhiDuLieu(strMa, GiaTri);
+    	}    	
+    	return kq;
+    }
+    public String TaoMaGiaoVien()
+    {
+    	return TaoMa("MaGiaoVien", "GIAOVIEN");
+    }
+    public String TaoMaLop()
+    {
+    	return TaoMa("MaLopHoc", "LOP");
+    }
+    public String TaoMaHocSinh()
+    {
+    	return TaoMa("MaHocSinh", "HOCSINH");
+    }
+	public DuLieuDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

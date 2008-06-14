@@ -1,0 +1,52 @@
+/**
+ * 
+ */
+package DAO;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
+import LIB.DOMUtil;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class DuLieuDAO {
+	public static String TenFile = "TruongHoc.xml";
+	public static Document TaiLieu = AbstractDAO.KetNoiXML(TenFile);
+	/**
+	 * 
+	 */
+    private void GhiDuLieu(String TenNode, int GiaTri)
+    {
+    	// Lay thong tin cua node co ten la TenNode
+    	Node node = TaiLieu.getElementsByTagName(TenNode).item(0);
+    	Node node1 = node.cloneNode(false);
+    	node1.getFirstChild().setNodeValue(String.valueOf(GiaTri));
+    	TaiLieu.getDocumentElement().replaceChild(node1, node);
+    	DOMUtil.writeXmlToFile(TenFile, TaiLieu);
+    }
+
+    private void LayThongTinNode(String TenNode, String Chuoi, Integer ChieuDai, Integer Giatri)
+    {
+    	Element node = (Element) TaiLieu.getElementsByTagName(TenNode).item(0);
+    	Chuoi = node.getAttribute("Chuoi");
+    	ChieuDai = Integer.parseInt(node.getAttribute("ChieuDai"));
+    	Giatri = Integer.parseInt(node.getFirstChild().getNodeValue());    	
+    }
+
+    //Lay so lon nhat co n chu so
+    private int SoLonNhat(int n)
+    {
+    	int kq = 1;
+    	for (int i = 1; i <= n; ++i)
+    		kq *= 10;
+    	return kq - 1;
+    }
+	public DuLieuDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

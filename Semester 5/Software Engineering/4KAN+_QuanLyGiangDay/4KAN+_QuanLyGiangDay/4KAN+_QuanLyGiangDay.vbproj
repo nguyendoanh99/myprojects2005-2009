@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{140E8551-5EB4-4DCE-A617-7182325A6678}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>_4KAN__QuanLyGiangDay.My.MyApplication</StartupObject>
+    <RootNamespace>_4KAN__QuanLyGiangDay</RootNamespace>
+    <AssemblyName>4KAN+_QuanLyGiangDay</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>4KAN+_QuanLyGiangDay.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>4KAN+_QuanLyGiangDay.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral, PublicKeyToken=eac822d9c4196ba1">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\CarlosAg.ExcelXmlWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacCauTrucThem.vb" />
+    <Compile Include="ExcelGenerator.vb" />
+    <Compile Include="frmChinh.designer.vb">
+      <DependentUpon>frmChinh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChinh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPCTheoBoMon.Designer.vb">
+      <DependentUpon>frmPCTheoBoMon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPCTheoBoMon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPCTheoLopHoc.designer.vb">
+      <DependentUpon>frmPCTheoLopHoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPCTheoLopHoc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmQuiDinh.Designer.vb">
+      <DependentUpon>frmQuiDinh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuiDinh.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinGiaoVien.Designer.vb">
+      <DependentUpon>frmThongTinGiaoVien.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinGiaoVien.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmThongTinLopHoc.designer.vb">
+      <DependentUpon>frmThongTinLopHoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinLopHoc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmThongTinMonHoc.designer.vb">
+      <DependentUpon>frmThongTinMonHoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinMonHoc.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTKBGV.Designer.vb">
+      <DependentUpon>frmTKBGV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTKBGV.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmTKBLH.Designer.vb">
+      <DependentUpon>frmTKBLH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTKBLH.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmTKBToanTruong.Designer.vb">
+      <DependentUpon>FrmTKBToanTruong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTKBToanTruong.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PCTheoLopHocFlag.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmChinh.resx">
+      <DependentUpon>frmChinh.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPCTheoBoMon.resx">
+      <DependentUpon>frmPCTheoBoMon.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPCTheoLopHoc.resx">
+      <DependentUpon>frmPCTheoLopHoc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuiDinh.resx">
+      <DependentUpon>frmQuiDinh.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinGiaoVien.resx">
+      <DependentUpon>frmThongTinGiaoVien.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinLopHoc.resx">
+      <DependentUpon>frmThongTinLopHoc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinMonHoc.resx">
+      <DependentUpon>frmThongTinMonHoc.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKBGV.resx">
+      <DependentUpon>frmTKBGV.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTKBLH.resx">
+      <DependentUpon>frmTKBLH.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTKBToanTruong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTKBToanTruong.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.vbproj">
+      <Project>{347988E0-BF76-4306-A2B0-53DD5F809B20}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.vbproj">
+      <Project>{41F81F24-EC5E-422D-9EA5-A346CAA379C2}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

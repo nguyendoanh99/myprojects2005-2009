@@ -1,0 +1,82 @@
+@charset "utf-8";
+#popupmenu {
+	list-style-type: none;
+	display: none;
+	position: absolute;
+	z-index: 1001;
+}
+#popupmenu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#popupmenu li {
+	height: 2em;
+	padding: 0;
+	position: relative;
+	width: 150px;
+	float: left;
+	margin: 0px 1px 0px 0px;
+}
+#popupmenu li dl {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+}
+
+#popupmenu dt {
+	display: block;
+	color: #FF0000;
+	border-bottom: 1px solid #444;
+	font-size: 1.2em;
+	padding: 2px;
+}
+#popupmenu .line {
+	border-bottom: 1px solid #666666;
+}
+
+#popupmenu .border_bottom {
+	border-bottom: 1px solid #444;
+}
+
+#popupmenu dl {
+	background: #6699FF;
+	cursor: pointer;
+	margin: 0;
+	width: 150px;
+	padding: 0;
+	text-align: center;
+}
+
+#popupmenu li dd {
+	display: block;
+}
+#popupmenu dd {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	border: 0;
+}
+#popupmenu    li:hover    dd, #popupmenu   li   a:hover   dd {
+	display: block;
+}
+
+#popupmenu li a, #popupmenu li a:visited {
+	text-decoration:none;
+}
+#popupmenu li:hover, #popupmenu li a:hover {
+	border: 0;
+
+}
+.Root dd a, .gallery dd a:visited {
+	padding: 0 0 0 30px;
+	color:#FFFFFF;
+	text-decoration:none;
+	display:block;
+}
+.Root dd a:hover {
+	background: #00ff00;
+	color:#FFFFFF;
+}

@@ -1,0 +1,15 @@
+import java.util.Date;
+
+
+public class HOCSINHDTO {
+	private	String MaHocSinh;
+	private String HoTen;
+	private Date NamSinh;
+	private String DiaChi;
+	private String DienThoai;
+	//private 
+	public HOCSINHDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

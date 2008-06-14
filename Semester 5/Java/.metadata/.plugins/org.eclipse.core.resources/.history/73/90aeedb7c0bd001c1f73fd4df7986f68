@@ -1,0 +1,131 @@
+package DAO;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
+import DTO.HOCSINHDTO;
+import DTO.KETQUAHOCTAPDTO;
+
+public class HOCSINHDAO extends AbstractDAO {
+	public HOCSINHDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	public HOCSINHDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+	public List<HOCSINHDTO> getDanhSachHocSinh()
+	{
+		HOCSINHDAO hocsinhdao = new HOCSINHDAO();
+		Node node = getNode();
+		List<HOCSINHDTO> kq = new ArrayList<HOCSINHDTO>();
+		node = node.getFirstChild();
+		
+		while (node != null)
+		{
+			if (node.getNodeType() == Node.ELEMENT_NODE)
+			{
+				hocsinhdao.setNode(node);				
+				kq.add(hocsinhdao.getHocSinh());
+			}
+			node = node.getNextSibling();
+		}
+		return kq;
+	}
+	public HOCSINHDTO getHocSinh()
+	{
+		Node node = getNode();
+		HOCSINHDTO kq = new HOCSINHDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaHocSinh") == 0)
+					kq.setMaHocSinh(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("HoTen") == 0)
+						kq.setHoTen(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("NamSinh") == 0)
+						{
+							String value = item.getFirstChild().getNodeValue();
+							DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, new Locale("vi", "VN"));
+							try
+							{
+								Date d = df.parse(value);
+								kq.setNamSinh(d);
+							}
+							catch (ParseException pe)
+							{
+								System.out.println(pe.toString());
+							}
+						}
+						else
+							if (name.compareToIgnoreCase("DiaChi") == 0)
+								kq.setDiaChi(item.getFirstChild().getNodeValue());
+							else
+								if (name.compareToIgnoreCase("DienThoai") == 0)
+									kq.setDienThoai(item.getFirstChild().getNodeValue());
+								else
+									if (name.compareToIgnoreCase("KQHT") == 0)
+									{
+										KETQUAHOCTAPDAO kqhtdao = new KETQUAHOCTAPDAO(item);
+										KETQUAHOCTAPDTO kqht = kqhtdao.getKQHT();
+										kq.setKQHT(kqht);
+									}
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;
+	}
+	public Node createNode(HOCSINHDTO hocsinhdto)
+	{
+		Document doc = KetNoiXML();
+		Node _node = doc.createElement("HOCSINH");
+		// MaHocSinh
+		Node MaHocSinhElement = doc.createElement("MaHocSinh");
+		Node value = doc.createTextNode(String.valueOf(hocsinhdto.getMaHocSinh()));
+		_node.appendChild(MaHocSinhElement);
+		MaHocSinhElement.appendChild(value);
+		// HoTen
+		Node HoTenElement = doc.createElement("HoTen");
+		value = doc.createTextNode(String.valueOf(hocsinhdto.getHoTen()));
+		_node.appendChild(HoTenElement);
+		HoTenElement.appendChild(value);
+		// NamSinh
+		Node NamSinh = doc.createElement("NamSinh");
+		value = doc.createTextNode(String.valueOf(hocsinhdto.getNamSinh()));
+		_node.appendChild(NamSinhElement);
+		NamSinhElement.appendChild(value);
+		/*
+		<HOCSINH>
+        <MaHocSinh></MaHocSinh>
+        <HoTen></HoTen>
+        <NamSinh></NamSinh>
+        <DiaChi></DiaChi>
+        <DienThoai></DienThoai>
+        <KQHT>
+          <Toan></Toan>
+          <Ly></Ly>
+          <Hoa></Hoa>
+          <DTB></DTB>
+        </KQHT>
+      </HOCSINH>
+		*/
+		setNode(_node);
+		return _node;
+	}
+}

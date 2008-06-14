@@ -1,0 +1,84 @@
+package DAO;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+
+import DTO.GIAOVIENDTO;
+
+public class GIAOVIENDAO extends AbstractDAO {
+
+	public GIAOVIENDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public GIAOVIENDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+	public GIAOVIENDTO getGiaoVien()
+	{
+		Node node = getNode();
+		GIAOVIENDTO kq = new GIAOVIENDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				
+				if (name.compareToIgnoreCase("MaGiaoVien") == 0)
+					kq.setMaGiaoVien(item.getFirstChild().getNodeValue());
+				else
+					if (name.compareToIgnoreCase("HoTen") == 0)
+						kq.setHoTen(item.getFirstChild().getNodeValue());
+					else
+						if (name.compareToIgnoreCase("TenTat") == 0)
+							kq.setTenTat(item.getFirstChild().getNodeValue());
+						else
+							if (name.compareToIgnoreCase("DiaChi") == 0)
+								kq.setDiaChi(item.getFirstChild().getNodeValue());
+							else
+								if (name.compareToIgnoreCase("DienThoai") == 0)
+									kq.setDienThoai(item.getFirstChild().getNodeValue());
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;
+	}
+	public Node createNode(GIAOVIENDTO giaoviendto)
+	{
+		Document doc = KetNoiXML();
+		Node _node = doc.createElement("GIAOVIEN");
+		// MaGiaoVien
+		Node MaGiaoVienElement = doc.createElement("MaGiaoVien");
+		Node value = doc.createTextNode(String.valueOf(giaoviendto.getMaGiaoVien()));
+		_node.appendChild(MaGiaoVienElement);
+		MaGiaoVienElement.appendChild(value);
+		// HoTen
+		Node HoTenElement = doc.createElement("HoTen");
+		value = doc.createTextNode(String.valueOf(giaoviendto.getHoTen()));
+		_node.appendChild(HoTenElement);
+		HoTenElement.appendChild(value);
+		// TenTat
+		Node TenTatElement = doc.createElement("TenTat");
+		value = doc.createTextNode(String.valueOf(giaoviendto.getTenTat()));
+		_node.appendChild(TenTatElement);
+		TenTatElement.appendChild(value);
+		// DiaChi
+		Node DiaChiElement = doc.createElement("DiaChi");
+		value = doc.createTextNode(String.valueOf(giaoviendto.getDiaChi()));
+		_node.appendChild(DiaChiElement);
+		DiaChiElement.appendChild(value);
+		// DienThoai
+		Node DienThoaiElement = doc.createElement("DienThoai");
+		value = doc.createTextNode(String.valueOf(giaoviendto.getDienThoai()));
+		_node.appendChild(DienThoaiElement);
+		DienThoaiElement.appendChild(value);
+		
+		setNode(_node);
+		return _node;
+	}
+}

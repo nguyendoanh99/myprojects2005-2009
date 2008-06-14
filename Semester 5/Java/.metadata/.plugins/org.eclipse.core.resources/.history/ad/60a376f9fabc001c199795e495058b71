@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package DAO;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class AbstractDAO {
+
+	/**
+	 * 
+	 */
+	public AbstractDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

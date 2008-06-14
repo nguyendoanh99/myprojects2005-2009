@@ -1,0 +1,72 @@
+Criminal(x)
+x/West
+
+Criminal(West)
+True
+
+G(Art, z)
+False
+
+x
+x/Criminal(West)
+x/Owns(Nono, M1)
+x/Missile(M1)
+x/Sells(West, M1, Nono)
+x/Weapon(M1)
+x/Hostile(Nono)
+x/American(West)
+x/Enemy(Nono, America)
+x/MotherOf(Jane, Billy)
+x/FatherOf(John, Billy)
+x/FatherOf(Sam, John)
+x/MotherOf(Mary, John)
+x/ParentOf(Jane, Billy)
+x/ParentOf(Mary, John)
+x/ParentOf(John, Billy)
+x/ParentOf(Sam, John)
+x/AncestorOf(Mary, Billy)
+x/AncestorOf(Sam, Billy)
+
+MotherOf(x, y)
+x/Jane, y/Billy
+x/Mary, y/John
+
+AncestorOf(Sam, Billy)
+True
+
+AncestorOf(Mary, Jane)
+False
+
+AncestorOf(x, y)
+x/Mary, y/Billy
+x/Sam, y/Billy
+
+AncestorOf(Sam, y)
+y/Billy
+
+AncestorOf(x, Billy)
+x/Mary
+x/Sam
+
+ParentOf(x, y)
+x/Jane, y/Billy
+x/Mary, y/John
+x/John, y/Billy
+x/Sam, y/John
+
+MotherOf(Jane, Billy)
+True
+
+FatherOf(Jane, Billy)
+False
+
+My
+False
+
+F(x, y)
+False
+
+FatherOf(Sam, John)
+True
+
+

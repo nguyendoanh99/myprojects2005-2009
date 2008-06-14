@@ -1,0 +1,23 @@
+import java.util.*;
+
+/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class LOPDTO {
+	private GIAOVIENDTO m_giaovien;
+	private String m_strPhongHoc;
+	private Date GioHoc;
+	private List<HOCSINH> m_arrHocSinh;
+	/**
+	 * 
+	 */
+	public LOPDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

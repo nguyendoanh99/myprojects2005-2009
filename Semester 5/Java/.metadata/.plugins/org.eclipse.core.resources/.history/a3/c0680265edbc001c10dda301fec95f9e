@@ -1,0 +1,8 @@
+
+public class HocSinhDTO {
+
+	public HocSinhDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

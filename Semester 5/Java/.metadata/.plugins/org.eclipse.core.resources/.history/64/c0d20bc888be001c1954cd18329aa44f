@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DULIEU>
+  <MaGiaoVien Chuoi="GV" ChieuDai="5">0</MaGiaoVien>
+  <MaLopHoc Chuoi="LH" ChieuDai="4">0</MaLopHoc>
+  <MaHocSinh Chuoi="HS" ChieuDai="6">0</MaHocSinh>
+
+</DULIEU>

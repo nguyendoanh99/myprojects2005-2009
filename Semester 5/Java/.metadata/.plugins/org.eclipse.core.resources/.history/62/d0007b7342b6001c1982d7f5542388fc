@@ -1,0 +1,867 @@
+import java.sql.*;
+import java.util.*;
+
+import com.sun.org.apache.bcel.internal.generic.Type;
+
+public class _DAOGenerator {
+	//**********************************************************
+	// Attributes
+	//**********************************************************
+	private String mDatabase;
+	private String mPassword;
+	private String mUsername;
+	private Connection mConnection;
+	private static _ConvertTypes ct = new _ConvertTypes(); 
+	//**********************************************************
+	// Private Functions
+	//**********************************************************
+	private String CreateMethodGet(String column_name, int data_type)
+	{
+		String result = new String();
+		String d = ct.JDBCToJavaType(data_type);
+		result = "public " + d + " get" + column_name + "()\n{";
+		result += "\n\treturn " + "m" + column_name + ";\n}";
+		return result;
+	}
+	private String CreateMethodSet(String column_name, int data_type)
+	{
+		String result = new String();
+		String d = ct.JDBCToJavaType(data_type);
+		result = "public void " + "set" + column_name + "(" + d + " " + column_name + ")\n{";
+		result += "\n\tthis." + "m" + column_name + " = " + column_name + ";\n}"; 
+		return result;
+	}
+	private String CreateMethod(String column_name, int data_type)
+	{
+		String result = new String();
+		result = CreateMethodSet(column_name, data_type) + "\n\n" + CreateMethodGet(column_name, data_type);
+		return result;
+	}
+	// Tao ham GetList
+	private String CreateGetList(String table)
+	{
+		String result = new String();
+		List<String> arrStr = new ArrayList<String>();
+		String str;
+		
+		arrStr.add("private List<" + table + "> getList(ResultSet rs)");
+		arrStr.add("{");
+		arrStr.add("\tList<" + table + "> result = new ArrayList<" + table + ">();");
+		arrStr.add("\ttry");
+		arrStr.add("\t{");
+		//while (rs.next()) 1
+		//{
+		//	String SBDI = rs.getString("SBDI"); 2
+		//	String SBDEN = rs.getString("SBDEN"); 3
+		//	java.sql.Timestamp GIODI = rs.getTimestamp("GIODI"); 4
+		//	java.sql.Timestamp GIODEN = rs.getTimestamp("GIODEN"); 5
+		//	temp.setMACB(MACB); 6
+		//	temp.setSBDI(SBDI); 7 
+		//	temp.setSBDEN(SBDEN); 8
+		//	temp.setGIODI(GIODI); 9
+		//	temp.setGIODEN(GIODEN); 10
+		//}
+		arrStr.add("\t\twhile (rs.next())"); // 1
+		arrStr.add("\t\t{");
+		arrStr.add("\t\t\t" + table + " temp = new " + table + "();");
+		List<String> arrColumn_name = new ArrayList<String>();
+		List arrColumn_type = new ArrayList();
+		// Lay thong tin cac cot
+		GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+		// 2 --> 5
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			str = new String();
+			String name = arrColumn_name.get(i);
+			
+			int iType = Integer.parseInt(arrColumn_type.get(i).toString());
+			String func = ct.JDBCTypeToResultFunc(iType).replaceAll("arg0", "\"" + name + "\"");
+			
+			str += "\t\t\t" + ct.JDBCToJavaType(iType) + " _" + name;
+			str += " = rs." + func;
+			str += ";";
+			arrStr.add(str);
+		}
+		
+		// 6 --> 10
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			str = new String();
+			String name = arrColumn_name.get(i);
+			
+			str += "\t\t\ttemp.set" + name + "(_" + name + ");";
+			arrStr.add(str);
+		}
+		
+		arrStr.add("\t\t\tresult.add(temp);");
+		arrStr.add("\t\t}");
+		
+		//	}
+		//	catch (SQLException e)
+		//	{
+		//		System.out.println(e.toString());
+		//	}
+		//	return result;
+		//}
+		arrStr.add("\t}");
+		arrStr.add("\tcatch (SQLException e)");
+		arrStr.add("\t{");
+		arrStr.add("\t\tSystem.out.println(e.toString());");
+		arrStr.add("\t}");
+		arrStr.add("\treturn result;");
+		arrStr.add("}");
+		
+		for (int i = 0; i < arrStr.size(); ++i)
+		{
+			result += "\n" + arrStr.get(i);
+		}
+		return result;
+	}
+	//	Tao ham getByID tuong ung voi table
+	//  TypeFunc : loai ham
+	//		1 : getByID
+	//		2 : getByPropertyName
+	//		3 : getAll
+	private String CreategetBy(String table, List<String> arrColumn, List arrType, int TypeFunc)
+	{
+		String result = new String();
+		List<String> arrStr = new ArrayList<String>();
+		String strReturn = new String();
+		/*
+		public CHUYENBAY getByID(String MACB) // 1
+		{
+			CHUYENBAY result = new CHUYENBAY(); // 2
+			try
+			{
+		*/
+		String str = new String();
+		for (int i = 0; i < arrColumn.size(); ++i)
+		{
+			int iType = Integer.parseInt(arrType.get(i).toString());
+			String name = arrColumn.get(i);
+			str += ct.JDBCToJavaType(iType) + " _" + name;
+			if (i != arrColumn.size() - 1)
+				str += ", ";
+		}
+		switch (TypeFunc)
+		{
+		case 1: // getByID
+			strReturn = table;
+			arrStr.add("public " + strReturn + " getByID(" + str + ")"); // 1
+			break;
+		case 2: // getPropertyName
+			strReturn = "List<" + table + ">";
+			arrStr.add("public " + strReturn + " getBy" + arrColumn.get(0) + "(" + str + ")"); // 1
+			break;
+		case 3: // getAll
+			strReturn = "List<" + table + ">";
+			arrStr.add("public " + strReturn + " getAll()"); // 1
+			break;
+		default:// getByID
+			arrStr.add("public " + strReturn + " getByID(" + str + ")"); // 1
+			break;
+		}
+		arrStr.add("{");
+		str = "\t" + strReturn +" result = new ";
+		if (strReturn.compareTo(table) == 0)
+			str += table + "();";
+		else
+			str += "ArrayList<" + table + ">();";
+		arrStr.add(str); // 2
+		// Khong co khoa chinh
+		if (TypeFunc == 1 && arrColumn.size() == 0) // getByID
+		{
+			arrStr.add("\tresult = null;");
+		}
+		else
+		{
+			arrStr.add("\ttry");
+			arrStr.add("\t{");
+			
+			// 		String sql = "Select * from CHUYENBAY where MACB=?";
+			String sql = "";
+			for (int i = 0; i < arrColumn.size(); ++i)
+			{
+	//			int iType = Integer.parseInt(Types.get(i).toString());
+				String name = arrColumn.get(i);
+	//			if (iType == java.sql.Types.TIMESTAMP)
+	//				sql += "datediff(d, " + name + ", ?) = 0"; 
+	//			else
+				sql += name + "=?";
+				if (i != arrColumn.size() - 1)
+					sql += " and ";
+			}
+			str = "\t\tString sql = \"select * from " + table;
+			if (sql.length() > 0)
+				str += " where " + sql;
+			
+			str += "\";";
+			arrStr.add(str);
+	
+			//	 PreparedStatement pst = mConnection.prepareStatement(sql); // 1 
+			//	 pst.setString(1, MACB);  // 2
+			//	 ResultSet rs = pst.executeQuery(); // 3
+			//	 result = getList(rs);
+			arrStr.add("\t\tPreparedStatement pst = mConnection.prepareStatement(sql);"); // 1			
+			// 2
+			for (int i = 0; i < arrColumn.size(); ++i)
+			{
+				String func = ct.JDBCTypeToPreparedFunc(Integer.parseInt(arrType.get(i).toString()));
+				func = func.replaceAll("arg0", "" + (i + 1));
+				func = func.replaceAll("arg1", "_" + arrColumn.get(i));
+				func = "\t\tpst." + func + ";";
+				arrStr.add(func);
+			}
+			arrStr.add("\t\tResultSet rs = pst.executeQuery();"); // 3
+	
+			if (TypeFunc == 1)
+			{
+				arrStr.add("\t\tList<" + table + "> lst = getList(rs);");
+				arrStr.add("\t\tif (lst.size() == 0)");
+				arrStr.add("\t\t\tresult = null;");
+				arrStr.add("\t\telse");
+				arrStr.add("\t\t\tresult = lst.get(0);");
+			}
+			else
+				arrStr.add("\t\tresult = getList(rs);");
+			
+			//	}
+			//	catch (SQLException e)
+			//	{
+			//		System.out.println(e.toString());
+			//	}
+			//	return result;
+			//}
+			arrStr.add("\t}");
+			arrStr.add("\tcatch (SQLException e)");
+			arrStr.add("\t{");
+			arrStr.add("\t\tSystem.out.println(e.toString());");
+			arrStr.add("\t}");
+		}
+		arrStr.add("\treturn result;");
+		arrStr.add("}");
+		
+		for (int i = 0; i < arrStr.size(); ++i)
+		{
+			result += "\n" + arrStr.get(i);
+		}
+		
+		return result;
+		
+	}
+	//**********************************************************
+	// Contructors
+	//**********************************************************
+	//**********************************************************
+	// Public Functions
+	//**********************************************************
+	public void ConnectDatabase(String database)
+	{
+		mDatabase = database;
+		try
+		{
+			mConnection.setCatalog(mDatabase);
+		}
+		catch (SQLException e)
+		{
+		}
+	}
+	//	 Ket noi co so du lieu
+	public String Connect(String username, String password)
+	{
+		String result = new String();
+		mUsername = username;
+		mPassword = password;
+		
+		try
+		{			
+			Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+			mConnection = DriverManager.getConnection 
+			  ("jdbc:microsoft:sqlserver://localhost:1433", username, password);
+		}
+		catch (SQLException e)
+		{
+			result += e.toString();
+		}
+		catch (ClassNotFoundException e)
+		{
+			result += e.toString();
+		}
+		
+		return result;
+	}
+	public String[] GetDatabases()
+	{
+		String[] result = null;
+		DatabaseMetaData DBMD;
+		List<String> lst = new ArrayList<String>();
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getCatalogs();
+			
+			while (rs.next())
+			{
+				String table_cat = rs.getString("TABLE_CAT");
+				lst.add(table_cat);
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = new String[lst.size()];
+		for (int i = 0; i < result.length; ++i)
+			result[i] = lst.get(i);
+		
+		return result;
+	}
+	// Lay kieu du lieu cua mot dong trong table
+	public int GetType(String table, String columnName)
+	{
+		int result = -1;
+		DatabaseMetaData DBMD;
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(null, null, table , columnName);
+			//ResultSet rs = DBMD.getColumns(mDatabase, null, table , columnName);
+			rs.next();
+			result = rs.getInt("DATA_TYPE");
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		return result;
+	}
+	// Lay tap hop cac table trong csdl
+	// system = true : chon table cua user va system
+	public String[] GetTable(boolean system)
+	{
+		String[] result;
+		DatabaseMetaData DBMD;
+		List<String> lst = new ArrayList<String>();
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getTables(null, null, null, null);
+//			ResultSet rs = DBMD.getTables(mDatabase, null, null, null);
+			
+			while (rs.next())
+			{
+				String table_type = rs.getString("TABLE_TYPE");
+				if (system == false || table_type.compareTo("TABLE") == 0)
+				{
+					String table_name = rs.getString("TABLE_NAME");
+					lst.add(table_name);
+				}
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = new String[lst.size()];
+		for (int i = 0; i < result.length; ++i)
+			result[i] = lst.get(i);
+		return result;
+	}
+	// Lay thong tin cac primary key
+	public void GetPrimaryKeysInfo(String table, List<String> primarykeys, List types)
+	{
+		DatabaseMetaData DBMD;
+		List<String> tempPrimarykeys = new ArrayList<String>();
+		List tempTypes = new ArrayList();
+		List<String> arrColumn_name = new ArrayList<String>();
+		List arrColumn_type = new ArrayList();
+		GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getPrimaryKeys(null, null, table);
+//			ResultSet rs = DBMD.getPrimaryKeys(mDatabase, null, table);
+			while (rs.next())
+			{
+				String column_name = rs.getString("COLUMN_NAME");
+				ResultSet rs2 = DBMD.getColumns(null, null, table , column_name);
+//				ResultSet rs2 = DBMD.getColumns(mDatabase, null, table , column_name);
+				rs2.next();
+				int data_type = rs2.getInt("DATA_TYPE");
+				tempPrimarykeys.add(column_name);				
+				tempTypes.add(data_type);
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			String name = arrColumn_name.get(i);
+			if (tempPrimarykeys.indexOf(name) != -1)
+			{
+				primarykeys.add(name);
+				types.add(arrColumn_type.get(i));
+			}
+		}
+	}
+	// Lay thong tin cac column cua table
+	public void GetColumnsInfo(String table, List<String> arrColumn_name, List arrColumn_type)
+	{
+		DatabaseMetaData DBMD;
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(null, null, table , null);
+//			ResultSet rs = DBMD.getColumns(mDatabase, null, table , null);
+			while (rs.next())
+			{
+				String name = rs.getString("COLUMN_NAME");
+				arrColumn_name.add(rs.getString("COLUMN_NAME"));
+				arrColumn_type.add(rs.getInt("DATA_TYPE"));
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+	}
+	// Tao lop Entity ung voi table
+	public String CreateEntityClass(String table)
+	{
+		String result = new String();
+		String strAttrib = new String();
+		DatabaseMetaData DBMD;
+
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(null, null, table , null);
+//			ResultSet rs = DBMD.getColumns(mDatabase, null, table , null);
+			while (rs.next())
+			{
+				int data_type = rs.getInt("DATA_TYPE");
+				String column_name = rs.getString("COLUMN_NAME");
+				result += CreateMethod(column_name, data_type) + "\n\n";
+				strAttrib += "private " + ct.JDBCToJavaType(data_type) + " " + "m" + column_name + ";\n";
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = "\n" + strAttrib + "\n" + result;
+		result = "public class " + table + "\n{" + result.replaceAll("\n", "\n\t") + "\n}";
+		return result;
+	}
+	public String[] CreateEntityClass(String[] arrTable)
+	{
+		String[] result = new String[arrTable.length]; 
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			System.out.println(arrTable[i]);
+			result[i] = CreateEntityClass(arrTable[i]);
+		}
+		return result;
+	}
+	// Luu cac Entity Class xuong file
+	public void WriteEntityClassToFile()	
+	{
+		String[] arrTable = GetTable(false);
+		String[] arrEntity = CreateEntityClass(arrTable);
+		String FileName;
+		_File f = new _File();
+		System.out.println("WriteEntityClassToFile");
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			FileName = arrTable[i] + ".java";
+			f.WriteFile(FileName, arrEntity[i]);
+		}
+	}
+	// Tao ham getByID tuong ung voi table
+	public String CreategetByID(String table)
+	{		
+		String result = new String();
+		List Types = new ArrayList();
+		List<String> Primarykeys = new ArrayList<String>();
+		
+		// Lay ten khoa chinh va kieu du lieu
+		GetPrimaryKeysInfo(table, Primarykeys, Types);
+		result = CreategetBy(table, Primarykeys, Types, 1);
+		
+		return result;		
+	}
+	// Tao ham getAll
+	public String CreategetAll(String table)
+	{
+		String result;
+		result = CreategetBy(table, new ArrayList<String>(), new ArrayList(), 3);
+		return result;
+	}
+	// Tao ham getByPropertyName
+	public String CreategetByColumnName(String table, String ColumnName)
+	{
+		String result = new String();
+		int iType = GetType(table, ColumnName);
+		List<String> arrColumn = new ArrayList<String>();
+		List arrType = new ArrayList();
+		
+		arrColumn.add(ColumnName);
+		arrType.add(iType);
+		result = CreategetBy(table, arrColumn, arrType, 2);
+		
+		return result;
+	}
+	public String[] CreategetByColumnName(String table)
+	{
+		List<String> arrColumn_name = new ArrayList<String>();
+		List arrColumn_type = new ArrayList();
+		List<String> primarykeys = new ArrayList<String>();
+		List types = new ArrayList();
+		GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+		GetPrimaryKeysInfo(table, primarykeys, types);
+		
+		if (primarykeys.size() == 1)
+		{
+			int index = arrColumn_name.indexOf(primarykeys.get(0));
+			arrColumn_name.remove(index);
+			arrColumn_type.remove(index);
+		}
+		
+		String[] result = new String[arrColumn_name.size()];
+		
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			result[i] = CreategetByColumnName(table, arrColumn_name.get(i));
+		}
+		return result;
+	}
+//	 Tao ham Insert
+	public String CreateInsert(String table)
+	{
+		String result = new String();
+		List<String> arrStr = new ArrayList<String>();
+		String str;
+		List<String> arrColumn_name = new ArrayList<String>();
+		List arrColumn_type = new ArrayList();
+		GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+		/*
+		public Boolean Insert(KHACHHANG khachhang)
+		{
+			Boolean result = false;
+			try 
+			{
+			*/
+		arrStr.add("public boolean Insert(" + table + " obj)");
+		arrStr.add("{");
+		arrStr.add("\tboolean result = false;");
+		arrStr.add("\ttry");
+		arrStr.add("\t{");
+		/*
+				String sql = "INSERT INTO KhachHang(MaKH, Ten, DChi, DThoai) VALUES(?, ?, ?, ?)";
+				PreparedStatement pst = mConnection.prepareStatement(sql);
+			    pst.setString(1, khachhang.getMAKH());
+			    pst.setString(2, khachhang.getTEN());
+			    pst.setString(3, khachhang.getDCHI());
+			    pst.setString(4, khachhang.getDTHOAI());
+			    
+				if (pst.executeUpdate() > 0)
+					result = true;
+			} 
+			*/
+		str = "";
+		String str2 = "";
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			str += arrColumn_name.get(i);
+			str2 += "?";
+			if (i != arrColumn_name.size() - 1)
+			{
+				str += ", ";
+				str2 += ", ";
+			}
+		}
+		str = "String sql = \"insert into " + table + "(" + str + ") values (" + str2 + ")\";";
+		arrStr.add("\t\t" + str);
+		arrStr.add("\t\tPreparedStatement pst = mConnection.prepareStatement(sql);");
+		
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			String func = ct.JDBCTypeToPreparedFunc(Integer.parseInt(arrColumn_type.get(i).toString()));
+			func = func.replaceAll("arg0", "" + (i + 1));
+			func = func.replaceAll("arg1", "obj.get" + arrColumn_name.get(i) + "()");
+			func = "\t\tpst." + func + ";";
+			arrStr.add(func);
+		}
+		arrStr.add("");
+		arrStr.add("\t\tif (pst.executeUpdate() > 0)");
+		arrStr.add("\t\t\tresult = true;");
+		arrStr.add("\t}"); 
+		/*
+			catch (SQLException e) 
+			{
+			}
+
+			return result;
+		}
+		*/
+		arrStr.add("\tcatch (SQLException e)");
+		arrStr.add("\t{");
+		arrStr.add("\t}");
+		arrStr.add("\treturn result;");
+		arrStr.add("}");
+		
+		for (int i = 0; i < arrStr.size(); ++i)
+		{
+			result += "\n" + arrStr.get(i);
+		}
+		return result;
+	}
+//	 Tao ham Update
+	public String CreateUpdate(String table)
+	{
+		String result = new String();
+		List<String> arrStr = new ArrayList<String>();
+		String str;
+		List<String> arrColumn_name = new ArrayList<String>();
+		List arrColumn_type = new ArrayList();
+		List<String> primarykeys = new ArrayList<String>();
+		List types = new ArrayList();
+		GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+		GetPrimaryKeysInfo(table, primarykeys, types);
+		/*
+		public Boolean Update(KHACHHANG khachhang)
+		{
+			Boolean result = false;
+			try 
+			{
+			*/
+		arrStr.add("public boolean Update(" + table + " obj)");
+		arrStr.add("{");
+		arrStr.add("\tboolean result = false;");
+		arrStr.add("\ttry");
+		arrStr.add("\t{");
+		/*
+				String sql = "update KHACHHANG set MaKH = ?, TEN = ?, DCHI = ?, DTHOAI = ? where MAKH = ?";
+				PreparedStatement pst = mConnection.prepareStatement(sql);
+			    pst.setString(1, obj.getTEN());
+				pst.setString(2, obj.getDCHI());
+				pst.setString(3, obj.getDTHOAI());
+				pst.setString(4, obj.getMAKH());
+			    
+				if (pst.executeUpdate() > 0)
+					result = true;
+			} 
+			*/
+		str = "";
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			str += arrColumn_name.get(i) + " = ?";
+			if (i != arrColumn_name.size() - 1)
+				str += ", ";
+		}
+		String str2 = "";
+		
+		for (int i = 0; i < primarykeys.size(); ++i)
+		{
+			str2 += primarykeys.get(i) + " = ?";
+			if (i != primarykeys.size() - 1)
+				str2 += " and ";
+		}
+		str = "String sql = \"update " + table +" set " + str + " where " + str2 +"\";";
+		arrStr.add("\t\t" + str);
+		arrStr.add("\t\tPreparedStatement pst = mConnection.prepareStatement(sql);");
+		
+		int index = 1;
+		for (int i = 0; i < arrColumn_name.size(); ++i, ++index)
+		{
+			String func = ct.JDBCTypeToPreparedFunc(Integer.parseInt(arrColumn_type.get(i).toString()));
+			func = func.replaceAll("arg0", "" + index);
+			func = func.replaceAll("arg1", "obj.get" + arrColumn_name.get(i) + "()");
+			func = "\t\tpst." + func + ";";
+			arrStr.add(func);
+		}
+		// primary key
+		for (int i = 0; i < primarykeys.size(); ++i, ++index)
+		{
+			String func = ct.JDBCTypeToPreparedFunc(Integer.parseInt(types.get(i).toString()));
+			func = func.replaceAll("arg0", "" + index);
+			func = func.replaceAll("arg1", "obj.get" + primarykeys.get(i) + "()");
+			func = "\t\tpst." + func + ";";
+			arrStr.add(func);
+		}
+		arrStr.add("");
+		arrStr.add("\t\tif (pst.executeUpdate() > 0)");
+		arrStr.add("\t\t\tresult = true;");
+		arrStr.add("\t}"); 
+		/*
+			catch (SQLException e) 
+			{
+			}
+
+			return result;
+		}
+		*/
+		arrStr.add("\tcatch (SQLException e)");
+		arrStr.add("\t{");
+		arrStr.add("\t}");
+		arrStr.add("\treturn result;");
+		arrStr.add("}");
+		
+		for (int i = 0; i < arrStr.size(); ++i)
+		{
+			result += "\n" + arrStr.get(i);
+		}
+		return result;
+	}
+	// Tao ham Show
+	public String CreateShow(String table)
+	{
+		List<String> arrStr = new ArrayList<String>();
+		String result = new String();
+		arrStr.add("public String Show(List<" + table + "> t)");
+		arrStr.add("{");
+		arrStr.add("\tString result = new String();");
+		arrStr.add("\tList<String> arrStr = new ArrayList<String>();");
+		arrStr.add("\tfor (int i = 0; i < t.size(); ++i)");
+		arrStr.add("\t{");
+		arrStr.add("\t\t" + table + " cb = t.get(i);");
+		arrStr.add("\t\tString str = new String();");
+		List<String> arrColumn_name = new ArrayList<String>();
+		List arrColumn_type = new ArrayList();
+		GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+		for (int i = 0; i < arrColumn_name.size(); ++i)
+		{
+			arrStr.add("\t\tstr += cb.get" + arrColumn_name.get(i) + "() + \" \";");
+		}
+		arrStr.add("\t\tarrStr.add(str);");
+		arrStr.add("\t}");
+		arrStr.add("\tfor (int i = 0; i < arrStr.size(); ++i)");
+		arrStr.add("\t{");
+		arrStr.add("\t\tresult += \"\\n\" + arrStr.get(i);");
+		arrStr.add("\t}");
+		arrStr.add("\treturn result;");
+		arrStr.add("}");
+		
+		for (int i = 0; i < arrStr.size(); ++i)
+		{
+			result += "\n" + arrStr.get(i);
+		}
+		return result;
+	}
+	// Tao lop Dao tuong ung voi Table
+	public String[] CreateDaoClass(String table)
+	{
+		String[] result;
+		String str;
+		List<String> arrStr = new ArrayList<String>();
+		arrStr.add("import java.sql.*;");
+		arrStr.add("import java.util.*;");
+		arrStr.add("");
+		arrStr.add("public class " + table + "Dao");
+		arrStr.add("{");
+		arrStr.add("\tprivate String mDatabase;");
+		arrStr.add("\tprivate Connection mConnection;");		
+		
+		// getList
+		str = CreateGetList(table);
+		arrStr.add(str.replaceAll("\n", "\n\t"));
+		
+		arrStr.add("\tpublic String ConnectDatabase(String database, String username, String password)");
+		arrStr.add("\t{");
+		arrStr.add("\t\tString result = new String();");
+		arrStr.add("\t\tmDatabase = database;");
+		arrStr.add("");
+		arrStr.add("\t\ttry");
+		arrStr.add("\t\t{");			
+		arrStr.add("\t\t\tClass.forName(\"com.microsoft.jdbc.sqlserver.SQLServerDriver\");");
+		arrStr.add("\t\t\tmConnection = DriverManager.getConnection"); 
+		arrStr.add("\t\t\t(\"jdbc:microsoft:sqlserver://localhost:1433\", username, password);");
+		arrStr.add("\t\t\tmConnection.setCatalog(mDatabase);");
+		arrStr.add("\t\t}");
+		arrStr.add("\t\tcatch (SQLException e)");
+		arrStr.add("\t\t{");
+		arrStr.add("\t\t\tresult += e.toString();");
+		arrStr.add("\t\t}");
+		arrStr.add("\t\tcatch (ClassNotFoundException e)");
+		arrStr.add("\t\t{");
+		arrStr.add("\t\t\tresult += e.toString();");
+		arrStr.add("\t\t}");
+		arrStr.add("");
+		arrStr.add("\t\treturn result;");
+		arrStr.add("\t}"); // Ket thuc ham
+		arrStr.add("\tpublic " + table + "Dao()");
+		arrStr.add("\t{");
+		arrStr.add("\t\tConnectDatabase(\"" + mDatabase + "\", \"" + mUsername + "\", \"" + mPassword + "\");");
+		arrStr.add("\t}");
+		
+		// getByID
+		str = CreategetByID(table);
+		arrStr.add(str.replaceAll("\n", "\n\t"));
+		
+		// getByPropertyName
+		String[] temp = CreategetByColumnName(table);
+		for (int i = 0; i < temp.length; ++i)
+		{
+			arrStr.add(temp[i].replaceAll("\n", "\n\t"));
+		}
+		
+		// getAll
+//		str = CreategetAll(table);
+//		arrStr.add(str.replaceAll("\n", "\n\t"));
+		
+		// Insert
+//		str = CreateInsert(table);
+//		arrStr.add(str.replaceAll("\n", "\n\t"));
+		
+		// Update
+//		str = CreateUpdate(table);
+//		arrStr.add(str.replaceAll("\n", "\n\t"));
+		// Show
+//		str = CreateShow(table);
+//		arrStr.add(str.replaceAll("\n", "\n\t"));
+		
+		arrStr.add("}"); // Ket thuc lop
+		
+		result = new String[arrStr.size()];
+		for (int i = 0; i < result.length; ++i)
+			result[i] = arrStr.get(i);
+
+		return result;
+	}
+	public String[][] CreateDaoClass(String[] arrTable)
+	{
+		String[][] result = new String[arrTable.length][]; 
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			result[i] = CreateDaoClass(arrTable[i]);
+			System.out.println(arrTable[i] + "DAO");
+		}
+		return result;
+	}
+	//	 Luu cac Entity Class xuong file
+	public void WriteDaoClassToFile()	
+	{
+		String[] arrTable = GetTable(false);
+		String[][] arrEntity = CreateDaoClass(arrTable);
+		String FileName;
+		_File f = new _File();
+		System.out.println("WriteDaoClassToFile");
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			FileName = arrTable[i] + "Dao.java";
+			f.WriteFile(FileName, arrEntity[i]);
+		}
+	}
+	public void WriteFile()
+	{
+		WriteEntityClassToFile();
+		WriteDaoClassToFile();
+	}
+}

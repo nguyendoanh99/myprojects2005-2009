@@ -1,0 +1,21 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+public class KHOIDAO {
+	private Node m_node;
+	
+	public KHOIDAO() {
+		// TODO Auto-generated constructor stub
+		m_node = null;
+	}
+
+	public Node getNode()
+	{
+		return m_node;
+	}
+	public void setNode(Node node)
+	{
+		m_node = node;
+	}
+}

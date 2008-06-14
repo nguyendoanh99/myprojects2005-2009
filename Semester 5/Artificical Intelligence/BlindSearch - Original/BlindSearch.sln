@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BlindSearch", "BlindSearch\BlindSearch.vcproj", "{3A3ADACA-A2D4-46C1-8C91-EA02FE0418C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A3ADACA-A2D4-46C1-8C91-EA02FE0418C5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A3ADACA-A2D4-46C1-8C91-EA02FE0418C5}.Debug|Win32.Build.0 = Debug|Win32
+		{3A3ADACA-A2D4-46C1-8C91-EA02FE0418C5}.Release|Win32.ActiveCfg = Release|Win32
+		{3A3ADACA-A2D4-46C1-8C91-EA02FE0418C5}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

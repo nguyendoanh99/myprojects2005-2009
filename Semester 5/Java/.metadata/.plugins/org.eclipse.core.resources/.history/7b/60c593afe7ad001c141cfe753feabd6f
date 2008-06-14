@@ -1,0 +1,22 @@
+import java.io.*;
+
+public class _File {
+	public String WriteFile(String FileName, String str)
+	{
+		String result = new String();
+		FileWriter fw;
+		
+		try
+		{
+			fw = new FileWriter(FileName);
+			fw.write(str);
+			fw.close();
+		}
+		catch(IOException exc) 
+		{
+			result += exc.toString();
+		}
+		
+		return result;
+	}
+}

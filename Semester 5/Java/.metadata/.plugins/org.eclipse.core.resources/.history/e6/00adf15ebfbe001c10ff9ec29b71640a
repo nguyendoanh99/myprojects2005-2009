@@ -1,0 +1,223 @@
+
+import java.awt.event.KeyEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Event;
+import java.awt.BorderLayout;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.KeyStroke;
+import java.awt.Point;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JMenuItem;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JFrame;
+import javax.swing.JDialog;
+import javax.swing.JList;
+import java.awt.Rectangle;
+import javax.swing.DefaultListModel;
+import java.awt.Dimension;
+import javax.swing.JScrollPane;
+import javax.swing.JRadioButton;
+import javax.swing.BorderFactory;
+import javax.swing.border.TitledBorder;
+import java.awt.Font;
+import java.awt.Color;
+
+/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class ChuyenLop {
+
+	private JFrame jFrame;  //  @jve:decl-index=0:visual-constraint="3,5"
+
+	private JPanel jContentPane;
+
+	private JScrollPane jSPDanhSachLop = null;
+
+	private JList jListDanhSachLop = null;
+
+	private JPanel jPanelKhoi = null;
+
+	private JRadioButton jRadioKhoi10 = null;
+
+	private JRadioButton jRadioKhoi11 = null;
+
+	private JRadioButton jRadioKhoi12 = null;
+
+	private JLabel jLabel = null;
+
+	/**
+	 * 
+	 */
+	public ChuyenLop() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * This method initializes jSPDanhSachLop	
+	 * 	
+	 * @return javax.swing.JScrollPane	
+	 */
+	private JScrollPane getJSPDanhSachLop() {
+		if (jSPDanhSachLop == null) {
+			try {
+				jSPDanhSachLop = new JScrollPane();
+				jSPDanhSachLop.setBounds(new Rectangle(204, 83, 216, 280));  // Generated
+				jSPDanhSachLop.setViewportView(getJListDanhSachLop());  // Generated
+			} catch (java.lang.Throwable e) {
+				// TODO: Something
+			}
+		}
+		return jSPDanhSachLop;
+	}
+
+	/**
+	 * This method initializes jListDanhSachLop	
+	 * 	
+	 * @return javax.swing.JList	
+	 */
+	private JList getJListDanhSachLop() {
+		if (jListDanhSachLop == null) {
+			try {
+				jListDanhSachLop = new JList();
+				jListDanhSachLop.setModel(new DefaultListModel());  // Generated
+			} catch (java.lang.Throwable e) {
+				// TODO: Something
+			}
+		}
+		return jListDanhSachLop;
+	}
+
+	/**
+	 * This method initializes jPanelKhoi	
+	 * 	
+	 * @return javax.swing.JPanel	
+	 */
+	private JPanel getJPanelKhoi() {
+		if (jPanelKhoi == null) {
+			try {
+				jPanelKhoi = new JPanel();
+				jPanelKhoi.setLayout(null);  // Generated
+				jPanelKhoi.setBounds(new Rectangle(11, 81, 182, 45));  // Generated
+				jPanelKhoi.setBorder(BorderFactory.createTitledBorder(null, "Kh\u1ed1i", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("Tahoma", Font.PLAIN, 11), Color.black));  // Generated
+				jPanelKhoi.add(getJRadioKhoi10(), null);  // Generated
+				jPanelKhoi.add(getJRadioKhoi11(), null);  // Generated
+				jPanelKhoi.add(getJRadioKhoi12(), null);  // Generated
+			} catch (java.lang.Throwable e) {
+				// TODO: Something
+			}
+		}
+		return jPanelKhoi;
+	}
+
+	/**
+	 * This method initializes jRadioKhoi10	
+	 * 	
+	 * @return javax.swing.JRadioButton	
+	 */
+	private JRadioButton getJRadioKhoi10() {
+		if (jRadioKhoi10 == null) {
+			try {
+				jRadioKhoi10 = new JRadioButton();
+				jRadioKhoi10.setBounds(new Rectangle(7, 16, 47, 23));  // Generated
+				jRadioKhoi10.setText("10");  // Generated
+			} catch (java.lang.Throwable e) {
+				// TODO: Something
+			}
+		}
+		return jRadioKhoi10;
+	}
+
+	/**
+	 * This method initializes jRadioKhoi11	
+	 * 	
+	 * @return javax.swing.JRadioButton	
+	 */
+	private JRadioButton getJRadioKhoi11() {
+		if (jRadioKhoi11 == null) {
+			try {
+				jRadioKhoi11 = new JRadioButton();
+				jRadioKhoi11.setBounds(new Rectangle(66, 17, 45, 23));  // Generated
+				jRadioKhoi11.setText("11");  // Generated
+			} catch (java.lang.Throwable e) {
+				// TODO: Something
+			}
+		}
+		return jRadioKhoi11;
+	}
+
+	/**
+	 * This method initializes jRadioKhoi12	
+	 * 	
+	 * @return javax.swing.JRadioButton	
+	 */
+	private JRadioButton getJRadioKhoi12() {
+		if (jRadioKhoi12 == null) {
+			try {
+				jRadioKhoi12 = new JRadioButton();
+				jRadioKhoi12.setBounds(new Rectangle(129, 17, 42, 23));  // Generated
+				jRadioKhoi12.setText("12");  // Generated
+			} catch (java.lang.Throwable e) {
+				// TODO: Something
+			}
+		}
+		return jRadioKhoi12;
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				ChuyenLop application = new ChuyenLop();
+				application.getJFrame().setVisible(true);
+			}
+		});
+	}
+
+	/**
+	 * This method initializes jFrame
+	 * 
+	 * @return javax.swing.JFrame
+	 */
+	private JFrame getJFrame() {
+		if (jFrame == null) {
+			jFrame = new JFrame();
+			jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			jFrame.setSize(550, 418);
+			jFrame.setContentPane(getJContentPane());
+			jFrame.setTitle("Application");
+		}
+		return jFrame;
+	}
+
+	/**
+	 * This method initializes jContentPane
+	 * 
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getJContentPane() {
+		if (jContentPane == null) {
+			jLabel = new JLabel();
+			jLabel.setBounds(new Rectangle(16, 21, 374, 29));  // Generated
+			jLabel.setText("Chọn lớp muốn chuyển");  // Generated
+			jContentPane = new JPanel();
+			jContentPane.setLayout(null);
+			jContentPane.add(getJSPDanhSachLop(), null);  // Generated
+			jContentPane.add(getJPanelKhoi(), null);  // Generated
+			jContentPane.add(jLabel, null);  // Generated
+		}
+		return jContentPane;
+	}
+
+}

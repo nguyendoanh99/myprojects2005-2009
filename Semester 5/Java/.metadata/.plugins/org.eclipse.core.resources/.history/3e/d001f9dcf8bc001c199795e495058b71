@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+import java.util.*;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class KHOIDTO {
+	private String m_strMaKhoi;
+	private String m_strTenKhoi;
+	private List<LOPHOCDTO> m_arrLopHoc;
+	/**
+	 * 
+	 */
+	public KHOIDTO() {
+		// TODO Auto-generated constructor stub
+		m_strMaKhoi = "";
+		m_strTenKhoi = "";
+		m_arrLopHoc = new ArrayList<LOPHOCDTO>();
+	}
+
+}

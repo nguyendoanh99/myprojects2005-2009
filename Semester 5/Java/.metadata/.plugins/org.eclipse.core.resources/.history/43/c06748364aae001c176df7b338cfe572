@@ -1,0 +1,353 @@
+import java.sql.*;
+import java.util.*;
+
+public class _DAOGenerator {
+	//**********************************************************
+	// Attributes
+	//**********************************************************
+	private String mDatabase;
+	private String mUsername;
+	private String mPassword;
+	private Connection mConnection;
+	private static _ConvertTypes ct = new _ConvertTypes(); 
+	//**********************************************************
+	// Private Functions
+	//**********************************************************
+	private String CreateMethodGet(String column_name, int data_type)
+	{
+		String result = new String();
+		String d = ct.JDBCToJavaType(data_type);
+		result = "public " + d + " get" + column_name + "()\n{";
+		result += "\n\treturn " + "m" + column_name + ";\n}";
+		return result;
+	}
+	private String CreateMethodSet(String column_name, int data_type)
+	{
+		String result = new String();
+		String d = ct.JDBCToJavaType(data_type);
+		result = "public void " + "set" + column_name + "(" + d + " " + column_name + ")\n{";
+		result += "\n\tthis." + "m" + column_name + " = " + column_name + ";\n}"; 
+		return result;
+	}
+	private String CreateMethod(String column_name, int data_type)
+	{
+		String result = new String();
+		result = CreateMethodSet(column_name, data_type) + "\n\n" + CreateMethodGet(column_name, data_type);
+		return result;
+	}
+	//**********************************************************
+	// Contructors
+	//**********************************************************
+	public _DAOGenerator(String database, String username, String password)
+	{
+		ConnectDatabase(database, username, password);
+	}
+	//**********************************************************
+	// Public Functions
+	//**********************************************************
+	//	 Ket noi co so du lieu
+	public String ConnectDatabase(String database, String username, String password)
+	{
+		String result = new String();
+		mDatabase = database;
+		mUsername = username;
+		mPassword = password;
+		
+		try
+		{			
+			Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+			mConnection = DriverManager.getConnection 
+			  ("jdbc:microsoft:sqlserver://localhost:1433", mUsername, mPassword);
+		}
+		catch (SQLException e)
+		{
+			result += e.toString();
+		}
+		catch (ClassNotFoundException e)
+		{
+			result += e.toString();
+		}
+		
+		return result;
+	}
+	// Lay tap hop cac table trong csdl
+	public String[] GetTable()
+	{
+		String[] result;
+		DatabaseMetaData DBMD;
+		List<String> lst = new ArrayList<String>();
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getTables(mDatabase, null, null, null);
+			
+			while (rs.next())
+			{
+				String table_type = rs.getString("TABLE_TYPE");
+				if (table_type.compareTo("TABLE") == 0)
+				{
+					String table_name = rs.getString("TABLE_NAME");
+					lst.add(table_name);
+				}
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = new String[lst.size()];
+		for (int i = 0; i < result.length; ++i)
+			result[i] = lst.get(i);
+		return result;
+	}
+	// Lay thong tin cac primary key
+	public void GetPrimaryKeysInfo(String table, List<String> primarykeys, List types)
+	{
+		DatabaseMetaData DBMD;
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getPrimaryKeys(mDatabase, null, table);
+			while (rs.next())
+			{
+				String column_name = rs.getString("COLUMN_NAME");
+				ResultSet rs2 = DBMD.getColumns(mDatabase, null, table , column_name);
+				rs2.next();
+				int data_type = rs2.getInt("DATA_TYPE");
+				primarykeys.add(column_name);				
+				types.add(data_type);
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+	}
+	// Lay thong tin cac column cua table
+	public void GetColumnsInfo(String table, List<String> arrColumn_name, List arrColumn_type)
+	{
+		DatabaseMetaData DBMD;
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(mDatabase, null, table , null);
+			while (rs.next())
+			{
+				arrColumn_name.add(rs.getString("COLUMN_NAME"));
+				arrColumn_type.add(rs.getString("DATA_TYPE"));
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+	}
+	// Tao lop Entity ung voi table
+	public String CreateEntityClass(String table)
+	{
+		String result = new String();
+		String strAttrib = new String();
+		DatabaseMetaData DBMD;
+
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(mDatabase, null, table , null);
+			while (rs.next())
+			{
+				int data_type = rs.getInt("DATA_TYPE");
+				String column_name = rs.getString("COLUMN_NAME");
+				result += CreateMethod(column_name, data_type) + "\n\n";
+				strAttrib += "private " + ct.JDBCToJavaType(data_type) + " " + "m" + column_name + ";\n";
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = "\n" + strAttrib + "\n" + result;
+		result = "public class " + table + "\n{" + result.replaceAll("\n", "\n\t") + "\n}";
+		return result;
+	}
+	public String[] CreateEntityClass(String[] arrTable)
+	{
+		String[] result = new String[arrTable.length]; 
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			result[i] = CreateEntityClass(arrTable[i]);
+		}
+		return result;
+	}
+	// Luu cac Entity Class xuong file
+	public String WriteEntityClassToFile()	
+	{
+		String result = new String();
+		String[] arrTable = GetTable();
+		String[] arrEntity = CreateEntityClass(arrTable);
+		String FileName;
+		_File f = new _File();
+		
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			FileName = arrTable[i] + ".java";
+			f.WriteFile(FileName, arrEntity[i]);
+		}
+		return result; 
+	}
+	// Tao ham getByID tuong ung voi table
+	public String CreategetByID(String table)
+	{
+		/*
+		public CHUYENBAY getByID(String MACB)
+		{
+			CHUYENBAY result = new CHUYENBAY();
+			try
+			{
+				String sql = "Select * from CHUYENBAY where MACB=?";			
+				PreparedStatement pst = mConnection.prepareStatement(sql);
+				pst.setString(1, MACB);
+				ResultSet rs = pst.executeQuery();
+				while (rs.next())
+				{
+					String SBDI = rs.getString("SBDI");
+					String SBDEN = rs.getString("SBDEN");
+					java.sql.Timestamp GIODI = rs.getTimestamp("GIODI");
+					java.sql.Timestamp GIODEN = rs.getTimestamp("GIODEN");
+					result.setMACB(MACB);
+					result.setSBDI(SBDI);
+					result.setSBDEN(SBDEN);
+					result.setGIODI(GIODI);
+					result.setGIODEN(GIODEN);
+				}
+			}
+			catch (SQLException e)
+			{
+				System.out.println(e.toString());
+			}
+			return result;
+		}
+		*/
+		
+		String result = new String();
+		List Types = new ArrayList();
+		List<String> Primarykeys = new ArrayList<String>();
+		List<String> arrStr = new ArrayList<String>();
+		DatabaseMetaData DBMD;
+		
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			// Lay ten khoa chinh va kieu du lieu
+			GetPrimaryKeysInfo(table, Primarykeys, Types);
+			
+			/*
+			public CHUYENBAY getByID(String MACB) // 1
+			{
+				CHUYENBAY result = new CHUYENBAY(); // 2
+				try
+				{
+			*/
+			String str = new String();
+			for (int i = 0; i < Primarykeys.size(); ++i)
+			{
+				int iType = Integer.parseInt(Types.get(i).toString());
+				String name = Primarykeys.get(i);
+				str += ct.JDBCToJavaType(iType) + " " + name;
+				if (i != Primarykeys.size() - 1)
+					str += ", ";
+			}
+			arrStr.add("public " + table + " getByID(" + str + ")"); // 1
+			arrStr.add("{");
+			arrStr.add("\t" + table +" result = new " + table + "();"); // 2
+			arrStr.add("\ttry");
+			arrStr.add("\t{");
+			
+			// 		String sql = "Select * from CHUYENBAY where MACB=?";
+			String sql = new String();
+			for (int i = 0; i < Primarykeys.size(); ++i)
+			{
+				sql += Primarykeys.get(i) + "=?";
+				if (i != Primarykeys.size() - 1)
+					sql += "and ";
+			}
+			arrStr.add("\t\tString sql = \"select * from " + table + " where " + sql + "\";");
+
+			//	 PreparedStatement pst = mConnection.prepareStatement(sql); // 1 
+			//	 pst.setString(1, MACB);  // 2
+			//	 ResultSet rs = pst.executeQuery(); // 3
+			arrStr.add("\t\tPreparedStatement pst = mConnection.prepareStatement(sql);"); // 1			
+			// 2
+			for (int i = 0; i < Primarykeys.size(); ++i)
+			{
+				String func = ct.JDBCTypeToPreparedFunc(Integer.parseInt(Types.get(i).toString()));
+				func = func.replaceAll("arg0", "" + (i + 1));
+				func = func.replaceAll("arg1", Primarykeys.get(i));
+				func = "\t\tpst." + func + ";";
+				arrStr.add(func);
+			}
+			arrStr.add("\t\tResultSet rs = pst.executeQuery();"); // 3
+			
+			//while (rs.next()) 1
+			//{
+			//	String SBDI = rs.getString("SBDI"); 2
+			//	String SBDEN = rs.getString("SBDEN"); 3
+			//	java.sql.Timestamp GIODI = rs.getTimestamp("GIODI"); 4
+			//	java.sql.Timestamp GIODEN = rs.getTimestamp("GIODEN"); 5
+			//	result.setMACB(MACB); 6
+			//	result.setSBDI(SBDI); 7 
+			//	result.setSBDEN(SBDEN); 8
+			//	result.setGIODI(GIODI); 9
+			//	result.setGIODEN(GIODEN); 10
+			//}
+			arrStr.add("\t\twhile (rs.next())"); // 1
+			arrStr.add("\t\t{");
+			List<String> arrColumn_name = new ArrayList<String>();
+			List arrColumn_type = new ArrayList();
+			// Lay thong tin cac cot
+			GetColumnsInfo(table, arrColumn_name, arrColumn_type);
+			// 2 --> 5
+			for (int i = 0; i < arrColumn_name.size(); ++i)
+			{
+				str = new String();
+				String name = arrColumn_name.get(i);
+				if (Primarykeys.indexOf(name) != -1)
+					continue;
+				
+				int iType = Integer.parseInt(arrColumn_type.get(i).toString());
+				String func = ct.JDBCTypeToResultFunc(iType).replaceAll("arg0", "\"" + name + "\"");
+				
+				str += "\t\t\t" + ct.JDBCToJavaType(iType) + " " + name;
+				str += " = rs." + func;
+				str += ";";
+				arrStr.add(str);
+			}
+			// 6 --> 10
+			for (int i = 0; i < arrColumn_name.size(); ++i)
+			{
+				str = new String();
+				int iType = Integer.parseInt(arrColumn_type.get(i).toString());
+				String name = arrColumn_name.get(i);
+				
+				str += "\t\t\tresult.set" + name + "(" + name + ");"; 
+				arrStr.add(str);
+			}
+			arrStr.add("\t\t}");
+			
+			
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		for (int i = 0; i < arrStr.size(); ++i)
+		{
+			result += "\n" + arrStr.get(i);
+		}
+		
+		return result;
+		
+	}
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+-->
+</style>
+<script type="text/javascript" src="_String.js"></script>
+<script type="text/javascript" src="_Number.js"></script>
+<script type="text/javascript" src="_Date.js"></script>
+<script type="text/javascript" src="_XML.js"></script>
+<script type="text/javascript" src="Functions.js"></script>
+<script type="text/javascript" src="Events.js"></script>
+<script type="text/javascript">
+    var Col = new Array();
+    Col[0] = true;
+    Col[1] = true;
+    Col[2] = true;
+    Col[3] = true;
+
+</script>
+</head>
+
+<body onload="Load()">
+<table width="100%%" border="0" cellspacing="0" cellpadding="00">
+  <tr>
+    <td bgcolor="#000066"><div align="center">
+      <h1 class="style3">.: ĐĂNG KÝ HỌC PHẦN :.</h1>
+    </div></td>
+  </tr>
+</table>
+<hr />
+
+<form action="" method="get"><table width="100%" height="145" border="0" cellpadding="00" cellspacing="0">
+  <tr>
+    <td align="right" valign="bottom"><strong>Mã số:</strong></td>
+    <td width="60%" align="left" valign="bottom">
+      <input name="txtID" type="text" id="txtID" title="Mã số sinh viên không được để trống" size="30" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/>
+    </label>    </td>
+  </tr>
+  <tr>
+    <td height="27" align="right" valign="bottom"><strong>Họ và tên:</strong></td>
+    <td width="60%" align="left" valign="bottom"><input type="text" name="txtName" id="txtName" title="Họ và tên sinh viên không được để trống" size="50" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/>    </td>
+  </tr>
+  <tr>
+    <td height="27" align="right" valign="bottom"><strong>Địa chỉ:</strong></td>
+    <td width="60%" align="left" valign="bottom"><input name="txtAddress" type="text" id="txtAddress" title="Địa chỉ không được để trống" size="60" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/></td>
+  </tr>
+  <tr>
+    <td height="27" align="right" valign="bottom"><strong>Điện thoại:</strong></td>
+    <td width="60%" align="left" valign="bottom"><input name="txtPhone" type="text" id="txtPhone" title="Số điện thoại có format XXX-XXXXXX (có mã vùng) hoặc XXXXXX(không cần mã vùng)" size="30" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/></td>
+  </tr>
+  <tr>
+    <td height="27" align="right" valign="bottom"><strong>Giới tính:</strong></td>
+    <td width="60%" align="left" valign="bottom"><label>
+      <input type="checkbox" id="chkMale" onclick="chkSex_Click(this.id, true)" checked="true"/>
+      Nam</label>
+      <label>
+      <input type="checkbox" id="chkFemale" onclick="chkSex_Click(this.id, true)"/>
+      Nữ
+      </label></td>
+  </tr>
+  <tr>
+    <td height="27" align="right" valign="bottom"><strong>Ngày sinh:</strong></td>
+    <td width="60%" align="left" valign="bottom"><select name="mnuMonth" id="mnuMonth">
+                        </select>
+      , 
+      <input name="txtDate" type="text" id="txtDate" title="Ngày sinh có giá trị từ 1 - 31 (phụ thuộc vào tháng)" size="8" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/>
+      , 
+      <input name="txtYear" type="text" id="txtYear" title="Năm sinh có giá trị từ 1900 - 2100" size="12" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/> 
+      (Month, DD, YYYY)</td>
+  </tr>
+  <tr>
+    <td height="27" align="right" valign="bottom"><strong>Email:</strong></td>
+    <td align="left" valign="bottom"><input name="txtEmail" type="text" id="txtEmail" title="Chỉ chấp nhận địa chỉ email của Yahoo hoặc Google" size="50" onfocus="FocusEvent(this.id)" onblur="LostFocusEvent(this.id)"/></td>
+  </tr>
+</table>
+<table width="100%%" border="0" cellspacing="0" cellpadding="00">
+  <tr>
+    <td width="46%" height="36" align="right" valign="middle"><strong>Các môn học</strong></td>
+    <td width="8%">&nbsp;</td>
+    <td width="46%"><strong>Các môn học đã chọn</strong></td>
+    </tr>
+  <tr>
+    <td height="81" rowspan="6" align="right" valign="top"><select name="lstSubjects" size="10" multiple="multiple" id="lstSubjects" style="width:200px">
+    </select>    </td>
+    <td height="25">&nbsp;</td>
+    <td rowspan="6" align="left" valign="top"><select name="lstSelectedSubjects" size="10" multiple="multiple" id="lstSelectedSubjects" style="width:200px">
+    </select>
+      <input type="button" name="butOK" id="butOK" value="Ok" style="width:40px" onclick="butOK_Click()"/></td>
+    </tr>
+  <tr>
+    <td align="center"><input name="butSelect" type="button" id="butSelect" value="&gt;" style="width:40px" onclick="MoveItem(lstSubjects, lstSelectedSubjects)"/></td>
+  </tr>
+  <tr>
+    <td align="center">      <input type="button" name="butSelectAll" id="butSelectAll" value="&gt;&gt;" style="width:40px" onclick="MoveItemsAll(lstSubjects, lstSelectedSubjects)"/>    </td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button" name="butDeselect" id="butDeselect" value="&lt;" style="width:40px" onclick="MoveItem(lstSelectedSubjects, lstSubjects)"/></td>
+  </tr>
+  <tr>
+    <td align="center"><input type="button" name="butDeselectAll" id="butDeselectAll" value="&lt;&lt;" style="width:40px" onclick="MoveItemsAll( lstSelectedSubjects, lstSubjects)"/></td>
+  </tr>
+  <tr>
+    <td height="27">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%%" border="0" cellspacing="0" cellpadding="00">
+  <tr>
+    <td width="43%" height="30">&nbsp;</td>
+    <td width="57%" valign="bottom"><input type="button" name="butRegister" id="butRegister" value="Đăng ký" onclick="butRegister_Click()" />
+      <input type="reset" name="butDelete" id="butDelete" value="Xóa" style="width:50px" onclick="MoveItemsAll(lstSelectedSubjects, lstSubjects)"/></td>
+  </tr>
+</table>
+</form>
+<hr/>
+<table width="100%" border="1" cellspacing="2" cellpadding="1" id="tableStudents">
+  <tr bgcolor="#000099">
+    <td align="center" onclick="SortTable('tableStudents', 0)"><span class="style3"><strong>Mã số</strong></span></td>
+    <td align="center" onclick="SortTable('tableStudents', 1)"><span class="style3"><strong>Họ và tên</strong></span></td>
+    <td align="center" onclick="SortTable('tableStudents', 2)"><span class="style3"><strong>Giới tính</strong></span></td>
+    <td align="center" onclick="SortTable('tableStudents', 3)"><span class="style3"><strong>Ngày sinh</strong></span></td>
+  </tr>
+</table>
+
+</body>
+</html>

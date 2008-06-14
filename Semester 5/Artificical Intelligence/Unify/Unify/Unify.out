@@ -1,0 +1,25 @@
+1. Yes: {y/A,x/f(z),z/g(A)}
+2. Yes: {}
+3. Yes: {x/y}
+4. Yes: {x/A}
+5. Yes: {y/x}
+6. Yes: {y/z,z/x}
+7. Yes: {x/A,y/B,z/y}
+8. Yes: {x/G(F(v)),u/F(v)}
+9. No
+10. Yes: {x/B,y/foo(z)}
+11. No
+12. Yes: {x/Father(Any)}
+13. No
+14. No
+15. No
+16. Yes: {x/B}
+17. No
+18. Yes: {y/x}
+19. Yes: {x/g(u),u/A}
+20. Yes: {x/E,y/x}
+21. Yes: {x/B,y/C}
+22. Yes: {x/f(C, y),y/z}
+23. No
+24. No
+

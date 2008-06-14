@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Subjects>
+  <subject id="01"> LT Hướng Đối Tượng </subject>
+  <subject id="02"> Cấu trúc dữ liệu </subject>
+  <subject id="03"> LT C trên Windows </subject>
+  <subject id="04"> NM CNPM </subject>
+  <subject id="05"> Trí Tuệ Nhân Tạo </subject>
+  <subject id="06"> CSDL và Web </subject>
+  <subject id="07"> CĐ Java </subject>
+  <subject id="08"> Cơ sở dữ liệu </subject>
+  <subject id="09"> Hợp ngữ </subject>
+</Subjects>

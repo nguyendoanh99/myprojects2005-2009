@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class TRUONGDTO {
+
+	/**
+	 * 
+	 */
+	public TRUONGDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

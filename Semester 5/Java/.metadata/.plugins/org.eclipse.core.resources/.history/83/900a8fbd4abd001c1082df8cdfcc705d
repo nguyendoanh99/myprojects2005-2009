@@ -1,0 +1,16 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+public class GIAOVIENDAO extends AbstractDAO {
+
+	public GIAOVIENDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public GIAOVIENDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+
+}

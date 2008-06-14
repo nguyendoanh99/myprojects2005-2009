@@ -1,0 +1,38 @@
+import java.util.*;
+
+/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class LOPDTO {
+	private GIAOVIENDTO m_giaovien;
+	private String m_strPhongHoc;
+	private Date m_dateGioHoc;
+	private List<HOCSINHDTO> m_arrHocSinh;
+	/**
+	 * 
+	 */
+	public LOPDTO() {
+		// TODO Auto-generated constructor stub
+		m_giaovien = new GIAOVIENDTO();
+		m_strPhongHoc = "";
+		m_dateGioHoc = new Date();
+		m_arrHocSinh = new ArrayList<HOCSINHDTO>();
+	}
+	// GiaoVien
+//	 NamSinh
+	public Date getNamSinh()
+	{
+		return m_dateNamSinh;
+	}
+	public void setNamSinh(Date value)
+	{
+		m_dateNamSinh = value;
+	}
+	// DiaChi
+
+}

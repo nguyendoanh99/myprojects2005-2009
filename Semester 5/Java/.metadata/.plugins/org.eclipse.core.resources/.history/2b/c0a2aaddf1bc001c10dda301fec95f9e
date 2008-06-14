@@ -1,0 +1,49 @@
+import java.util.Date;
+
+
+public class HOCSINHDTO {
+	//private
+	private	String m_strMaHocSinh;
+	private String m_strHoTen;
+	private Date m_dateNamSinh;
+	private String m_strDiaChi;
+	private String m_strDienThoai;
+	private KETQUAHOCTAPDTO m_KQHT;
+ 
+	public HOCSINHDTO() {
+		// TODO Auto-generated constructor stub
+		m_strMaHocSinh = "";
+		m_strHoTen = "";
+		m_dateNamSinh = new Date();
+		m_strDiaChi = "";
+		m_strDienThoai = "";
+		m_KQHT = new KETQUAHOCTAPDTO();		
+	}
+	// MaHocSinh
+	public String getMaHocSinh()
+	{
+		return m_strMaHocSinh;
+	}
+	public void setMaHocSinh(String value)
+	{
+		m_strMaHocSinh = value;
+	}
+	// HoTen
+	public String getHoTen()
+	{
+		return m_strHoTen;
+	}
+	public void setHoTen(String value)
+	{
+		m_strHoTen = value;
+	}
+	// NamSinh
+	public Date getNamSinh()
+	{
+		return m_dateNamSinh;
+	}
+	public void setNamSinh(Date value)
+	{
+		m_dateNamSinh = value;
+	}
+}

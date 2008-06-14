@@ -1,0 +1,13 @@
+KB
+~p | q
+~q | r
+~p | ~r | s
+~r | k
+~k | m
+r
+END KB
+
+S: m
+S: m & s
+S: ~p, s
+S: r | k

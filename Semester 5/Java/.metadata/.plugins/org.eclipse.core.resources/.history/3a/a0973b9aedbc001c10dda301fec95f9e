@@ -1,0 +1,9 @@
+
+public class HocSinhDTO {
+	private	String MaHocSinh;
+	private String HoTen;
+	public HocSinhDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

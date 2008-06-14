@@ -1,0 +1,14 @@
+public class test {
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String args[])
+	{	
+		_DAOGenerator dao = new _DAOGenerator("QLCHUYENBAY", "sa", "sa");
+//		System.out.println(dao.CreateEntityClass("CHUYENBAY"));
+//		System.out.println(dao.WriteEntityClassToFile());
+		System.out.println(dao.GetTable());
+	}
+}

@@ -1,0 +1,37 @@
+package DAO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.w3c.dom.Node;
+
+import DTO.KHOIDTO;
+
+public class KHOIDAO extends AbstractDAO{
+	
+	public KHOIDAO() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+	public KHOIDAO(Node node)
+	{
+		super(node);
+	}
+	public List<KHOIDTO> getDanhSachKhoiHoc()
+	{
+		Node node = getNode();
+		List<KHOIDTO> kq = new ArrayList<KHOIDTO>();
+		node = node.getFirstChild();
+		
+		while (node != null)
+		{
+			if (node.getNodeType() == Node.ELEMENT_NODE)
+			{
+				kq.add(getKhoi(node));
+			}
+			node = node.getNextSibling();
+		}
+		return kq;
+	}
+	
+}

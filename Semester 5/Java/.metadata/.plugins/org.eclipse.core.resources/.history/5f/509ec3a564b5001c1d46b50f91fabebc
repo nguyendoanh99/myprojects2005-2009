@@ -1,0 +1,20 @@
+import javax.swing.JDesktopPane;
+
+
+public class FormLogin extends JDesktopPane {
+
+	private static final long serialVersionUID = 1L;
+
+	public FormLogin() {
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

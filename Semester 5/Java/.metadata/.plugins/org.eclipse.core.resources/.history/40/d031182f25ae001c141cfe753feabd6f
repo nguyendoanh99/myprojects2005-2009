@@ -1,0 +1,288 @@
+import java.sql.*;
+import java.util.*;
+
+public class _DAOGenerator {
+	//**********************************************************
+	// Attributes
+	//**********************************************************
+	private String mDatabase;
+	private String mUsername;
+	private String mPassword;
+	private Connection mConnection;
+	private static _ConvertTypes ct = new _ConvertTypes(); 
+	//**********************************************************
+	// Private Functions
+	//**********************************************************
+	private String CreateMethodGet(String column_name, int data_type)
+	{
+		String result = new String();
+		String d = ct.JDBC2JavaType(data_type);
+		result = "public " + d + " get" + column_name + "()\n{";
+		result += "\n\treturn " + "m" + column_name + ";\n}";
+		return result;
+	}
+	private String CreateMethodSet(String column_name, int data_type)
+	{
+		String result = new String();
+		String d = ct.JDBC2JavaType(data_type);
+		result = "public void " + "set" + column_name + "(" + d + " " + column_name + ")\n{";
+		result += "\n\tthis." + "m" + column_name + " = " + column_name + ";\n}"; 
+		return result;
+	}
+	private String CreateMethod(String column_name, int data_type)
+	{
+		String result = new String();
+		result = CreateMethodSet(column_name, data_type) + "\n\n" + CreateMethodGet(column_name, data_type);
+		return result;
+	}
+	//**********************************************************
+	// Contructors
+	//**********************************************************
+	public _DAOGenerator(String database, String username, String password)
+	{
+		ConnectDatabase(database, username, password);
+	}
+	//**********************************************************
+	// Public Functions
+	//**********************************************************
+	//	 Ket noi co so du lieu
+	public String ConnectDatabase(String database, String username, String password)
+	{
+		String result = new String();
+		mDatabase = database;
+		mUsername = username;
+		mPassword = password;
+		
+		try
+		{			
+			Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+			mConnection = DriverManager.getConnection 
+			  ("jdbc:microsoft:sqlserver://localhost:1433", mUsername, mPassword);
+		}
+		catch (SQLException e)
+		{
+			result += e.toString();
+		}
+		catch (ClassNotFoundException e)
+		{
+			result += e.toString();
+		}
+		
+		return result;
+	}
+	// Lay tap hop cac table trong csdl
+	public String[] GetTable()
+	{
+		String[] result;
+		DatabaseMetaData DBMD;
+		List<String> lst = new ArrayList<String>();
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getTables(mDatabase, null, null, null);
+			
+			while (rs.next())
+			{
+				String table_type = rs.getString("TABLE_TYPE");
+				if (table_type.compareTo("TABLE") == 0)
+				{
+					String table_name = rs.getString("TABLE_NAME");
+					lst.add(table_name);
+				}
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = new String[lst.size()];
+		for (int i = 0; i < result.length; ++i)
+			result[i] = lst.get(i);
+		return result;
+	}
+	// Lay ten cac column
+	public String[] GetColumnInfo(String table)
+	{
+		String[] result = null;
+		DatabaseMetaData DBMD;
+		List<String> lst = new ArrayList<String>();
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(mDatabase, null, table , null);
+			while (rs.next())
+			{
+				String column_name = rs.getString("COLUMN_NAME");
+				lst.add(column_name);
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = new String[lst.size()];
+		for (int i = 0; i < result.length; ++i)
+		{
+			result[i] = lst.get(i);
+		}
+		return result;
+	}
+	// Tao lop Entity ung voi table
+	public String CreateEntityClass(String table)
+	{
+		String result = new String();
+		String strAttrib = new String();
+		DatabaseMetaData DBMD;
+
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getColumns(mDatabase, null, table , null);
+			while (rs.next())
+			{
+				int data_type = rs.getInt("DATA_TYPE");
+				String column_name = rs.getString("COLUMN_NAME");
+				result += CreateMethod(column_name, data_type) + "\n\n";
+				strAttrib += "private " + ct.JDBC2JavaType(data_type) + " " + "m" + column_name + ";\n";
+			}
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		result = "\n" + strAttrib + "\n" + result;
+		result = "public class " + table + "\n{" + result.replaceAll("\n", "\n\t") + "\n}";
+		return result;
+	}
+	public String[] CreateEntityClass(String[] arrTable)
+	{
+		String[] result = new String[arrTable.length]; 
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			result[i] = CreateEntityClass(arrTable[i]);
+		}
+		return result;
+	}
+	// Luu cac Entity Class xuong file
+	public String WriteEntityClassToFile()	
+	{
+		String result = new String();
+		String[] arrTable = GetTable();
+		String[] arrEntity = CreateEntityClass(arrTable);
+		String FileName;
+		_File f = new _File();
+		
+		for (int i = 0; i < arrTable.length; ++i)
+		{
+			FileName = arrTable[i] + ".java";
+			f.WriteFile(FileName, arrEntity[i]);
+		}
+		return result; 
+	}
+	// Tao ham getByID tuong ung voi table
+	public String CreategetByID(String table)
+	{
+		/*
+		public CHUYENBAY getByID(String MACB)
+		{
+			CHUYENBAY result = new CHUYENBAY();
+			try
+			{
+				String sql = "Select * from CHUYENBAY where MACB=?";			
+				PreparedStatement pst = mConnection.prepareStatement(sql);
+				pst.setString(1, MACB);
+				ResultSet rs = pst.executeQuery();
+				while (rs.next())
+				{
+					String SBDI = rs.getString("SBDI");
+					String SBDEN = rs.getString("SBDEN");
+					java.sql.Timestamp GIODI = rs.getTimestamp("GIODI");
+					java.sql.Timestamp GIODEN = rs.getTimestamp("GIODEN");
+					result.setMACB(MACB);
+					result.setSBDI(SBDI);
+					result.setSBDEN(SBDEN);
+					result.setGIODI(GIODI);
+					result.setGIODEN(GIODEN);
+				}
+			}
+			catch (SQLException e)
+			{
+				System.out.println(e.toString());
+			}
+			return result;
+		}
+		*/
+		String result = new String();
+		List<String> type = new ArrayList<String>();
+		List<String> primarykey = new ArrayList<String>();
+		List<String> arr = new ArrayList<String>();
+		DatabaseMetaData DBMD;
+		try
+		{
+			DBMD = mConnection.getMetaData();
+			ResultSet rs = DBMD.getPrimaryKeys(mDatabase, null, table);
+			// Lay ten khoa chinh va kieu du lieu
+			while (rs.next())
+			{
+				String column_name = rs.getString("COLUMN_NAME");
+				ResultSet rs2 = DBMD.getColumns(mDatabase, null, table , column_name);
+				rs2.next();
+				int data_type = rs2.getInt("DATA_TYPE");
+				primarykey.add(column_name);
+				type.add(ct.JDBC2JavaType(data_type));
+			}
+			// String sql = "Select * from CHUYENBAY where MACB=?";
+			// Tao cau lenh sql
+			String sql = new String();
+			for (int i = 0; i < primarykey.size(); ++i)
+			{
+				sql += primarykey.get(i) + "=?";
+				if (i != primarykey.size() - 1)
+					sql += "and ";
+			}
+			arr.add("String sql = \"select * from " + table + " where " + sql + "\";");
+			//1 PreparedStatement pst = mConnection.prepareStatement(sql); 
+			//2 pst.setString(1, MACB); 
+			//3 ResultSet rs = pst.executeQuery();
+			// Tao cau lenh thi hanh nhu tren
+			String str;
+			str = "PreparedStatement pst = mConnection.prepareStatement(sql);"; // 1			
+			// 2
+			for (int i = 0; i < primarykey.size(); ++i)
+			{
+				String func = ct.JavaTypeToPreparedFunc(type.get(i));
+				func = func.replaceAll("arg0", String.format("%d", (i + 1)));
+				func = func.replaceAll("arg1", primarykey.get(i));
+				func = "pst." + func + ";";
+				str += "\n" + func;
+			}
+			// 3
+			str += "\n" + "ResultSet rs = pst.executeQuery();";
+			arr.add(str);
+			//while (rs.next()) 1
+			//{
+			//	String SBDI = rs.getString("SBDI"); 2
+			//	String SBDEN = rs.getString("SBDEN"); 3
+			//	java.sql.Timestamp GIODI = rs.getTimestamp("GIODI"); 4
+			//	java.sql.Timestamp GIODEN = rs.getTimestamp("GIODEN"); 5
+			//	result.setMACB(MACB); 6
+			//	result.setSBDI(SBDI); 7 
+			//	result.setSBDEN(SBDEN); 8
+			//	result.setGIODI(GIODI); 9
+			//	result.setGIODEN(GIODEN); 10
+			//}
+			str = "";
+			result = str;
+		}
+		catch (SQLException e)
+		{
+			System.out.println(e.toString());
+		}
+		
+		return result;
+		
+	}
+}

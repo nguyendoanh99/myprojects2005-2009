@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+import java.util.*;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class KHOIDTO {
+	private String m_strMaKhoi;
+	private String m_strTenKhoi;
+	private List<LOPHOCDTO> m_arrLopHoc;
+	/**
+	 * 
+	 */
+	public KHOIDTO() {
+		// TODO Auto-generated constructor stub
+		m_strMaKhoi = "";
+		m_strTenKhoi = "";
+		m_arrLopHoc = new ArrayList<LOPHOCDTO>();
+	}
+	//	 TenKhoi
+	public String geTenKhoi()
+	{
+		return m_strTenKhoi;
+	}
+	public void setTenKhoi(String value)
+	{
+		m_strTenKhoi = value;
+	}
+	// MaKhoi
+	public String getMaKhoi()
+	{
+		return m_strMaKhoi;
+	}
+	public void setMaKhoi(String value)
+	{
+		m_strMaKhoi = value;
+	}
+	// DanhSachLopHoc
+	public ArrayList<LOPHOCDTO> getDanhSachLopHoc()
+	{
+		return m_arrLopHoc;
+	}
+	public void setDanhSachLopHoc(ArrayList<LOPHOCDTO> value)
+	{
+		m_arrLopHoc = value;
+	}
+}

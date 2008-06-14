@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>testQLCB</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/KHACHHANG.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/KHACHHANG.java</location>
+		</link>
+		<link>
+			<name>src/LOAIMB.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/LOAIMB.java</location>
+		</link>
+		<link>
+			<name>src/tempDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/tempDao.java</location>
+		</link>
+		<link>
+			<name>src/PHANCONGDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/PHANCONGDao.java</location>
+		</link>
+		<link>
+			<name>src/LICHBAY.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/LICHBAY.java</location>
+		</link>
+		<link>
+			<name>src/LOAIMBDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/LOAIMBDao.java</location>
+		</link>
+		<link>
+			<name>src/KHANANGDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/KHANANGDao.java</location>
+		</link>
+		<link>
+			<name>src/DATCHO.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/DATCHO.java</location>
+		</link>
+		<link>
+			<name>src/PHANCONG.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/PHANCONG.java</location>
+		</link>
+		<link>
+			<name>src/MAYBAY.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/MAYBAY.java</location>
+		</link>
+		<link>
+			<name>src/CHUYENBAY.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/CHUYENBAY.java</location>
+		</link>
+		<link>
+			<name>src/CHUYENBAYDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/CHUYENBAYDao.java</location>
+		</link>
+		<link>
+			<name>src/LICHBAYDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/LICHBAYDao.java</location>
+		</link>
+		<link>
+			<name>src/NHANVIEN.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/NHANVIEN.java</location>
+		</link>
+		<link>
+			<name>src/KHANANG.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/KHANANG.java</location>
+		</link>
+		<link>
+			<name>src/MAYBAYDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/MAYBAYDao.java</location>
+		</link>
+		<link>
+			<name>src/KHACHHANGDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/KHACHHANGDao.java</location>
+		</link>
+		<link>
+			<name>src/temp.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/temp.java</location>
+		</link>
+		<link>
+			<name>src/NHANVIENDao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/NHANVIENDao.java</location>
+		</link>
+		<link>
+			<name>src/DATCHODao.java</name>
+			<type>1</type>
+			<location>E:/02_My Projects/Semester 5/Java/testQLCB/src/DATCHODao.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>

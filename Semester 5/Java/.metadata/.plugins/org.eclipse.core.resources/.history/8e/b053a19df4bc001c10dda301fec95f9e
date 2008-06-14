@@ -1,0 +1,44 @@
+import java.util.*;
+
+/**
+ * 
+ */
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class LOPHOCDTO {
+	private GIAOVIENDTO m_giaovien;
+	private String m_strPhongHoc;
+	private Date m_dateGioHoc;
+	private List<HOCSINHDTO> m_arrHocSinh;
+	/**
+	 * 
+	 */
+	public LOPHOCDTO() {
+		// TODO Auto-generated constructor stub
+		m_giaovien = new GIAOVIENDTO();
+		m_strPhongHoc = "";
+		m_dateGioHoc = new Date();
+		m_arrHocSinh = new ArrayList<HOCSINHDTO>();
+	}
+	// GiaoVien
+	public GIAOVIENDTO getGiaoVien()
+	{
+		return m_giaovien;
+	}
+	public void setGiaoVien(GIAOVIENDTO value)
+	{
+		m_giaovien = value;
+	}
+	// PhongHoc
+	public String getPhongHoc()
+	{
+		return m_strPhongHoc;
+	}
+	public void setPhongHoc(String value)
+	{
+		m_strPhongHoc = value;
+	}
+}

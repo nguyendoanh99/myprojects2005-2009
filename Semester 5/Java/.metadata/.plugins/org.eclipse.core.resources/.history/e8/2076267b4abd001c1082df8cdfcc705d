@@ -1,0 +1,13 @@
+package DAO;
+
+public class LOPHOCDAO extends AbstractDAO{
+
+	public LOPHOCDAO() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+	public LOPHOCDAO(Node node)
+	{
+		super(node);
+	}
+}

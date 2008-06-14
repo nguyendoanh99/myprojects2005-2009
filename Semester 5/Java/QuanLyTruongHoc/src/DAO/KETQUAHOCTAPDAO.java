@@ -1,0 +1,74 @@
+package DAO;
+
+import org.w3c.dom.Node;
+
+import DTO.KETQUAHOCTAPDTO;
+
+public class KETQUAHOCTAPDAO extends AbstractDAO {
+
+	public KETQUAHOCTAPDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public KETQUAHOCTAPDAO(Node node) {
+		super(node);
+		// TODO Auto-generated constructor stub
+	}
+	public KETQUAHOCTAPDTO getKQHT()
+	{
+		Node node = getNode();
+		KETQUAHOCTAPDTO kq = new KETQUAHOCTAPDTO();		
+		
+		Node item = node.getFirstChild();
+		
+		while (item != null)
+		{
+			if (item.getNodeType() == Node.ELEMENT_NODE)
+			{
+				String name = item.getNodeName();
+				float value = Float.parseFloat(item.getFirstChild().getNodeValue());
+				if (name.compareToIgnoreCase("Toan") == 0)
+					kq.setToan(value);
+				else
+					if (name.compareToIgnoreCase("Ly") == 0)
+						kq.setLy(value);
+					else
+						if (name.compareToIgnoreCase("Hoa") == 0)
+							kq.setHoa(value);
+						else
+							if (name.compareToIgnoreCase("DTB") == 0)
+								kq.setDTB(value);							
+			}
+			item = item.getNextSibling();
+		}	
+				
+		return kq;	
+	}
+	public Node createNode(KETQUAHOCTAPDTO kqhtdto)
+	{
+		Node _node = doc.createElement("KQHT");
+		// Toan
+		Node ToanElement = doc.createElement("Toan");
+		Node value = doc.createTextNode(String.valueOf(kqhtdto.getToan()));
+		_node.appendChild(ToanElement);
+		ToanElement.appendChild(value);
+		// Ly
+		Node LyElement = doc.createElement("Ly");
+		_node.appendChild(LyElement);
+		value = doc.createTextNode(String.valueOf(kqhtdto.getLy()));
+		LyElement.appendChild(value);
+		// Hoa
+		Node HoaElement = doc.createElement("Hoa");
+		_node.appendChild(HoaElement);
+		value = doc.createTextNode(String.valueOf(kqhtdto.getHoa()));
+		HoaElement.appendChild(value);
+		// DTB
+		Node DTBElement = doc.createElement("DTB");
+		_node.appendChild(DTBElement);
+		value = doc.createTextNode(String.valueOf(kqhtdto.getDTB()));
+		DTBElement.appendChild(value);
+		
+		setNode(_node);
+		return _node;
+	}
+}

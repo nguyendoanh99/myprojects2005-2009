@@ -1,0 +1,9 @@
+package DAO;
+
+public class LOPHOCDAO {
+
+	public LOPHOCDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

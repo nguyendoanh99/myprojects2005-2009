@@ -1,0 +1,70 @@
+/**
+ * 
+ */
+package DAO;
+
+import java.util.*;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import DTO.*;
+import LIB.DOMUtil;
+
+/**
+ * @author DangKhoa
+ *
+ */
+public class TRUONGDAO extends AbstractDAO{
+	/**
+	 * 
+	 */
+	public TRUONGDAO() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+	public TRUONGDTO getTruong()
+	{
+		TRUONGDTO kq = new TRUONGDTO();
+		Element goc = doc.getDocumentElement();
+		Node DSKhoi = goc.getElementsByTagName("DanhSachKhoi").item(0);
+		KHOIDAO khoidao = new KHOIDAO(DSKhoi);
+		kq.setDanhSachKhoiHoc(khoidao.getDanhSachKhoiHoc());
+		
+		return kq;
+	}
+	public Node createNode(TRUONGDTO truongdto)
+	{
+		Node _node = doc.createElement("TRUONG");
+		Node DanhSachKhoiElement = doc.createElement("DanhSachKhoi");
+		_node.appendChild(DanhSachKhoiElement);
+		List<KHOIDTO> lst = truongdto.getDanhSachKhoiHoc();
+		KHOIDAO khoidao = new KHOIDAO();
+		for (int i = 0; i < lst.size(); ++i)
+		{
+			khoidao.createNode(lst.get(i));
+			DanhSachKhoiElement.appendChild(khoidao.getNode());
+		}
+		setNode(_node);
+		return _node;
+	}
+	public boolean ThemKhoi(KHOIDTO khoidto)
+	{
+		boolean kq = true;
+				
+		Element DanhSachElement = (Element) doc.getElementsByTagName("DanhSachKhoi").item(0);
+		// Khong tim thay
+		if (DanhSachElement == null)
+		{
+			DanhSachElement = doc.createElement("DanhSachKhoi");
+			doc.appendChild(DanhSachElement);
+		}
+		
+		KHOIDAO khoidao = new KHOIDAO();
+		khoidao.createNode(khoidto);
+		
+		DanhSachElement.appendChild(khoidao.getNode());
+		DOMUtil.writeXmlToFile(TenFile, doc);
+		return kq;
+	}
+}
