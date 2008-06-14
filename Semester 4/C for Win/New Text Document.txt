@@ -1,0 +1,13 @@
+GetLogicalDrives
+GetLogicalDriveStrings 
+GetDriveType
+GetDiskFreeSpace
+GetVolumeInformation
+SHGetFileInfo
+GetFileSize
+GetFileAttributes
+FindFirstFile
+FindNextFile 
+
+wsprintf
+_tprintf

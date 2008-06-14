@@ -1,0 +1,139 @@
+<DBF>
+	<HEADER>
+		<FileType>0x03</FileType>
+		<LastUpdate>29/10/01</LastUpdate>
+		<NumRecord>6</NumRecord>
+		<FirstRecord>225</FirstRecord>
+		<LenRecord>77</LenRecord>
+		<Reserved>00000000000000000000000000000000</Reserved>
+		<Flag>0x00</Flag>
+		<CodePageMark>0x03</CodePageMark>
+		<Reserved_>0000</Reserved_>
+	</HEADER>
+	<FIELDS>
+		<NumField>6</NumField>
+		<FIELD No="1">
+			<Name>MAHANG</Name>
+			<Type>C</Type>
+			<Displacement>01000000</Displacement>
+			<Length>4</Length>
+			<NumDecimal>0</NumDecimal>
+			<Flag>0x00</Flag>
+			<NextValue>0</NextValue>
+			<StepValue>0</StepValue>
+			<Reserved>0000000000000000</Reserved>
+		</FIELD>
+		<FIELD No="2">
+			<Name>TENHANG</Name>
+			<Type>C</Type>
+			<Displacement>05000000</Displacement>
+			<Length>30</Length>
+			<NumDecimal>0</NumDecimal>
+			<Flag>0x00</Flag>
+			<NextValue>0</NextValue>
+			<StepValue>0</StepValue>
+			<Reserved>0000000000000000</Reserved>
+		</FIELD>
+		<FIELD No="3">
+			<Name>DONVI</Name>
+			<Type>C</Type>
+			<Displacement>23000000</Displacement>
+			<Length>10</Length>
+			<NumDecimal>0</NumDecimal>
+			<Flag>0x00</Flag>
+			<NextValue>0</NextValue>
+			<StepValue>0</StepValue>
+			<Reserved>0000000000000000</Reserved>
+		</FIELD>
+		<FIELD No="4">
+			<Name>SOLUONG</Name>
+			<Type>N</Type>
+			<Displacement>2d000000</Displacement>
+			<Length>10</Length>
+			<NumDecimal>0</NumDecimal>
+			<Flag>0x00</Flag>
+			<NextValue>0</NextValue>
+			<StepValue>0</StepValue>
+			<Reserved>0000000000000000</Reserved>
+		</FIELD>
+		<FIELD No="5">
+			<Name>DONGIA</Name>
+			<Type>N</Type>
+			<Displacement>37000000</Displacement>
+			<Length>10</Length>
+			<NumDecimal>2</NumDecimal>
+			<Flag>0x00</Flag>
+			<NextValue>0</NextValue>
+			<StepValue>0</StepValue>
+			<Reserved>0000000000000000</Reserved>
+		</FIELD>
+		<FIELD No="6">
+			<Name>THANHTIEN</Name>
+			<Type>N</Type>
+			<Displacement>41000000</Displacement>
+			<Length>12</Length>
+			<NumDecimal>2</NumDecimal>
+			<Flag>0x00</Flag>
+			<NextValue>0</NextValue>
+			<StepValue>0</StepValue>
+			<Reserved>0000000000000000</Reserved>
+		</FIELD>
+	</FIELDS>
+	<RECORDS>
+		<RECORD No="1">
+			<Flag>" "</Flag>
+			<MAHANG> &quot;0001&quot;</MAHANG>
+			<TENHANG> &quot;TIVI SONY WEGA 21&quot;            &quot;</TENHANG>
+			<DONVI> &quot;CAI       &quot;</DONVI>
+			<SOLUONG> &quot;        10&quot;</SOLUONG>
+			<DONGIA> &quot;5500000.00&quot;</DONGIA>
+			<THANHTIEN> &quot; 55000000.00&quot;</THANHTIEN>
+		</RECORD>
+		<RECORD No="2">
+			<Flag>" "</Flag>
+			<MAHANG> &quot;0002&quot;</MAHANG>
+			<TENHANG> &quot;DAU MAY VCD TIEN DAT          &quot;</TENHANG>
+			<DONVI> &quot;CAI       &quot;</DONVI>
+			<SOLUONG> &quot;       100&quot;</SOLUONG>
+			<DONGIA> &quot;1000000.00&quot;</DONGIA>
+			<THANHTIEN> &quot;100000000.00&quot;</THANHTIEN>
+		</RECORD>
+		<RECORD No="3">
+			<Flag>"*"</Flag>
+			<MAHANG> &quot;0003&quot;</MAHANG>
+			<TENHANG> &quot;TIVI PANASONIC 29&quot;            &quot;</TENHANG>
+			<DONVI> &quot;CAI       &quot;</DONVI>
+			<SOLUONG> &quot;         5&quot;</SOLUONG>
+			<DONGIA> &quot;5000000.00&quot;</DONGIA>
+			<THANHTIEN> &quot; 25000000.00&quot;</THANHTIEN>
+		</RECORD>
+		<RECORD No="4">
+			<Flag>"*"</Flag>
+			<MAHANG> &quot;0004&quot;</MAHANG>
+			<TENHANG> &quot;DAU MAY DVD SONY              &quot;</TENHANG>
+			<DONVI> &quot;CAI       &quot;</DONVI>
+			<SOLUONG> &quot;        20&quot;</SOLUONG>
+			<DONGIA> &quot;6000000.00&quot;</DONGIA>
+			<THANHTIEN> &quot;120000000.00&quot;</THANHTIEN>
+		</RECORD>
+		<RECORD No="5">
+			<Flag>" "</Flag>
+			<MAHANG> &quot;0005&quot;</MAHANG>
+			<TENHANG> &quot;LO VI-BA NATIONAL             &quot;</TENHANG>
+			<DONVI> &quot;CAI       &quot;</DONVI>
+			<SOLUONG> &quot;        10&quot;</SOLUONG>
+			<DONGIA> &quot;3500000.00&quot;</DONGIA>
+			<THANHTIEN> &quot; 35000000.00&quot;</THANHTIEN>
+		</RECORD>
+		<RECORD No="6">
+			<Flag>"*"</Flag>
+			<MAHANG> &quot;0006&quot;</MAHANG>
+			<TENHANG> &quot;DAN MAY CD/RADIO/CASSETE SONY &quot;</TENHANG>
+			<DONVI> &quot;CAI       &quot;</DONVI>
+			<SOLUONG> &quot;         1&quot;</SOLUONG>
+			<DONGIA> &quot;4000000.00&quot;</DONGIA>
+			<THANHTIEN> &quot;  4000000.00&quot;</THANHTIEN>
+		</RECORD>
+	</RECORDS>
+	<OEM>0x1a</OEM>
+</DBF>

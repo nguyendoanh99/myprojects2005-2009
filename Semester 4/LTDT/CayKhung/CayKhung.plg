@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CayKhung - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/CayKhung.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Baitap\Hoc Ky 4\LTDT\CayKhung\CCayKhung.cpp"
+"E:\Baitap\Hoc Ky 4\LTDT\CayKhung\CDoThiMTK.cpp"
+"E:\Baitap\Hoc Ky 4\LTDT\CayKhung\main.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP5F.tmp" 
+<h3>Output Window</h3>
+Compiling...
+CCayKhung.cpp
+CDoThiMTK.cpp
+main.cpp
+Creating temporary file "C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP60.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/CayKhung.pdb" /debug /machine:I386 /out:"Debug/CayKhung.exe" /pdbtype:sept 
+".\Debug\CCayKhung.obj"
+".\Debug\CDoThiMTK.obj"
+".\Debug\main.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP60.tmp"
+<h3>Output Window</h3>
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/CayKhung.bsc"  ".\Debug\CCayKhung.sbr" ".\Debug\CDoThiMTK.sbr" ".\Debug\main.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+CayKhung.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

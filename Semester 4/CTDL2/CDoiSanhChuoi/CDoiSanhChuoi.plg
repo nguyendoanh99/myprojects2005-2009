@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CDoiSanhChuoi - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP22A.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/CDoiSanhChuoi.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Baitap\Hoc Ky 4\CTDL2\CDoiSanhChuoi\CKMP.CPP"
+"E:\Baitap\Hoc Ky 4\CTDL2\CDoiSanhChuoi\CMP.CPP"
+]
+Creating command line "cl.exe @C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP22A.tmp" 
+Creating temporary file "C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP22B.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/CDoiSanhChuoi.pdb" /debug /machine:I386 /out:"Debug/CDoiSanhChuoi.exe" /pdbtype:sept 
+".\Debug\CBruteForce.obj"
+".\Debug\CDoiSanhChuoi.obj"
+".\Debug\CKMP.OBJ"
+".\Debug\CMP.OBJ"
+".\Debug\main.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\DANGKH~1\LOCALS~1\Temp\RSP22B.tmp"
+<h3>Output Window</h3>
+Compiling...
+CKMP.CPP
+E:\Baitap\Hoc Ky 4\CTDL2\CDoiSanhChuoi\CKMP.CPP(64) : warning C4018: '<' : signed/unsigned mismatch
+E:\Baitap\Hoc Ky 4\CTDL2\CDoiSanhChuoi\CKMP.CPP(94) : warning C4018: '<' : signed/unsigned mismatch
+CMP.CPP
+e:\baitap\hoc ky 4\ctdl2\cdoisanhchuoi\cmp.cpp(64) : warning C4018: '<' : signed/unsigned mismatch
+e:\baitap\hoc ky 4\ctdl2\cdoisanhchuoi\cmp.cpp(83) : warning C4018: '<' : signed/unsigned mismatch
+Linking...
+
+
+
+<h3>Results</h3>
+CDoiSanhChuoi.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

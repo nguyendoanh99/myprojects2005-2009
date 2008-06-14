@@ -1,0 +1,62 @@
+WinZip(R) Version 8.1 SR-1 (5266)
+Copyright (C) 1991-2001 WinZip Computing, Inc.
+All Rights Reserved
+
+For a brief description of WinZip, see the "Introduction to
+WinZip" topic of the WinZip Help file.  To view this, start
+WinZip, switch to the Classic interface if necessary, and
+choose Help Contents and Index from the Help menu. For a list
+of changes in this version, see the file whatsnew.txt.
+
+*** Installation ***
+
+    If you received this version of WinZip on a CD-ROM, you can
+    install it as follows:
+
+    Insert the CD-ROM into your drive.  The autorun capability
+    of Windows will start the WinZip 8.1 setup program.  If it
+    does not, select the Run... option of the taskbar Start Menu
+    and type:
+
+        D:\setup.exe
+
+    replacing D: with your CD-ROM drive.
+
+    If you received this version of WinZip in a self-extracting
+    Zip file (for example, WINZIP81.EXE), you can install it as
+    follows:
+
+    1 Select the Run... option from the Taskbar Start menu
+    2 Type the full name of the file
+      (for example, C:\DNLOAD\WINZIP81.EXE)
+    3 Press the Enter key, and follow the prompts
+
+*** Upgrade Instructions ***
+
+    Follow the installation instructions above.  You can install
+    this version of WinZip to the same location as a previously
+    installed copy of WinZip.
+
+*** Requirements ***
+
+    This version of WinZip requires Windows. Some optional
+    features require external programs. See the documentation
+    for details.
+
+*** Documentation ***
+
+    For full documentation, including context sensitive help,
+    press the F1 key at any time while running WinZip.
+
+*** Self-Extracting Archives ***
+
+    The online evaluation version of WinZip is distributed as a
+    Windows self-extracting archive created with WinZip Self-
+    Extractor 2.2, an optional companion product.  The help
+    document includes a list of differences between WinZip Self-
+    Extractor 2.2 and WinZip Self-Extractor Personal Edition,
+    which is included with this copy of WinZip.
+
+
+###
+
