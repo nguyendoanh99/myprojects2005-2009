@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KHACHSAN ten="Hoa Sen" dienthoai="9521078" diachi="123 Trần Hưng Đạo">
+  <PHONG loai="A" dongia="240000" ngaygiam="5" mucgiam="5"></PHONG>
+  <PHONG loai="B" dongia="220000" ngaygiam="5" mucgiam="4"></PHONG>
+  <PHONG loai="C" dongia="180000" ngaygiam="3" mucgiam="5"></PHONG>
+  <PHONG loai="Đặc biệt" dongia="320000"></PHONG>
+</KHACHSAN>

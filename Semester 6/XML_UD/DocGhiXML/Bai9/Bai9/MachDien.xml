@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MACH_DIEN>
+  <NOI_TIEP>
+    <DIEN_TRO R="4" />
+    <SONG_SONG>
+      <NOI_TIEP>
+        <DIEN_TRO R="6" />
+        <DIEN_TRO R="8" />
+      </NOI_TIEP>
+      <NOI_TIEP>
+        <DIEN_TRO R="2" />
+        <SONG_SONG>
+          <DIEN_TRO R="5" />
+          <DIEN_TRO R="7" />
+        </SONG_SONG>
+      </NOI_TIEP>      
+    </SONG_SONG>
+    <DIEN_TRO R="10" />
+  </NOI_TIEP>
+</MACH_DIEN>

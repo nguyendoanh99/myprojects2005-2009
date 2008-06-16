@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BIEUTHUC Ten="P">
+  <PHANSO Tu="4" Mau="5"></PHANSO>
+  <PHANSO Tu="6" Mau="7"/>
+  <PHANSO Tu="-10" Mau="3" />
+</BIEUTHUC>

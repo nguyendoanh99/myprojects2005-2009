@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BIEUTHUC Ten="P">
+  <PHANSO Tu="4" Mau="5"/>
+  <TICHSO>
+    <PHANSO Tu="6" Mau="7"/>
+    <PHANSO Tu="1" Mau="3"/>
+  </TICHSO>
+  <PHANSO Tu="-10" Mau="3"/>
+  <TICHSO>
+    <PHANSO Tu="11" Mau="2"/>
+    <PHANSO Tu="2" Mau="3"/>
+  </TICHSO>
+</BIEUTHUC>
