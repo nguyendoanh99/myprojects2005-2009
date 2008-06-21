@@ -1,0 +1,522 @@
+﻿.dxeLoadingDiv_RedWine
+{
+	background: White;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    cursor: wait;
+}
+.dxeLoadingPanel_RedWine
+{
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxeLoadingPanel_RedWine td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px 12px 12px 12px;
+}
+
+.dxeBase_RedWine
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+}
+/* -- ErrorFrame -- */
+.dxeErrorCell_RedWine, .dxeErrorCell_RedWine td
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+	color: Red;
+}
+.dxeErrorCell_RedWine
+{ 
+	padding-left: 4px;
+	padding-right:5px;		
+}
+.dxeErrorFrame_RedWine
+{
+	padding-right: 3px;
+}
+.dxeEditArea_RedWine 
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+	border: 1px solid #A0A0A0;
+}
+/* -- Buttons -- */
+.dxeButtonEditButton_RedWine, .dxeCalendarButton_RedWine,
+.dxeSpinIncButton_RedWine, .dxeSpinDecButton_RedWine,
+.dxeSpinLargeIncButton_RedWine, .dxeSpinLargeDecButton_RedWine
+{	
+	vertical-align: Middle;
+	border: Solid 1px #8A0A37;
+	cursor: pointer;
+	cursor: hand;
+} 
+.dxeButtonEditButton_RedWine, .dxeCalendarButton_RedWine, .dxeButtonEditButton_RedWine td.dx, .dxeCalendarButton_RedWine td.dx,
+.dxeSpinIncButton_RedWine, .dxeSpinDecButton_RedWine, .dxeSpinLargeIncButton_RedWine, .dxeSpinLargeDecButton_RedWine,
+.dxeSpinIncButton_RedWine td.dx, .dxeSpinDecButton_RedWine td.dx, .dxeSpinLargeIncButton_RedWine td.dx, .dxeSpinLargeDecButton_RedWine td.dx
+{	
+    font-family: Tahoma;
+    font-size: 11px;    
+	font-weight: normal;        
+	text-align: center;
+	white-space: nowrap;
+} 
+.dxeButtonEditButton_RedWine,
+.dxeSpinIncButton_RedWine, .dxeSpinDecButton_RedWine, .dxeSpinLargeIncButton_RedWine, .dxeSpinLargeDecButton_RedWine
+{
+    padding: 1px 2px 3px 2px;
+	background-image: url('edtDropDownBack.gif');
+    background-repeat: repeat-x;
+    background-position: top;    
+    background-color: #E85E8E;
+}
+.dxeSpinIncButton_RedWine, .dxeSpinDecButton_RedWine
+{
+    padding: 0px 2px 0px 2px;
+}
+.dxeSpinLargeIncButton_RedWine, .dxeSpinLargeDecButton_RedWine
+{
+    padding: 0px 1px 0px 1px;
+}
+.dxeSpinIncButton_RedWine
+{
+	background-image: url('edtSpinIncBtnBack.gif');
+    background-repeat: repeat-x;
+    background-position: top;
+	background-color: #BD3464;
+}
+.dxeSpinDecButton_RedWine
+{
+	background-image: url('edtSpinDecBtnBack.gif');
+    background-repeat: repeat-x;
+    background-position: top;
+	background-color: #E85E8E;
+}
+
+.dxeButtonEditButton_RedWine table.dxbebt,
+.dxeSpinIncButton_RedWine table.dxbebt, .dxeSpinDecButton_RedWine table.dxbebt, 
+.dxeSpinLargeIncButton_RedWine table.dxbebt, .dxeSpinLargeDecButton_RedWine table.dxbebt
+{
+	width: 11px;
+}
+.dxeCalendarButton_RedWine      
+{
+    color: #FFFFFF;   
+    font-size: 9pt;
+    font-family: Tahoma;				    
+    cursor: default;	
+    vertical-align: middle;	 		
+    border: solid 1px #8A0A37;	
+    background: #F0749F url('edtButtonBack.gif') top;
+    background-repeat:repeat-x;
+	padding: 3px 11px 4px 11px;
+	width: 38px;
+}
+.dxeCalendarButton_RedWine td.dx
+{
+    color: #FFFFFF;  
+	font-size: 9pt;    
+	text-align: center;
+	white-space: nowrap;
+}
+.dxeCalendarButton_RedWine table.dxbebt 
+{
+	width: 100%;
+}
+
+/* -- Pressed -- */
+.dxeCalendarButtonPressed_RedWine
+{
+	background: #BD71B9 url('edtButtonPressedBack.gif') top;
+    background-repeat: repeat-x;    
+    border: Solid 1px #6C2668;	        
+}
+.dxeButtonEditButtonPressed_RedWine,
+.dxeSpinIncButtonPressed_RedWine, .dxeSpinDecButtonPressed_RedWine, .dxeSpinLargeIncButtonPressed_RedWine, 
+.dxeSpinLargeDecButtonPressed_RedWine
+{
+	background: #BD71B9 url('edtDropDownButtonPressedBack.gif') top;
+    background-repeat: repeat-x;    
+    border: Solid 1px #6C2668;	        
+}
+.dxeSpinIncButtonPressed_RedWine
+{
+	background: #82407D url('edtSpinIncButtonPressedBack.gif') top;
+    background-repeat: repeat-x;    
+    border: Solid 1px #6C2668;
+}
+.dxeSpinDecButtonPressed_RedWine 
+{
+	background: #AF60AB url('edtSpinDecButtonPressedBack.gif') top;
+    background-repeat: repeat-x;    
+    border: Solid 1px #6C2668;	        
+}
+/* -- Hover -- */
+.dxeButtonEditButtonHover_RedWine,
+.dxeSpinIncButtonHover_RedWine, .dxeSpinDecButtonHover_RedWine, .dxeSpinLargeIncButtonHover_RedWine, .dxeSpinLargeDecButtonHover_RedWine
+{
+	background-image: url('edtDropDownButtonHoverBack.gif');
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #CD8AC9;
+    border: Solid 1px #6C2668;	    
+}
+.dxeSpinIncButtonHover_RedWine
+{
+	background-image: url('edtSpinIncButtonHoverBack.gif');
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #AA63A6;
+    border: Solid 1px #6C2668;	    
+}
+.dxeSpinDecButtonHover_RedWine
+{
+	background-image: url('edtSpinDecButtonHoverBack.gif');
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #CD8AC9;
+    border: Solid 1px #6C2668;	    
+}
+.dxeCalendarButtonHover_RedWine
+{
+	background: #D69BD3 url('edtButtonHoverBack.gif') top;
+    background-repeat: repeat-x;
+    background-color: #D69BD3;
+    border: Solid 1px #6C2668;	    
+}
+
+.dxeButtonEdit_RedWine
+{
+    background-color: White;
+    border: Solid 1px #BC758E;
+    width: 170px;
+}
+.dxeButtonEdit_RedWine .dxeEditArea_RedWine, .dxeButtonEdit_RedWine td.dxic
+{
+	width: 100%;
+}
+.dxeButtonEdit_RedWine td.dxic
+{
+    padding: 1px 2px 1px 3px;
+}
+.dxeTextBox_RedWine, .dxeMemo_RedWine
+{
+    background-color: White;
+    border: Solid 1px #BC758E;
+}
+.dxeTextBox_RedWine td.dxic
+{
+	padding: 2px 5px 2px 4px;
+}
+.dxeTextBox_RedWine td.dxic
+{
+	width: 100%;
+}
+.dxeRadioButtonList_RedWine, .dxeRadioButtonList_RedWine table
+{
+    font-family: Tahoma;
+    font-size: 9pt;    
+}
+.dxeRadioButtonList_RedWine
+{
+    border: Solid 1px #BC758E;
+    background-color: #F5ECF1;
+}
+.dxeRadioButtonList_RedWine td.dxe
+{
+    padding: 6px 11px;
+    padding-top: 7px;
+}
+
+/* -- Memo -- */
+.dxeMemo_RedWine
+{
+}
+.dxeMemoEditArea_RedWine 
+{
+	font-family: Tahoma;
+	font-size: 9pt;
+}
+.dxeMemo_RedWine td
+{
+	width: 100%;
+}
+
+/* -- Hyperlink -- */
+.dxeHyperlink_RedWine
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+	font-weight: normal;    
+    color: #8A0A37;    
+}
+a:hover.dxeHyperlink_RedWine
+{
+    color: #BE458B;
+}
+a:visited.dxeHyperlink_RedWine
+{
+    color: #928489;
+}
+/* -- ListBox -- */
+.dxeListBox_RedWine
+{
+	border: Solid 1px #8A0A37;
+    height: 113px;
+    width: 70px;
+    color: Black;
+}
+.dxeListBox_RedWine div.dxlbd
+{
+    padding-bottom: 1px;
+	background-color: White;
+    font-family: Tahoma;
+    font-size: 9pt;
+}
+.dxeListBoxItem_RedWine
+{    
+    border-top: Solid 1px #FFFFFF;
+    border-left: Solid 1px #FFFFFF;
+    border-right: Solid 1px #FFFFFF;
+    color: Black;        
+    font-family: Tahoma;
+    font-size: 9pt; 
+    font-weight: normal;           
+    padding: 3px 2px 4px 4px;
+    white-space: nowrap;
+    text-align: left;
+    cursor: default;
+}
+.dxeListBox_RedWine .dxeI_RedWine 
+{
+    padding-right: 0px!important;
+    border-right-width: 0px!important;
+}
+.dxeListBox_RedWine .dxeT_RedWine
+{
+    width: 100%;    
+    border-left-width: 0px!important;    
+}
+.dxeListBoxItemHover_RedWine        /* inherits dxeListBoxItem */
+{
+    background-color: #DBBBDA;
+}
+.dxeListBoxItemSelected_RedWine     /* inherits dxeListBoxItem */
+{    
+    color: White;
+    background-color: #8A0A37;
+}
+
+/* -- Calendar -- */
+.dxeCalendar_RedWine
+{ 
+    border: solid 1px #8a0a37;
+    background-color: #ffffff;
+	font-weight: normal;    
+}
+.dxeCalendar_RedWine td.dxMonthGrid 
+{
+    padding: 3px 22px 6px 21px;
+    cursor: default;
+}
+.dxeCalendar_RedWine td.dxMonthGridWithWeekNumbers
+{
+    padding: 3px 19px 6px 7px;
+    cursor: default;
+}
+.dxeCalendarDayHeader_RedWine
+{
+    font-family: Tahoma;
+    font-size: 9pt;        
+    padding: 3px 5px 6px 6px;
+    border-bottom: solid 1px #cfcfcf;
+}
+.dxeCalendarWeekNumber_RedWine
+{    
+    font-family: Tahoma;
+    font-size: 7pt;    
+    text-align: right;      
+    color: #bfbfbf;
+    padding: 3px 3px 2px 4px;
+}
+.dxeCalendarDay_RedWine
+{    
+    font-family: Tahoma;
+    font-size: 9pt;
+    text-align: center;    
+    padding: 3px 7px 4px 7px;
+}
+.dxeCalendarWeekend_RedWine        /* inherits dxeCalendarDay */
+{
+    color: #c00000;
+}
+.dxeCalendarOtherMonth_RedWine     /* inherits dxeCalendarDay */
+{
+    color: #888;
+}
+.dxeCalendarOutOfRange_RedWine     /* inherits dxeCalendarDay */
+{
+    color: #d0d0d0;    
+}
+.dxeCalendarSelected_RedWine       /* inherits dxeCalendarDay */
+{
+    color: #ffffff;
+    background-color: #BD71B9;
+}
+
+.dxeCalendarToday_RedWine         /* inherits dxeCalendarDay */
+{
+    color: #ffffff;
+    background-color: #8a0a37;   
+}
+.dxeCalendarHeader_RedWine
+{
+    color: #ffffff;    
+    background: #f27ba6 url('edtCalendarHeaderBack.gif') top;
+    border-bottom: solid 1px #bd5077;
+    padding: 3px 3px;
+}
+.dxeCalendarHeader_RedWine td.dxe
+{
+    color: #ffffff;        
+    font-family: Tahoma;
+    font-size: 9pt;
+    text-align: center;
+	cursor: pointer;
+	cursor: hand;
+}
+.dxeCalendarFooter_RedWine 
+{
+    background-color: #eed8e3;
+    padding: 10px 0px;    
+    padding-bottom: 10px;   
+    border-top: solid 1px #cb9fb4;
+}
+.dxeCalendarFastNav_RedWine
+{
+    color: #000000;
+    background: #FFFFFF;
+    border: Solid 1px #8A0A37;
+    border-bottom: 0px;
+    padding: 12px 8px;
+}
+.dxeCalendarFastNavMonthArea_RedWine
+{
+    padding: 0px 9px;
+}
+.dxeCalendarFastNavYearArea_RedWine
+{    
+}
+.dxeCalendarFastNavFooter_RedWine
+{
+    color: #000000;
+    background-color: #EED8E3;
+    padding: 8px 0px;    
+    border: Solid 1px #8A0A37;    
+    border-top: Solid 1px #CB9FB4;        
+}
+.dxeCalendarFastNavMonth_RedWine, .dxeCalendarFastNavYear_RedWine
+{
+    font: normal 9pt Tahoma;
+    color: #000000;
+    padding: 3px 4px;
+    text-align: center;
+	cursor: pointer;
+	cursor: hand;
+	border: Solid 1px White;
+}
+.dxeCalendarFastNavMonth_RedWine
+{
+	padding: 5px;
+}
+.dxeCalendarFastNavMonthSelected_RedWine, .dxeCalendarFastNavYearSelected_RedWine
+{
+    color: #FFFFFF;
+    background-color: #8A0A37;
+    border: Solid 1px White;
+}
+
+.dxeCalendarFastNavMonthHover_RedWine, .dxeCalendarFastNavYearHover_RedWine
+{        
+    color: #FFFFFF;
+    background: #D69BD3;
+    padding: 2px 4px;
+    border: Solid 1px White;
+}
+.dxeCalendarFastNavMonthHover_RedWine
+{
+	padding: 5px;
+}
+/* Disabled */
+.dxeDisabled_RedWine, .dxeDisabled_RedWine td.dxe
+{
+	color: #808080;
+	cursor: default;
+}
+.dxeButtonDisabled_RedWine, .dxeButtonDisabled_RedWine td.dxe
+{
+	color: #808080;
+	cursor: default;
+}
+/* -- Button -- */
+.dxbButton_RedWine
+{	
+    color: #FFFFFF;   
+    font-size: 9pt;
+    font-family: Tahoma;				    
+	font-weight:normal;    
+    vertical-align: middle;	 		
+    border: solid 1px #8A0A37;	
+    background: #F0749F url('edtButtonBack.gif') top;
+    background-repeat:repeat-x;
+    padding: 1px 1px 1px 1px;
+	cursor: pointer;
+	cursor: hand;
+}
+.dxbButtonHover_RedWine 
+{
+  	color: #FFFFFF;   
+	background: #D69BD3 url('edtButtonHoverBack.gif') top;
+    background-repeat: repeat-x;
+    border: solid 1px #6C2668;	    
+}
+.dxbButtonChecked_RedWine 
+{
+    color: #FFFFFF;
+	background: #E0496C url('edtButtonCheckedBack.gif') top;
+    background-repeat: repeat-x;	
+    border: solid 1px #8A0A37;	        
+}
+.dxbButtonPressed_RedWine 
+{
+  	color: #FFFFFF;        
+	background: #BD71B9 url('edtButtonPressedBack.gif') top;
+    background-repeat: repeat-x;    
+    border: solid 1px #6C2668;	        
+}
+.dxbButton_RedWine div.dxb
+{    
+    padding: 2px 10px 3px 10px;
+	border: 0px;
+}
+.dxbButton_RedWine div.dxbf
+{     
+    padding: 1px 9px 2px 9px;
+	border: dotted 1px #FFFFFF;		
+}
+.dxbButton_RedWine div.dxb table
+{    
+    color: #FFFFFF;   
+    font-size: 9pt;
+    font-family: Tahoma;				    
+	font-weight:normal;    
+}
+/* Disabled */
+.dxbDisabled_RedWine
+{
+	color: #808080;
+	cursor: default;
+}
