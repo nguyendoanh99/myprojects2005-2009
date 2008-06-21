@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : HelloCarbide2ndGUI.loc
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "HelloCarbide2ndGUI.l01"
+#endif

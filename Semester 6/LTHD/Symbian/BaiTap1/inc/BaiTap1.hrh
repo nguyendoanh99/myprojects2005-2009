@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : BaiTap1.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TBaiTap1ViewUids
+	{
+	EBaiTap1ContainerViewId = 1
+	};

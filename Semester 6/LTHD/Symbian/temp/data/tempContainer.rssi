@@ -1,0 +1,58 @@
+/*
+========================================================================
+ Name        : tempContainer.rssi
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "tempContainer.hrh"
+#include "tempContainer.loc"
+
+RESOURCE AVKON_VIEW r_temp_container_temp_container_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_temp_container_options_menu;
+	}
+RESOURCE MENU_BAR r_temp_container_options_menu
+	{titles =
+			{
+			MENU_TITLE
+				{
+				menu_pane = r_temp_container_menu_pane1_menu_pane;
+				}
+			};
+
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_temp_container_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_temp_container_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_temp_container_title_resource
+	{
+	txt = STR_tempContainerView_1;
+	}
+RESOURCE MENU_PANE r_temp_container_menu_pane1_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = ETempContainerView_10_TDiemMenuItemCommand;
+			txt = STR_tempContainerView_2;
+			},
+		MENU_ITEM
+			{
+			command = ETempContainerView_10_CDuongTronMenuItemCommand;
+			txt = STR_tempContainerView_3;
+			}
+		};
+	}

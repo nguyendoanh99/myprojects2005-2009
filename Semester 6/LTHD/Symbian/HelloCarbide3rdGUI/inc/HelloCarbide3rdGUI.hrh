@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : HelloCarbide3rdGUI.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum THelloCarbide3rdGUIViewUids
+	{
+	EHelloCarbide3rdGUIContainerViewId = 1
+	};

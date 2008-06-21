@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designerData version="1.1.0">
+  <componentManifest>
+    <manifestEntry id="com.nokia.sdt.series60.CAknView" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignTimeContainer" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitle" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitleBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBA" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBABase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControl" version="1.1.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ContainerBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBar" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuItem" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuItemBase" version="1.0.0"/>
+  </componentManifest>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
+  <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
+  <property id="com.nokia.sdt.component.symbian.version">3.1.0</property>
+  <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCE_DIRECTORY_ID">src</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCEGEN_PROVIDER">com.nokia.sdt.sourcegen.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.BUILD_DIRECTORY_ID">group</property>
+  <component id="com.nokia.sdt.series60.CAknView">
+    <property id="className">CBT01_DescriptorsContainerView</property>
+    <compoundProperty id="location">
+      <property id="x">38</property>
+      <property id="y">10</property>
+    </compoundProperty>
+    <property id="optionsMenu" type="componentRef">optionsMenu</property>
+    <property id="name">BT01_DescriptorsContainerView</property>
+    <compoundProperty id="size">
+      <property id="width">176</property>
+      <property id="height">208</property>
+    </compoundProperty>
+    <component id="com.nokia.sdt.series60.StatusPane">
+      <compoundProperty id="location">
+        <property id="x">16</property>
+        <property id="y">1</property>
+      </compoundProperty>
+      <property id="name">statusPane</property>
+      <compoundProperty id="size">
+        <property id="width">152</property>
+        <property id="height">43</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.StatusPaneTitle">
+        <compoundProperty id="location">
+          <property id="x">48</property>
+        </compoundProperty>
+        <property id="name">title</property>
+        <property id="titleText" type="i18n">STR_BT01_DescriptorsContainerView_1</property>
+        <compoundProperty id="size">
+          <property id="width">104</property>
+          <property id="height">28</property>
+        </compoundProperty>
+        <compoundProperty id="image"/>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.CBA">
+      <compoundProperty id="location">
+        <property id="y">184</property>
+      </compoundProperty>
+      <compoundProperty id="info"/>
+      <property id="name">controlPane</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">24</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.CCoeControl">
+      <compoundProperty id="location">
+        <property id="y">44</property>
+      </compoundProperty>
+      <property id="className">CBT01_DescriptorsContainer</property>
+      <property id="name">BT01_DescriptorsContainer</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">140</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.MenuBar">
+      <compoundProperty id="location">
+        <property id="x">3</property>
+        <property id="y">-43</property>
+      </compoundProperty>
+      <property id="name">optionsMenu</property>
+      <compoundProperty id="size">
+        <property id="height">227</property>
+        <property id="width">173</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.MenuPane">
+        <compoundProperty id="location"/>
+        <property id="name">menuPane1</property>
+        <compoundProperty id="size">
+          <property id="height">227</property>
+          <property id="width">173</property>
+        </compoundProperty>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">2</property>
+          </compoundProperty>
+          <property id="name">example_1MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_2</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_1MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_1MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">24</property>
+          </compoundProperty>
+          <property id="name">example_2MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_3</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_2MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_2MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">46</property>
+          </compoundProperty>
+          <property id="name">example_3MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_4</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_3MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_3MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">68</property>
+          </compoundProperty>
+          <property id="name">example_4MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_5</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_4MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_4MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">90</property>
+          </compoundProperty>
+          <property id="name">example_5MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_6</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_5MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_5MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">112</property>
+          </compoundProperty>
+          <property id="name">example_6MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_7</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_6MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_6MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">134</property>
+          </compoundProperty>
+          <property id="name">example_7MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_8</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_7MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_7MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">156</property>
+          </compoundProperty>
+          <property id="name">example_8MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_9</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_8MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_8MenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">178</property>
+          </compoundProperty>
+          <property id="name">example_9MenuItem</property>
+          <property id="text" type="i18n">STR_BT01_DescriptorsContainerView_10</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleExample_9MenuItemSelectedL" handlerSymbol="cpp@src//BT01_DescriptorsContainerView.cpp/function(CBT01_DescriptorsContainerView::HandleExample_9MenuItemSelectedL(TInt))"/>
+        </component>
+      </component>
+    </component>
+  </component>
+  <stringBundle>
+    <stringTable language="LANG_English">
+      <string id="STR_BT01_DescriptorsContainerView_1">BT01_DescriptorsContainer</string>
+      <string id="STR_BT01_DescriptorsContainerView_2">Example 1</string>
+      <string id="STR_BT01_DescriptorsContainerView_3">Example 2</string>
+      <string id="STR_BT01_DescriptorsContainerView_4">Example 3</string>
+      <string id="STR_BT01_DescriptorsContainerView_5">Example 4</string>
+      <string id="STR_BT01_DescriptorsContainerView_6">Example 5</string>
+      <string id="STR_BT01_DescriptorsContainerView_7">Example 6</string>
+      <string id="STR_BT01_DescriptorsContainerView_8">Example 7</string>
+      <string id="STR_BT01_DescriptorsContainerView_9">Example 8</string>
+      <string id="STR_BT01_DescriptorsContainerView_10">Example 9</string>
+    </stringTable>
+  </stringBundle>
+  <macroTable/>
+  <sourceMappingState>
+    <resourceMappings>
+      <resourceMapping instanceName="title">r_bt01_descriptors_container_title_resource</resourceMapping>
+      <resourceMapping instanceName="statusPane">r_bt01_descriptors_container_status_pane</resourceMapping>
+      <resourceMapping instanceName="optionsMenu">r_bt01_descriptors_container_options_menu</resourceMapping>
+      <resourceMapping instanceName="menuPane1">r_bt01_descriptors_container_menu_pane1_menu_pane</resourceMapping>
+      <resourceMapping instanceName="BT01_DescriptorsContainerView">r_bt01_descriptors_container_bt01_descriptors_container_view</resourceMapping>
+    </resourceMappings>
+    <enumMappings>
+      <enumMapping instanceName="example_8MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_8MenuItemCommand</enumMapping>
+      <enumMapping instanceName="example_5MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_5MenuItemCommand</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_CONTROL_TYPE">EAknCtTitlePane</enumMapping>
+      <enumMapping instanceName="example_7MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_7MenuItemCommand</enumMapping>
+      <enumMapping instanceName="example_3MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_3MenuItemCommand</enumMapping>
+      <enumMapping instanceName="example_1MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_1MenuItemCommand</enumMapping>
+      <enumMapping instanceName="BT01_DescriptorsContainerView" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EBT01_DescriptorsContainerViewId</enumMapping>
+      <enumMapping instanceName="example_2MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_2MenuItemCommand</enumMapping>
+      <enumMapping instanceName="example_9MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_9MenuItemCommand</enumMapping>
+      <enumMapping instanceName="example_6MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_6MenuItemCommand</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_STATUS_PANE_ID">EEikStatusPaneUidTitle</enumMapping>
+      <enumMapping instanceName="example_4MenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBT01_DescriptorsContainerViewExample_4MenuItemCommand</enumMapping>
+    </enumMappings>
+    <arrayMappings/>
+  </sourceMappingState>
+  <generatedFiles>
+    <file>src/BT01_DescriptorsContainerView.cpp</file>
+    <file>inc/BT01_DescriptorsContainer.h</file>
+    <file>inc/BT01_DescriptorsContainerView.h</file>
+    <file>src/BT01_DescriptorsContainer.cpp</file>
+    <file>data/BT01_Descriptors.rss</file>
+    <file>data/BT01_DescriptorsContainer.rssi</file>
+    <file>inc/BT01_Descriptors.hrh</file>
+    <file>inc/BT01_DescriptorsContainer.hrh</file>
+    <file>data/BT01_Descriptors.loc</file>
+    <file>data/BT01_Descriptors.l01</file>
+    <file>data/BT01_DescriptorsContainer.loc</file>
+    <file>data/BT01_DescriptorsContainer.l01</file>
+  </generatedFiles>
+</designerData>

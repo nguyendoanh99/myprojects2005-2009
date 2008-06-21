@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BaiTap1Container.loc
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "BaiTap1Container.l01"
+#endif

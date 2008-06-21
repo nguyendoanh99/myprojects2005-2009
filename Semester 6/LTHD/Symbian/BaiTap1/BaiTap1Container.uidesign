@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designerData version="1.1.0">
+  <componentManifest>
+    <manifestEntry id="com.nokia.sdt.series60.CAknView" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignTimeContainer" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitle" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitleBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBA" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBABase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControl" version="1.1.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ContainerBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBar" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuItem" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuItemBase" version="1.0.0"/>
+  </componentManifest>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
+  <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
+  <property id="com.nokia.sdt.component.symbian.version">3.1.0</property>
+  <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCE_DIRECTORY_ID">src</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCEGEN_PROVIDER">com.nokia.sdt.sourcegen.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.BUILD_DIRECTORY_ID">group</property>
+  <component id="com.nokia.sdt.series60.CAknView">
+    <property id="className">CBaiTap1ContainerView</property>
+    <compoundProperty id="location">
+      <property id="x">38</property>
+      <property id="y">10</property>
+    </compoundProperty>
+    <property id="optionsMenu" type="componentRef">optionsMenu</property>
+    <property id="name">BaiTap1ContainerView</property>
+    <compoundProperty id="size">
+      <property id="width">176</property>
+      <property id="height">208</property>
+    </compoundProperty>
+    <component id="com.nokia.sdt.series60.StatusPane">
+      <compoundProperty id="location">
+        <property id="x">16</property>
+        <property id="y">1</property>
+      </compoundProperty>
+      <property id="name">statusPane</property>
+      <compoundProperty id="size">
+        <property id="width">152</property>
+        <property id="height">43</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.StatusPaneTitle">
+        <compoundProperty id="location">
+          <property id="x">48</property>
+        </compoundProperty>
+        <property id="name">title</property>
+        <property id="titleText" type="i18n">STR_BaiTap1ContainerView_1</property>
+        <compoundProperty id="size">
+          <property id="width">104</property>
+          <property id="height">28</property>
+        </compoundProperty>
+        <compoundProperty id="image"/>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.CBA">
+      <compoundProperty id="location">
+        <property id="y">184</property>
+      </compoundProperty>
+      <compoundProperty id="info"/>
+      <property id="name">controlPane</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">24</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.CCoeControl">
+      <compoundProperty id="location">
+        <property id="y">44</property>
+      </compoundProperty>
+      <property id="className">CBaiTap1Container</property>
+      <property id="name">BaiTap1Container</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">140</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.MenuBar">
+      <compoundProperty id="location">
+        <property id="x">3</property>
+        <property id="y">45</property>
+      </compoundProperty>
+      <property id="name">optionsMenu</property>
+      <compoundProperty id="size">
+        <property id="height">139</property>
+        <property id="width">173</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.MenuPane">
+        <compoundProperty id="location"/>
+        <property id="name">menuPane1</property>
+        <compoundProperty id="size">
+          <property id="height">139</property>
+          <property id="width">173</property>
+        </compoundProperty>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">2</property>
+          </compoundProperty>
+          <property id="name">tinh_khoang_cachMenuItem</property>
+          <property id="text" type="i18n">STR_BaiTap1ContainerView_2</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleTinh_khoang_cachMenuItemSelectedL" handlerSymbol="cpp@src//BaiTap1ContainerView.cpp/function(CBaiTap1ContainerView::HandleTinh_khoang_cachMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">24</property>
+          </compoundProperty>
+          <property id="name">chu_vi_dien_tich_HCNMenuItem</property>
+          <property id="text" type="i18n">STR_BaiTap1ContainerView_3</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleChu_vi_dien_tich_HCNMenuItemSelectedL" handlerSymbol="cpp@src//BaiTap1ContainerView.cpp/function(CBaiTap1ContainerView::HandleChu_vi_dien_tich_HCNMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">46</property>
+          </compoundProperty>
+          <property id="name">chu_vi_dien_tich_duong_tronMenuItem</property>
+          <property id="text" type="i18n">STR_BaiTap1ContainerView_4</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleChu_vi_dien_tich_duong_tronMenuItemSelectedL" handlerSymbol="cpp@src//BaiTap1ContainerView.cpp/function(CBaiTap1ContainerView::HandleChu_vi_dien_tich_duong_tronMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">68</property>
+          </compoundProperty>
+          <property id="name">tao_doi_tuong_tam_giacMenuItem</property>
+          <property id="text" type="i18n">STR_BaiTap1ContainerView_6</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleTao_doi_tuong_tam_giacMenuItemSelectedL" handlerSymbol="cpp@src//BaiTap1ContainerView.cpp/function(CBaiTap1ContainerView::HandleTao_doi_tuong_tam_giacMenuItemSelectedL(TInt))"/>
+        </component>
+        <component id="com.nokia.sdt.series60.MenuItem">
+          <compoundProperty id="location">
+            <property id="x">5</property>
+            <property id="y">90</property>
+          </compoundProperty>
+          <property id="name">tao_doi_tuong_duong_tronMenuItem</property>
+          <property id="text" type="i18n">STR_BaiTap1ContainerView_7</property>
+          <compoundProperty id="size">
+            <property id="width">158</property>
+            <property id="height">22</property>
+          </compoundProperty>
+          <eventBinding id="selected" handlerDisplay="HandleTao_doi_tuong_duong_tronMenuItemSelectedL" handlerSymbol="cpp@src//BaiTap1ContainerView.cpp/function(CBaiTap1ContainerView::HandleTao_doi_tuong_duong_tronMenuItemSelectedL(TInt))"/>
+        </component>
+      </component>
+    </component>
+  </component>
+  <stringBundle>
+    <stringTable language="LANG_English">
+      <string id="STR_BaiTap1ContainerView_1">BaiTap1Container</string>
+      <string id="STR_BaiTap1ContainerView_2">Khoang cach giua 2 diem</string>
+      <string id="STR_BaiTap1ContainerView_3">Chu vi, dien tich tam giac</string>
+      <string id="STR_BaiTap1ContainerView_4">Chu vi, dien tich duong tron</string>
+      <string id="STR_BaiTap1ContainerView_6">Test CTamGiac</string>
+      <string id="STR_BaiTap1ContainerView_7">Test CDuongTron</string>
+    </stringTable>
+  </stringBundle>
+  <macroTable/>
+  <sourceMappingState>
+    <resourceMappings>
+      <resourceMapping instanceName="statusPane">r_bai_tap1_container_status_pane</resourceMapping>
+      <resourceMapping instanceName="BaiTap1ContainerView">r_bai_tap1_container_bai_tap1_container_view</resourceMapping>
+      <resourceMapping instanceName="title">r_bai_tap1_container_title_resource</resourceMapping>
+      <resourceMapping instanceName="optionsMenu">r_bai_tap1_container_options_menu</resourceMapping>
+      <resourceMapping instanceName="menuPane1">r_bai_tap1_container_menu_pane1_menu_pane</resourceMapping>
+    </resourceMappings>
+    <enumMappings>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_CONTROL_TYPE">EAknCtTitlePane</enumMapping>
+      <enumMapping instanceName="BaiTap1ContainerView" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EBaiTap1ContainerViewId</enumMapping>
+      <enumMapping instanceName="chu_vi_dien_tich_HCNMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBaiTap1ContainerViewChu_vi_dien_tich_HCNMenuItemCommand</enumMapping>
+      <enumMapping instanceName="tao_doi_tuong_tam_giacMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBaiTap1ContainerViewTao_doi_tuong_tam_giacMenuItemCommand</enumMapping>
+      <enumMapping instanceName="tao_doi_tuong_duong_tronMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBaiTap1ContainerViewTao_doi_tuong_duong_tronMenuItemCommand</enumMapping>
+      <enumMapping instanceName="tinh_khoang_cachMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBaiTap1ContainerViewTinh_khoang_cachMenuItemCommand</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_STATUS_PANE_ID">EEikStatusPaneUidTitle</enumMapping>
+      <enumMapping instanceName="chu_vi_dien_tich_duong_tronMenuItem" propertyId="command" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_COMMANDS">EBaiTap1ContainerViewChu_vi_dien_tich_duong_tronMenuItemCommand</enumMapping>
+    </enumMappings>
+    <arrayMappings/>
+  </sourceMappingState>
+  <generatedFiles>
+    <file>src/BaiTap1Container.cpp</file>
+    <file>src/BaiTap1ContainerView.cpp</file>
+    <file>inc/BaiTap1Container.h</file>
+    <file>inc/BaiTap1ContainerView.h</file>
+    <file>data/BaiTap1.rss</file>
+    <file>data/BaiTap1Container.rssi</file>
+    <file>inc/BaiTap1.hrh</file>
+    <file>inc/BaiTap1Container.hrh</file>
+    <file>data/BaiTap1.loc</file>
+    <file>data/BaiTap1.l01</file>
+    <file>data/BaiTap1Container.loc</file>
+    <file>data/BaiTap1Container.l01</file>
+  </generatedFiles>
+</designerData>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designerData version="1.1.0">
+  <componentManifest>
+    <manifestEntry id="com.nokia.sdt.series60.CAknView" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignTimeContainer" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitle" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitleBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBA" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBABase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControl" version="1.1.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ContainerBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikLabel" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CCoeControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikEdwin" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikEdwinBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.EditorBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikFixedPointEditor" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikTimeEditor" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CEikMfneBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBar" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.MenuBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CAknListQueryDialog" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.NonLayoutBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ListBoxItem" version="1.0.0"/>
+  </componentManifest>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
+  <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
+  <property id="com.nokia.sdt.component.symbian.version">3.1.0</property>
+  <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCE_DIRECTORY_ID">src</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCEGEN_PROVIDER">com.nokia.sdt.sourcegen.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.BUILD_DIRECTORY_ID">group</property>
+  <component id="com.nokia.sdt.series60.CAknView">
+    <property id="className">CConversionContainerView</property>
+    <compoundProperty id="location">
+      <property id="x">38</property>
+      <property id="y">10</property>
+    </compoundProperty>
+    <property id="optionsMenu" type="componentRef">optionsMenu</property>
+    <property id="name">ConversionContainerView</property>
+    <compoundProperty id="size">
+      <property id="width">176</property>
+      <property id="height">208</property>
+    </compoundProperty>
+    <component id="com.nokia.sdt.series60.StatusPane">
+      <compoundProperty id="location">
+        <property id="x">16</property>
+        <property id="y">1</property>
+      </compoundProperty>
+      <property id="name">statusPane</property>
+      <compoundProperty id="size">
+        <property id="width">152</property>
+        <property id="height">43</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.StatusPaneTitle">
+        <compoundProperty id="location">
+          <property id="x">48</property>
+        </compoundProperty>
+        <property id="name">title</property>
+        <property id="titleText" type="i18n">STR_ConversionContainerView_1</property>
+        <compoundProperty id="size">
+          <property id="width">104</property>
+          <property id="height">28</property>
+        </compoundProperty>
+        <compoundProperty id="image"/>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.CBA">
+      <compoundProperty id="location">
+        <property id="y">184</property>
+      </compoundProperty>
+      <compoundProperty id="info"/>
+      <property id="name">controlPane</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">24</property>
+      </compoundProperty>
+    </component>
+    <component id="com.nokia.sdt.series60.CCoeControl">
+      <property id="initialFocus" type="componentRef">edit1</property>
+      <compoundProperty id="location">
+        <property id="y">44</property>
+      </compoundProperty>
+      <property id="className">CConversionContainer</property>
+      <property id="name">ConversionContainer</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">140</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.CEikLabel">
+        <compoundProperty id="location">
+          <property id="x">6</property>
+          <property id="y">7</property>
+        </compoundProperty>
+        <property id="name">label1</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_3</property>
+        <property id="alignment">EEikLabelAlignHLeft</property>
+        <compoundProperty id="size">
+          <property id="width">71</property>
+          <property id="height">17</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikLabel">
+        <compoundProperty id="location">
+          <property id="x">7</property>
+          <property id="y">38</property>
+        </compoundProperty>
+        <property id="name">label2</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_6</property>
+        <property id="alignment">EEikLabelAlignHLeft</property>
+        <compoundProperty id="size">
+          <property id="height">17</property>
+          <property id="width">71</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikLabel">
+        <compoundProperty id="location">
+          <property id="x">8</property>
+          <property id="y">72</property>
+        </compoundProperty>
+        <property id="name">label3</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_9</property>
+        <property id="alignment">EEikLabelAlignHLeft</property>
+        <compoundProperty id="size">
+          <property id="height">17</property>
+          <property id="width">71</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikLabel">
+        <compoundProperty id="location">
+          <property id="x">8</property>
+          <property id="y">96</property>
+        </compoundProperty>
+        <property id="name">label4</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_12</property>
+        <property id="alignment">EEikLabelAlignHLeft</property>
+        <compoundProperty id="size">
+          <property id="height">17</property>
+          <property id="width">71</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikLabel">
+        <compoundProperty id="location">
+          <property id="x">6</property>
+          <property id="y">119</property>
+        </compoundProperty>
+        <property id="name">label5</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_15</property>
+        <property id="alignment">EEikLabelAlignHLeft</property>
+        <compoundProperty id="size">
+          <property id="height">17</property>
+          <property id="width">71</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikEdwin">
+        <compoundProperty id="size">
+          <property id="width">50</property>
+          <property id="height">15</property>
+        </compoundProperty>
+        <compoundProperty id="avkonFlags"/>
+        <compoundProperty id="location">
+          <property id="x">85</property>
+          <property id="y">10</property>
+        </compoundProperty>
+        <compoundProperty id="flags"/>
+        <compoundProperty id="allowedCaseModes"/>
+        <property id="name">edit1</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_17</property>
+        <compoundProperty id="allowedInputModes">
+          <property id="EAknEditorKatakanaInputMode">true</property>
+          <property id="EAknEditorFullWidthTextInputMode">true</property>
+          <property id="EAknEditorFullWidthNumericInputMode">true</property>
+          <property id="EAknEditorFullWidthKatakanaInputMode">true</property>
+          <property id="EAknEditorHiraganaKanjiInputMode">true</property>
+          <property id="EAknEditorHalfWidthTextInputMode">true</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikFixedPointEditor">
+        <compoundProperty id="location">
+          <property id="x">84</property>
+          <property id="y">38</property>
+        </compoundProperty>
+        <property id="name">fixedPointEditor1</property>
+        <compoundProperty id="size">
+          <property id="width">27</property>
+          <property id="height">17</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikEdwin">
+        <compoundProperty id="size">
+          <property id="width">50</property>
+          <property id="height">15</property>
+        </compoundProperty>
+        <compoundProperty id="avkonFlags"/>
+        <compoundProperty id="location">
+          <property id="x">84</property>
+          <property id="y">72</property>
+        </compoundProperty>
+        <compoundProperty id="flags"/>
+        <compoundProperty id="allowedCaseModes"/>
+        <property id="name">edit2</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_18</property>
+        <compoundProperty id="allowedInputModes">
+          <property id="EAknEditorKatakanaInputMode">true</property>
+          <property id="EAknEditorFullWidthTextInputMode">true</property>
+          <property id="EAknEditorFullWidthNumericInputMode">true</property>
+          <property id="EAknEditorFullWidthKatakanaInputMode">true</property>
+          <property id="EAknEditorHiraganaKanjiInputMode">true</property>
+          <property id="EAknEditorHalfWidthTextInputMode">true</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikFixedPointEditor">
+        <compoundProperty id="location">
+          <property id="x">84</property>
+          <property id="y">93</property>
+        </compoundProperty>
+        <property id="name">fixedPointEditor2</property>
+        <compoundProperty id="size">
+          <property id="width">27</property>
+          <property id="height">17</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.CEikTimeEditor">
+        <compoundProperty id="maxTime">
+          <property id="hour">23</property>
+          <property id="minute">59</property>
+          <property id="second">59</property>
+        </compoundProperty>
+        <compoundProperty id="size">
+          <property id="width">79</property>
+          <property id="height">17</property>
+        </compoundProperty>
+        <compoundProperty id="location">
+          <property id="x">83</property>
+          <property id="y">122</property>
+        </compoundProperty>
+        <compoundProperty id="flags"/>
+        <property id="name">timeEditor1</property>
+        <compoundProperty id="time"/>
+        <compoundProperty id="minTime"/>
+      </component>
+    </component>
+    <component id="com.nokia.sdt.series60.MenuBar">
+      <compoundProperty id="location">
+        <property id="x">3</property>
+        <property id="y">184</property>
+      </compoundProperty>
+      <property id="name">optionsMenu</property>
+      <compoundProperty id="size"/>
+    </component>
+    <component id="com.nokia.sdt.series60.CAknListQueryDialog">
+      <sequenceProperty id="extraImages"/>
+      <compoundProperty id="location">
+        <property id="y">116</property>
+      </compoundProperty>
+      <property id="name">listQuery1</property>
+      <property id="text" type="i18n">STR_ConversionContainerView_19</property>
+      <compoundProperty id="size">
+        <property id="width">176</property>
+        <property id="height">92</property>
+      </compoundProperty>
+      <component id="com.nokia.sdt.series60.ListBoxItem">
+        <compoundProperty id="location"/>
+        <property id="name">listboxItem1</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_20</property>
+        <compoundProperty id="size">
+          <property id="width">164</property>
+          <property id="height">22</property>
+        </compoundProperty>
+      </component>
+      <component id="com.nokia.sdt.series60.ListBoxItem">
+        <compoundProperty id="location">
+          <property id="y">22</property>
+        </compoundProperty>
+        <property id="name">listboxItem2</property>
+        <property id="text" type="i18n">STR_ConversionContainerView_22</property>
+        <compoundProperty id="size">
+          <property id="width">164</property>
+          <property id="height">22</property>
+        </compoundProperty>
+      </component>
+    </component>
+  </component>
+  <stringBundle>
+    <stringTable language="LANG_English">
+      <string id="STR_ConversionContainerView_1">ConversionContainer</string>
+      <string id="STR_ConversionContainerView_3">Currency</string>
+      <string id="STR_ConversionContainerView_6">Amount</string>
+      <string id="STR_ConversionContainerView_9">Temp</string>
+      <string id="STR_ConversionContainerView_12">Measure</string>
+      <string id="STR_ConversionContainerView_15">Time</string>
+      <string id="STR_ConversionContainerView_17">Edit text</string>
+      <string id="STR_ConversionContainerView_18">Edit text</string>
+      <string id="STR_ConversionContainerView_19">Question</string>
+      <string id="STR_ConversionContainerView_20">Item1</string>
+      <string id="STR_ConversionContainerView_22">Item2</string>
+    </stringTable>
+  </stringBundle>
+  <macroTable/>
+  <sourceMappingState>
+    <resourceMappings>
+      <resourceMapping instanceName="edit1">r_conversion_container_edit1</resourceMapping>
+      <resourceMapping instanceName="edit1" rsrcId="text">r_conversion_container_edit1_2</resourceMapping>
+      <resourceMapping instanceName="fixedPointEditor1">r_conversion_container_fixed_point_editor1</resourceMapping>
+      <resourceMapping instanceName="fixedPointEditor2">r_conversion_container_fixed_point_editor2</resourceMapping>
+      <resourceMapping instanceName="timeEditor1">r_conversion_container_time_editor1</resourceMapping>
+      <resourceMapping instanceName="listboxItem2">r_conversion_container_listbox_item2</resourceMapping>
+      <resourceMapping instanceName="label2">r_conversion_container_label2</resourceMapping>
+      <resourceMapping instanceName="edit2">r_conversion_container_edit2</resourceMapping>
+      <resourceMapping instanceName="listQuery1">r_conversion_container_list_query1</resourceMapping>
+      <resourceMapping instanceName="label1">r_conversion_container_label1</resourceMapping>
+      <resourceMapping instanceName="optionsMenu">r_conversion_container_options_menu</resourceMapping>
+      <resourceMapping instanceName="statusPane">r_conversion_container_status_pane</resourceMapping>
+      <resourceMapping instanceName="title">r_conversion_container_title_resource</resourceMapping>
+      <resourceMapping instanceName="ConversionContainerView">r_conversion_container_conversion_container_view</resourceMapping>
+      <resourceMapping instanceName="label3">r_conversion_container_label3</resourceMapping>
+      <resourceMapping instanceName="edit2" rsrcId="text">r_conversion_container_edit2_2</resourceMapping>
+      <resourceMapping instanceName="label5">r_conversion_container_label5</resourceMapping>
+      <resourceMapping instanceName="label4">r_conversion_container_label4</resourceMapping>
+      <resourceMapping instanceName="listboxItem1">r_conversion_container_listbox_item1</resourceMapping>
+    </resourceMappings>
+    <enumMappings>
+      <enumMapping instanceName="edit2" propertyId="numericKeymap">EAknEditorStandardNumberModeKeymap</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_CONTROL_TYPE">EAknCtTitlePane</enumMapping>
+      <enumMapping instanceName="label2" propertyId="alignment">EEikLabelAlignHLeft</enumMapping>
+      <enumMapping instanceName="label1" propertyId="font">EEikLabelFontNormal</enumMapping>
+      <enumMapping instanceName="edit2" propertyId="defaultCase">EAknEditorTextCase</enumMapping>
+      <enumMapping instanceName="label5" propertyId="font">EEikLabelFontNormal</enumMapping>
+      <enumMapping instanceName="label1" propertyId="alignment">EEikLabelAlignHLeft</enumMapping>
+      <enumMapping instanceName="label2" propertyId="font">EEikLabelFontNormal</enumMapping>
+      <enumMapping instanceName="edit1" propertyId="numericKeymap">EAknEditorStandardNumberModeKeymap</enumMapping>
+      <enumMapping instanceName="ConversionContainerView" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EConversionContainerViewId</enumMapping>
+      <enumMapping instanceName="edit2" propertyId="defaultInputMode">EAknEditorTextInputMode</enumMapping>
+      <enumMapping instanceName="label4" propertyId="font">EEikLabelFontNormal</enumMapping>
+      <enumMapping instanceName="label4" propertyId="alignment">EEikLabelAlignHLeft</enumMapping>
+      <enumMapping instanceName="title" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_STATUS_PANE_ID">EEikStatusPaneUidTitle</enumMapping>
+      <enumMapping instanceName="edit1" propertyId="defaultInputMode">EAknEditorTextInputMode</enumMapping>
+      <enumMapping instanceName="label5" propertyId="alignment">EEikLabelAlignHLeft</enumMapping>
+      <enumMapping instanceName="edit1" propertyId="defaultCase">EAknEditorTextCase</enumMapping>
+      <enumMapping instanceName="label3" propertyId="alignment">EEikLabelAlignHLeft</enumMapping>
+      <enumMapping instanceName="label3" propertyId="font">EEikLabelFontNormal</enumMapping>
+      <enumMapping instanceName="listQuery1" propertyId="style">EAknCtSinglePopupMenuListBox</enumMapping>
+    </enumMappings>
+    <arrayMappings/>
+  </sourceMappingState>
+  <generatedFiles>
+    <file>inc/ConversionContainer.h</file>
+    <file>src/ConversionContainer.cpp</file>
+    <file>inc/ConversionContainerView.h</file>
+    <file>src/ConversionContainerView.cpp</file>
+    <file>data/Conversion.rss</file>
+    <file>data/ConversionContainer.rssi</file>
+    <file>inc/Conversion.hrh</file>
+    <file>data/ConversionContainer2.rssi</file>
+    <file>data/Conversion.loc</file>
+    <file>data/Conversion.l01</file>
+    <file>data/ConversionContainer.loc</file>
+    <file>data/ConversionContainer.l01</file>
+    <file>data/ConversionContainer2.loc</file>
+    <file>data/ConversionContainer2.l01</file>
+  </generatedFiles>
+</designerData>

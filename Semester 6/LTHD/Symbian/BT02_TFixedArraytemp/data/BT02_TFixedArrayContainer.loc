@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArrayContainer.loc
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "BT02_TFixedArrayContainer.l01"
+#endif

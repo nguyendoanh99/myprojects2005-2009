@@ -1,0 +1,93 @@
+/*
+========================================================================
+ Name        : BT01_DescriptorsContainer.rssi
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "BT01_DescriptorsContainer.hrh"
+#include "BT01_DescriptorsContainer.loc"
+
+RESOURCE AVKON_VIEW r_bt01_descriptors_container_bt01_descriptors_container_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_bt01_descriptors_container_options_menu;
+	}
+RESOURCE MENU_BAR r_bt01_descriptors_container_options_menu
+	{titles =
+			{
+			MENU_TITLE
+				{
+				menu_pane = r_bt01_descriptors_container_menu_pane1_menu_pane;
+				}
+			};
+
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_bt01_descriptors_container_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_bt01_descriptors_container_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_bt01_descriptors_container_title_resource
+	{
+	txt = STR_BT01_DescriptorsContainerView_1;
+	}
+RESOURCE MENU_PANE r_bt01_descriptors_container_menu_pane1_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_1MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_2;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_2MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_3;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_3MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_4;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_4MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_5;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_5MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_6;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_6MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_7;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_7MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_8;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_8MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_9;
+			},
+		MENU_ITEM
+			{
+			command = EBT01_DescriptorsContainerViewExample_9MenuItemCommand;
+			txt = STR_BT01_DescriptorsContainerView_10;
+			}
+		};
+	}

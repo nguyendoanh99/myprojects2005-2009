@@ -1,0 +1,31 @@
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+; Also, the resource file entries should be changed to match the language
+; used in the build. For example, if building for LANGUAGE_01, change the file
+; extensions .rsc to .r01.
+;
+;Languages
+&EN
+;
+; UID is the app's UID
+;
+#{"HelloCarbide2ndGUI"},(0x0B10718E),1,0,0
+;
+;Supports Series 60 v 2.0
+;This line indicates that this installation is for the Series 60 platform v2.0
+;This line must appear _exactly_ as shown below in the sis file
+;If this line is missing or incorrect, the sis file will not be able
+;to be installed on Series 60 v2.0 platforms
+(0x101F7960), 0, 0, 0, {"Series60ProductID"} 
+;
+; Four files to install
+;
+"$(EPOCROOT)epoc32\release\$(PLATFORM)\$(TARGET)\HelloCarbide2ndGUI.app"		  -"!:\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.app"
+"$(EPOCROOT)epoc32\data\z\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.r01"		 -"!:\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.r01"
+"$(EPOCROOT)epoc32\data\z\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI_caption.r01" -"!:\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI_caption.r01"
+"$(EPOCROOT)epoc32\data\z\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.aif"		 -"!:\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.aif"
+"$(EPOCROOT)epoc32\data\z\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.mbm"		 -"!:\system\apps\HelloCarbide2ndGUI\HelloCarbide2ndGUI.mbm"

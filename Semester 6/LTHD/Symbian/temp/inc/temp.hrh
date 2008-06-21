@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : temp.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TtempViewUids
+	{
+	ETempContainerViewId = 1
+	};

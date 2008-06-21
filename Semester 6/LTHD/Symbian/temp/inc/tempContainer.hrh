@@ -1,0 +1,13 @@
+/*
+========================================================================
+ Name        : tempContainer.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TTempContainerViewCommands
+	{
+	ETempContainerView_10_TDiemMenuItemCommand = 0x6000,
+	ETempContainerView_10_CDuongTronMenuItemCommand
+	};

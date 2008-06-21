@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designerData version="1.1.0">
+  <componentManifest>
+    <manifestEntry id="com.nokia.sdt.series60.CAknApplication" version="1.1.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.NonLayoutBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CAknDocument" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CAknViewAppUi" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CAknAppUi" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CAknAppUiBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignTimeContainer" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPane" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.ControlBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneCaption" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.StatusPaneTitleBase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBA" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.CBABase" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.AvkonViewReference" version="1.0.0"/>
+    <manifestEntry id="com.nokia.sdt.series60.DesignReference" version="1.0.0"/>
+  </componentManifest>
+  <property id="com.nokia.sdt.component.symbian.vendor">com.nokia.series60</property>
+  <property id="com.nokia.sdt.component.symbian.version">3.1.0</property>
+  <property id="com.nokia.sdt.symbian.dm.RESOURCE_DIRECTORY_ID">data</property>
+  <property id="com.nokia.sdt.symbian.dm.COMPONENT_PROVIDER">com.nokia.sdt.component.symbian.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.INCLUDE_DIRECTORY_ID">inc</property>
+  <property id="com.nokia.sdt.symbian.dm.ROOT_CONTAINER">BT01_DescriptorsAppUi</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCE_DIRECTORY_ID">src</property>
+  <property id="com.nokia.sdt.symbian.dm.ROOT_APPLICATION_NAME">BT01_Descriptors</property>
+  <property id="com.nokia.sdt.symbian.dm.SOURCEGEN_PROVIDER">com.nokia.sdt.sourcegen.Symbian-Provider</property>
+  <property id="com.nokia.sdt.symbian.dm.BUILD_DIRECTORY_ID">group</property>
+  <component id="com.nokia.sdt.series60.CAknApplication">
+    <property id="className">CBT01_DescriptorsApplication</property>
+    <property id="documentBase">BT01_Descriptors</property>
+    <property id="name">BT01_DescriptorsApplication</property>
+    <property id="uid">0xED383BA3</property>
+    <component id="com.nokia.sdt.series60.CAknDocument">
+      <property id="className">CBT01_DescriptorsDocument</property>
+      <property id="name">BT01_DescriptorsDocument</property>
+      <component id="com.nokia.sdt.series60.CAknViewAppUi">
+        <property id="initialDesign" type="componentRef">aknViewReference1</property>
+        <property id="className">CBT01_DescriptorsAppUi</property>
+        <compoundProperty id="location"/>
+        <property id="name">BT01_DescriptorsAppUi</property>
+        <compoundProperty id="size">
+          <property id="width">176</property>
+          <property id="height">208</property>
+        </compoundProperty>
+        <component id="com.nokia.sdt.series60.StatusPane">
+          <compoundProperty id="location">
+            <property id="x">16</property>
+            <property id="y">1</property>
+          </compoundProperty>
+          <property id="name">statusPane</property>
+          <compoundProperty id="size">
+            <property id="width">152</property>
+            <property id="height">43</property>
+          </compoundProperty>
+          <component id="com.nokia.sdt.series60.StatusPaneCaption">
+            <property id="shortCaption" type="i18n">STR_BT01_DescriptorsApplication_2</property>
+            <compoundProperty id="location">
+              <property id="x">48</property>
+            </compoundProperty>
+            <property id="longCaption" type="i18n">STR_BT01_DescriptorsApplication_1</property>
+            <property id="name">caption</property>
+            <compoundProperty id="size">
+              <property id="width">104</property>
+              <property id="height">28</property>
+            </compoundProperty>
+          </component>
+        </component>
+        <component id="com.nokia.sdt.series60.CBA">
+          <compoundProperty id="location">
+            <property id="y">184</property>
+          </compoundProperty>
+          <compoundProperty id="info"/>
+          <property id="name">controlPane</property>
+          <compoundProperty id="size">
+            <property id="width">176</property>
+            <property id="height">24</property>
+          </compoundProperty>
+        </component>
+        <component id="com.nokia.sdt.series60.AvkonViewReference">
+          <property id="filePath">BT01_DescriptorsContainer.uidesign</property>
+          <property id="baseName">BT01_DescriptorsContainer</property>
+          <property id="name">aknViewReference1</property>
+        </component>
+      </component>
+    </component>
+  </component>
+  <stringBundle>
+    <stringTable language="LANG_English">
+      <string id="STR_BT01_DescriptorsApplication_1">BT01_Descriptors</string>
+      <string id="STR_BT01_DescriptorsApplication_2">BT01_Descriptors</string>
+    </stringTable>
+  </stringBundle>
+  <macroTable/>
+  <sourceMappingState>
+    <resourceMappings>
+      <resourceMapping instanceName="BT01_DescriptorsAppUi" rsrcId="localisable_app_info">r_localisable_app_info</resourceMapping>
+      <resourceMapping instanceName="aknViewReference1" rsrcId="tabText">r_application_akn_view_reference1</resourceMapping>
+      <resourceMapping instanceName="BT01_DescriptorsAppUi">r_application_bt01_descriptors_app_ui</resourceMapping>
+      <resourceMapping instanceName="statusPane">r_application_status_pane</resourceMapping>
+    </resourceMappings>
+    <enumMappings>
+      <enumMapping instanceName="aknViewReference1" propertyId="" nameAlgorithm="com.nokia.sdt.component.symbian.NAME_ALG_VIEW_UID">EBT01_DescriptorsContainerViewId</enumMapping>
+    </enumMappings>
+    <arrayMappings/>
+  </sourceMappingState>
+  <generatedFiles>
+    <file>src/BT01_DescriptorsDocument.cpp</file>
+    <file>src/BT01_DescriptorsAppUi.cpp</file>
+    <file>inc/BT01_DescriptorsApplication.h</file>
+    <file>inc/BT01_DescriptorsDocument.h</file>
+    <file>src/BT01_DescriptorsApplication.cpp</file>
+    <file>inc/BT01_DescriptorsAppUi.h</file>
+    <file>data/BT01_Descriptors.rss</file>
+    <file>data/BT01_DescriptorsContainer.rssi</file>
+    <file>data/BT01_DescriptorsContainer.l01</file>
+    <file>data/BT01_DescriptorsContainer.loc</file>
+    <file>data/BT01_Descriptors.l01</file>
+    <file>data/BT01_Descriptors.loc</file>
+    <file>inc/BT01_Descriptors.hrh</file>
+  </generatedFiles>
+</designerData>

@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : temp.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_tempApplication_1 "temp"
+#define STR_tempApplication_2 "temp"

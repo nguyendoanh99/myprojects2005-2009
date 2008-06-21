@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArrayContainer.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TBT02_TFixedArrayContainerViewCommands
+	{
+	EBT02_TFixedArrayContainerView_10_doi_tuong_TDiemMenuItemCommand = 0x6000
+	};

@@ -1,0 +1,21 @@
+/* Copyright (c) 2004, Nokia. All rights reserved */
+
+
+//  LOCALISATION STRINGS
+
+//d:Caption string for app.
+#define qtn_hewb_caption_string "HelloWorld"
+
+//d:Short caption string for app.
+#define qtn_hewb_short_caption_string "HW"
+
+//d:First item in "Options" menu pane, "hello" event.
+#define qtn_hewb_command1 "Hello"
+
+//d:Second item in "Options" menu pane, "exit" event.
+#define qtn_hewb_exit "Exit"
+
+//d:When user requests EHelloWorldBasicCommand1 event, text below is shown.
+#define qtn_hewb_command1_text "Hello!"
+
+// End of File

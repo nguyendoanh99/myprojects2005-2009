@@ -1,0 +1,20 @@
+/*
+========================================================================
+ Name        : BT01_DescriptorsContainer.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TBT01_DescriptorsContainerViewCommands
+	{
+	EBT01_DescriptorsContainerViewExample_1MenuItemCommand = 0x6000,
+	EBT01_DescriptorsContainerViewExample_2MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_3MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_4MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_5MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_6MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_7MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_8MenuItemCommand,
+	EBT01_DescriptorsContainerViewExample_9MenuItemCommand
+	};

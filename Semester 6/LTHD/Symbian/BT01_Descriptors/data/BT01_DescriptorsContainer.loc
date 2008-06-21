@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BT01_DescriptorsContainer.loc
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "BT01_DescriptorsContainer.l01"
+#endif

@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : Conversion.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_ConversionApplication_1 "Conversion"
+#define STR_ConversionApplication_2 "Conversion"

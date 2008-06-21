@@ -1,0 +1,1147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+
+
+	<title>CodeProject: Text to Speech with the Microsoft Speech Library and SDK version 5.1. Free source code and programming help</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Description" content="This article describes an application used to exercise some of the Text To Speech features available to .NET developers through the Microsoft Speech 5.1 SDK.; Author: salysle; Section: Audio and Video; Chapter: Multimedia">
+<meta name="Keywords" content=".NET 2.0, VS2005, VB, Windows, Dev, Intermediate,Audio and Video,Multimedia,Free source code, tutorials">
+<meta name="Author" content="The Code Project">
+<meta name="Rating" content="General">
+<meta name="Robots" content="index, follow">
+<meta name="Revisit-After" content="1 days">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Lounge Postings" href="http://www.codeproject.com/webservices/LoungeRSS.aspx">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - All topics" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=1">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - MFC / C++" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=2">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - C#" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=3">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - ASP.NET" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=4">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - .NET" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=5">
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - VB.NET" href="http://www.codeproject.com/webservices/articlerss.aspx?cat=6">
+<link rel="search" type="application/opensearchdescription+xml" title="CodeProject" href="http://www.codeproject.com/info/OpenSearch.xml">
+	<link rel="stylesheet" type="text/css" href="TTSinVBpackage.aspx_files/CodeProject.css">	
+	<link rel="stylesheet" type="text/css" href="TTSinVBpackage.aspx_files/ForumClassic.css">	
+	<!-- base -->
+	
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="TTSinVBpackage.aspx_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+   var pageTracker = _gat._getTracker("UA-1735123-1");
+   pageTracker._setDomainName("codeproject.com");
+   pageTracker._setSessionTimeout("1200"); // 20 mins
+   pageTracker._initData();
+   pageTracker._trackPageview();
+</script>
+	
+	<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/oncopy.js"></script>
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/jxs.js"></script>
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/bookmark.js"></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+function ToggleMenu(itemName)
+{
+	var elm = document.getElementById(itemName);
+	var i,others = document.getElementById('SectionMenu');
+	for(i=0; i < others.childNodes.length; i++)
+	{
+		var other = others.childNodes[i];
+		if ((other.className == 'MenuSectionBlock') && (other != elm))
+			other.style.display='none';
+	}
+	if (elm.style.display == 'block') elm.style.display='none';
+	else elm.style.display='block';
+	return false;
+}
+
+//]]></script>
+
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/addto.js"></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+var Selected = "-1";
+
+function SwitchMessage(e, msgId)
+{
+  if (!msgId) {
+    if(!e)e=window.event;
+    var target=e.target?e.target:e.srcElement;
+    while(target&&target.id!='DynMessLink')target=target.parentNode;
+    if(!target||target.id!='DynMessLink')return;
+    msgId=target.name;
+  }
+  if(Selected&&Selected!=""){
+    var body=eval("document.getElementById('F" + Selected + "_h1')");
+    if(body) body.style.display = 'none';
+    var head=eval("document.getElementById('F" + Selected + "_h0')");
+    if(head) head.className = head.className.replace("Sel", "UnSel");
+  }
+  if(Selected==msgId.toString())
+    Selected="";
+  else {
+    Selected=msgId.toString();
+    var body=eval("document.getElementById('F" + Selected + "_h1')");
+    if(body){
+      if(body.style.display=='none') body.style.display='';
+      else body.style.display = 'none';
+    }
+    var head=eval("document.getElementById('F" + Selected + "_h0')");
+    if (head) 
+      head.className = head.className.replace("UnSel", "Sel");
+    if(body&&head&&body.style.display!='none'){
+      document.body.scrollTop = getRealPos(head, "Top") - document.body.clientHeight/10;
+      EnsureMessageVisible(Selected, true);
+    }
+  }
+  if (e){if(e.preventDefault)e.preventDefault;else e.returnValue=false;}
+  return false;
+}
+
+//]]></script>
+
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/ShortCuts.js"></script>
+<link rel="icon" href="http://www.codeproject.com/favicon.ico" type="image/ico">
+<link rel="shortcut icon" href="http://www.codeproject.com/favicon.ico" type="image/ico">
+
+</head><body style="background-color: rgb(255, 255, 255);">
+
+<table id="ctl00_AT" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr valign="top">
+		<td colspan="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="HeaderLogo"><a href="http://www.codeproject.com/"><img alt="Home" src="TTSinVBpackage.aspx_files/codeproject225x90.gif" border="0" width="225" height="90"></a></td>
+				 
+			<td class="HeaderBanner" align="right" width="100%">
+			<iframe src="TTSinVBpackage.aspx_files/ServeThirdParty.htm" scrolling="no" width="728" frameborder="0" height="90"></iframe>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			
+
+<table class="MemberNavBar" cellpadding="5" cellspacing="0" width="100%">
+<tbody><tr>
+<td class="SmallText" style="font-weight: bold;">5,040,558 members and growing! (16,770 online)</td>
+<td align="right">
+
+
+
+<div id="ctl00_MemberMenu_LoggedOffOptions" class="MemberNavBarText" style="margin: 0pt; padding: 0pt;">
+			<a name="SignUp"></a>
+<form name="subForm" id="subForm" action="/script/Membership/LogOn.aspx?rp=%2fKB%2faudio-video%2fTTSinVBpackage.aspx" method="post" style="margin: 0pt; padding: 0pt;">
+Email    <input class="SmallText" name="Email" id="Email" style="width: 100px;" type="text">
+Password <input class="SmallText" name="Password" id="Password" style="width: 60px;" type="password">
+<input value="Sign in" class="FormButton" type="submit">
+<script type="text/javascript">
+function Join(){document.location.href='/script/Membership/Modify.aspx';return false;}
+document.write('<input type="button" class="FormButton" onclick="return Join();" value="Join"');
+document.write('<input type="hidden" name="fld_quicksign" value="true" />');
+</script><input class="FormButton" onclick="return Join();" value="Join" type="button"><input name="fld_quicksign" value="true" type="hidden">
+<input checked="checked" name="cookie" id="RememberMeCheck" type="checkbox">
+<label for="RememberMeCheck">Remember me?</label>&nbsp;
+<a id="ctl00_MemberMenu_SendPassword" href="http://www.codeproject.com/script/Membership/SendPassword.aspx?rp=%2fKB%2faudio-video%2fTTSinVBpackage.aspx"><img alt="help" src="TTSinVBpackage.aspx_files/help.gif" align="middle" border="0" width="16" height="16">Lost your password?</a>
+</form>
+
+		</div>
+
+</td>
+</tr>
+</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			
+<table class="SiteNavBar" id="tblSiteToolbar" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><a href="http://www.codeproject.com/">Home</a></td>
+<td class="SelCat" nowrap="nowrap"><a href="http://www.codeproject.com/?cat=1">All Topics</a></td>
+<td nowrap="nowrap"><a href="http://www.codeproject.com/?cat=2">MFC/C++</a></td>
+<td nowrap="nowrap"><a href="http://www.codeproject.com/?cat=3">C#</a></td>
+<td nowrap="nowrap"><a href="http://www.codeproject.com/?cat=6">VB.NET</a></td>
+<td nowrap="nowrap"><a href="http://www.codeproject.com/?cat=4">ASP.NET</a></td>
+<td nowrap="nowrap"><a href="http://www.codeproject.com/?cat=9">SQL</a></td>
+<td nowrap="nowrap"><a href="http://www.codeproject.com/?cat=8">Architect</a></td>
+
+<td nowrap="nowrap"><a href="http://java.codeproject.com/">Java</a></td>
+<td nowrap="nowrap"><a href="http://lamp.codeproject.com/">LAMP</a></td>
+
+<td width="100%">&nbsp;</td>
+<td id="ctl00_TopNavBar_RightMenus"><!--380-->
+	<div id="MenuPos" style="position: relative; width: 305px; height: 22px; top: 1px;">
+	<table style="border-width: 0px; height: 20px;" cellpadding="0" cellspacing="0" width="305">
+	<tbody><tr valign="middle">
+	<td style="border-width: 0pt;" nowrap="nowrap"><a href="http://www.codeproject.com/info/FAQ.aspx">Help!</a></td>
+<td style="border-width: 0pt;" nowrap="nowrap"><a href="http://www.codeproject.com/script/Articles/Latest.aspx">Articles</a></td>
+<td style="border-width: 0pt;" nowrap="nowrap"><a href="http://www.codeproject.com/script/Forums/List.aspx">Message Boards</a></td>
+<td style="border-width: 0pt;" nowrap="nowrap"><a href="http://www.codeproject.com/Lounge.aspx">Lounge</a></td>
+
+	</tr>
+	</tbody></table>
+	</div>
+</td>
+		
+</tr>
+
+</tbody></table>
+
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="2" valign="top">
+			<a name="_top"></a>
+			<table id="ctl00_ArticleTopHeader_HeaderTable" class="ArticleHeader" border="0" cellpadding="3" cellspacing="0" width="100%">
+			<tbody><tr valign="top">
+				<td class="SmallText">
+	<a id="ctl00_ArticleTopHeader_ChapterLink" href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=3">Multimedia</a> »
+	<a id="ctl00_ArticleTopHeader_SectionLink" href="http://www.codeproject.com/KB/audio-video/">Audio and Video</a> »
+	<a id="ctl00_ArticleTopHeader_SubsectionLink" href="http://www.codeproject.com/KB/audio-video/index.aspx?#Audio%20and%20Video%20-%20Multimedia">Multimedia</a>
+	<span id="ctl00_ArticleTopHeader_SkillLevel" class="ArticleIntermediate">&nbsp;&nbsp;&nbsp; Intermediate</span> <span id="ctl00_ArticleTopHeader_LicenceTerms"></span>
+	<br><br>
+	<h1><span id="ctl00_ArticleTopHeader_ArticleTitle" class="ArticleTopTitle">Text to Speech with the Microsoft Speech Library and SDK version 5.1</span></h1>
+	<b>By <a href="http://www.codeproject.com/script/Articles/MemberArticles.aspx?amid=1774085">salysle</a></b><br><br>
+    <span id="ctl00_ArticleTopHeader_ArticleDescr" class="ArticleTopDescr">This
+article describes an application used to exercise some of the Text To
+Speech features available to .NET developers through the Microsoft
+Speech 5.1 SDK.</span>	
+</td>
+				<td class="SmallText" style="width: 210px;">
+	<span id="ctl00_ArticleTopHeader_ArticleAttributes">VB, Windows, .NET, .NET 2.0, VS, VS2005, Dev</span><br><br>
+	<span style="padding-right: 2ex;">Posted</span>: <b>31 Aug 2006</b><br>
+	<span style="padding-right: 0.5ex;">Updated</span>: <b>31 Aug 2006</b>
+	<br>
+	<span style="padding-right: 3.2ex;">Views</span>: <b>27,542</b><br>
+</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+	<table width="100%">
+	<tbody><tr>
+	<td></td>
+	<td style="white-space: nowrap;" class="SmallText" align="right">
+	</td>
+	</tr>
+	</tbody></table>
+</td>
+			</tr>
+		</tbody></table>
+		
+
+		</td>
+	</tr>
+	<tr valign="top">
+		<td id="ctl00_LeftNavCell" class="LHNavBar">
+			<div style="text-align: center; padding-top: 5px;">
+				<iframe src="TTSinVBpackage.aspx_files/ServeThirdParty_002.htm" scrolling="no" width="150" frameborder="0" height="80"></iframe>
+			</div>
+			
+
+<div class="FeatureBlockHeader">Announcements</div>
+<div class="FeatureBlockContent RHFeatureBar">
+
+
+
+
+
+<div style="padding-top: 0px;"><img src="TTSinVBpackage.aspx_files/prize_winner.gif" alt="Comp" style="float: left; margin-left: 7px; padding-right: 14px; margin-right: 10px;" width="10" height="20">
+<a id="ctl00_Announcements_CompLink" href="http://www.codeproject.com/Feature/ArticleCompetition/">Monthly Competition</a><br clear="all">
+
+<div style="padding-top: 3px; padding-bottom: 5px;"><img src="TTSinVBpackage.aspx_files/staff_sm.gif" alt="Staff" style="float: left; margin-left: 7px; padding-right: 10px; margin-right: 8px;" width="12" height="16">
+<a href="http://www.codeproject.com/info/jobs/">We're Hiring!</a></div>
+
+<div style="padding-top: 3px; padding-bottom: 5px;"><img src="TTSinVBpackage.aspx_files/silverlight_20.jpg" alt="Silverlight" style="float: left; margin-left: 0pt; margin-top: 3px; padding-right: 0pt; margin-right: 0pt;" width="27" height="20">
+<a href="http://www.codeproject.com/script/News/View.aspx?nwid=6024">Add Silverlight to your articles</a></div>
+
+
+</div>
+</div>
+			
+			<div class="MenuCat">Services</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/Services/coffee.aspx">Code Project Coffee</a></div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/Services/TradePub.aspx">Free Magazines</a></div>
+<br>
+<div id="SectionMenu">
+<div class="MenuCat">Chapters</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=1" onclick="return ToggleMenu('Chapter1');">Desktop Development</a></div>
+<div class="MenuSectionBlock" id="Chapter1" style="display: none;">
+<div class="MI" id="Section1"><a href="http://www.codeproject.com/KB/buttons/">Button Controls</a></div>
+<div class="MI" id="Section15"><a href="http://www.codeproject.com/KB/clipboard/">Clipboard</a></div>
+<div class="MI" id="Section2"><a href="http://www.codeproject.com/KB/combobox/">Combo &amp; List Boxes</a></div>
+<div class="MI" id="Section67"><a href="http://www.codeproject.com/KB/dialog/">Dialogs and Windows</a></div>
+<div class="MI" id="Section107"><a href="http://www.codeproject.com/KB/gadgets/">Desktop Gadgets</a></div>
+<div class="MI" id="Section16"><a href="http://www.codeproject.com/KB/docview/">Document / View</a></div>
+<div class="MI" id="Section4"><a href="http://www.codeproject.com/KB/edit/">Edit Controls</a></div>
+<div class="MI" id="Section17"><a href="http://www.codeproject.com/KB/files/">Files and Folders</a></div>
+<div class="MI" id="Section3"><a href="http://www.codeproject.com/KB/grid/">Grid &amp; Data Controls</a></div>
+<div class="MI" id="Section48"><a href="http://www.codeproject.com/KB/system/">Hardware &amp; System</a></div>
+<div class="MI" id="Section5"><a href="http://www.codeproject.com/KB/list/">List Controls</a></div>
+<div class="MI" id="Section6"><a href="http://www.codeproject.com/KB/menus/">Menus</a></div>
+<div class="MI" id="Section14"><a href="http://www.codeproject.com/KB/miscctrl/">Miscellaneous</a></div>
+<div class="MI" id="Section18"><a href="http://www.codeproject.com/KB/printing/">Printing</a></div>
+<div class="MI" id="Section95"><a href="http://www.codeproject.com/KB/progress/">Progress Controls</a></div>
+<div class="MI" id="Section11"><a href="http://www.codeproject.com/KB/selection/">Selection Controls</a></div>
+<div class="MI" id="Section19"><a href="http://www.codeproject.com/KB/shell/">Shell and IE programming</a></div>
+<div class="MI" id="Section68"><a href="http://www.codeproject.com/KB/smart/">Smart Client</a></div>
+<div class="MI" id="Section8"><a href="http://www.codeproject.com/KB/splitter/">Splitter Windows</a></div>
+<div class="MI" id="Section9"><a href="http://www.codeproject.com/KB/static/">Static &amp; Panel Controls</a></div>
+<div class="MI" id="Section10"><a href="http://www.codeproject.com/KB/statusbar/">Status Bar</a></div>
+<div class="MI" id="Section7"><a href="http://www.codeproject.com/KB/tabs/">Tabs &amp; Property Pages</a></div>
+<div class="MI" id="Section12"><a href="http://www.codeproject.com/KB/toolbars/">Toolbars &amp; Docking windows</a></div>
+<div class="MI" id="Section13"><a href="http://www.codeproject.com/KB/tree/">Tree Controls</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=2" onclick="return ToggleMenu('Chapter2');">Web Development</a></div>
+<div class="MenuSectionBlock" id="Chapter2" style="display: none;">
+<div class="MI" id="Section70"><a href="http://www.codeproject.com/KB/ajax/">Ajax and Atlas</a></div>
+<div class="MI" id="Section27"><a href="http://www.codeproject.com/KB/applications/">Applications &amp; Tools</a></div>
+<div class="MI" id="Section85"><a href="http://www.codeproject.com/KB/asp/">ASP</a></div>
+<div class="MI" id="Section89"><a href="http://www.codeproject.com/KB/aspnet/">ASP.NET</a></div>
+<div class="MI" id="Section28"><a href="http://www.codeproject.com/KB/webforms/">ASP.NET Controls</a></div>
+<div class="MI" id="Section38"><a href="http://www.codeproject.com/KB/ATL-Server/">ATL Server</a></div>
+<div class="MI" id="Section29"><a href="http://www.codeproject.com/KB/web-cache/">Caching</a></div>
+<div class="MI" id="Section91"><a href="http://www.codeproject.com/KB/web-image/">Charts, Graphs and Images</a></div>
+<div class="MI" id="Section25"><a href="http://www.codeproject.com/KB/scripting/">Client side scripting</a></div>
+<div class="MI" id="Section30"><a href="http://www.codeproject.com/KB/custom-controls/">Custom Controls</a></div>
+<div class="MI" id="Section23"><a href="http://www.codeproject.com/KB/HTML/">HTML / CSS</a></div>
+<div class="MI" id="Section22"><a href="http://www.codeproject.com/KB/IP/">Internet / Network</a></div>
+<div class="MI" id="Section24"><a href="http://www.codeproject.com/KB/ISAPI/">ISAPI</a></div>
+<div class="MI" id="Section33"><a href="http://www.codeproject.com/KB/server-management/">Site &amp; Server Management</a></div>
+<div class="MI" id="Section34"><a href="http://www.codeproject.com/KB/session/">Session State</a></div>
+<div class="MI" id="Section113"><a href="http://www.codeproject.com/KB/silverlight/">Silverlight</a></div>
+<div class="MI" id="Section36"><a href="http://www.codeproject.com/KB/trace/">Trace and Logs</a></div>
+<div class="MI" id="Section31"><a href="http://www.codeproject.com/KB/user-controls/">User Controls</a></div>
+<div class="MI" id="Section37"><a href="http://www.codeproject.com/KB/validation/">Validation</a></div>
+<div class="MI" id="Section35"><a href="http://www.codeproject.com/KB/viewstate/">View State</a></div>
+<div class="MI" id="Section26"><a href="http://www.codeproject.com/KB/WAP/">WAP / WML</a></div>
+<div class="MI" id="Section32"><a href="http://www.codeproject.com/KB/web-security/">Web Security</a></div>
+<div class="MI" id="Section20"><a href="http://www.codeproject.com/KB/webservices/">Web Services</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=9" onclick="return ToggleMenu('Chapter9');">Enterprise Systems</a></div>
+<div class="MenuSectionBlock" id="Chapter9" style="display: none;">
+<div class="MI" id="Section98"><a href="http://www.codeproject.com/KB/MCMS/">Content Management Server</a></div>
+<div class="MI" id="Section99"><a href="http://www.codeproject.com/KB/biztalk/">Microsoft BizTalk Server</a></div>
+<div class="MI" id="Section102"><a href="http://www.codeproject.com/KB/exchange/">Microsoft Exchange</a></div>
+<div class="MI" id="Section90"><a href="http://www.codeproject.com/KB/office/">Office Development</a></div>
+<div class="MI" id="Section101"><a href="http://www.codeproject.com/KB/sharepoint/">SharePoint Server</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=3" onclick="return ToggleMenu('Chapter3');">Multimedia</a></div>
+<div class="MenuSectionBlock" id="Chapter3">
+<div class="MIS" id="Section42"><a href="http://www.codeproject.com/KB/audio-video/">Audio and Video</a></div>
+<div class="MI" id="Section44"><a href="http://www.codeproject.com/KB/directx/">DirectX</a></div>
+<div class="MI" id="Section46"><a href="http://www.codeproject.com/KB/GDI/">GDI</a></div>
+<div class="MI" id="Section47"><a href="http://www.codeproject.com/KB/GDI-plus/">GDI+</a></div>
+<div class="MI" id="Section43"><a href="http://www.codeproject.com/KB/graphics/">General Graphics</a></div>
+<div class="MI" id="Section45"><a href="http://www.codeproject.com/KB/openGL/">OpenGL</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=4" onclick="return ToggleMenu('Chapter4');">Database</a></div>
+<div class="MenuSectionBlock" id="Chapter4" style="display: none;">
+<div class="MI" id="Section66"><a href="http://www.codeproject.com/KB/database/">Database</a></div>
+<div class="MI" id="Section100"><a href="http://www.codeproject.com/KB/reporting-services/">SQL Reporting Services</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=8" onclick="return ToggleMenu('Chapter8');">Platforms, Frameworks &amp; Libraries</a></div>
+<div class="MenuSectionBlock" id="Chapter8" style="display: none;">
+<div class="MI" id="Section83"><a href="http://www.codeproject.com/KB/atl/">ATL</a></div>
+<div class="MI" id="Section117"><a href="http://www.codeproject.com/KB/MFC/">MFC</a></div>
+<div class="MI" id="Section88"><a href="http://www.codeproject.com/KB/stl/">STL</a></div>
+<div class="MI" id="Section84"><a href="http://www.codeproject.com/KB/wtl/">WTL</a></div>
+<div class="MI" id="Section49"><a href="http://www.codeproject.com/KB/COM/">COM / COM+</a></div>
+<div class="MI" id="Section76"><a href="http://www.codeproject.com/KB/dotnet/">.NET Framework</a></div>
+<div class="MI" id="Section92"><a href="http://www.codeproject.com/KB/winsdk/">Win32/64 SDK &amp; OS</a></div>
+<div class="MI" id="Section108"><a href="http://www.codeproject.com/KB/vista/">Vista API</a></div>
+<div class="MI" id="Section110"><a href="http://www.codeproject.com/KB/vista-security/">Vista Security</a></div>
+<div class="MI" id="Section82"><a href="http://www.codeproject.com/KB/cross-platform/">Cross Platform</a></div>
+<div class="MI" id="Section69"><a href="http://www.codeproject.com/KB/game/">Game Development</a></div>
+<div class="MI" id="Section73"><a href="http://www.codeproject.com/KB/mobile/">Mobile Development</a></div>
+<div class="MI" id="Section106"><a href="http://www.codeproject.com/KB/WC/">Windows CardSpace</a></div>
+<div class="MI" id="Section103"><a href="http://www.codeproject.com/KB/WCF/">Windows Communication Foundation</a></div>
+<div class="MI" id="Section104"><a href="http://www.codeproject.com/KB/WPF/">Windows Presentation Foundation</a></div>
+<div class="MI" id="Section105"><a href="http://www.codeproject.com/KB/WF/">Windows Workflow Foundation</a></div>
+<div class="MI" id="Section119"><a href="http://www.codeproject.com/KB/library/">Libraries</a></div>
+<div class="MI" id="Section122"><a href="http://www.codeproject.com/KB/powershell/">Windows Powershell</a></div>
+<div class="MI" id="Section123"><a href="http://www.codeproject.com/KB/linq/">LINQ</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=5" onclick="return ToggleMenu('Chapter5');">Languages</a></div>
+<div class="MenuSectionBlock" id="Chapter5" style="display: none;">
+<div class="MI" id="Section71"><a href="http://www.codeproject.com/KB/cpp/">C / C++ Language</a></div>
+<div class="MI" id="Section72"><a href="http://www.codeproject.com/KB/mcpp/">C++ / CLI</a></div>
+<div class="MI" id="Section93"><a href="http://www.codeproject.com/KB/cs/">C#</a></div>
+<div class="MI" id="Section78"><a href="http://www.codeproject.com/KB/msil/">MSIL</a></div>
+<div class="MI" id="Section86"><a href="http://www.codeproject.com/KB/vbscript/">VBScript</a></div>
+<div class="MI" id="Section87"><a href="http://www.codeproject.com/KB/vb/">VB.NET</a></div>
+<div class="MI" id="Section115"><a href="http://www.codeproject.com/KB/vb-interop/">VB6 Interop</a></div>
+<div class="MI" id="Section77"><a href="http://www.codeproject.com/KB/net-languages/">Other .NET Languages</a></div>
+<div class="MI" id="Section21"><a href="http://www.codeproject.com/KB/XML/">XML</a></div>
+<div class="MI" id="Section96"><a href="http://www.codeproject.com/KB/java/">Java</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=6" onclick="return ToggleMenu('Chapter6');">General Programming</a></div>
+<div class="MenuSectionBlock" id="Chapter6" style="display: none;">
+<div class="MI" id="Section57"><a href="http://www.codeproject.com/KB/recipes/">Algorithms &amp; Recipes</a></div>
+<div class="MI" id="Section64"><a href="http://www.codeproject.com/KB/bugs/">Bugs &amp; Workarounds</a></div>
+<div class="MI" id="Section79"><a href="http://www.codeproject.com/KB/collections/">Collections</a></div>
+<div class="MI" id="Section56"><a href="http://www.codeproject.com/KB/security/">Cryptography &amp; Security</a></div>
+<div class="MI" id="Section50"><a href="http://www.codeproject.com/KB/datetime/">Date and Time</a></div>
+<div class="MI" id="Section52"><a href="http://www.codeproject.com/KB/DLL/">DLLs &amp; Assemblies</a></div>
+<div class="MI" id="Section80"><a href="http://www.codeproject.com/KB/exception/">Exception Handling</a></div>
+<div class="MI" id="Section81"><a href="http://www.codeproject.com/KB/locale/">Localisation</a></div>
+<div class="MI" id="Section53"><a href="http://www.codeproject.com/KB/macros/">Macros and Add-ins</a></div>
+<div class="MI" id="Section54"><a href="http://www.codeproject.com/KB/tips/">Programming Tips</a></div>
+<div class="MI" id="Section55"><a href="http://www.codeproject.com/KB/string/">String handling</a></div>
+<div class="MI" id="Section58"><a href="http://www.codeproject.com/KB/threads/">Threads, Processes &amp; IPC</a></div>
+<div class="MI" id="Section59"><a href="http://www.codeproject.com/KB/winhelp/">WinHelp / HTMLHelp</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=10" onclick="return ToggleMenu('Chapter10');">Graphics / Design</a></div>
+<div class="MenuSectionBlock" id="Chapter10" style="display: none;">
+<div class="MI" id="Section40"><a href="http://www.codeproject.com/KB/expression/">Expression</a></div>
+<div class="MI" id="Section114"><a href="http://www.codeproject.com/KB/usability/">Usability</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=11" onclick="return ToggleMenu('Chapter11');">Development Lifecycle</a></div>
+<div class="MenuSectionBlock" id="Chapter11" style="display: none;">
+<div class="MI" id="Section51"><a href="http://www.codeproject.com/KB/debug/">Debug Tips</a></div>
+<div class="MI" id="Section39"><a href="http://www.codeproject.com/KB/architecture/">Design and Architecture</a></div>
+<div class="MI" id="Section112"><a href="http://www.codeproject.com/KB/install/">Installation</a></div>
+<div class="MI" id="Section41"><a href="http://www.codeproject.com/KB/work/">Work Issues</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=7" onclick="return ToggleMenu('Chapter7');">General Reading</a></div>
+<div class="MenuSectionBlock" id="Chapter7" style="display: none;">
+<div class="MI" id="Section60"><a href="http://www.codeproject.com/KB/books/">Book Chapters</a></div>
+<div class="MI" id="Section61"><a href="http://www.codeproject.com/KB/book-reviews/">Book Reviews</a></div>
+<div class="MI" id="Section109"><a href="http://www.codeproject.com/KB/hardware-review/">Hardware Reviews</a></div>
+<div class="MI" id="Section63"><a href="http://www.codeproject.com/KB/interviews/">Interviews</a></div>
+<div class="MI" id="Section62"><a href="http://www.codeproject.com/KB/scrapbook/">Scrapbook</a></div>
+</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/script/Content/Chapter.aspx?chptId=12" onclick="return ToggleMenu('Chapter12');">Third Party Products</a></div>
+<div class="MenuSectionBlock" id="Chapter12" style="display: none;">
+<div class="MI" id="Section65"><a href="http://www.codeproject.com/KB/showcase/">Product Showcase</a></div>
+<div class="MI" id="Section124"><a href="http://www.codeproject.com/KB/solution-center/">Solution Center</a></div>
+</div>
+</div>
+<br>
+<div class="MenuCat">Feature Zones</div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/Zones/Install">Installshield 2008</a></div>
+<div class="MenuChapter"><a href="http://www.codeproject.com/Zones/IBM">IBM DeveloperWorks</a></div>
+<br>
+
+			
+			<iframe src="TTSinVBpackage.aspx_files/ServeThirdParty_003.htm" scrolling="no" width="160" frameborder="0" height="600"></iframe>		
+			<img src="TTSinVBpackage.aspx_files/t.gif" alt="" width="160" height="1">
+		</td>
+		<td class="ArticlePane" valign="top">
+
+			
+<table class="SearchHeaderBar" cellspacing="0" width="100%">
+<tbody><tr>
+<td style="white-space: nowrap; width: 60%;" align="right" valign="middle">
+<form method="get" action="/info/search.aspx" name="Search" style="margin: 0pt;">
+<b>Search &nbsp;</b>
+<input class="SmallText" name="artkw" style="width: 200px;">
+<select class="SmallText" style="font-weight: bold;" name="sbo">
+<option value="kw">Articles</option>
+<!--<option value="au">Authors</option>-->
+<option value="fm">Messages</option>
+</select>
+<input class="SmallText" style="font-weight: bold;" value=" Go! " type="submit"> &nbsp;
+</form>
+</td>
+
+<td class="TinyText" style="white-space: nowrap;">
+<a href="http://www.codeproject.com/info/search.aspx">Advanced Search</a><br>
+<a href="http://www.codeproject.com/script/Content/SiteMap.aspx">Sitemap</a>
+
+</td>
+</tr>
+</tbody></table>
+
+			<span id="ctl00_ResultMessage"></span>
+			
+			<div id="ctl00_ArtDiv">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">	
+			<tbody><tr valign="top">
+				<td valign="top">
+				    
+<table>
+
+</table>
+
+
+
+					
+<div class="SmallText" style="white-space: nowrap;">
+<img src="TTSinVBpackage.aspx_files/print.gif" alt="print" style="vertical-align: middle;" width="16" height="16">
+<a id="ctl00_ArticleHeaderLinks_PrintLnk" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?display=Print">Print</a> &nbsp;
+
+<img src="TTSinVBpackage.aspx_files/report.gif" alt="Broken Article?" style="vertical-align: middle;" width="16" height="16">
+<a id="ctl00_ArticleHeaderLinks_BrokenLnk" href="http://www.codeproject.com/script/Articles/Report.aspx?aid=15426">Report Article</a> &nbsp;
+
+ &nbsp;
+
+<img src="TTSinVBpackage.aspx_files/discuss.gif" alt="Discuss" style="vertical-align: middle;" width="15" height="16">
+<a href="#_comments">Discuss</a> &nbsp;
+
+<img src="TTSinVBpackage.aspx_files/mail.gif" alt="Recommend Article" style="vertical-align: middle;" width="16" height="16">
+<a id="ctl00_ArticleHeaderLinks_Recommend" href="http://www.codeproject.com/script/common/TellFriend.aspx?obtid=2&amp;obid=15426">Send to a friend</a>	
+</div>
+				</td>
+				<td style="width: 1px;" align="right">
+					            
+<table><tbody><tr>
+<td style="white-space: nowrap;" class="SmallText" align="right"> 
+<span id="ctl00_ArticleRating_VoteLabel">5 votes for this Article.</span></td>
+<td><table border="1" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td bgcolor="White" width="20" height="7"><img src="TTSinVBpackage.aspx_files/red.gif" align="center" border="0" width="20" height="7"></td>
+				<td bgcolor="White" width="20" height="7"><img src="TTSinVBpackage.aspx_files/red.gif" align="center" border="0" width="20" height="7"></td>
+				<td bgcolor="White" width="20" height="7"><img src="TTSinVBpackage.aspx_files/red.gif" align="center" border="0" width="20" height="7"></td>
+				<td bgcolor="White" width="20" height="7" nowrap="nowrap"><img src="TTSinVBpackage.aspx_files/red.gif" align="center" border="0" width="9" height="7"></td>
+				<td bgcolor="White" width="20" height="7"><img src="TTSinVBpackage.aspx_files/white.gif" align="center" border="0" width="20" height="7"></td>
+			</tr>
+		</tbody></table>
+		</td>
+</tr>
+<tr id="ctl00_ArticleRating_PopularityRow">
+			<td colspan="2" class="SmallText" align="right">
+<a id="ctl00_ArticleRating_PopularityLnk" title="Calculated as rating x Log10(# votes)" href="http://www.codeproject.com/script/Articles/TopArticles.aspx?ta_so=1">Popularity: 2.41</a>
+<span id="ctl00_ArticleRating_PopularityLbl"></span>Rating: <b>3.45</b> out of 5</td>
+		</tr>
+		
+</tbody></table>
+
+
+
+</td>
+				<td style="width: 1px;" align="right">            
+<div>
+<table class="HistTable" title="Voting Distribution. Recent data only"><tbody><tr><td><img src="TTSinVBpackage.aspx_files/t.htm" alt="0 votes, 0.0%" border="0" width="10" height="1"><br>1</td>
+<td><img src="TTSinVBpackage.aspx_files/pollcol.gif" alt="1 vote, 50.0%" border="0" width="10" height="10"><br>2</td>
+<td><img src="TTSinVBpackage.aspx_files/t.htm" alt="0 votes, 0.0%" border="0" width="10" height="1"><br>3</td>
+<td><img src="TTSinVBpackage.aspx_files/pollcol.gif" alt="2 votes, 100.0%" border="0" width="10" height="20"><br>4</td>
+<td><img src="TTSinVBpackage.aspx_files/pollcol.gif" alt="2 votes, 100.0%" border="0" width="10" height="20"><br>5</td>
+</tr></tbody></table>
+</div>
+
+
+
+
+				</td>
+			</tr>
+			</tbody></table>
+			
+			
+			
+			
+						
+			
+			
+			
+			
+			
+			
+			
+			
+			<span id="intelliTXT">
+			<div id="contentdiv">
+			
+			<!-- Main Page Contents Start -->
+			
+
+<!-- Article Starts -->
+
+<ul class="download">
+<li><a href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage/TTS_Reader.zip">Download source project - 249 Kb</a> </li></ul>
+<h2>Introduction</h2>
+<p>This article describes an application used to exercise some of the
+Text To Speech features available to .NET developers through the
+Microsoft Speech 5.1 SDK. This article does not address the newer
+speech server related libraries, nor does it address web based
+deployments of speech related technologies.</p>
+<p>The application performs several functions although all work in
+basically the same manner. The application is intended to provide an
+introduction to working with the TTS library, by illustrating how to go
+about gaining access to and manipulating voices, and playing text out
+as synthesized voice. The application provides examples of generating
+speech as you type, passing canned phrases to TTS, and passing entire
+text files to TTS.</p>
+<h2>Getting Started</h2>
+<p>In order to get started, unzip the included project and open the
+solution in the Visual Studio 2005 environment. You will note that the
+project contains a file cleverly named “<i>Form1.vb</i>”. This form contains all of the code necessary to get a start with programming TTS.</p>
+<p>To begin, you may not have the necessary references on your machine
+as the application requires the installation of Microsoft’s Speech 5.1
+SDK and the Microsoft sample TTS engine library. These may be
+downloaded with the SDK at no cost, from this URL:</p>
+<ul>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=5E86EC97-40A7-453F-B0EE-6583171B4530&amp;displaylang=en" target="_blank">Speech 5.1 SDK</a> </li></ul>
+<p>You may also obtain a couple of additional voices (the SDK includes
+Microsoft Mary, Microsoft Mike, and Microsoft Sam) by downloading the
+Microsoft Reader and additional TTS components found <a href="http://www.microsoft.com/reader/downloads/default.asp" target="_blank">here</a> (not required, but you will gain two additional voices if you do add these to your system).</p>
+<p>You do not need to activate the reader for this to work, however,
+you can’t install the additional voices unless you have the reader
+installed.</p>
+<p>If you have any other voices on your system, they may also be
+exposed to the application. For example, my Toshiba laptop has an
+additional voice called “TOSHIBA male adult (U.S.)” and this voice also
+appears as available to this application at runtime.</p>
+<p>If you need to update the project references, do so prior to
+attempting to run the application. Once you have installed the Speech
+SDK, go back to the project and run a build. If the references are
+absent, remove these (highlighted) references: (Figure 1)</p>
+<p><img src="TTSinVBpackage.aspx_files/1.jpg" width="443" height="469"></p>
+<p><b>Figure 1</b>: Speech Related Project References</p>
+<p>After removing the old references, right click on the project and
+select “Add Reference”. Once the dialog opens, select the COM tab (then
+go get a cup of coffee while it takes forever to load, and when you get
+back), look for and add these two references (figures 2 and 3) (Note:
+you really don’t need the second reference to the sample TTS engine):</p>
+<p><img src="TTSinVBpackage.aspx_files/2.jpg" width="467" height="383"></p>
+<p><b>Figure 2</b>: Add the Microsoft Speech Object Library Reference</p>
+<p><img src="TTSinVBpackage.aspx_files/3.jpg" width="467" height="383"></p>
+<p>Figure 3: Add the Sample TTS Engine Type Library Reference</p>
+<p>Having added these references, go ahead and do a build to see if
+anything else is missing. If anything turns up, add the missing project
+references in the same manner and build again. Once you have a good
+build, go ahead and run the application. On application start, you will
+see this form appear:</p>
+<p><img src="TTSinVBpackage.aspx_files/4.jpg" width="600" height="516"></p>
+<p><b>Figure 4</b>: The Main Form of the TTS Reader Application</p>
+<p>Looking at the form, note that it has five control groups:
+“Configuration”, “Speak As You type”, “Speak Specific Phrases”, “Speak
+On Enter”, and “Load a Text File and Read It”.</p>
+<h2>Configuration</h2>
+<p>This control group contains two controls, the speaker combo box and
+the speech rate track bar control. The speaker combo box is populated
+with the names of each of the TTS speaker voices; you may change the
+current speaker by selecting a different option form this combo box.</p>
+<p>The rate track bar control will speed up or reduce the cadence of
+the synthesized speech. It is set to contain five positions, and
+whenever its value is changed, the rate of speech will be altered to
+execute at the newly set rate.</p>
+<h2>Speak As You Type</h2>
+<p>This control group contains a single text box which has been
+configured such that, whenever the user hits the space bar, the speaker
+will read the contents of the text box and, once finished reading, it
+will clear the text box. The intent here is to see if you could type as
+you go and speak through TTS. It seemed like a nice idea, and it seems
+like it would be worthwhile for someone lacking the capacity for speech
+to use a function like this to speak by typing. In reality, the action
+is a little choppy, and the speech rendered is not too terrific. With
+the application running, you may key in a word and listen to the
+results for yourself. If you type slow enough, it is adequate, but it
+is not quite quick enough to use as a form of conversation.</p>
+<h2>Speak Specific Phrases</h2>
+<p>This control group contains a single combo box; whenever a new value
+is selected from the box, it will immediately be read by the speaker.</p>
+<h2>Speak On Enter</h2>
+<p>This appears to be a far more viable way to conduct a conversation
+using TTS as a voice medium. This control works in a manner very
+similar to the “Speak As You Type” option; however, it reads and clears
+the text box only after the user hits the “Enter” key. You may try
+typing in a sentence and then hitting the Enter key to get a feel for
+how that works.</p>
+<h2>Load a Text File and Read It</h2>
+<p>This control group contains a single multi-line text box control,
+and three buttons: “Open File”, “Stop”, and “Read File”. Click on the
+“Open File” button and use the open file dialog box to navigate to any
+text file. The text file will load into the text box, and with a file
+loaded, you may click on the “Read File” button to have the speaker
+read the contents of the text box end to end. TTS does a fair job of
+this; however, I will point out that punctuation and abbreviations do
+not work out too well for the 5.1 SDK.</p>
+<p>You may also key text into the text box and evoke the “Read File” function to read the contents of the text box.</p>
+<h2>The Code</h2>
+<p>The code is pretty straightforward and easy to follow. The class definition begins as follows:</p><div class="SmallText" id="premain0" style="width: 100%; cursor: pointer;"><img preid="0" src="TTSinVBpackage.aspx_files/minus.gif" id="preimg0" width="9" height="9"><span preid="0" style="margin-bottom: 0pt;" id="precollapse0"> Collapse</span></div><div style="margin-top: 0pt;" id="pre0" class="no-vmads"><pre lang="vbnet"><span class="code-keyword">Imports</span> SpeechLib
+<span class="code-keyword">Imports</span> System.Environment
+<span class="code-keyword">Imports</span> System.DateTime
+
+<span class="code-keyword">Public</span> <span class="code-keyword">Class</span> Form1
+
+<span class="code-preprocessor">#Region</span> <span class="code-string">"</span><span class="code-string">Declarations"</span>
+
+    <span class="code-keyword">Public</span> <span class="code-keyword">WithEvents</span> vox <span class="code-keyword">As</span> <span class="code-keyword">New</span> SpVoice
+    <span class="code-keyword">Public</span> RateOfSpeech <span class="code-keyword">As</span> <span class="code-keyword">Integer</span> = <span class="code-digit">3</span>
+
+<span class="code-preprocessor">#End</span> Region
+
+
+    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> Form1_Load(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> System.Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.EventArgs) <span class="code-keyword">Handles</span> <span class="code-keyword">MyBase</span>.Load
+
+        <span class="code-comment">'</span><span class="code-comment"> Load the voices combo box
+</span>
+        <span class="code-keyword">Dim</span> Token <span class="code-keyword">As</span> ISpeechObjectToken
+        <span class="code-keyword">For</span> <span class="code-keyword">Each</span> Token <span class="code-keyword">In</span> vox.GetVoices
+            cboVoxOptions.Items.Add(Token.GetDescription())
+        <span class="code-keyword">Next</span>
+        cboVoxOptions.SelectedIndex = <span class="code-digit">0</span>
+
+        <span class="code-keyword">Dim</span> str <span class="code-keyword">As</span> <span class="code-keyword">String</span> = Environment.UserName.ToString()
+        SayGreeting(str)
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>As you can see, the imports section includes the speech library. A <code>Declaration</code> region was next defined, and two variables were declared within that region. The first creates an instance of an <code>SpVoice</code>, and note that the declaration is made with events. The other variable, <code>RateOfSpeech</code>, is used to keep track of the current rate of speech selected using the Rate of Speech track bar control.</p>
+<p>In form load, we begin by collecting all of the current voices and
+adding them to the combo box used to select a speaker. The current
+index is set to zero such that, when the form loads, a current speaker
+will be defined.</p>
+<p>The last two lines of the form load subroutine are used to capture
+the user’s name (however, it may be defined on the target machine) and
+to pass the name to the Say Greeting subroutine. The “Say Greeting”
+subroutine is used to present a welcome message to the user through
+TTS. The “Say Greeting” subroutine is written as follows:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Public</span> <span class="code-keyword">Sub</span> SayGreeting(<span class="code-keyword">ByVal</span> strUser <span class="code-keyword">As</span> <span class="code-keyword">String</span>)
+
+        <span class="code-comment">'</span><span class="code-comment"> Now say something
+</span>
+        vox.Voice = vox.GetVoices().Item(cboVoxOptions.SelectedIndex)
+
+        <span class="code-keyword">Dim</span> dt <span class="code-keyword">As</span> DateTime
+        dt = Now
+
+        <span class="code-comment">'</span><span class="code-comment"> clear your throat
+</span>
+        vox.Rate = RateOfSpeech
+        vox.Speak(<span class="code-string">"</span><span class="code-string">"</span>.ToString, SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak)
+
+        <span class="code-keyword">Try</span>
+            vox.Speak(<span class="code-string">"</span><span class="code-string">Greetings "</span> &amp; strUser &amp; <span class="code-string">"</span><span class="code-string"> from Text To Speech"</span>, _
+            SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak)
+            vox.Speak(<span class="code-string">"</span><span class="code-string">Today's Date is "</span> &amp; dt.ToShortDateString, _ 
+            SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak)
+            vox.Speak(<span class="code-string">"</span><span class="code-string">The time is "</span> &amp; dt.ToShortTimeString, _ 
+            SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak)
+        <span class="code-keyword">Catch</span> ex <span class="code-keyword">As</span> Exception
+            MsgBox(ex.ToString, MsgBoxStyle.Exclamation, <span class="code-string">"</span><span class="code-string">I'm Speechless"</span>)
+        <span class="code-keyword">End</span> <span class="code-keyword">Try</span>
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>As you can see, the subroutine formats a message containing the
+passed in username as well as the date and time, and then reads that
+message aloud using the current speaker voice. Note the use of the <code>SVSFPurgeBeforeSpeak</code> flag; it is there to ensure that the speaker will finish the last statement before progressing on to the next one.</p>
+<p>Next up is the track bar control’s handler, it is written as follows:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> tbarRateOfSpeech_Scroll(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> System.Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.EventArgs) <span class="code-keyword">Handles</span> tbarRateOfSpeech.Scroll
+
+        <span class="code-keyword">Me</span>.RateOfSpeech = tbarRateOfSpeech.Value
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>This function merely sets the rate of speech variable to contain the
+current track bar value. The variable is used to set the rate property
+for the speaker whenever the speaker is passed text to read.</p>
+<p>Following the track bar control handler, you will see the following code:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> TextBox1_KeyPress(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.Windows.Forms.KeyPressEventArgs) _
+            <span class="code-keyword">Handles</span> TextBox1.KeyPress
+
+        vox.Rate = RateOfSpeech
+
+        <span class="code-comment">'</span><span class="code-comment"> this will try to speak each word as you type, it does not keep up        
+</span>
+        <span class="code-comment">'</span><span class="code-comment"> all that well
+</span>
+        <span class="code-keyword">If</span> e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Space) <span class="code-keyword">Or</span> _
+           e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) <span class="code-keyword">Then</span>
+            vox.Speak(TextBox1.Text, SpeechVoiceSpeakFlags.SVSFDefault)
+            TextBox1.Text = <span class="code-string">"</span><span class="code-string">"</span>
+        <span class="code-keyword">End</span> <span class="code-keyword">If</span>
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>This bit of code is used to drive the Speak As You Type function. Here the rate of speech is set to the current <code>RateOfSpeech</code>
+variable’s value, and the text box is set to look for a space key hit;
+whenever a space is entered, the code will pass the contents of the
+text box to the speaker, the speaker will read the text, and then the
+text box will be cleared and made ready for the next word to be typed.</p>
+<p>The next bit of code will drive the Speak On Enter function; the
+code is identical to that used in the Speak As You Type function, but
+rather than reading out the contents of the text box on space, the
+contents will be read out whenever the user hits the Enter key. That
+code looks like this:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> TextBox2_KeyPress(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.Windows.Forms.KeyPressEventArgs) _
+            <span class="code-keyword">Handles</span> TextBox2.KeyPress
+
+        vox.Rate = RateOfSpeech
+
+        <span class="code-comment">'</span><span class="code-comment"> this will try to speak the contents of the textbox on Enter
+</span>
+        <span class="code-keyword">If</span> e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) <span class="code-keyword">Then</span>
+            vox.Speak(TextBox2.Text, SpeechVoiceSpeakFlags.SVSFDefault)
+            TextBox2.Text = <span class="code-string">"</span><span class="code-string">"</span>
+        <span class="code-keyword">End</span> <span class="code-keyword">If</span>
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>The last pieces of code to look at manage the function used to read
+from a text file. The first item is used to open a file open dialog and
+read a text file into the control group’s text box. That code looks
+like this:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> btnOpenFile_Click(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> System.Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.EventArgs) <span class="code-keyword">Handles</span> btnOpenFile.Click
+
+        vox.Rate = RateOfSpeech
+
+        <span class="code-keyword">If</span> OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK <span class="code-keyword">Then</span>
+
+            <span class="code-keyword">Dim</span> sr <span class="code-keyword">As</span> <span class="code-keyword">New</span> System.IO.StreamReader(OpenFileDialog1.FileName)
+            <span class="code-keyword">Me</span>.txtReadFile.Text = sr.ReadToEnd.ToString()
+            sr.Close()
+
+        <span class="code-keyword">End</span> <span class="code-keyword">If</span>
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>The next bit is used to read the file, it looks like this:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> btnReadFile_Click(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> System.Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.EventArgs) <span class="code-keyword">Handles</span> btnReadFile.Click
+
+        vox.Rate = RateOfSpeech
+
+        vox.Speak(txtReadFile.Text.ToString(), _ 
+        SpeechVoiceSpeakFlags.SVSFlagsAsync)
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>You will note that the function is basically the same as that used
+to read from one of the other form text boxes (note that the speak flag
+is set to the asynchronous mode). The next item to look at is used to
+stop the speaker from continuing to read from the text; that code looks
+like this:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> btnStop_Click(<span class="code-keyword">ByVal</span> sender <span class="code-keyword">As</span> System.Object, _
+            <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.EventArgs) <span class="code-keyword">Handles</span> btnStop.Click
+
+        vox.Speak(<span class="code-string">"</span><span class="code-string">"</span>, SpeechVoiceSpeakFlags.SVSFPurgeBeforeSpeak)
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<p>This subroutine passes an empty string to the speaker, and in so doing stops the speaker from continuing.</p>
+<p>The last bit of code in the application is used to change the
+speaker’s voice to one selected from the speaker combo box, that code
+looks like this:</p><div class="no-vmads"><pre lang="vbnet">    <span class="code-keyword">Private</span> <span class="code-keyword">Sub</span> cboVoxOptions_SelectedIndexChanged(<span class="code-keyword">ByVal</span> sender _
+            <span class="code-keyword">As</span> System.Object, <span class="code-keyword">ByVal</span> e <span class="code-keyword">As</span> System.EventArgs) _
+            <span class="code-keyword">Handles</span> cboVoxOptions.SelectedIndexChanged
+
+        vox.Voice = vox.GetVoices().Item(cboVoxOptions.SelectedIndex)
+
+    <span class="code-keyword">End</span> <span class="code-keyword">Sub</span></pre></div>
+<h2>Summary</h2>
+<p>This article and code sample was intended to provide a very easy
+introduction into TTS based speech synthesis; there are a great many
+more things that you can do with the speech SDK than have been
+addressed in this document. A review of the contents of the speech SDK
+will provide greater details on the use of the speech libraries.</p>
+
+
+
+<!-- Article Ends -->
+
+
+			<!-- Main Page Contents End -->
+			
+			</div>
+			</span>
+			
+			<form name="aspnetForm" method="post" action="TTSinVBpackage.aspx" id="aspnetForm" style="margin: 0pt; padding: 0pt;">
+		<div>
+		<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwMDUyNjYzMjhkZEazqJyfViaD74lU0Qi5DRnEB7ti" type="hidden">
+		</div>
+		
+
+			
+			<h2>License</h2>
+			<div id="ctl00_LicenseTerms"><p>This
+article has no explicit license attached to it but may contain usage
+terms in the article text or the download files themselves. If in doubt
+please contact the author via the discussion board below.</p><p>A list of licenses authors might use can be found <a href="http://www.codeproject.com/info/Licenses.aspx">here</a></p></div>
+			
+			<h2>About the Author</h2>
+			
+					
+            
+<table border="0" cellpadding="0" cellspacing="5" width="100%">
+<tbody><tr valign="top">
+<td id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberPhotoTable" style="width: 155px;" valign="top">
+	<b><a id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberProfileLink" href="http://www.codeproject.com/script/Membership/Profiles.aspx?mid=1774085">salysle</a></b><br><br>
+	<center></center><br>
+	<span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberType" class="SmallText"></span>
+		
+</td>
+		
+<td>
+	<br>	
+
+	<table>
+	<tbody><tr id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_jobTitleRow">
+			<td class="SmallText" nowrap="nowrap">Occupation: </td>
+			<td width="100%"><span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberJobTitle" class="SmallText">Software Developer (Senior)</span></td>
+		</tr>
+		
+
+	
+
+	<tr id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_locationRow">
+			<td class="SmallText">Location: </td>
+			<td width="100%"><span id="ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberLocation" class="SmallText"><img src="TTSinVBpackage.aspx_files/US.gif" alt="United States" width="16" height="11"> United States</span></td>
+		</tr>
+		
+	</tbody></table>
+	
+</td>
+</tr>
+</tbody></table>
+
+					<br>
+				
+			
+			<table id="ctl00_PopularArticlesRow" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr valign="top">
+				<td style="width: 100%;">
+					<h2>Other popular Audio and Video articles:</h2><ul><li><a href="http://www.codeproject.com/KB/audio-video/Motion_Detection.aspx">Motion Detection Algorithms</a><div class="SmallText">Some approaches to detect motion in a video stream.</div></li><li><a href="http://www.codeproject.com/KB/audio-video/cameraviewer.aspx">Camera Vision - video surveillance on C#</a><div class="SmallText">A C# video surveillance application, which allows monitoring several IP cameras simultaneously.</div></li><li><a href="http://www.codeproject.com/KB/audio-video/face_detection.aspx">Face Detection C++ Library with Skin and Motion Analysis</a><div class="SmallText">The
+article demonstrates face detection SSE optimized C++ library for color
+and gray scale data with skin detection, motion estimation for faster
+processing, small sized SVM and NN rough face prefiltering,
+PCA/LDA/ICA/any dimensionality reduction/projection and final NN
+classification</div></li><li><a href="http://www.codeproject.com/KB/audio-video/avifilewrapper.aspx">A Simple C# Wrapper for the AviFile Library</a><div class="SmallText">Edit AVI files in .NET.</div></li><li><a href="http://www.codeproject.com/KB/audio-video/avicapwrp.aspx">CAviCap and CFrameGrabber - wrappers for AVICap Window</a><div class="SmallText">AVICap wrappers to ease real-time video processing and single frame capture</div></li></ul>
+					<h2></h2>				
+				</td>
+				<td>
+					<iframe src="TTSinVBpackage.aspx_files/ServeThirdParty_004.htm" scrolling="no" width="300" frameborder="0" height="250"></iframe>
+				</td>
+			</tr>
+		</tbody></table>
+		
+		
+			<div id="ctl00_AddTo_AddTo" style="margin: 10px;">
+<script language="JavaScript" type="text/javascript">
+var addtoMethod=1;
+var AddURL = document.location.href;
+var AddTitle = escape(document.title);
+DrawLinks(100, 0, "SmallText Bold", "AddTo") 
+</script><span class="SmallText Bold">Add this article to: </span> <a class="AddTo" title="Add this page to Digg" onclick="return addto(0);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Digg.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Del.icio.us" onclick="return addto(1);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Delicious.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Google" onclick="return addto(2);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Google.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Windows Live" onclick="return addto(3);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Live.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Yahoo! MyWeb" onclick="return addto(4);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Yahoo.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Technorati" onclick="return addto(5);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Technorati.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Blink" onclick="return addto(6);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Blink.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Furl" onclick="return addto(7);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Furl.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Simpy" onclick="return addto(8);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Simpy.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Reddit" onclick="return addto(9);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Reddit.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Newsvine" onclick="return addto(10);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_Newsvine.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Stumbleupon" onclick="return addto(11);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_stumbleupon.png" align="absmiddle" border="0" width="16" height="16"></a>  <a class="AddTo" title="Add this page to Mr. Wong" onclick="return addto(12);" href="#"><img src="TTSinVBpackage.aspx_files/AddTo_MrWong.png" align="absmiddle" border="0" width="16" height="16"></a>  
+</div>
+			
+			<table id="ctl00_RateArticleRow" class="RatingBar" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody><tr>
+				<td><a href="#_top">Article Top</a></td>
+				<td align="right">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+	<td style="white-space: nowrap;" class="SmallText" align="right">
+	  <table>
+		<tbody><tr>
+			
+			<td id="ctl00_RateArticle_SignIn"><a href="#SignUp">Sign Up</a> to vote for this article</td>
+				
+		    
+			
+				
+			
+			<td><span id="ctl00_RateArticle_ErrorMessage"></span></td>
+		</tr>
+	  </tbody></table>			
+	</td>
+</tr>
+</tbody></table>
+
+
+</td>
+			</tr>
+		</tbody></table>
+		
+			</form>
+			
+			<div style="padding: 10px; overflow: hidden; text-align: center; white-space: nowrap;">
+				<iframe src="TTSinVBpackage.aspx_files/ServeThirdParty_005.htm" scrolling="no" width="468" frameborder="0" height="60"></iframe>
+									  
+			</div>
+
+			<a name="_comments"></a><!-- Forum Start -->
+<div id="_MessageBoard" onclick="return SwitchMessage(event, null)">
+	<table id="ForumTable" class="Frm_MainTable" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="Frm_MsgAlert"><b>You must <a href="http://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fKB%2faudio-video%2fTTSinVBpackage.aspx%3ffid%3d337118%26df%3d90%26mpp%3d25%26noise%3d3%26sort%3dPosition%26view%3dQuick">Sign In</a> to use this message board.</b></td>
+		</tr><tr>
+			<td><form action="/script/Forums/SetOptions.aspx?floc=%2fKB%2faudio-video%2fTTSinVBpackage.aspx&amp;fid=337118&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick" method="get">
+				<input name="fid" value="337118" type="hidden"><input name="currentQS" value="?floc=%2fKB%2faudio-video%2fTTSinVBpackage.aspx&amp;fid=337118&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick" type="hidden"><input name="floc" value="/KB/audio-video/TTSinVBpackage.aspx" type="hidden"><table border="0" cellpadding="3" cellspacing="0" width="100%">
+					<tbody><tr class="Frm_HeaderRow1">
+						<td style="white-space: nowrap;"><img src="TTSinVBpackage.aspx_files/forum_faq.gif" alt="FAQ" align="middle" border="0" width="16" height="16">&nbsp;<a href="http://www.codeproject.com/script/Forums/FAQ.aspx"><b>FAQ</b></a>&nbsp;</td><td style="white-space: nowrap; text-align: right;">Noise Tolerance<select size="1" class="Frm_DropDown" name="noise">
+							<option value="1">Very High</option><option value="2">High</option><option selected="selected" value="3">Medium</option><option value="4">Low</option><option value="5">Very Low</option>
+						</select></td><td colspan="2" style="white-space: nowrap; text-align: right;"><img src="TTSinVBpackage.aspx_files/forum_search.gif" alt="Search" align="top" border="0" width="16" height="15">&nbsp;<a href="http://www.codeproject.com/script/Forums/Search.aspx?fid=337118">Search comments</a>&nbsp;</td><td style="text-align: right;"><input value="Set Options" name="submit" class="Frm_Button" type="submit"></td>
+					</tr><tr class="Frm_HeaderRow2">
+						<td style="width: 100%;">&nbsp;</td><td style="white-space: nowrap; text-align: right;">Layout<select size="1" class="Frm_DropDown" name="view">
+							<option selected="selected" value="Quick">Normal</option><option value="Topic">Expand Root Messages</option><option value="Expanded">Expand All Messages</option><option value="Thread">Thread View</option><option value="Normal">No Javascript (slow)</option><option value="Preview">No Javascript Preview</option>
+						</select>&nbsp;&nbsp;</td><td style="white-space: nowrap;">Per page<select size="1" class="Frm_DropDown" name="mpp">
+							<option value="10">10</option><option selected="selected" value="25">25</option><option value="50">50</option>
+						</select>&nbsp;&nbsp;</td><td colspan="2">&nbsp;</td>
+					</tr>
+				</tbody></table>
+			</form></td>
+		</tr><tr>
+			<td><a name="xx0xx"></a><table border="0" cellpadding="2" cellspacing="0" width="100%">
+				<tbody><tr class="Frm_NavigationBar">
+					<td>&nbsp;</td><td>Msgs 1 to 3 of 3 (Total in Forum: 3) (<a href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick">Refresh</a>)</td><td style="text-align: right; white-space: nowrap;"><span class="Frm_HL">First</span><span class="Frm_HL">Prev</span><span class="Frm_HL">Next</span></td>
+				</tr>
+			</tbody></table></td>
+		</tr><tr>
+			<td>
+
+<!-- Column Headers -->
+
+			<table class="Frm_MsgTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody><tr class="Frm_ColumnHeaders">
+					<td style="width: 100%;"><table border="0" cellpadding="2" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td>Subject&nbsp;</td><td class="Frm_MsgAuthor">&nbsp;Author&nbsp;</td><td class="Frm_MsgDate">Date&nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr>
+					<td><img src="TTSinVBpackage.aspx_files/t_002.gif" alt="" border="0" width="1" height="5"></td>
+				</tr>
+<!-- Start Message head -->
+
+				<tr class="MsgHd LoVote Rt HdUnSel" id="F1837296_h0">
+					<td width="100%"><table class="QuickHd" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td class="Frm_MsgIndent" width="16"><a name="xx1837296xx"></a><img src="TTSinVBpackage.aspx_files/msg_general.gif" alt="General" align="top" width="16" height="16"></td><td class="Frm_MsgSubject"><a id="DynMessLink" name="1837296" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick&amp;select=1837296#xx1837296xx">How to run on Mobile Windows?</a></td><td style="width: 20px; white-space: nowrap;"><img src="TTSinVBpackage.aspx_files/member_sm.gif" alt="member" border="0" height="16"></td><td class="Frm_MsgAuthor"><a href="http://www.codeproject.com/script/Membership/Profiles.aspx?mid=1025741">Kirill Yatsenko</a></td><td class="Frm_MsgDate" style="vertical-align: top; white-space: nowrap;">1:06 10 Jan '07 &nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><!-- End Message head -->
+
+				<tr id="F1837296_h1" style="display: none;">
+					<td style="width: 100%;"><table class="QuickBd" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td class="Frm_MsgIndent" style="width: 16px;"></td><td class="MsgBd BdSel"><table border="0" cellpadding="0" cellspacing="5" width="100%">
+								<tbody><tr>
+									<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody><tr>
+											<td colspan="2">Have you tried to run the application on Windows Mobile? Succeeded? <br><br><div class="ForumSig">/LOOM<br>www.kirillyatsenko.com</div><br></td>
+										</tr><tr style="vertical-align: top;">
+											<td class="Frm_MsgFt"><a class="Frm_MHL" href="http://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fKB%2faudio-video%2fTTSinVBpackage.aspx">Sign In</a>·<a class="Frm_MHL" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;sort=Position&amp;tid=1837296" title="View Thread">View Thread</a>·<a class="Frm_MHL" href="http://www.codeproject.com/script/Forums/View.aspx?fid=337118&amp;msg=1837296" title="Get permanent link">PermaLink</a></td><td class="Frm_MsgFt" style="text-align: right;"><span id="MVF1837296" style="white-space: nowrap;">2.00/5 (1 vote) </span></td>
+										</tr>
+									</tbody></table></td>
+								</tr>
+							</tbody></table></td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="Quick">
+					<td class="Frm_MsgRtDivide"><img src="TTSinVBpackage.aspx_files/t_002.gif" alt="" border="0" width="1" height="1"></td>
+				</tr>
+<!-- Start Message head -->
+
+				<tr class="MsgHd LoVote Rt HdUnSel" id="F1657664_h0">
+					<td width="100%"><table class="QuickHd" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td class="Frm_MsgIndent" width="16"><a name="xx1657664xx"></a><img src="TTSinVBpackage.aspx_files/msg_question.gif" alt="Question" align="top" width="16" height="16"></td><td class="Frm_MsgSubject"><a id="DynMessLink" name="1657664" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick&amp;select=1657664#xx1657664xx">Where can I find other voices</a></td><td style="width: 20px; white-space: nowrap;"><img src="TTSinVBpackage.aspx_files/member_sm.gif" alt="member" border="0" height="16"></td><td class="Frm_MsgAuthor"><a href="http://www.codeproject.com/script/Membership/Profiles.aspx?mid=639489">msyoung</a></td><td class="Frm_MsgDate" style="vertical-align: top; white-space: nowrap;">12:36 6 Sep '06 &nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><!-- End Message head -->
+
+				<tr id="F1657664_h1" style="display: none;">
+					<td style="width: 100%;"><table class="QuickBd" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td class="Frm_MsgIndent" style="width: 16px;"></td><td class="MsgBd BdSel"><table border="0" cellpadding="0" cellspacing="5" width="100%">
+								<tbody><tr>
+									<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody><tr>
+											<td colspan="2">Some
+other text-to-voice applications I have heard provide a more realistic
+sounding voice. Is the "computer" voice output from Microsoft TTS a
+result of the sdk limited capabilities, or is it the particular voice
+file(s) being used in this example? <br></td>
+										</tr><tr style="vertical-align: top;">
+											<td class="Frm_MsgFt"><a class="Frm_MHL" href="http://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fKB%2faudio-video%2fTTSinVBpackage.aspx">Sign In</a>·<a class="Frm_MHL" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;sort=Position&amp;tid=1657664" title="View Thread">View Thread</a>·<a class="Frm_MHL" href="http://www.codeproject.com/script/Forums/View.aspx?fid=337118&amp;msg=1657664" title="Get permanent link">PermaLink</a></td><td class="Frm_MsgFt" style="text-align: right;"><span id="MVF1657664" style="white-space: nowrap;">2.75/5 (4 votes) </span></td>
+										</tr>
+									</tbody></table></td>
+								</tr>
+							</tbody></table></td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr class="Quick">
+					<td class="Frm_MsgDivide"><img src="TTSinVBpackage.aspx_files/t_002.gif" alt="" border="0" width="1" height="1"></td>
+				</tr>
+<!-- Start Message head -->
+
+				<tr class="MsgHd LoVote HdUnSel" id="F1657754_h0">
+					<td width="100%"><table class="QuickHd" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td class="Frm_MsgIndent" width="34"><a name="xx1657754xx"></a><img src="TTSinVBpackage.aspx_files/msg_answer.gif" alt="Answer" align="top" width="16" height="16"></td><td class="Frm_MsgSubject"><a id="DynMessLink" name="1657754" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick&amp;select=1657754#xx1657754xx">Re: Where can I find other voices</a></td><td style="width: 20px; white-space: nowrap;"><img src="TTSinVBpackage.aspx_files/member_sm.gif" alt="member" border="0" height="16"></td><td class="Frm_MsgAuthor"><a href="http://www.codeproject.com/script/Membership/Profiles.aspx?mid=1774085">salysle</a></td><td class="Frm_MsgDate" style="vertical-align: top; white-space: nowrap;">14:46 6 Sep '06 &nbsp;</td>
+						</tr>
+					</tbody></table></td>
+				</tr><!-- End Message head -->
+
+				<tr id="F1657754_h1" style="display: none;">
+					<td style="width: 100%;"><table class="QuickBd" border="0" cellpadding="0" cellspacing="0" width="100%">
+						<tbody><tr>
+							<td class="Frm_MsgIndent" style="width: 34px;"></td><td class="MsgBd BdSel"><table border="0" cellpadding="0" cellspacing="5" width="100%">
+								<tbody><tr>
+									<td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<tbody><tr>
+											<td colspan="2">There
+are many voices available and a good number of them sound far better
+than the ones included in the SDK. I would recommend this site as a
+place to begin looking for free ones:<br><br>http://www.bytecool.com/voices.htm<br><br>There are also other voices that may be purchased but I would start here.<br><br>Thanks,<br>Scott Lysle <br></td>
+										</tr><tr style="vertical-align: top;">
+											<td class="Frm_MsgFt"><a class="Frm_MHL" href="http://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fKB%2faudio-video%2fTTSinVBpackage.aspx">Sign In</a>·<a class="Frm_MHL" href="http://www.codeproject.com/KB/audio-video/TTSinVBpackage.aspx?fid=337118&amp;df=90&amp;mpp=25&amp;sort=Position&amp;tid=1657664" title="View Thread">View Thread</a>·<a class="Frm_MHL" href="http://www.codeproject.com/script/Forums/View.aspx?fid=337118&amp;msg=1657754" title="Get permanent link">PermaLink</a></td><td class="Frm_MsgFt" style="text-align: right;"><span id="MVF1657754" style="white-space: nowrap;">2.00/5 (3 votes) </span></td>
+										</tr>
+									</tbody></table></td>
+								</tr>
+							</tbody></table></td>
+						</tr>
+					</tbody></table></td>
+				</tr><tr>
+					<td><img src="TTSinVBpackage.aspx_files/t_002.gif" alt="" border="0" width="1" height="5"></td>
+				</tr>
+			</tbody></table></td>
+		</tr><tr>
+			<td><table cellpadding="2" cellspacing="0" width="100%">
+				<tbody><tr class="Frm_Footer">
+					<td>Last Visit: Thursday, April 17, 2008 6:17 AM &nbsp; &nbsp; Last Update:Thursday, April 17, 2008 6:17 AM</td><td style="text-align: right; white-space: nowrap;"></td>
+				</tr>
+			</tbody></table></td>
+		</tr>
+	</tbody></table>
+</div><p class="SmallText"><img src="TTSinVBpackage.aspx_files/msg_general.gif" alt="General" align="top" width="16" height="16"> General &nbsp;&nbsp; <img src="TTSinVBpackage.aspx_files/msg_news.gif" alt="News" align="top" width="16" height="16"> News &nbsp;&nbsp; <img src="TTSinVBpackage.aspx_files/msg_question.gif" alt="Question" align="top" width="16" height="16"> Question &nbsp;&nbsp; <img src="TTSinVBpackage.aspx_files/msg_answer.gif" alt="Answer" align="top" width="16" height="16"> Answer &nbsp;&nbsp; <img src="TTSinVBpackage.aspx_files/msg_joke.gif" alt="Joke" align="top" width="16" height="16"> Joke &nbsp;&nbsp; <img src="TTSinVBpackage.aspx_files/msg_rant.gif" alt="Rant" align="top" width="16" height="16"> Rant &nbsp;&nbsp; <img src="TTSinVBpackage.aspx_files/msg_admin.gif" alt="Admin" align="top" width="16" height="16"> Admin &nbsp;&nbsp; </p>
+<!-- Forum End -->
+
+
+
+
+			
+			</div>
+			<table width="100%">
+			<tbody><tr valign="top">
+				<td class="TinyText" align="left">
+				    <a id="ctl00_PermaLink" href="http://www.codeproject.com/script/Articles/Article.aspx?aid=15426">PermaLink</a> | 
+					<a id="ctl00_PrivacyLink" href="http://www.codeproject.com/info/privacy.aspx"> 
+						Privacy </a> |
+					<a id="ctl00_TermsOfUseLink" href="http://www.codeproject.com/info/TermsOfUse.aspx">Terms 
+					of Use</a>
+					<br>Last Updated: 31 Aug 2006<br>
+					Editor: <a id="ctl00_ArticleEditor" href="http://www.codeproject.com/script/Membership/Profiles.aspx?mid=28970">Smitha Vijayan</a><br>
+				</td>
+				<td class="TinyText" align="right" valign="top">
+					Copyright 2006 by salysle<br>Everything else
+					Copyright © <a href="mailto:webmaster@codeproject.com">CodeProject</a>, 1999-2008 <br>
+					Web11 |
+					<a id="ctl00_AdvertiseLink" href="http://www.codeproject.com/info/MediaKit.aspx">Advertise on the Code Project </a>
+				</td>
+			</tr>
+			
+			</tbody></table>		
+		</td>
+</tr>
+<tr>
+	<td colspan="2" align="center">
+		
+
+
+
+		</td>
+</tr>
+</tbody></table>
+
+<br>
+	
+<script type="text/javascript" language="Javascript">//<![CDATA[
+if (document.all) try {window.attachEvent("oncopy",copyCode);}catch(e){};
+//]]></script>
+
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/TogglePre.js"></script>
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/menu132_com.js"></script>
+<script type="text/javascript" language="Javascript" src="TTSinVBpackage.aspx_files/TopNavBar.js"></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+new HVMenu(new menu_NavbarConfig());
+//]]></script>
+
+
+<div style="position: absolute; visibility: visible; z-index: 101; width: 303px; height: 22px; top: 126px; left: 951px;"><div class="NavBarMain" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 40px; height: 16px; padding-left: 5px; padding-top: 2px; left: 7px; top: 2px;">Help!</div><div class="NavBarMain" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 55px; height: 16px; padding-left: 5px; padding-top: 2px; left: 55px; top: 2px;">Articles</div><div class="NavBarMain" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 115px; height: 16px; padding-left: 5px; padding-top: 2px; left: 118px; top: 2px;">Message Boards</div><div class="NavBarMain" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 55px; height: 16px; padding-left: 5px; padding-top: 2px; left: 241px; top: 2px;">Lounge</div></div><div class="NavBarCont" style="position: absolute; visibility: hidden; z-index: 102; width: 198px; height: 104px; top: 0pt; left: 0pt;"><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 5px;">What is 'The Code Project'?</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 24px;">General FAQ</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 43px;">Post a Question</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 62px;">Site Directory</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 183px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 81px;">About Us</div></div><div class="NavBarCont" style="position: absolute; visibility: hidden; z-index: 102; width: 158px; height: 161px; top: 0pt; left: 0pt;"><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 5px;">Latest</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 24px;">Search</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 43px;">Most Popular</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 62px;">Beginner Articles</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 81px;">Topic List</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 100px;">Submit an Article</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 119px;">Update an Article</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 143px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 138px;">Article Competition</div></div><div class="NavBarCont" style="position: absolute; visibility: hidden; z-index: 102; width: 183px; height: 389px; top: 0pt; left: 0pt;"><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 5px;">Visual C++ / MFC</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 24px;">ATL / WTL / STL</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 43px;">COM</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 62px;">Managed C++/CLI</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 81px;">C#</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 100px;">ASP.NET</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 119px;">VB.NET</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 138px;">Web Development</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 157px;">.NET Framework</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 176px;">WPF / WCF / WF</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 195px;">LINQ and .NET 3.5</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 214px;">Silverlight</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 233px;">SQL / ADO / ADO.NET</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 252px;">XML / XSL</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 271px;">OS / SysAdmin</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 290px;">General Discussions</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 309px;">Hardware</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 328px;">Suggestions / Site Bugs</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 347px;">The Soapbox</div><div class="NavBarSub" style="overflow: hidden; position: absolute; visibility: inherit; cursor: pointer; width: 168px; height: 16px; padding-left: 5px; padding-top: 2px; left: 5px; top: 366px;">All Message Boards...</div></div></body></html>

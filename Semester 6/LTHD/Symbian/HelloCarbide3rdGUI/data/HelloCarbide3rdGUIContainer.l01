@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : HelloCarbide3rdGUIContainer.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_HelloCarbide3rdGUIContainerView_1 "HelloCarbide3rdGUIContainer"
+#define STR_HelloCarbide3rdGUIContainerView_2 "Test1"

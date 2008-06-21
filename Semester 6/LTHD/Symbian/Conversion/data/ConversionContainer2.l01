@@ -1,0 +1,10 @@
+/*
+========================================================================
+ Name        : ConversionContainer2.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_ConversionContainer2View_1 "ConversionContainer2"

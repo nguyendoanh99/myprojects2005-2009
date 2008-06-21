@@ -1,0 +1,33 @@
+TARGET  HelloCarbide2ndGUI.app
+TARGETTYPE  app
+TARGETPATH \system\apps\HelloCarbide2ndGUI
+UID  0x100039CE 0x0B10718E 
+VENDORID	  	  0
+
+SYSTEMINCLUDE \epoc32\include 
+USERINCLUDE	   ..\inc ..\data
+
+SOURCEPATH		..\data
+RESOURCE HelloCarbide2ndGUI.rss
+RESOURCE HelloCarbide2ndGUI_caption.rss
+
+LIBRARY 	euser.lib apparc.lib cone.lib eikcore.lib
+LIBRARY 	eikcoctl.lib avkon.lib commonengine.lib eikdlg.lib
+LIBRARY 	eikctl.lib bafl.lib fbscli.lib efsrv.lib estor.lib aknnotify.lib
+LIBRARY 	etext.lib gdi.lib egul.lib insock.lib 
+
+AIF HelloCarbide2ndGUI.aif ..\aif HelloCarbide2ndGUIaif.rss c4,1 context_pane_icon.bmp context_pane_icon_mask.bmp list_icon.bmp list_icon_mask.bmp
+
+LANG	 01
+
+START BITMAP	HelloCarbide2ndGUI.mbm
+HEADER
+TARGETPATH		\system\apps\HelloCarbide2ndGUI
+SOURCEPATH		..\aif
+SOURCE	c12,1	list_icon.bmp list_icon_mask.bmp
+END
+
+SOURCEPATH		..\src
+
+
+SOURCE HelloCarbide2ndGUIContainer.cpp HelloCarbide2ndGUIContainerView.cpp HelloCarbide2ndGUIApplication.cpp HelloCarbide2ndGUIDocument.cpp HelloCarbide2ndGUIAppUi.cpp

@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BT01_Descriptors.loc
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "BT01_Descriptors.l01"
+#endif

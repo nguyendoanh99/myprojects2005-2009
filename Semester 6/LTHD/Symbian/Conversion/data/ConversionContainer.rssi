@@ -1,0 +1,148 @@
+/*
+========================================================================
+ Name        : ConversionContainer.rssi
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "ConversionContainer.loc"
+
+RESOURCE AVKON_VIEW r_conversion_container_conversion_container_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_conversion_container_options_menu;
+	}
+RESOURCE MENU_BAR r_conversion_container_options_menu
+	{
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_conversion_container_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_conversion_container_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_conversion_container_title_resource
+	{
+	txt = STR_ConversionContainerView_1;
+	}
+RESOURCE LABEL r_conversion_container_label1
+	{
+	txt = STR_ConversionContainerView_3;
+	horiz_align = EEikLabelAlignHLeft;
+	}
+RESOURCE LABEL r_conversion_container_label2
+	{
+	txt = STR_ConversionContainerView_6;
+	horiz_align = EEikLabelAlignHLeft;
+	}
+RESOURCE LABEL r_conversion_container_label3
+	{
+	txt = STR_ConversionContainerView_9;
+	horiz_align = EEikLabelAlignHLeft;
+	}
+RESOURCE LABEL r_conversion_container_label4
+	{
+	txt = STR_ConversionContainerView_12;
+	horiz_align = EEikLabelAlignHLeft;
+	}
+RESOURCE LABEL r_conversion_container_label5
+	{
+	txt = STR_ConversionContainerView_15;
+	horiz_align = EEikLabelAlignHLeft;
+	}
+RESOURCE EDWIN r_conversion_container_edit1
+	{
+	maxlength = 255;
+	default_case = EAknEditorTextCase;
+	allowed_case_modes = EAknEditorAllCaseModes;
+	numeric_keymap = EAknEditorStandardNumberModeKeymap;
+	default_input_mode = EAknEditorTextInputMode;
+	allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode | EAknEditorSecretAlphaInputMode | EAknEditorKatakanaInputMode | EAknEditorFullWidthTextInputMode | EAknEditorFullWidthNumericInputMode | EAknEditorFullWidthKatakanaInputMode | EAknEditorHiraganaKanjiInputMode | EAknEditorHalfWidthTextInputMode;
+	special_character_table = 0;
+	}
+RESOURCE TBUF r_conversion_container_edit1_2
+	{
+	buf = STR_ConversionContainerView_17;
+	}
+RESOURCE FIXPTED r_conversion_container_fixed_point_editor1
+	{
+	min = -2147483647;
+	max = 2147483647;
+	}
+RESOURCE EDWIN r_conversion_container_edit2
+	{
+	maxlength = 255;
+	default_case = EAknEditorTextCase;
+	allowed_case_modes = EAknEditorAllCaseModes;
+	numeric_keymap = EAknEditorStandardNumberModeKeymap;
+	default_input_mode = EAknEditorTextInputMode;
+	allowed_input_modes = EAknEditorTextInputMode | EAknEditorNumericInputMode | EAknEditorSecretAlphaInputMode | EAknEditorKatakanaInputMode | EAknEditorFullWidthTextInputMode | EAknEditorFullWidthNumericInputMode | EAknEditorFullWidthKatakanaInputMode | EAknEditorHiraganaKanjiInputMode | EAknEditorHalfWidthTextInputMode;
+	special_character_table = 0;
+	}
+RESOURCE TBUF r_conversion_container_edit2_2
+	{
+	buf = STR_ConversionContainerView_18;
+	}
+RESOURCE FIXPTED r_conversion_container_fixed_point_editor2
+	{
+	min = -2147483647;
+	max = 2147483647;
+	}
+RESOURCE TIME_EDITOR r_conversion_container_time_editor1
+	{
+	minTime = TIME
+		{
+		};
+	maxTime = TIME
+		{
+		hour = 23;
+		minute = 59;
+		second = 59;
+		};
+	}
+RESOURCE AVKON_LIST_QUERY r_conversion_container_list_query1
+	{
+	flags = EGeneralQueryFlags;
+	softkeys = R_AVKON_SOFTKEYS_OK_CANCEL;
+	items =
+		{
+		AVKON_LIST_QUERY_DLG_LINE
+			{
+			control = AVKON_LIST_QUERY_CONTROL
+				{
+				listtype = EAknCtSinglePopupMenuListBox;
+				heading = STR_ConversionContainerView_19;
+				listbox = AVKON_LIST_QUERY_LIST
+					{
+					};
+				};
+			}
+		};
+	}
+RESOURCE ARRAY r_conversion_container_listbox_item1
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = STR_ConversionContainerView_20;
+			}
+		};
+	}
+RESOURCE ARRAY r_conversion_container_listbox_item2
+	{
+	items =
+		{
+		LBUF
+			{
+			txt = STR_ConversionContainerView_22;
+			}
+		};
+	}

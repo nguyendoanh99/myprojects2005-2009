@@ -1,0 +1,20 @@
+/*
+========================================================================
+ Name        : ConversionContainer.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_ConversionContainerView_1 "ConversionContainer"
+#define STR_ConversionContainerView_15 "Time"
+#define STR_ConversionContainerView_17 "Edit text"
+#define STR_ConversionContainerView_20 "Item1"
+#define STR_ConversionContainerView_18 "Edit text"
+#define STR_ConversionContainerView_19 "Question"
+#define STR_ConversionContainerView_22 "Item2"
+#define STR_ConversionContainerView_3 "Currency"
+#define STR_ConversionContainerView_6 "Amount"
+#define STR_ConversionContainerView_9 "Temp"
+#define STR_ConversionContainerView_12 "Measure"

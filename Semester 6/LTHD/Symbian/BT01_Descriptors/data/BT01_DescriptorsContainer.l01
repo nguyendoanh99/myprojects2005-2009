@@ -1,0 +1,19 @@
+/*
+========================================================================
+ Name        : BT01_DescriptorsContainer.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_BT01_DescriptorsContainerView_1 "BT01_DescriptorsContainer"
+#define STR_BT01_DescriptorsContainerView_2 "Example 1"
+#define STR_BT01_DescriptorsContainerView_3 "Example 2"
+#define STR_BT01_DescriptorsContainerView_4 "Example 3"
+#define STR_BT01_DescriptorsContainerView_5 "Example 4"
+#define STR_BT01_DescriptorsContainerView_6 "Example 5"
+#define STR_BT01_DescriptorsContainerView_7 "Example 6"
+#define STR_BT01_DescriptorsContainerView_10 "Example 9"
+#define STR_BT01_DescriptorsContainerView_8 "Example 7"
+#define STR_BT01_DescriptorsContainerView_9 "Example 8"

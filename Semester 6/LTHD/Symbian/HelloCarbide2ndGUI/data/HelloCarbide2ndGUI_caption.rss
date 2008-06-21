@@ -1,0 +1,16 @@
+/*
+========================================================================
+ Name        : HelloCarbide2ndGUI_caption.rss
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include <apcaptionfile.rh>
+#include "HelloCarbide2ndGUI.loc"
+
+RESOURCE CAPTION_DATA r_application_caption
+	{
+	caption = STR_HelloCarbide2ndGUIApplication_1;
+	shortcaption = STR_HelloCarbide2ndGUIApplication_2;
+	}

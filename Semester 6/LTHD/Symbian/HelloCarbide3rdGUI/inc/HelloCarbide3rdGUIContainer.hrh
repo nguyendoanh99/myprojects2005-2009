@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : HelloCarbide3rdGUIContainer.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum THelloCarbide3rdGUIContainerViewCommands
+	{
+	EHelloCarbide3rdGUIContainerViewTest1MenuItemCommand = 0x6000
+	};

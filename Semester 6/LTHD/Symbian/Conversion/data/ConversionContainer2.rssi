@@ -1,0 +1,34 @@
+/*
+========================================================================
+ Name        : ConversionContainer2.rssi
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "ConversionContainer2.loc"
+
+RESOURCE AVKON_VIEW r_conversion_container2_conversion_container2_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_conversion_container2_options_menu;
+	}
+RESOURCE MENU_BAR r_conversion_container2_options_menu
+	{
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_conversion_container2_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_conversion_container2_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_conversion_container2_title_resource
+	{
+	txt = STR_ConversionContainer2View_1;
+	}

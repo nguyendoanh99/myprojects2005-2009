@@ -1,0 +1,58 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArrayContainer.rssi
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#include "BT02_TFixedArrayContainer.hrh"
+#include "BT02_TFixedArrayContainer.loc"
+
+RESOURCE AVKON_VIEW r_bt02_tfixed_array_container_bt02_tfixed_array_container_view
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	menubar = r_bt02_tfixed_array_container_options_menu;
+	}
+RESOURCE MENU_BAR r_bt02_tfixed_array_container_options_menu
+	{titles =
+			{
+			MENU_TITLE
+				{
+				menu_pane = r_bt02_tfixed_array_container_menu_pane1_menu_pane;
+				}
+			};
+
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_bt02_tfixed_array_container_status_pane
+	{
+	panes =
+		{
+		SPANE_PANE
+			{
+			id = EEikStatusPaneUidTitle;
+			type = EAknCtTitlePane;
+			resource = r_bt02_tfixed_array_container_title_resource;
+			}
+		};
+	}
+RESOURCE TITLE_PANE r_bt02_tfixed_array_container_title_resource
+	{
+	txt = STR_BT02_TFixedArrayContainerView_1;
+	}
+RESOURCE MENU_PANE r_bt02_tfixed_array_container_menu_pane1_menu_pane
+	{
+	items =
+		{
+		MENU_ITEM
+			{
+			command = EBT02_TFixedArrayContainerViewKtao_Sap_xepMenuItemCommand;
+			txt = STR_BT02_TFixedArrayContainerView_2;
+			},
+		MENU_ITEM
+			{
+			command = EBT02_TFixedArrayContainerView_10_doi_tuong_TDuongTronMenuItemCommand;
+			txt = STR_BT02_TFixedArrayContainerView_4;
+			}
+		};
+	}

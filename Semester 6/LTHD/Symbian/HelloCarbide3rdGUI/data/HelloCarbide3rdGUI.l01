@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : HelloCarbide3rdGUI.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_HelloCarbide3rdGUIApplication_1 "HelloCarbide3rdGUI"
+#define STR_HelloCarbide3rdGUIApplication_2 "HelloCarbide3rdGUI"

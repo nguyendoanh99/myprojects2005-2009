@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArrayContainer.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_BT02_TFixedArrayContainerView_1 "BT02_TFixedArrayContainer"
+#define STR_BT02_TFixedArrayContainerView_4 "10 doi tuong TDuongTron"
+#define STR_BT02_TFixedArrayContainerView_2 "10 doi tuong TDiem"

@@ -1,0 +1,46 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArray.rss
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+NAME BTTF
+
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <eikon.rh>
+#include <appinfo.rh>
+#include "BT02_TFixedArray.hrh"
+#include "BT02_TFixedArray.loc"
+
+RESOURCE RSS_SIGNATURE
+	{
+	}
+RESOURCE TBUF
+	{
+	buf = "BT02_TFixedArray";
+	}
+RESOURCE EIK_APP_INFO r_application_bt02_tfixed_array_app_ui
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	status_pane = r_application_status_pane;
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_application_status_pane
+	{
+	}
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+	{
+	short_caption = STR_BT02_TFixedArrayApplication_2;
+	caption_and_icon = CAPTION_AND_ICON_INFO
+		{
+		caption = STR_BT02_TFixedArrayApplication_1;
+		number_of_icons = 0;
+		};
+	}
+RESOURCE TBUF r_application_akn_view_reference1
+	{
+	}
+
+#include "BT02_TFixedArrayContainer.rssi"

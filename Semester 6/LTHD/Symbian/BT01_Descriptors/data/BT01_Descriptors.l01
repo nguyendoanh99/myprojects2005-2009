@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BT01_Descriptors.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_BT01_DescriptorsApplication_1 "BT01_Descriptors"
+#define STR_BT01_DescriptorsApplication_2 "BT01_Descriptors"

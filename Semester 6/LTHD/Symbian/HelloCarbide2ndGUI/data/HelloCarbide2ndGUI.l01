@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : HelloCarbide2ndGUI.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_HelloCarbide2ndGUIApplication_1 "HelloCarbide2ndGUI"
+#define STR_HelloCarbide2ndGUIApplication_2 "HelloCarbide2ndGUI"

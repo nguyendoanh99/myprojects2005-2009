@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArray.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TBT02_TFixedArrayViewUids
+	{
+	EBT02_TFixedArrayContainerViewId = 1
+	};

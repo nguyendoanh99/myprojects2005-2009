@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : BT01_Descriptors.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TBT01_DescriptorsViewUids
+	{
+	EBT01_DescriptorsContainerViewId = 1
+	};

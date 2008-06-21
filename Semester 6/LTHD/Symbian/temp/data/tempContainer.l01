@@ -1,0 +1,12 @@
+/*
+========================================================================
+ Name        : tempContainer.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_tempContainerView_1 "tempContainer"
+#define STR_tempContainerView_2 "10 TDiem"
+#define STR_tempContainerView_3 "10 CDuongTron"

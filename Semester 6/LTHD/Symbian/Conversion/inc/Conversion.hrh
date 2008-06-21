@@ -1,0 +1,13 @@
+/*
+========================================================================
+ Name        : Conversion.hrh
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+enum TConversionViewUids
+	{
+	EConversionContainerViewId = 1,
+	EConversionContainer2ViewId
+	};

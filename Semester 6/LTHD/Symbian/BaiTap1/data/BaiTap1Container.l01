@@ -1,0 +1,15 @@
+/*
+========================================================================
+ Name        : BaiTap1Container.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_BaiTap1ContainerView_1 "BaiTap1Container"
+#define STR_BaiTap1ContainerView_2 "Khoang cach giua 2 diem"
+#define STR_BaiTap1ContainerView_3 "Chu vi, dien tich tam giac"
+#define STR_BaiTap1ContainerView_4 "Chu vi, dien tich duong tron"
+#define STR_BaiTap1ContainerView_7 "Test CDuongTron"
+#define STR_BaiTap1ContainerView_6 "Test CTamGiac"

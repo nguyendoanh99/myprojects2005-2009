@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dictionaries>
+  <Dictionary name="Anh - Việt" file="Anh_Viet"/>
+  <Dictionary name="Việt - Anh" file="Viet_Anh"/>
+  <Dictionary name="Việt - Việt" file="Viet_Viet"/>
+</Dictionaries>

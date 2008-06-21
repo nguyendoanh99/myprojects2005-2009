@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArray.loc
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+#ifdef LANGUAGE_01
+#include "BT02_TFixedArray.l01"
+#endif

@@ -1,0 +1,11 @@
+/*
+========================================================================
+ Name        : BT02_TFixedArray.l01
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+// localized strings for language: UK English (01)
+#define STR_BT02_TFixedArrayApplication_1 "BT02_TFixedArray"
+#define STR_BT02_TFixedArrayApplication_2 "BT02_TFixedArray"

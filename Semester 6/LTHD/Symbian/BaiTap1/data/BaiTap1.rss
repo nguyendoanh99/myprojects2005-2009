@@ -1,0 +1,46 @@
+/*
+========================================================================
+ Name        : BaiTap1.rss
+ Author      : 
+ Copyright   : Your copyright notice
+ Description : 
+========================================================================
+*/
+NAME BAIT
+
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <eikon.rh>
+#include <appinfo.rh>
+#include "BaiTap1.hrh"
+#include "BaiTap1.loc"
+
+RESOURCE RSS_SIGNATURE
+	{
+	}
+RESOURCE TBUF
+	{
+	buf = "BaiTap1";
+	}
+RESOURCE EIK_APP_INFO r_application_bai_tap1_app_ui
+	{
+	cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+	status_pane = r_application_status_pane;
+	}
+RESOURCE STATUS_PANE_APP_MODEL r_application_status_pane
+	{
+	}
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+	{
+	short_caption = STR_BaiTap1Application_2;
+	caption_and_icon = CAPTION_AND_ICON_INFO
+		{
+		caption = STR_BaiTap1Application_1;
+		number_of_icons = 0;
+		};
+	}
+RESOURCE TBUF r_application_akn_view_reference1
+	{
+	}
+
+#include "BaiTap1Container.rssi"
