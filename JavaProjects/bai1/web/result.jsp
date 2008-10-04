@@ -42,20 +42,27 @@
             int maPhieuTL = max + 1;
 
             // Write Answers to Database
-            sql = "insert into PhieuTraLoi (MaPhieuTL, HoTen, DienThoai) values ('" +
-                    maPhieuTL + "','" + name + "','" + phone + "')";
-            statement.executeUpdate(sql);
+            
+            //sql = "insert into PhieuTraLoi (MaPhieuTL, HoTen, DienThoai) values ('" +
+            //        maPhieuTL + "','" + name + "','" + phone + "')";
+            //statement.executeUpdate(sql);
 
+            sql = "insert into PhieuTraLoi (MaPhieuTL, HoTen, DienThoai) values (?,?,?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, maPhieuTL);
+            ps.setString(2, name);
+            ps.setString(3, phone);
+            ps.executeUpdate();
+            
             sql = "select * from CauHoi";
-            statement = con.createStatement();
             rs = statement.executeQuery(sql);
+            statement = con.createStatement();
             while (rs.next()) {
                 String maCauHoi = rs.getString("MaCauHoi");
                 String answer = request.getParameter(maCauHoi);
 
                 sql = "insert into ChiTietTL (MaPhieuTL, MaCauHoi, LuaChon) values ('" +
-                        maPhieuTL + "','" + maCauHoi + "','" + answer + "')";
-                statement = con.createStatement();
+                        maPhieuTL + "','" + maCauHoi + "','" + answer + "')";                
                 statement.executeUpdate(sql);
             }
         %>
