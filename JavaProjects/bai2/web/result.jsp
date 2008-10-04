@@ -17,6 +17,7 @@
     <body>
         <%
             Connection con = MyUtilities.MyConnection.getODBCConnection("bai2");
+            con.setAutoCommit(false);
         %>
         
         <%
@@ -33,24 +34,32 @@
 
             // Them don dat hang
             int tongTien = 0;
-            sql = "insert into DDH(MaDDH, HoTen, DienThoai, DiaChi) values ('" +
-                    maDDH + "','" + name + "','" + phone + "','" + address + "')";
+//            sql = "insert into DDH(MaDDH, HoTen, DienThoai, DiaChi) values ('" +
+//                    maDDH + "','" + name + "','" + phone + "','" + address + "')";
 
-            statement.executeUpdate(sql);
-            statement = con.createStatement();
-
+//            statement.executeUpdate(sql);
+//            statement = con.createStatement();
+            
+            sql = "insert into DDH(MaDDH, HoTen, DienThoai, DiaChi) values (?, ?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, maDDH);
+            ps.setString(2, name);
+            ps.setString(3, phone);
+            ps.setString(4, address);
+            ps.executeUpdate();
+            ps.close();
             // Chi tiet don dat hang            
             String strChiTiet = "<ul>"; // Chuoi html
 
             sql = "select * from MatHang";
             rs = statement.executeQuery(sql);
             statement = con.createStatement();
-
+           
             while (rs.next()) {
                 MatHang mh = MatHang.CreateMatHang(rs);
-                String maMH = String.valueOf(mh.getMaMH());
+                int maMH = mh.getMaMH();
 
-                if (request.getParameter(maMH) != null) {
+                if (request.getParameter(String.valueOf(maMH)) != null) {
                     int donGia = mh.getDonGia();
                     int soLuong = 1;
                     int thanhTien = donGia * soLuong;
@@ -59,8 +68,7 @@
                     sql = "insert into ChiTiet(MaDDH, MaMH, SoLuong, ThanhTien) values ('" +
                             maDDH + "','" + maMH + "','" + soLuong + "','" + thanhTien + "')";
                     statement.executeUpdate(sql);
-                    statement = con.createStatement();
-
+                    
                     // chuoi html
                     strChiTiet += "<li>" + tenMH + ": " + donGia + "</li>";
 
@@ -68,14 +76,14 @@
                     tongTien += thanhTien;
                 }
             }
-            
+
             // Cap nhat tong tien
             sql = "update DDH set ThanhTien='" + tongTien + "' where MaDDH=" + maDDH + "";
             statement.executeUpdate(sql);
-            statement = con.createStatement();
 
             strChiTiet += "<dl><dd>Thanh tien: " + tongTien + "</dd></dl>";
             strChiTiet += "</ul>";
+            con.commit();
             con.close();
         %>
         <h1> Cam on ban da mua hang</h1>
