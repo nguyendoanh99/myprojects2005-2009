@@ -57,12 +57,23 @@
             tongTien += cpu.getGiaTien() + ram.getGiaTien() + monitor.getGiaTien();
 
             // Ghi du lieu
-            sql = "insert into HoaDon(MaHD, TenKH, DiaChi, DienThoai, GiaTien, MaCPU, MaRAM, MaMonitor) values ('" +
-                    maHD + "','" + name + "','" + address + "','" + phone + "','" + tongTien + "','" +
-                    maCPU + "','" + maRam + "','" + maMonitor + "')";
-
-            statement.executeUpdate(sql);
-            statement = con.createStatement();
+//            sql = "insert into HoaDon(MaHD, TenKH, DiaChi, DienThoai, GiaTien, MaCPU, MaRAM, MaMonitor) values ('" +
+//                    maHD + "','" + name + "','" + address + "','" + phone + "','" + tongTien + "','" +
+//                    maCPU + "','" + maRam + "','" + maMonitor + "')";
+            sql = "insert into HoaDon(MaHD, TenKH, DiaChi, DienThoai, GiaTien, MaCPU, MaRAM, MaMonitor) " +
+                    "values (?, ?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, maHD);
+            ps.setString(2, name);
+            ps.setString(3, address);
+            ps.setString(4, phone);
+            ps.setInt(5, tongTien);
+            ps.setString(6, maCPU);
+            ps.setString(7, maRam);
+            ps.setString(8, maMonitor);
+            ps.executeUpdate();
+//            statement.executeUpdate(sql);
+//            statement = con.createStatement();
 
             con.close();
         %>
