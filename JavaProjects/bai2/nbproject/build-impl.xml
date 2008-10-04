@@ -509,11 +509,23 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
+        <basename file="${file.reference.msbase.jar}" property="included.lib.file.reference.msbase.jar"/>
+        <copy-ear-war file="${file.reference.msbase.jar}" propname="included.lib.file.reference.msbase.jar.X"/>
+        <basename file="${file.reference.mssqlserver.jar}" property="included.lib.file.reference.mssqlserver.jar"/>
+        <copy-ear-war file="${file.reference.mssqlserver.jar}" propname="included.lib.file.reference.mssqlserver.jar.X"/>
+        <basename file="${file.reference.msutil.jar}" property="included.lib.file.reference.msutil.jar"/>
+        <copy-ear-war file="${file.reference.msutil.jar}" propname="included.lib.file.reference.msutil.jar.X"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
-        <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
+        <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update">
+            <attribute name="Class-Path" value="${included.lib.file.reference.msbase.jar} ${included.lib.file.reference.mssqlserver.jar} ${included.lib.file.reference.msutil.jar} "/>
+        </manifest>
         <delete dir="${dist.ear.dir}/temp"/>
     </target>
-    <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir"/>
+    <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
+        <copy file="${file.reference.msbase.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copy file="${file.reference.mssqlserver.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copy file="${file.reference.msutil.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+    </target>
     <target depends="init,compile,compile-jsps,-pre-dist,library-inclusion-in-manifest" name="do-ear-dist">
         <dirname file="${dist.ear.war}" property="dist.jar.dir"/>
         <mkdir dir="${dist.jar.dir}"/>
