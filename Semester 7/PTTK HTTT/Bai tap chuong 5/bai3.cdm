@@ -1,0 +1,1261 @@
+/BEGIN_TABLE AMCHEAD
+NAME A30
+VERS A8
+USER A30
+/BEGIN_DATA AMCHEAD
+PowerDesigner/CDM
+6.0.0
+
+/END_TABLE AMCHEAD
+
+/BEGIN_TABLE AMCMODL
+@       N5
+OID     N8
+MODL    N8
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+POID    N8
+PNAM    A80
+PCOD    A80
+USER    A80
+VERS    A8
+CDAT    N12
+MDAT    N12
+EDAT    N12
+PART    N1
+ACCS    N5
+/BEGIN_DATA AMCMODL
+3
+17
+17
+Model_17
+MODEL_17
+
+
+
+0
+
+
+
+
+1223297013
+1223297180
+0
+0
+0
+/END_TABLE AMCMODL
+
+/BEGIN_TABLE AMCDOMN
+@       N5
+OID     N8
+DOMN    N8
+NAME    A80
+CODE    A80
+DESC    TXT
+NOTE    TXT
+LABL    A254
+DTTP    A30
+MLEN    N8
+PREC    N2
+UNIT    A8
+FRMT    A20
+LVAL    A20
+HVAL    A20
+DVAL    A30
+UPPR    N1
+LOWR    N1
+NMDF    N1
+VALS    TXT
+CRUL    TXT
+SRUL    TXT
+/BEGIN_DATA AMCDOMN
+/END_TABLE AMCDOMN
+
+/BEGIN_TABLE AMCINFO
+@       N5
+OID     N8
+INFO    N8
+MODL    N8
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+DOMN    N8
+DTTP    A30
+MLEN    N8
+PREC    N2
+UNIT    A8
+FRMT    A20
+LVAL    A20
+HVAL    A20
+DVAL    A30
+UPPR    N1
+LOWR    N1
+NMDF    N1
+VALS    TXT
+CRUL    TXT
+SRUL    TXT
+/BEGIN_DATA AMCINFO
+3
+5
+5
+17
+MaTheLoai
+MATHELOAI
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+7
+7
+17
+TenTheLoai
+TENTHELOAI
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+9
+9
+17
+MaBao
+MABAO
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+11
+11
+17
+TenBao
+TENBAO
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+13
+13
+17
+HinhThuc
+HINHTHUC
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+15
+15
+17
+DonGiaKy
+DONGIAKY
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+17
+17
+17
+SoKy
+SOKY
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+19
+19
+17
+ThanhTien
+THANHTIEN
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+21
+21
+17
+NgayDat
+NGAYDAT
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+23
+23
+17
+MaKH
+MAKH
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+3
+25
+25
+17
+TenKH
+TENKH
+
+
+
+0
+<UNDEF>
+0
+0
+
+
+
+
+
+0
+0
+0
+
+
+
+/END_TABLE AMCINFO
+
+/BEGIN_TABLE AMCENTT
+@       N5
+OID     N8
+ENTT    N8
+MODL    N8
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+NBRC    N8
+GENE    N1
+/BEGIN_DATA AMCENTT
+3
+1
+1
+17
+TheLoai
+ENT_1
+
+
+
+0
+1
+3
+2
+2
+17
+Bao
+ENT_2
+
+
+
+0
+1
+3
+3
+3
+17
+KhachHang
+ENT_3
+
+
+
+0
+1
+3
+4
+4
+17
+DatBao
+ENT_4
+
+
+
+0
+1
+/END_TABLE AMCENTT
+
+/BEGIN_TABLE AMCRLSH
+@       N5
+OID     N8
+RLSH    N8
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+ENTT1   N8
+ENTT2   N8
+NAME1   A80
+CMIN1   A10
+CMAX1   A10
+DOM1    N1
+NAME2   A80
+CMIN2   A10
+CMAX2   A10
+DOM2    N1
+RELT    N1
+NBRC    N8
+GENE    N1
+/BEGIN_DATA AMCRLSH
+3
+27
+27
+GomCo
+RELATION_27
+
+
+
+1
+2
+
+1
+n
+0
+
+1
+1
+0
+1
+0
+1
+3
+28
+28
+LienQuan
+RELATION_28
+
+
+
+2
+4
+
+1
+n
+0
+
+1
+1
+0
+1
+0
+1
+3
+29
+29
+LienQuan
+RELATION_29
+
+
+
+3
+4
+
+1
+n
+0
+
+1
+1
+0
+1
+0
+1
+/END_TABLE AMCRLSH
+
+/BEGIN_TABLE AMCPENT
+@       N5
+OID     N8
+PENT    N8
+ENTT    N8
+INFO    N8
+IDTF    N1
+MAND    N1
+DISP    N1
+NUMR    N8
+/BEGIN_DATA AMCPENT
+3
+6
+6
+1
+5
+1
+1
+1
+1
+3
+8
+8
+1
+7
+0
+0
+1
+2
+3
+10
+10
+2
+9
+1
+1
+1
+1
+3
+12
+12
+2
+11
+0
+0
+1
+2
+3
+14
+14
+2
+13
+0
+0
+1
+3
+3
+16
+16
+2
+15
+0
+0
+1
+4
+3
+24
+24
+3
+23
+0
+0
+1
+1
+3
+26
+26
+3
+25
+0
+0
+1
+2
+3
+18
+18
+4
+17
+0
+0
+1
+1
+3
+20
+20
+4
+19
+0
+0
+1
+2
+3
+22
+22
+4
+21
+0
+0
+1
+3
+/END_TABLE AMCPENT
+
+/BEGIN_TABLE AMCINHR
+@       N5
+OID     N8
+INHR    N8
+ENTT    N8
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+EXCL    N1
+INHA    N1
+SATN    A80
+SATC    A80
+DTTP    A30
+MLEN    N8
+/BEGIN_DATA AMCINHR
+/END_TABLE AMCINHR
+
+/BEGIN_TABLE AMCLINH
+@       N5
+OID     N8
+LINH    N8
+INHR    N8
+ENTT    N8
+/BEGIN_DATA AMCLINH
+/END_TABLE AMCLINH
+
+/BEGIN_TABLE AMCRULE
+@       N5
+OID     N8
+RULE    N8
+NAME    A80
+CODE    A80
+LABL    A254
+DESC    TXT
+NOTE    TXT
+TYPE    N5
+FLAG    N5
+CEXP    TXT
+SEXP    TXT
+LOBJ    TXT
+/BEGIN_DATA AMCRULE
+/END_TABLE AMCRULE
+
+/BEGIN_TABLE AMCRPRT
+@       N5
+OID     N8
+RPRT    N8
+FLGS    N8
+NAME    A64
+DESC    A254
+TMLT    BIN
+/BEGIN_DATA AMCRPRT
+/END_TABLE AMCRPRT
+
+/BEGIN_TABLE AMCSLCT
+RPRT    N8
+MODL    N8
+LOBJ    TXT
+/BEGIN_DATA AMCSLCT
+/END_TABLE AMCSLCT
+
+/BEGIN_TABLE AMCFONT
+FONT    N5
+FNAM    A32
+FSIZ    N5
+FSTY    N5
+/BEGIN_DATA AMCFONT
+1
+Arial
+8
+0
+2
+MS Sans Serif
+8
+0
+3
+Arial
+8
+8
+4
+Arial
+6
+0
+/END_TABLE AMCFONT
+
+/BEGIN_TABLE AMCPENS
+PENS    N5
+PSTY    N5
+PCLR    N8
+PWID    N5
+/BEGIN_DATA AMCPENS
+1
+1
+0
+0
+2
+1
+255
+0
+3
+1
+255
+2
+/END_TABLE AMCPENS
+
+/BEGIN_TABLE AMCBRSH
+BRSH    N5
+BSTY    N5
+BCLR    N8
+BHAT    N5
+/BEGIN_DATA AMCBRSH
+1
+0
+16777215
+0
+2
+0
+32896
+0
+3
+0
+255
+0
+/END_TABLE AMCBRSH
+
+/BEGIN_TABLE AMCPROP
+PROP    N5
+MODL    N8
+SUBM    N8
+SECT    A50
+NPRO    A30
+VPRO    A80
+/BEGIN_DATA AMCPROP
+0
+17
+0
+DataArchitect
+Shadow
+no
+1
+17
+0
+DataArchitect
+AutoAdjust
+yes
+2
+17
+0
+DataArchitect
+LineStyle
+2
+3
+17
+0
+DataArchitect
+PrnScale
+100
+4
+17
+0
+DataArchitect
+Orientation
+1
+5
+17
+0
+DataArchitect
+LengthName
+80
+6
+17
+0
+DataArchitect
+UpprCaseName
+no
+7
+17
+0
+DataArchitect
+LowrCaseName
+no
+8
+17
+0
+DataArchitect
+AllowAllName
+yes
+9
+17
+0
+DataArchitect
+AllowChrName
+
+10
+17
+0
+DataArchitect
+InvldChrName
+"+-*/\.,!:;"
+11
+17
+0
+DataArchitect
+NoAccentName
+no
+12
+17
+0
+DataArchitect
+LengthCode
+80
+13
+17
+0
+DataArchitect
+UpprCaseCode
+yes
+14
+17
+0
+DataArchitect
+LowrCaseCode
+no
+15
+17
+0
+DataArchitect
+AllowAllCode
+no
+16
+17
+0
+DataArchitect
+AllowChrCode
+'a'-'z', 'A'-'Z', '0'-'9', "_"
+17
+17
+0
+DataArchitect
+InvldChrCode
+
+18
+17
+0
+DataArchitect
+NoAccentCode
+yes
+19
+17
+0
+DataArchitect
+NoSplitting
+yes
+20
+17
+0
+DataArchitect
+Truncation
+no
+21
+17
+0
+DataArchitect
+Wrapping
+no
+22
+17
+0
+DataArchitect
+WrapLength
+80
+23
+17
+0
+DataArchitect
+WrapChar
+" !""#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+24
+17
+0
+DataArchitect
+CdmShowName
+yes
+25
+17
+0
+DataArchitect
+CdmShowIdtf
+yes
+26
+17
+0
+DataArchitect
+CdmShowProp
+yes
+27
+17
+0
+DataArchitect
+CdmShowDttp
+no
+28
+17
+0
+DataArchitect
+CdmShowNameRlsh
+yes
+29
+17
+0
+DataArchitect
+CdmShowNameLink
+yes
+30
+17
+0
+DataArchitect
+CdmInfoUnique
+yes
+31
+17
+0
+DataArchitect
+CdmInfoAllowReuse
+yes
+32
+17
+0
+DataArchitect
+CdmInfoReuse
+yes
+33
+17
+0
+DataArchitect
+CdmInfoDmnNoDiv
+no
+34
+17
+0
+DataArchitect
+CdmInfoDmnDivInd
+1
+35
+17
+0
+DataArchitect
+CdmRlshUnique
+yes
+36
+17
+0
+DataArchitect
+CdmDefDttp
+
+37
+17
+0
+DataArchitect
+CdmInfoNoDmnDiv
+no
+/END_TABLE AMCPROP
+
+/BEGIN_TABLE AMCSYMB
+@       N5
+SID     N8
+TSYM    N5
+SSYM    N8
+NUMR    N8
+CSID    N8
+SID1    N8
+SID2    N8
+CLND    N8
+CLNN    N5
+RCX1    N8
+RCY1    N8
+RCX2    N8
+RCY2    N8
+PENS    N5
+BRSH    N5
+CTXT    N8
+FONT    N5
+JUST    N5
+WOVL    N8
+HOVL    N8
+SARR    N5
+CARR    N5
+TARR    N5
+NBPT    N8
+LSPT    BIN
+LSTY    N5
+TEXT    TXT
+PICT    PIC
+BTMP    BMP
+GRPH    N8
+OID     N8
+OLE     BIN
+/BEGIN_DATA AMCSYMB
+3
+3321
+257
+0
+1
+0
+0
+0
+0
+0
+-21902
+14213
+-16503
+17737
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+3320
+1
+
+3
+3322
+257
+0
+2
+0
+0
+0
+0
+0
+9048
+12037
+14647
+17511
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+3320
+2
+
+3
+3323
+257
+0
+3
+0
+0
+0
+0
+0
+-10651
+-7163
+-5552
+-3639
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+3320
+3
+
+3
+3324
+257
+0
+4
+0
+0
+0
+0
+0
+2373
+2698
+7972
+7197
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+0
+
+
+
+3320
+4
+
+3
+3325
+260
+0
+5
+0
+3321
+3322
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+14
+0
+18
+2
+d4b3ffffd73e00005c2b0000d73e0000
+2
+
+
+
+3320
+27
+
+3
+3329
+260
+0
+6
+0
+3322
+3324
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+14
+0
+18
+4
+45330000f03c000045330000a923000075120000a9230000751200008f160000
+2
+
+
+
+3320
+28
+
+3
+3333
+260
+0
+7
+0
+3323
+3324
+0
+0
+0
+0
+0
+0
+2
+3
+0
+0
+0
+0
+0
+14
+0
+18
+3
+3de1ffff71e9ffff870f000071e9ffff870f000075120000
+2
+
+
+
+3320
+29
+
+/END_TABLE AMCSYMB
+
+
