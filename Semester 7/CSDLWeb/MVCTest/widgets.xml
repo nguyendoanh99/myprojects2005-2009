@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages>
+	<page path="default">
+		<widget id="login" />
+		<widget id="rss" />
+	</page>
+</pages>
