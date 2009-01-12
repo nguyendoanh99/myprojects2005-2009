@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NHibernate.Generated.BusinessObjects" assembly="NHibernateTest">
+	<class name="NHibernate.Generated.BusinessObjects.XeDaSua, NHibernateTest" table="dbo.XeDaSua" lazy="true">
+		<id name="Id" column="MaXeDaSua">
+		 	<generator class="native" />
+		</id>
+		<property name="LoaiXe" column="LoaiXe" />
+		<property name="BienSo" column="BienSo" />
+		<property name="MauSac" column="MauSac" />
+		<property name="SoKhung" column="SoKhung" />
+		<property name="SoMay" column="SoMay" />
+		<property name="NgayMua" column="NgayMua" />
+		<property name="GhiChu" column="GhiChu" />
+		<many-to-one name="KhachHangMember" column="MaKhachHang" class="KhachHang" />
+		<bag name="HDSuaXes" lazy="true" cascade="all" inverse="true" >
+			<key column="MaXeDaSua"></key>
+			<one-to-many class="HDSuaXe"></one-to-many>
+		</bag>
+	</class>
+</hibernate-mapping>

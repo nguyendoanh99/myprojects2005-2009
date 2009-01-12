@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NHibernate.Generated.BusinessObjects" assembly="NHibernateTest">
+	<class name="NHibernate.Generated.BusinessObjects.PhuTung, NHibernateTest" table="dbo.PhuTung" lazy="true">
+		<id name="Id" column="MaPhuTung">
+		 	<generator class="native" />
+		</id>
+		<property name="MaSoPhuTung" column="MaSoPhuTung" />
+		<property name="TenPhuTung" column="TenPhuTung" />
+		<property name="SoLuong" column="SoLuong" />
+		<property name="DonVi" column="DonVi" />
+		<property name="TongTienVon" column="TongTienVon" />
+		<property name="GiaVonTren1DV" column="GiaVonTren1DV" />
+		<property name="GiaBanTren1DV" column="GiaBanTren1DV" />
+		<property name="GhiChu" column="GhiChu" />
+		<many-to-one name="ModelMember" column="MaModel" class="Model" />
+		<bag name="CTHDNhapPhuTungs" lazy="true" cascade="all" inverse="true" >
+			<key column="MaPhuTung"></key>
+			<one-to-many class="CTHDNhapPhuTung"></one-to-many>
+		</bag>
+		<bag name="CTHDSuaXes" lazy="true" cascade="all" inverse="true" >
+			<key column="MaPhuTung"></key>
+			<one-to-many class="CTHDSuaXe"></one-to-many>
+		</bag>
+	</class>
+</hibernate-mapping>

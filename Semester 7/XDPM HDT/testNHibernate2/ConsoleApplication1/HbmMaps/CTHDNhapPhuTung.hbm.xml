@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NHibernate.Generated.BusinessObjects" assembly="NHibernateTest">
+	<class name="NHibernate.Generated.BusinessObjects.CTHDNhapPhuTung, NHibernateTest" table="dbo.CTHDNhapPhuTung" lazy="true">
+		<id name="Id" column="MaCTHDNhap">
+		 	<generator class="native" />
+		</id>
+		<property name="SoLuong" column="SoLuong" />
+		<property name="DonGiaNhap" column="DonGiaNhap" />
+		<property name="ThanhTien" column="ThanhTien" />
+		<property name="GhiChu" column="GhiChu" />
+		<many-to-one name="HDNhapPhuTungMember" column="MaHoaDonNhap" class="HDNhapPhuTung" />
+		<many-to-one name="PhuTungMember" column="MaPhuTung" class="PhuTung" />
+	</class>
+</hibernate-mapping>

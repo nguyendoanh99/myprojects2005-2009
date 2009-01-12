@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="himusic.Casi, himusic" table="casi">
+		<id name="Id" type="Int32" unsaved-value="null">
+			<column name="MaCaSi" length="4" sql-type="int" not-null="true" unique="true" index="PK__casi__07020F21"/>
+			<generator class="native" />
+		</id>
+		<property name="TenCaSi" type="String">
+			<column name="TenCaSi" length="50" sql-type="nvarchar" not-null="true"/>
+		</property>
+		<property name="QuocGia" type="String">
+			<column name="QuocGia" length="50" sql-type="nvarchar" not-null="true"/>
+		</property>
+		<bag name="albums" inverse="true" lazy="true" cascade="all-delete-orphan">
+			<key column="MaCaSi"/>
+			<one-to-many class="himusic.Album, himusic"/>
+		</bag>
+	</class>
+</hibernate-mapping>

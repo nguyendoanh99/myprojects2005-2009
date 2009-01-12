@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NHibernate.Generated.BusinessObjects" assembly="NHibernateTest">
+	<class name="NHibernate.Generated.BusinessObjects.LoaiXe, NHibernateTest" table="dbo.LoaiXe" lazy="true">
+		<id name="Id" column="MaLoaiXe">
+		 	<generator class="native" />
+		</id>
+		<property name="TenLoaiXe" column="TenLoaiXe" />
+		<property name="GhiChu" column="GhiChu" />
+		<many-to-one name="HangXeMember" column="MaHangXe" class="HangXe" />
+		<bag name="Models" lazy="true" cascade="all" inverse="true" >
+			<key column="MaLoaiXe"></key>
+			<one-to-many class="Model"></one-to-many>
+		</bag>
+	</class>
+</hibernate-mapping>

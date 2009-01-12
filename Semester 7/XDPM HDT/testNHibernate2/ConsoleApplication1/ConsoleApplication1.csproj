@@ -1,0 +1,232 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E824A32E-C5EF-481E-A904-7B45BFEF348A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>NHibernateTest</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\_Group\NHibernate\CSharp\..\Common\NHibernate\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2, Version=2.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\_Group\NHibernate\CSharp\..\Common\NHibernate\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\_Group\NHibernate\CSharp\..\Common\NHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\_Group\NHibernate\CSharp\..\Common\NHibernate\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\_Group\NHibernate\CSharp\..\Common\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnit.Framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\_Group\NHibernate\CSharp\..\Common\NUnit\NUnit.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BusinessBase.cs" />
+    <Compile Include="Base\ManagerBase.cs" />
+    <Compile Include="Base\NHibernateSession.cs" />
+    <Compile Include="Base\NHibernateSessionManager.cs" />
+    <Compile Include="Base\UnitTestsBase.cs" />
+    <Compile Include="BusinessObjects\CTHDNhapPhuTung.cs" />
+    <Compile Include="BusinessObjects\CTHDNhapPhuTung.generated.cs">
+      <DependentUpon>CTHDNhapPhuTung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\CTHDSuaXe.cs" />
+    <Compile Include="BusinessObjects\CTHDSuaXe.generated.cs">
+      <DependentUpon>CTHDSuaXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\HangXe.cs" />
+    <Compile Include="BusinessObjects\HangXe.generated.cs">
+      <DependentUpon>HangXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\HDNhapPhuTung.cs" />
+    <Compile Include="BusinessObjects\HDNhapPhuTung.generated.cs">
+      <DependentUpon>HDNhapPhuTung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\HDSuaXe.cs" />
+    <Compile Include="BusinessObjects\HDSuaXe.generated.cs">
+      <DependentUpon>HDSuaXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\KhachHang.cs" />
+    <Compile Include="BusinessObjects\KhachHang.generated.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\LoaiXe.cs" />
+    <Compile Include="BusinessObjects\LoaiXe.generated.cs">
+      <DependentUpon>LoaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Model.cs" />
+    <Compile Include="BusinessObjects\Model.generated.cs">
+      <DependentUpon>Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\PhuTung.cs" />
+    <Compile Include="BusinessObjects\PhuTung.generated.cs">
+      <DependentUpon>PhuTung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\XeDaSua.cs" />
+    <Compile Include="BusinessObjects\XeDaSua.generated.cs">
+      <DependentUpon>XeDaSua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\CTHDNhapPhuTungManager.cs" />
+    <Compile Include="ManagerObjects\CTHDNhapPhuTungManager.Generated.cs">
+      <DependentUpon>CTHDNhapPhuTungManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\CTHDSuaXeManager.cs" />
+    <Compile Include="ManagerObjects\CTHDSuaXeManager.Generated.cs">
+      <DependentUpon>CTHDSuaXeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\HangXeManager.cs" />
+    <Compile Include="ManagerObjects\HangXeManager.Generated.cs">
+      <DependentUpon>HangXeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\HDNhapPhuTungManager.cs" />
+    <Compile Include="ManagerObjects\HDNhapPhuTungManager.Generated.cs">
+      <DependentUpon>HDNhapPhuTungManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\HDSuaXeManager.cs" />
+    <Compile Include="ManagerObjects\HDSuaXeManager.Generated.cs">
+      <DependentUpon>HDSuaXeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\KhachHangManager.cs" />
+    <Compile Include="ManagerObjects\KhachHangManager.Generated.cs">
+      <DependentUpon>KhachHangManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\LoaiXeManager.cs" />
+    <Compile Include="ManagerObjects\LoaiXeManager.Generated.cs">
+      <DependentUpon>LoaiXeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\ManagerFactory.cs" />
+    <Compile Include="ManagerObjects\ModelManager.cs" />
+    <Compile Include="ManagerObjects\ModelManager.Generated.cs">
+      <DependentUpon>ModelManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\PhuTungManager.cs" />
+    <Compile Include="ManagerObjects\PhuTungManager.Generated.cs">
+      <DependentUpon>PhuTungManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerObjects\XeDaSuaManager.cs" />
+    <Compile Include="ManagerObjects\XeDaSuaManager.Generated.cs">
+      <DependentUpon>XeDaSuaManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test\CthdNhapphutungTests.cs" />
+    <Compile Include="test\CthdNhapphutungTests.generated.cs">
+      <DependentUpon>CthdNhapphutungTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\CthdSuaxeTests.cs" />
+    <Compile Include="test\CthdSuaxeTests.generated.cs">
+      <DependentUpon>CthdSuaxeTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\HangXeTests.cs" />
+    <Compile Include="test\HangXeTests.generated.cs">
+      <DependentUpon>HangXeTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\HDNhapPhuTungTests.cs" />
+    <Compile Include="test\HDNhapPhuTungTests.generated.cs">
+      <DependentUpon>HDNhapPhuTungTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\HDSuaXeTests.cs" />
+    <Compile Include="test\HDSuaXeTests.generated.cs">
+      <DependentUpon>HDSuaXeTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\KhachHangTests.cs" />
+    <Compile Include="test\KhachHangTests.generated.cs">
+      <DependentUpon>KhachHangTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\LoaiXeTests.cs" />
+    <Compile Include="test\LoaiXeTests.generated.cs">
+      <DependentUpon>LoaiXeTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\ModelTests.cs" />
+    <Compile Include="test\ModelTests.generated.cs">
+      <DependentUpon>ModelTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\PhuTungTests.cs" />
+    <Compile Include="test\PhuTungTests.generated.cs">
+      <DependentUpon>PhuTungTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test\XeDaSuaTests.cs" />
+    <Compile Include="test\XeDaSuaTests.generated.cs">
+      <DependentUpon>XeDaSuaTests.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="CodeSmithProject1.csp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\CTHDNhapPhuTung.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\CTHDSuaXe.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\HangXe.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\HDNhapPhuTung.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\HDSuaXe.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\KhachHang.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\LoaiXe.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\Model.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\PhuTung.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HbmMaps\XeDaSua.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

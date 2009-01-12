@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <variables>
+    <add key="ConnectionString1" value="Data Source=.\SQLEXPRESS; Initial Catalog=himusic; Integrated Security=True" />
+    <add key="ConnectionString2" value="Provider = Microsoft.Jet.OLEDB.4.0; Data Source = E:\_Group\quanlykinhdoanhxemay\Database\Database.mdb" />
+    <add key="ConnectionString3" value="Provider = Microsoft.Jet.OLEDB.4.0; Data Source = c:\Database.mdb" />
+    <add key="ConnectionString4" value="Provider = Microsoft.Jet.OLEDB.4.0; Data Source = d:\Database.mdb" />
+    <add key="ConnectionString5" value="Data Source=.\SQLEXPRESS; Initial Catalog=qlxemay; Integrated Security=True" />
+  </variables>
+  <propertySets>
+    <propertySet name="NHibernateMaster" template="..\..\..\..\..\_Group\NHibernate\CSharp\NHibernateMaster.cst">
+      <property name="NHibernateVersion">v2_0</property>
+      <property name="VsVersion">VS_2005</property>
+      <property name="AssemblyName">NHibernateTest</property>
+      <property name="ManagerNamespace">NHibernate.Generated.ManagerObjects</property>
+      <property name="BusinessNamespace">NHibernate.Generated.BusinessObjects</property>
+      <property name="BaseNamespace">NHibernate.Generated.Base</property>
+      <property name="UnitTestNamespace">test</property>
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString5)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+      </property>
+    </propertySet>
+  </propertySets>
+</codeSmith>

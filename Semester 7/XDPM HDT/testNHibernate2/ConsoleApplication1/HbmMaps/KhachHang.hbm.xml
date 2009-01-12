@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="NHibernate.Generated.BusinessObjects" assembly="NHibernateTest">
+	<class name="NHibernate.Generated.BusinessObjects.KhachHang, NHibernateTest" table="dbo.KhachHang" lazy="true">
+		<id name="Id" column="MaKhachHang">
+		 	<generator class="native" />
+		</id>
+		<property name="HoTen" column="HoTen" />
+		<property name="SoNha" column="SoNha" />
+		<property name="Duong" column="Duong" />
+		<property name="Phuong" column="Phuong" />
+		<property name="Quan" column="Quan" />
+		<property name="ThanhPho" column="ThanhPho" />
+		<property name="DienThoaiBan" column="DienThoaiBan" />
+		<property name="DiDong" column="DiDong" />
+		<property name="Nam" column="Nam" />
+		<property name="NamSinh" column="NamSinh" />
+		<property name="GhiChu" column="GhiChu" />
+		<bag name="XeDaSuas" lazy="false" inverse="true" >
+			<key column="MaKhachHang"></key>
+			<one-to-many class="XeDaSua"></one-to-many>
+		</bag>
+	</class>
+</hibernate-mapping>

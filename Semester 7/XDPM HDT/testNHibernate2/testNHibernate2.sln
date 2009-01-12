@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{E824A32E-C5EF-481E-A904-7B45BFEF348A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nhibernate", "Nhibernate\Nhibernate.csproj", "{4F791F25-1700-4B4E-9031-89C1F3C24698}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E824A32E-C5EF-481E-A904-7B45BFEF348A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E824A32E-C5EF-481E-A904-7B45BFEF348A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E824A32E-C5EF-481E-A904-7B45BFEF348A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E824A32E-C5EF-481E-A904-7B45BFEF348A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F791F25-1700-4B4E-9031-89C1F3C24698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F791F25-1700-4B4E-9031-89C1F3C24698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F791F25-1700-4B4E-9031-89C1F3C24698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F791F25-1700-4B4E-9031-89C1F3C24698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
