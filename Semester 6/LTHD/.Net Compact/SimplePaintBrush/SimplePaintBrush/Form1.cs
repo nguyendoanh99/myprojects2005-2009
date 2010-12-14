@@ -25,6 +25,7 @@ namespace SimplePainBrush
             s += String.Format("{0:X}", c.B).PadLeft(2, '0');
             return s;
         }
+        Bitmap bmpNew = null;
         public Form1()
         {
             InitializeComponent();
@@ -37,18 +38,42 @@ namespace SimplePainBrush
             m_Fill = Color.White;
             mnuColor.Text = "Color(" + ColorToString(m_Color) + ")";
             mnuFill.Text = "Fill(" + ColorToString(m_Fill) + ")";
+
+            CreateBitmap();
+        }
+
+        private void CreateBitmap()
+        {
+            // Create a bitmap and a Graphics object for the bitmap.
+            bmpNew = new Bitmap(500, 500);
+            Graphics gbmp = Graphics.FromImage(bmpNew);
+
+            //Clear the bitmap background.
+            gbmp.Clear(Color.LightGray);
+
+            // Get a Graphics object for the form.
+            Graphics g = CreateGraphics();
+
+            // Copy the bitmap to the window at (x,y) location.
+            g.DrawImage(bmpNew, 0, 0);
+
+            // Clean up when we are done.
+            g.Dispose();
+            gbmp.Dispose();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {           
+
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            foreach (CShape t in m_arrShape)
-            {
-                t.Draw(e.Graphics);
-            }        
+            e.Graphics.DrawImage(bmpNew, 0, 0);
+//             foreach (CShape t in m_arrShape)
+//             {
+//                 t.Draw(e.Graphics);
+//             }        
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -74,9 +99,12 @@ namespace SimplePainBrush
                 m_Shape.Fill = m_Fill;
 
                 // Ve
+                Graphics grImage = Graphics.FromImage(bmpNew);
                 Graphics gr = this.CreateGraphics();
-                m_Shape.Draw(gr);
+                m_Shape.Draw(gr); // ve len man hinh
+                m_Shape.Draw(grImage); // ve len anh (trong vung nho)
                 gr.Dispose();
+                grImage.Dispose();
                 
                 // Them hinh vao tap hop
                 m_arrShape.Add(m_Shape);

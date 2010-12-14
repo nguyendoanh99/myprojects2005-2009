@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePaintBrush", "SimplePaintBrush\SimplePaintBrush.csproj", "{56527DB1-7214-423C-8D89-3EC0602A150B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintLib", "PaintLib\PaintLib.csproj", "{46D17FE4-1603-4C1C-8048-662D10142781}"
