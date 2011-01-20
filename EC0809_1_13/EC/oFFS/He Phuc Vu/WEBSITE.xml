@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WEBSITE>
+  <ThongTin Ten="KHThongTinGiaoDich" TinhTrang="1">
+    <QuangCao Ten="namita" />
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+  <ThongTin Ten="TrangChu" TinhTrang="1">
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+  <ThongTin Ten="DanhSachMonAn" TinhTrang="0">
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+  <ThongTin Ten="DanhSachThucDon" TinhTrang="0">
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+  <ThongTin Ten="ChiTietMonAn" TinhTrang="0">
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+  <ThongTin Ten="ChiTietThucDon" TinhTrang="0">
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+  <ThongTin Ten="AddToCard" TinhTrang="1">
+    <QuangCao Ten="Long A" />
+    <QuangCao Ten="tinyfood :))" />
+    <QuangCao Ten="demon" />
+  </ThongTin>
+</WEBSITE>

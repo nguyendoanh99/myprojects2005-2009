@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\oFFS_DAL_WS\", ".", "{7CBCED3F-E402-4CF2-989C-17AA92A62325}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/oFFS_DAL_WS"
+		Debug.AspNetCompiler.PhysicalPath = "E:\BT_HK7_09_10\TMDT\Do an\Repository3\oFFS_DAL_WS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\oFFS_DAL_WS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/oFFS_DAL_WS"
+		Release.AspNetCompiler.PhysicalPath = "E:\BT_HK7_09_10\TMDT\Do an\Repository3\oFFS_DAL_WS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\oFFS_DAL_WS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2222"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CBCED3F-E402-4CF2-989C-17AA92A62325}.Debug|.NET.ActiveCfg = Debug|.NET
+		{7CBCED3F-E402-4CF2-989C-17AA92A62325}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

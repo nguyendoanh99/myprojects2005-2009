@@ -1,0 +1,730 @@
+* { 
+    -moz-box-sizing: border-box; 
+}
+
+body{
+	font-size:0.7em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#333;
+	text-align:center;
+	margin:0;
+	padding:0;
+	background-color:#135A2E;
+}
+
+/* global styles */
+a { color:#E50D00; text-decoration:none; }
+a:hover { text-decoration:underline; }
+a img { border:0px; }
+form { margin:0px; }
+hr { background:none; height:1px; border:0px; border-top:1px solid #ccc; }
+p{margin:10px 0 10px 0;}
+
+.breaker{clear:both; line-height:0;}
+.homepageFeature{text-align:center; padding-top:0;}
+.homepageFeature div{padding:5px; border:1px solid #C9D787; text-align:center;margin-top:10px;}
+
+/* Container which encloses the whole site to allow easy width change */
+#container,#wrap {
+	width:960px;	/* change value to adjust width */
+	text-align:left;
+	margin:5px auto;
+	background-color:#FFFFFF;
+	padding: 3px 3px 3px 3px;
+}
+
+/* Logo and minicart */
+#header {
+	padding:5px 0px;
+	border:1px solid #e5e5e5;
+	/*margin-bottom:10px;*/
+}
+#header table {
+	border-collapse:collapse;
+	width:100%;
+}
+#header img {
+	margin:0px 10px;
+}
+#header td.headerlinks { /* mini cart */
+	width:300px;
+	text-align:right;
+	vertical-align:middle;
+	margin-top:15px;
+	color:#999;
+	font-family:Tahoma, Arial, Helvetica, sans-serif;
+	font-size:90%;
+	padding-right:10px;
+}
+#header a {
+	text-decoration:none;
+	color:#1981b7;
+	font-weight:bold;
+}
+#header a:hover { text-decoration:underline; }
+
+/*formats the mini cart subtotal  in the right menu*/
+.cartsubtotalminicart{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: bold;
+	text-align: right;	
+}
+
+/*formats the links in the minicart*/
+.cartminilinks{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+.cartminilinks a:link{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.cartminilinks a:visited{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.cartminilinks a:hover{
+	color: #FF0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+.cartminilinks a:active{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+
+/* Encloses all content area under header */
+#wrap {
+	padding:5px;
+	border:1px solid #e5e5e5;
+}
+
+/* Horizontal navigation */
+#nav {  
+	background:white;
+	border:1px solid #EEEEEE;
+	width:100%;
+}
+
+table#horiz_nav {	/* table is generated via shopa_navigation_create.asp */
+	padding:0px;
+	width:100%;
+	border-collapse:collapse;
+	background-image:url(/images/header/menu_bckgrd.jpg);
+	background-repeat:repeat-x;
+	height:37px;
+}
+
+table#horiz_nav td {
+	text-align:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding:0px;
+}
+
+table#horiz_nav td a {
+	display:block;
+	text-align:center;
+	padding:8px 0px;
+	color:#FFF;
+	text-decoration:none;
+	font-size:80%;
+	text-transform:uppercase;
+	border-right:1px solid #FFF;
+	font-weight:bold;
+}
+table#horiz_nav td.last a { border-right:0px; }
+table#horiz_nav td a:hover { color:#000; }
+
+/* Horizontal navigation drop down menu
+   do not remove or modify styles listed 
+   under "Do Not Change" */
+table#horiz_nav ul {
+	/* Do not change  */
+	position:absolute;
+	left: -999em;
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
+	
+	/* Styles */
+	background:white;
+	border-right:1px solid #eee;
+	text-align:left;
+	width:150px;
+}
+
+/* Do not change  */
+#horiz_nav td:hover ul { left: auto; }
+#horiz_nav td.sfhover ul { left: auto; }
+
+#horiz_nav ul li { /* submenu */
+	/* Do not change */
+	display:block;
+	width:100%;
+	margin:0px;
+	
+	/* Styles */
+	line-height:22px;
+	text-transform:capitalize;
+}
+
+table#horiz_nav ul li a { /* submenu links */
+	/* Do not change */
+	display:block;
+	
+	/* Styles */
+	padding:0px 10px !important;
+	border-bottom:1px solid #EEEEEE;
+	border-right:0px;
+	text-align:left;
+}
+
+/* Utility bar includes login links
+   welcome note and quick search box */
+#utilbar {
+	text-align:center;
+	background:#eee;
+	padding:10px;
+	border-bottom:5px solid #D7D7D7;
+}
+
+#utilbar table {
+	border-collapse:collapse;
+	width:100%;
+}
+
+#utilbar td {
+	padding:5px 0px;
+	text-align:center;
+	vertical-align:middle;
+	width:33.3%;
+	font-size:80%;
+	border-right:2px dotted #E5E5E5;
+	font-weight:bold;
+}
+
+#utilbar td.last { border:0px; }	/* remove border from the last column */
+#utilbar form { display:inline; }
+#utilbar a { color:#1981b7; text-decoration:none; }
+#utilbar a:hover { text-decoration:underline; }
+
+/* Encloses all content area under utilbar */
+#all { 
+	margin-top:5px;
+	padding-bottom:5px;
+}
+
+/* Left column- categories, currency, language etc */
+#left {
+	/* Styles */
+	width:25%;	/* Change to alter width of left column */
+}
+
+#left h2 {
+	background:#C9D787;
+	color:#003300;
+	margin:0px;
+	padding:5px 10px;
+	font-size:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+#left .box {		/* General style of each box in left column */
+	padding:5px 10px;
+	font-size:90%;
+	border:1px solid #eee;
+	margin-bottom:5px;
+}
+
+#left .box p {
+	margin:0px;
+	padding-bottom:10px;
+}
+
+#left ul {		/* General style of list style in left column; including category listing */
+	list-style-type:none;
+	margin:0px 0px 5px 0px;
+	line-height:20px;
+	border:1px solid #eee;
+	padding:3px;
+}
+
+#left ul a {
+	padding-left:15px;
+	background:url(/images/icons/cat_bckgrd.jpg) repeat-x;
+	height:25px;
+	display:block;
+	color:#FFF;
+	border-bottom:1px solid #FFF;
+}
+
+/* Extra styles for category navigation */
+#catnav ul { margin:10px 15px; }
+
+/* Main content area */
+#main {
+	text-align:center;
+}
+
+#main table td { text-align:left; }
+#main td { font-size:100%; }
+#main td td { font-size:100%; }
+
+/* Top content box on home page */
+#homecontent {
+	border:1px solid #D7D7D7;
+	padding:10px;
+	color:#666;
+	margin-bottom:5px;
+	text-align:left;
+}
+
+#homecontent h1 { color:#003300; display:inline;}
+#homecontent p { margin-right:180px; }
+#homecontent img { margin-right:10px; }
+
+/* content area styles */
+#content {
+	padding:0px 10px 10px 10px;
+	text-align:left;
+}
+
+/* Footer */
+#footer {
+	background:#E1E1E1;
+	padding-bottom:10px;
+	text-align:center;
+	color:#454545;
+	font-size:80%;
+	clear:both;
+}
+
+/* Alphabet listing */
+#footer .alphabet {
+	background:#D7D7D7;
+	margin-bottom:10px;
+	padding:3px 10px;
+	font-size:100%;
+}
+
+#footer a {
+	color:#454545;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#footer a:hover {
+	text-decoration:underline;
+}
+
+/*formats the search box in header file.*/
+.searchfield{
+	background-color: #FFFFFF;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*formats the display of the form elements throughout the front end*/
+.imgbtn { border:0px; }
+
+.txtfield{
+	background-color: #FFFFFF;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #000000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #000000;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.txtfielddropdown{
+	background-color: #FFFFFF;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: normal;
+	border:1px solid black;
+}
+
+.submitbtn {
+   color:#FFF;
+   font-weight:bold;
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   text-transform:lowercase;
+   background:url(../Hinh Anh/button_bckgrd.jpg) repeat-x;
+}
+
+.nonsubmitbtn {
+   color:#000;
+   font-weight:bold;
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   text-transform:lowercase;
+   background:url(/images/icons/button_bckgrd_white.jpg) repeat-x;
+}
+
+/* General styles */
+.menuhdr{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color : #135A2E;
+	color : Black;
+	font-size : x-small;
+	font-weight : bold;
+	padding : 3px 5px;
+	text-align : left;
+}
+
+.menubdr{
+	background-color : #B3B7BB;
+}
+
+.dashed{
+	border-left : 1px solid #cccccc;
+	border-right : 1px solid #cccccc;
+	border-bottom : 1px solid #cccccc;
+	background-color : #F7F7F7;
+}
+
+/* Left menu styles; no longer used in 6.50 */
+.leftmenumain a{
+	border-top : 1px solid #D3D3D3;
+	display: block;
+}
+.leftmenumain{
+	background-color: #F7F7F7;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+}
+.leftmenumain a:link{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	padding-bottom: 7px;
+	padding-left: 4px;
+	padding-top: 6px;
+	text-align: left;
+	text-decoration: underline;
+	width: 100%;
+}
+.leftmenumain a:visited{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	padding-bottom: 7px;
+	padding-left: 4px;
+	padding-top: 6px;
+	text-align: left;
+	text-decoration: underline;
+	width: 100%;
+}
+.leftmenumain a:hover{
+	background-color: #EEEEEE;
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	padding-bottom: 7px;
+	padding-left: 4px;
+	padding-top: 6px;
+	text-align: left;
+	text-decoration: none;
+	width: 100%;
+}
+.leftmenumain a:active{
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+	font-style: normal;
+	font-weight: normal;
+	padding-bottom: 7px;
+	padding-left: 4px;
+	padding-top: 6px;
+	text-align: left;
+	text-decoration: underline;
+	width: 100%;
+}
+.dottedBorder {
+	border: 1px dotted #cccccc; 
+	background-color: #F9F9F9;
+	padding: 5px	
+}
+
+/*formats the header text throughout the site*/
+.txtheader{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.hdrproduct{
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-small;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* Styles to be use in 6.50 */
+#main {
+	font-size:90%;
+	line-height:18px;
+	width:75%;
+}
+
+/* breadcrumbs */
+div.breadcrumb {
+	text-align:left;
+	color:#000;
+	font-size:90%; 
+	margin-bottom:10px;
+}
+
+div.breadcrumb a { 
+	color:#1981B7; 
+	text-decoration:none; 
+}
+div.breadcrumb a:hover { 
+	color:#175D7F; 
+	text-decoration:underline;
+}
+
+/* Main area text styles */
+#main h1 {
+	font-size:100%;
+	font-weight : bold;
+	color:#003300;
+	background-color:#C9D787;
+	padding:5px;
+}
+
+#main h2 {
+	text-align:left;
+	margin:0px 0px 10px 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:130%;
+	text-transform:capitalize;
+}
+
+#main h2.picheader { /* Heading style for headings with picture, e.g. shopcustomer.asp */
+	background-position:1% 50%;
+	background-repeat:no-repeat;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight : bold;
+	color:#333;
+	font-size:12px;
+	border-top:1px solid #CCCCCC;
+	border-left:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	background-color:white;
+	text-align:left;
+	padding:10px 5px 10px 50px;
+	margin:0px;
+}
+
+/* compare products styles */
+.applyoverflow {
+	overflow-x:auto;
+	overflow-y:hidden;
+	width:100%;
+	padding-bottom:50px;
+}
+
+table.tbl_compare {
+	width:100%;
+	border-collapse:collapse;
+	border:0px;
+}
+
+table.tbl_compare td {
+	vertical-align:top;
+	text-align:left;
+	padding:0px 10px;
+}
+
+table.tbl_compareproduct {
+	border-collapse:inherit;
+	line-height:18px;
+}
+
+table.tbl_compareproduct td {
+	padding:3px 0px;
+}
+
+/* Customer service and Affiliate service page (shopcustadmin.asp,shopaffadmin.asp) */
+table.customerservice {
+	width:100%;
+	background:#F9F9F9;
+	border:1px solid #CCCCCC !important;
+	margin-bottom:10px;
+	border-collapse:collapse;
+}
+
+table.customerservice th {
+	height:35px;
+	background-position:1% 50%;
+	background-repeat:no-repeat;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight : bold;
+	color:#333;
+	font-size:12px;
+	border-bottom:1px solid #CCCCCC;
+	background-color:white;
+	text-align:left;
+	padding-left:50px;
+	vertical-align:middle;
+}
+
+table.customerservice td {
+	padding:10px;
+}
+
+table.customerservice ul {
+	margin:0px;
+	padding:0px 10px 0px 25px;
+}
+
+/* standard table display */
+.std_table {
+	background:#F9F9F9;
+	border:1px solid #CCCCCC !important;
+	margin-bottom:10px;
+	padding:10px;
+	text-align:left;
+	vertical-align:top;
+	line-height:20px;
+	font-size:11px;
+}
+
+.std_table table { 
+	border-collapse:collapse;
+	width:85%;
+}
+
+.std_table th { 
+	vertical-align:top;
+	padding:0px 10px 0px 0px;
+	width:35%;
+	font-weight:normal;
+}
+.std_table td {	padding:0px 5px 0px 0px; }
+
+/* Category table (shopdisplaycategories.asp) */
+table.tbl_category td {	text-align:center; }
+
+/* shopcustomer.asp form */
+table.tbl_customer {
+	width:85%;
+}
+
+table.tbl_customer th {
+	width:35%;
+	vertical-align:top;
+	text-align:left;
+	font-weight:normal;
+}
+
+table.tbl_customer td {
+	vertical-align:top;
+	text-align:left;
+}
+
+table.tbl_customer iframe {	/* refer to shoplicense.htm for changing license styles */ 
+	width:100%;
+}
+
+table.tbl_subproduct {
+	border-collapse:collapse;
+	margin-right:2px;
+	margin-bottom:2px;
+	border:1px solid #ddd;
+	background:#F7F7F7;
+	text-align:center;
+	width:100px;
+	float:left;
+}
+
+table.tbl_subproduct td {
+	padding:3px 5px;
+}
+
+/* General override styles */
+.ac { text-align:center !important; }
+.ar { text-align:right !important; }
+.al { text-align:left !important; }
+.fr { float:right !important; }
+.fl { float:left !important; }
+.vt { vertical-align:top !important; padding: 3px 3px 3px 3px;}
+.vm { vertical-align:middle !important; }
+.vb { vertical-align:bottom !important; }
+.cb {
+	clear: both;
+	display: block;
+	font: 1px/0px serif;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+.smlpad { padding:15px !important; }
+
+.pricesmall {}
+.price {}

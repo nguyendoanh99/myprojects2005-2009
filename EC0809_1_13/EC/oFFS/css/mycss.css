@@ -1,0 +1,127 @@
+.yui-t7
+{
+	margin:auto;
+	text-align:left;
+	width:57.69em;
+	width:56.301em;
+	min-width:750px;
+}
+
+#hd{margin-top:6px;}
+#hd p.title {
+font-size:16px;
+font-weight:800;
+}
+
+.formfield{
+
+}
+.formlabel{
+color:#505050;
+float:left;
+padding:0.2em 0.5em 0 0;
+text-align:right;
+width:25%;
+}
+.forminput{
+	font-size:100%;
+	margin-bottom:0.2em;
+	position:relative;
+	padding-top: 2px;
+}
+.formradio{
+	padding: 5px 0 5px 0
+}
+.formhint{
+	color:#999999;
+}
+.formerror{
+	color:red;
+	font-weight:700;
+	display:none;
+}
+.formpicture{
+font-size:36px;
+font-family:"Times New Roman", Times, serif;
+color:#6633CC;
+background-color:#CCCCCC;
+text-align:center;
+}
+hr{
+color:#3366FF;
+}
+fieldset{
+margin:1em 1.5em;
+}
+
+fieldset legend{
+-x-system-font:none;
+color:#63126B;
+font-family:arial;
+font-size:100%;
+/*font-size-adjust:none;
+font-stretch:normal;*/
+font-style:normal;
+font-variant:normal;
+font-weight:bold;
+line-height:normal;
+padding:0.3em 0 0.4em 1em;
+}
+
+#section1{
+text-align:center;
+}
+#section1 h1{
+font-size:36px;
+color:#000099
+}
+#section1 h2{
+font-size:24px;
+color:#FF9900
+}
+#section7{
+text-align:center;
+}
+.style1 {color: #0066FF}
+
+
+
+.formlabel_left{
+color:#3366FF;
+float:left;
+font-weight:bolder;
+text-align:left;
+padding:0.2em 0.5em 0 0;
+width:25%;
+}
+
+
+.formlabel_left1{
+float:left;
+text-align:left;
+padding:0.2em 0.5em 0 0;
+width:25%;
+}
+
+.formlm{
+color:#3366FF;
+float:left;
+text-align:left;
+width:25%;
+}
+
+.formedit
+{
+font-size:10.0pt;
+font-family:"Arial","sans-serif";
+text-align:right;
+font-weight:bolder;
+}
+
+#hd p.title2 {
+font-size:16px;
+font-weight:800;
+font-family:"@DotumChe";
+color:Red;
+}
+

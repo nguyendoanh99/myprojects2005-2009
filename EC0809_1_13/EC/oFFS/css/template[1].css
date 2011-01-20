@@ -1,0 +1,55 @@
+
+h3 {
+font-size:125%;
+font-weight:bold;
+}
+th {
+ font-weight: bold;
+ text-align: left;
+}
+p, pre, blockquote, ul, ol, h1, h2, h3, h4, h5, h6 {
+margin:10px 0;
+padding:0;
+}
+.usform {
+background:#FFFFFF url(../images_layout/form_center.jpg) repeat-x scroll center bottom;
+}
+.usform_right {
+background:transparent url(../images_layout/form_right.jpg) no-repeat scroll right bottom;
+}
+.usform_left {
+background:transparent url(../images_layout/form_left.jpg) no-repeat scroll left bottom;
+padding-bottom:12px;
+padding-left:12px;
+}
+.usform_topright {
+background:transparent url(../images_layout/top_right.jpg) no-repeat scroll right top;
+}
+.usform_topleft {
+background:transparent url(../images_layout/top_left.jpg) no-repeat scroll left top;
+}
+.usform_top {
+background:transparent url(../images_layout/top_center.jpg) repeat scroll center top;
+margin-bottom:0;
+}
+.ushead {
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #E8E8E8;
+height:28px;
+line-height:8px;
+margin-left:2px;
+margin-top:20px;
+overflow:hidden;
+width:99%;
+}
+.ushead_logo {
+float:left;
+left:8px;
+margin-bottom:-53px;
+position:relative;
+top:-44px;
+}
+.uscontentheading {
+font-size:12px;
+padding-left:62px;
+}

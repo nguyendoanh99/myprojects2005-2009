@@ -1,0 +1,232 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPAdmin.master.cs" Inherits="MPAdmin" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html id="minwidth" dir="ltr" xml:lang="en-gb" xmlns="http://www.w3.org/1999/xhtml" lang="en-gb"><head runat="server">
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="keywords" content="joomla, Joomla"/>
+  <meta name="description" content="Joomla! - hệ thống quản lý nội dung và cổng giao tiếp động."/>
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management"/>
+  <title>Online Fast Food System - Admin</title>
+  <link href="http://localhost/joomla/administrator/templates/khepri/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<LINK href="css/template[1].css" type=text/css rel=stylesheet>
+    <LINK href="css/template.css" type=text/css rel=stylesheet>
+  <style type="text/css">
+    <!--
+
+.icon-16-menu_icon {
+	background: url(../components/com_virtuemart/shop_image/ps_image/menu_icon.png) no-repeat;
+}
+
+    -->
+    
+  </style>
+  <script type="text/javascript" src="JSVirtueMart/joomla.js"></script>
+  <script type="text/javascript" src="JSVirtueMart/mootools.js"></script>
+  <script type="text/javascript" src="JSVirtueMart/virtuemart_menu.js"></script>
+  
+  <script type="text/javascript" src="He Khach/XL_CongTy.js"></script>
+  <script type="text/javascript" src="He Khach/XL_QuangCao.js"></script>  
+  <script type="text/javascript" src="He Khach/XL_NguoiDung.js"></script>
+  
+  
+    <script type="text/javascript" src="He Khach/XL_HAM.js"></script>
+    <script type="text/javascript" src="He Khach/XL_THAM_SO.js"></script>
+    <script type="text/javascript" src="He Khach/XL_CHUOI.js"></script>
+    
+    <script type="text/javascript">
+    function Page_Load()
+    {
+        XL_CongTy.HienThiThongTin();
+    }
+    </script>
+
+  <style type="text/css">
+.section-smenu{display: none;}
+</style>
+
+  
+  <link href="CSSVirtueMart/fetchscript.css" type="text/css" rel="stylesheet"/>
+
+
+<link rel="stylesheet" href="CSSVirtueMart/system.css" type="text/css"/>
+<link href="CSSVirtueMart/template.css" rel="stylesheet" type="text/css"/>
+<link href="CSSVirtueMart/general.css" rel="stylesheet" type="text/css"/>
+
+
+<link rel="Stylesheet" href="css/mycss.css" type="text/css" />
+<link rel="stylesheet" href="css/2.3.0-reset-fonts-grids.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/tablestyle.css"/>
+
+<!--[if IE 7]>
+<link href="CSSVirtueMart/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lte IE 6]>
+<link href="CSSVirtueMart/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="CSSVirtueMart/rounded.css"/>
+
+<script type="text/javascript" src="JSVirtueMart/menu.js"></script>
+<!--<script type="text/javascript" src="JSVirtueMart/index.js"></script>-->
+
+</head><body class="ext-gecko" id="minwidth-body">
+   
+	<div id="border-top" class="h_cherry ">
+		<div>
+			<div>
+                <span class="title">Online Fast Food System - Admin</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="content-box">
+		<div class="border">
+			<div class="padding">
+		
+				
+		<div id="element-box">
+			<div class="m">
+				<table style="width: 100%; table-layout: fixed;"><tbody><tr><td style="vertical-align: top; width: 249px;"><div id="vmMenu">
+<div id="content-box2">
+<div id="content-pad">
+  <div style="padding: 0pt; width: 254px;" class="sidemenu-box"><b style="background-color: rgb(255, 255, 255);" class="artop"><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re1"></b><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re2"></b><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re3"></b><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re4"></b></b>
+    <div style="border-left: 1px solid rgb(204, 204, 204); border-right: 1px solid rgb(204, 204, 204);" class="sidemenu-pad">
+		<center>
+							<a href="http://virtuemart.net/" target="_blank">
+				<img src="ImageVirtueMart/menu_logo.gif" alt="VirtueMart Cart Logo" align="middle" hspace="15">
+			</a>
+		
+			<h2>
+                oFFS</h2>
+		</center>
+		<div class="status-divider">
+		</div>
+		<div class="sidemenu" id="masterdiv2">
+							<h3 class="title-smenu" title="Các chức năng chính" onclick="SwitchMenu('1')">
+                                Các chức năng chính</h3>
+						<div style="display: none;" class="section-smenu">
+					<ul>
+					<li class="item-smenu vmicon vmicon-16-config">
+					<a href="ThongTinCongTy.aspx">
+                        Xem thông tin công ty</a>
+					</li>
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="ThongTinQuangCao.aspx">
+                        Quản lý thông tin quảng cáo</a>
+					</li>
+					
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="QTThayDoiQuiDinhHeThong.aspx">
+                        Thay đổi quy định hệ thống</a>
+					</li>
+					</ul>
+					</div>
+					<h3 class="title-smenu" title="Quản lý Email" onclick="SwitchMenu('2')">
+                                        Quản lý thông tin người dùng</h3>
+					<div style="display: none;" class="section-smenu">
+					<ul>
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="QTQuanLyTaiKhoanNguoiDung.aspx">
+                        Quản lý tài khoản người dùng</a>
+					</li>
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="TaoTaiKhoanNguoiDung.aspx">
+                        Tạo tài khoản người dùng</a>
+					</li>
+					
+					</ul>
+					</div>
+									<h3 class="title-smenu" title="Quản lý Email" onclick="SwitchMenu('3')">
+                                        Quản lý Email</h3>
+					<div style="display: none;" class="section-smenu">
+					<ul>
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="QTGuiMail.aspx">Gửi email</a>
+					</li>
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="QTDanhSachEmailDaGui.aspx">Danh sách các email đã gửi</a>
+					</li>
+					</ul>
+					</div>
+					
+									<h3 class="title-smenu" title="Thông tin cá nhân" onclick="SwitchMenu('4')">
+                                        Thông tin cá nhân&nbsp;</h3>
+					<div style="display: none;" class="section-smenu">
+					<ul>
+					<li class="item-smenu vmicon vmicon-16-user">
+					<a href="QTXemThongTinCaNhan.aspx">Xem thông tin cá nhân</a>
+					</li>					
+					
+					</ul>
+					
+					</div>
+									<h3 class="title-smenu" title="order" onclick="Thoat()">
+                                        Thoát&nbsp;</h3>
+					<div style="display: none;" class="section-smenu">
+					<hr>
+					</div>
+						</div>
+	<div style="text-align: center;">
+	<h5>
+        oFFS</h5>
+        demonuns 1.0&nbsp;stable
+	 </div>
+      </div>
+    <b style="background-color: rgb(255, 255, 255);" class="artop"><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re4"></b><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re3"></b><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re2"></b><b style="border-color: rgb(204, 204, 204); background-color: rgb(247, 247, 247);" class="re1"></b></b></div>
+  </div>
+</div>
+</div>
+   
+   
+<script type="text/javascript">
+		window.onload=function(){
+			//Rounded("div.sidemenu-box","all","#fff","#f7f7f7","border #ccc");
+			//Rounded("div.element-box","all","#fff","#fff","border #ccc");
+			//Rounded("div.toolbar-box","all","#fff","#fbfbfb","border #ccc");
+			//Rounded("div.submenu-box","all","#fff","#f2f2f2","border #ccc");
+	
+		}
+	</script></td><td id="vmPage" style="width: 78%; vertical-align: top;"><div align="right">
+        &nbsp;</div>
+
+    <!--<form name="adminForm" action="/joomla/administrator/index.php" method="post">-->
+<table><tbody><tr><td style="width: 906px">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    
+    </asp:ContentPlaceHolder> 
+
+    
+    </td>
+</tr></tbody></table><br style="clear: both;">
+
+<!--</form>-->
+</td></tr></tbody></table>
+
+				<div class="clr"></div>
+			</div>
+			<div class="b">
+				<div class="b">
+					<div class="b" style="width: 938px"></div>
+				</div>
+			</div>
+   		</div>
+		<noscript>
+			Warning! JavaScript must be enabled for proper operation of the Administrator back-end.		</noscript>
+		<div class="clr"></div>
+	</div>
+	<div class="clr"></div>
+</div>
+</div>
+
+
+	<div id="border-bottom"><div><div style="width: 963px"></div></div></div>
+	<div id="footer">
+		<p class="copyright">
+            Nhóm 13 - Nguyễn Huệ Nghi - Nguyễn Thị Như Anh - Trần Kim Long - Nguyễn Đăng Khoa</p>
+	</div>
+<div style="padding: 0px; overflow: hidden; visibility: hidden; position: absolute; width: 1279px; left: -1280px; top: 0px;" id="WzTtDiV"></div></body></html>

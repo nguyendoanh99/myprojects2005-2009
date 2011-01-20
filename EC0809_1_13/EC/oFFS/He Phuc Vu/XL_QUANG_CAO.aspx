@@ -1,0 +1,1 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="XL_QUANG_CAO.aspx.cs" Inherits="He_Phuc_Vu_XL_QUANG_CAO" %>

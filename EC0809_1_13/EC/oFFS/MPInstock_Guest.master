@@ -1,0 +1,356 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPInstock_Guest.master.cs" Inherits="MPInstock_Guest" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="joomla, Joomla" />
+  <meta name="description" content="Joomla! - hệ thống quản lý nội dung và cổng giao tiếp động." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Welcome to Online Fast Food System</title>
+
+  <link href="/joomla/index.php?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="/joomla/index.php?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  
+  <link href="CSSInstock/red.css" rel="stylesheet" type="text/css" />
+  
+  <link rel='stylesheet' type='text/css' href='CSSInstock/mod_myfp_style.css'/>
+  <link rel='stylesheet' type='text/css' href='CSSInstock/layout.css'/>
+  <link type="text/css" rel="stylesheet" href="css/tablestyle.css"/>
+  
+  <link rel="Stylesheet" href="css/mycss.css" type="text/css" />
+  <!--<link rel="Stylesheet" href="css/2.3.0-reset-fonts-grids.css" type="text/css" />-->
+   
+    <script language="javascript" type="text/javascript" src="He Khach/XL_NguoiDung.js"></script>
+  <script language="javascript" type="text/javascript" src="He Khach/XL_QuangCao.js"></script>
+   <script type="text/javascript" src="He Khach/XL_MonAn.js"></script>
+   <script type="text/javascript" src="He Khach/XL_MonAnYeuThich.js"></script>
+   <script type="text/javascript" src="He Khach/XL_ThucDonYeuThich.js"></script>
+   <script type="text/javascript" src="He Khach/XL_ThucDonCaNhan.js"></script>
+   <script type="text/javascript" src="He Khach/XL_Tag.js"></script>
+   <script type="text/javascript" src="He Khach/XL_QuangCao.js"></script>
+   <script type="text/javascript" src="He Khach/XL_ThucDon.js"></script>
+   <script type="text/javascript" src="He Khach/XL_LoaiMon.js"></script>
+   <script type="text/javascript" src="He Khach/XL_LoaiThucDon.js"></script>
+   <script type="text/javascript" src="He Khach/XL_GioHang.js"></script>
+   <script type="text/javascript" src="He Khach/XL_CHUOI.js"></script>
+    <script type="text/javascript" src="He Khach/XL_HAM.js"></script>
+    <script type="text/javascript" src="He Khach/XL_THAM_SO.js"></script>
+   
+  <!--
+  <script type="text/javascript" src="JSInstock/mootools.js"></script>
+  
+  <script type="text/javascript" src="JSInstock/sve.js"></script>
+  <script language="javascript" type="text/javascript" src="JSInstock/motionpack.js"></script> 
+  <script type="text/javascript" src="JSInstock/caption.js"></script>
+  <script type='text/javascript' src='JSInstock/tooltip.js'></script>
+-->
+
+
+
+<!--[if IE 6]>
+<link href="/joomla/templates/instock/css/iesucks.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--<script type="text/javascript" src="JSInstock/mouseover.js"></script>-->
+<!--<script type="text/javascript" src="JSInstock/smooth.js"></script>-->
+
+<!--[if lte IE 6]>
+<script type="text/javascript" src="JSInstock/ie2.js"></script>
+<![endif]-->
+
+
+
+</head>
+<!-- ODVAJANJE ZAREZOM -->
+<body>
+<div id="fobg">
+<div id="mainbg">
+<div id="centar" style="font-size:12px; width:1000px;">
+<div id="wrap">
+<div id="insidewrapblank">
+
+<div id="centarmain" style="font-size:12px; width:1000px;">
+
+<!-- top menu and search -->
+<div id="topmwrap">
+<div id="topmen"><div id="topin"></div></div><div id="searchbox"><div id="searchboxin">
+
+
+
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</div></div></div>
+
+
+
+
+<!--end  top menu and search -->
+
+</div><!-- end centarmain-->
+
+
+<!--header top-->
+<div id="header">
+<div id="hl">
+<div id="hr">
+<div id="logo1">
+<div id="tags"> <h1><a href="#" title="Virtuemart, Joomla Templates, Oscomerce,Youjoomla">Joomla Software solutions Template</a></h1></div>
+</div><!-- end logo-->
+
+
+<!-- menuwrap-->
+<div id="menuwrap">
+  <div id="navigacija">
+
+<ul class="nav" id="horiznav">
+    <li class="top"><span class="topdaddy"><a href="trangchu.aspx">Trang chủ</a></span></li>
+    <li><span class="topdaddy"><a class="topdaddy" href="danhsachmonan.aspx">Danh mục</a></span>
+        <ul>
+        <li><span class="top"><a href="DanhSachLoaiThucDon.aspx">Loại thực đơn</a></span></li>
+        <li><span class="top"><a href="DanhSachLoaiMonAn.aspx">Loại món ăn</a></span></li>
+        <li><span class="top"><a href="DanhSachThucDon.aspx">Thực đơn</a></span></li>
+        <li><span class="top"><a href="DanhSachMonAn.aspx">Món ăn</a></span></li>
+        </ul>
+    </li>
+    <li><span class="top"><a href="LienHe.aspx">Liên hệ</a></span></li>
+    <li><span class="top"><a href="FormTimKiemNangCao.aspx">Tìm kiếm</a></span></li>
+    <li id="menuCaNhan" runat="server"><span class="top"><a href="#">Quản lý thông tin cá nhân</a></span>
+        <ul>
+        <li><span class="top"><a href="XemThongTinCaNhan.aspx">Xem TT cá nhân</a></span></li>
+        <li><span class="top"><a href="KHThongTinGiaoDich.aspx">Xem TT giao dịch</a></span></li>
+        <li><span class="top"><a href="TaoThucDonMoi_KH.aspx">Tạo thực đơn mới</a></span></li>
+        <li><span class="top"><a href="DanhSachMonAnYeuThich.aspx">Món ăn ưa thích</a></span></li>
+        <li><span class="top"><a href="DanhSachThucDonYeuThich.aspx">Thực đơn ưa thích</a></span></li>
+        </ul>
+    </li>
+</ul>    
+    </div>
+    </div>
+
+<!-- end menuwrap-->
+</div>
+</div>
+</div>
+<!-- end header top-->
+<!-- header bottom -->
+<div id="headerb">
+
+<div id="hlb">
+<div id="hrb">
+<div id="logo2"></div>
+<div id="tool">
+<div id="tools">
+<a href='/joomla/index.php?change_css=red' ><img src="ImageInstock/red.png" height="13px" width="19px" alt="Red" title="Red" /></a><a href='/joomla/index.php?change_css=blue' ><img src="ImageInstock/blue.png" height="13px" width="19px" alt="Blue" title="Blue" /></a><a href='/joomla/index.php?change_css=green' ><img src="ImageInstock/green.png" height="13px" width="19px" alt="Green" title="Green" /></a> <a href='/joomla/index.php?change_font=small' ><img src="ImageInstock/small.png" height="13px" width="19px" alt="Small" title="Small" /></a><a href='/joomla/index.php?change_font=medium' ><img src="ImageInstock/medium.png" height="13px" width="19px" alt="Medium" title="Medium" /></a><a href='/joomla/index.php?change_font=large' ><img src="ImageInstock/large.png" height="13px" width="19px" alt="Large" title="Large" /></a>
+<a href='/joomla/index.php?change_width=wide' ><img src="ImageInstock/wide.png" height="13px" width="19px" alt="Wide" title="Wide" /></a><a href='/joomla/index.php?change_width=narrow' ><img src="ImageInstock/narrow.png" height="13px" width="19px" alt="Narrow" title="Narrow" /></a><a href='/joomla/index.php?change_width=fluid' ><img src="ImageInstock/fluid.png" height="13px" width="19px" alt="Fluid" title="Fluid" /></a>
+</div>
+<div id="tools">
+    <a href = "AddToCard.aspx">Xem giỏ hàng</a>
+</div><div id="tools" style="width: 412px;color:White" >
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <script type="text/javascript" src="He Khach/XL_NguoiDung.js"></script>
+    <script type="text/javascript" src="He Khach/XL_HAM.js"></script>
+    <script type="text/javascript" src="He Khach/XL_THAM_SO.js"></script>
+    <script type="text/javascript" src="He Khach/XL_CHUOI.js"></script>
+    
+    <label id="lblDangNhap" runat="server"><a href="DangNhap.aspx">Đăng nhập | </a></label>
+    <label id="lblDangKy" runat="server"><a href="DKTaiKhoan.aspx"> Đăng ký</a></label>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <label id="lblChao" runat="server">Chào bạn</label>
+    <label id="lblThoat" runat="server"><a id="A1" href="#" runat="server" onclick="Thoat()"> (Thoát)</a></label>
+                                      
+       
+        
+ &nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end hedaer bottom -->
+
+<div id="pathway">Bạn đang ở : </div>
+
+
+<div id="mainbody_R">
+<div id="content_R" style="width: 114%">
+<div class="inside">
+<div id="newsflash">
+					<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+<tr class="myfp_row">
+<td valign="top" style="width: 180px"><div style="width: 150px; height: 100px;">
+    <a id='a1' href="LienHe.aspx"><img id="1" src="./Hinh Anh/Quang Cao/quang_cao.jpg" style="width: 150px; height: 100px" /></a></div>
+</td>
+<td valign="top"><div style="width: 150px; height: 100px;">
+    <a id='a2'href="LienHe.aspx"><img id="2" src="./Hinh Anh/Quang Cao/quang_cao.jpg" style="width: 150px; height: 100px" /></a></div>
+</td>
+  <td valign="top" ><div style="width: 150px; height: 100px;">
+      <a id='a3' href="LienHe.aspx"><img id="3" src="./Hinh Anh/Quang Cao/quang_cao.jpg" style="width: 150px; height: 100px" /></a></div>
+</td>
+<td valign="top"><div style="width: 150px; height: 100px;">
+    <a id='a4' href="LienHe.aspx"><img id="4" src="./Hinh Anh/Quang Cao/quang_cao.jpg" style="width: 150px; height: 100px" /></a></div>
+</td>
+</tr>
+</table>
+	 
+</div>
+
+<form  runat="server" id="addtocart">
+<div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder> 
+
+</div>
+</form>
+</div></div>
+
+</div> 
+
+
+<!--end of main-body-->
+<!-- right side always stand alone-->
+<div id="right_R"> 
+
+
+
+
+<div class="inside"> <!-- keep mods of edges-->
+	<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Loại món</h3>
+
+		    <div id="divDsLoaiMon">
+          <!--
+          <a title="Thức ăn nhanh" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Thức ăn nhanh</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Món Nhật</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Món Hàn</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Cơm văn phòng</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Thức uống</a>
+          -->
+          </div>
+          
+          <script type="text/javascript">
+                XL_LoaiMon.LoadDSLoaiMonGoc('divDsLoaiMon');
+          
+          </script>
+          
+                                                    <h3>Loại thực đơn</h3>
+
+		    <div id="divDsLoaiThucDon">
+          <!--
+          <a title="Thức ăn nhanh" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Thức ăn nhanh</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Món Nhật</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Món Hàn</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Cơm văn phòng</a>
+          <a title="Món Nhật" style="display:block;" class="mainlevel" href="danhsachmonan.aspx" >Thức uống</a>
+          -->
+          </div>
+          
+          <script type="text/javascript">
+            XL_LoaiThucDon.LoadDSLoaiThucDonGoc('divDsLoaiThucDon');
+          
+          </script>
+          
+           
+           
+             <!--BEGIN Tag  --> 
+             <h3>Tag</h3>
+
+		    <div id="divDSTag">
+          
+          </div>
+          <script type="text/javascript">
+          XL_TAG.DanhSachTag();
+          </script>
+         <!--BEGIN Tag  --> 
+       
+       
+          <table cellpadding="1" cellspacing="1" border="0" width="100%">
+   
+   
+  <!--BEGIN Search Box --> 
+  <tr> 
+    <td colspan="2" style="height: 224px">
+	  <hr />
+      <label for="shop_search_field">Tìm kiếm sản phẩm</label>
+      
+        <input id="shop_search_field" title="Search" class="inputbox" type="text" size="12" name="keyword" />
+        <input class="button" type="submit" name="Search" value="Tìm" id="Submit1" onclick="return XL_MON_AN.GhiNhanTimKiemTheoTen(document.getElementById('shop_search_field').value)" />
+        <br />
+        <br />
+		<input type="hidden" name="Itemid" value="1" />
+
+		<input type="hidden" name="option" value="com_virtuemart" />
+		<input type="hidden" name="page" value="shop.browse" />&nbsp;<br />
+        <p class="MsoNormal" style="margin: 0in 0in 0pt">
+            <span style="font-size: 12pt; color: #000000; font-family: Times New Roman"></span><a href="FormTimKiemNangCao.aspx">Tìm kiếm
+                nâng cao
+            </a>
+        </p>
+    </td>
+  </tr>
+
+  <!-- End Search Box --> 
+  
+  <!-- End Giỏ hàng --> 
+    <tr>
+        <td>
+            <div id="divTTGioHang">                
+            </div>
+            <script type = "text/javascript">
+            XL_GIO_HANG.Th_Thong_tin_chinh_gio_hang()
+            </script>
+        </td>
+    </tr>
+    <tr>                       
+    </tr>
+    <!-- End Giỏ hàng --> 
+    
+   
+           
+</table><hr />
+        
+	</div>
+	</div>
+
+</div>
+</div>
+		
+	
+</div></div><!-- end right side-->
+<div id="bottom" ></div>
+
+</div><!-- end of insidewrap--></div> <!--end of wrap-->
+
+<div id="footer">
+<div id="fol">
+<div id="for">
+<div align="center">
+
+	&copy; 2008 IN STOCK</div>
+
+<div align="center">
+	<a href="#">Joomla!</a> is Free Software released under the GNU/GPL License.</div><a href="#">Custom Design by Youjoomla.com</a>
+
+<a href="#centarmain">Top</a>
+</div>
+</div>
+</div>
+</div><!-- end centar-->
+
+
+
+
+
+
+
+</div>
+</div><!-- end fobg -->
+</body>
+</html>
+

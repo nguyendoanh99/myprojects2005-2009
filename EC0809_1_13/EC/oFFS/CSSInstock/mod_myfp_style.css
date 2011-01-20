@@ -1,0 +1,141 @@
+/* -------- news style ---------- */
+
+#myfp_newswrap .myfp_article_seperator {
+background: none;
+}
+.myfp_newsitem_right,
+.myfp_newsitem_center
+.myfp_newsitem_left{
+float: left;
+padding: 0;
+text-align: center;
+}
+.myfp_newsitem_inner{
+text-align: left;
+padding:0 3px;
+border:1px solid #F1EFEF;
+margin:2px;
+background: url(ImageInstock/h3r.gif) repeat-x left top;
+
+
+}
+.myfp_newscontent {
+padding: 0;
+}
+.myfp_newsitem_inner img {
+margin: 2px 5px 5px 0;
+padding: 2px;
+background:none;
+border:1px solid #e0dede;
+
+}
+.myfp_newslinks {
+margin:40px 0 0;
+padding: 0;
+}
+a.myfp_newscat, a.myfp_newscat:hover, a.myfp_newscat:active, a.myfp_newscat:focus {
+display: block;
+/*position: relative;*/
+font: bold 120%/normal Geneva, Arial, Helvetica, sans-serif;
+text-decoration: none;
+width:100%;
+height:30px;
+}
+
+a.myfp_newscat span {
+font-weight: bold;
+text-transform: uppercase;
+font: bold 100%/normal Verdana, Arial, Helvetica, sans-serif;
+text-decoration: none;
+margin-left:10px;
+}
+
+a.myfp_newscat:hover span{
+text-decoration:none;
+
+}
+.myfp_newscatwrap .myfp_newscat span,
+.myfp_newsitem_left:hover .myfp_newscat span,
+.myfp_newsitem_center:hover .myfp_newscat span,
+.myfp_newsitem_right:hover .myfp_newscat span {
+
+text-decoration:none;
+}
+.moduletablemyfp_ a.myfp_newstitle_c ,
+.modulemyfp_ a.myfp_newstitle_c {
+display: block;
+font-weight: bold;
+margin-bottom:5px;
+border: none;
+text-decoration: none;
+font: bold 125%/normal Cambria, "Times New Roman", Times, serif;
+}
+a.myfp_newstitle:hover, a.myfp_newstitle:active, a.myfp_newstitle:focus {
+
+}
+.myfp_row{
+margin-bottom: 10px;
+}
+.myfp_slide{
+overflow: hidden; 
+}
+.myfp_slide div {
+overflow: hidden; 
+}
+.myfp_slide div div {
+float: left;  
+}
+.myfp_slide_menu{
+}
+ a.myfp_rm_c {
+
+ }
+.moduletablemyfp_{
+padding: 0 10px;/*padding for inside text*/
+border:1px solid #efefef;
+}
+#links{
+float:left;
+text-align:left;
+}
+
+.myfp_newslinks li{
+padding-left:20px;
+background: url(ImageInstock/strelica.gif) no-repeat left center;
+font-family: Verdana, Arial, Helvetica,  sans-serif;
+font-size: 11px;
+text-decoration: none;
+}
+.myfp_newslinks li:hover{
+padding-left:20px;
+background: url(ImageInstock/strelica_h.gif) no-repeat left center;
+font-family: Verdana, Arial, Helvetica,  sans-serif; font-size: 11px; text-decoration: none;
+}
+.youjoomla-tip {
+width:200px;
+z-index: 13000;
+text-align:left;
+font: normal 100%/normal Geneva, Arial, Helvetica, sans-serif;
+}
+ 
+.youjoomla-title {
+margin: 0;
+color:#999;
+padding: 8px 8px 4px;
+background: url(ImageInstock/bubble2.png) top left;
+font: bold 125%/normal Geneva, Arial, Helvetica, sans-serif;
+}
+ 
+.youjoomla-text {
+	font-size: 12px;
+	padding: 4px 8px 8px;
+	color:#CCC;
+	background: url(ImageInstock/bubble2.png) bottom right;
+}
+.more a,.more a:hover{
+font-weight:bold;
+float:left;
+padding:4px 3px;
+font-size: 11px;
+text-align:left;
+}

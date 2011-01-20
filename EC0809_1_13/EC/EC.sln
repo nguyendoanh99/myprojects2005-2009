@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\...\oFFS\", "oFFS\", "{BCC145E3-45A4-439E-9B02-B4496E3591C5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/oFFS"
+		Debug.AspNetCompiler.PhysicalPath = "oFFS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\oFFS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/oFFS"
+		Release.AspNetCompiler.PhysicalPath = "oFFS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\oFFS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+<<<<<<< .mine
+		VWDPort = "56796"
+=======
+		VWDPort = "1620"
+>>>>>>> .r195
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\...\WS_Bank_oFFS\", "WS_Bank_oFFS\", "{C38DB57A-5CBA-43B5-A9EC-0A28EE7D7F8E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/WS_Bank_oFFS"
+		Debug.AspNetCompiler.PhysicalPath = "WS_Bank_oFFS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WS_Bank_oFFS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WS_Bank_oFFS"
+		Release.AspNetCompiler.PhysicalPath = "WS_Bank_oFFS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WS_Bank_oFFS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3333"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\...\WS_CardSystem\", "WS_CardSystem\", "{3EC60A76-43B1-462B-B73A-8A10CCF4B89A}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/WS_CardSystem"
+		Debug.AspNetCompiler.PhysicalPath = "WS_CardSystem\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WS_CardSystem\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WS_CardSystem"
+		Release.AspNetCompiler.PhysicalPath = "WS_CardSystem\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WS_CardSystem\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2222"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "E:\...\WS_Paypal\", "WS_Paypal\", "{C3B3761B-8FBC-46AA-AA7E-10A6CBB35AFC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/WS_Paypal"
+		Debug.AspNetCompiler.PhysicalPath = "WS_Paypal\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WS_Paypal\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WS_Paypal"
+		Release.AspNetCompiler.PhysicalPath = "WS_Paypal\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WS_Paypal\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4444"
+		VWDDynamicPort = "false"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCC145E3-45A4-439E-9B02-B4496E3591C5}.Debug|.NET.ActiveCfg = Debug|.NET
+		{BCC145E3-45A4-439E-9B02-B4496E3591C5}.Debug|.NET.Build.0 = Debug|.NET
+		{C38DB57A-5CBA-43B5-A9EC-0A28EE7D7F8E}.Debug|.NET.ActiveCfg = Debug|.NET
+		{C38DB57A-5CBA-43B5-A9EC-0A28EE7D7F8E}.Debug|.NET.Build.0 = Debug|.NET
+		{3EC60A76-43B1-462B-B73A-8A10CCF4B89A}.Debug|.NET.ActiveCfg = Debug|.NET
+		{3EC60A76-43B1-462B-B73A-8A10CCF4B89A}.Debug|.NET.Build.0 = Debug|.NET
+		{C3B3761B-8FBC-46AA-AA7E-10A6CBB35AFC}.Debug|.NET.ActiveCfg = Debug|.NET
+		{C3B3761B-8FBC-46AA-AA7E-10A6CBB35AFC}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
